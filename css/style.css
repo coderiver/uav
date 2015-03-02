@@ -1,0 +1,137 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?mp9n2s');
+	src:url('fonts/icomoon.eot?#iefixmp9n2s') format('embedded-opentype'),
+		url('fonts/icomoon.woff?mp9n2s') format('woff'),
+		url('fonts/icomoon.ttf?mp9n2s') format('truetype'),
+		url('fonts/icomoon.svg?mp9n2s#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-about-play:before {
+	content: "\e600";
+}
+
+.icon-arrow-main-down:before {
+	content: "\e601";
+}
+
+.icon-arrow-main-left:before {
+	content: "\e602";
+}
+
+.icon-arrow-main-right:before {
+	content: "\e603";
+}
+
+.icon-arrow-main-up:before {
+	content: "\e604";
+}
+
+.icon-contacts-developed:before {
+	content: "\e605";
+}
+
+.icon-exploded-close:before {
+	content: "\e606";
+}
+
+.icon-exploded-plus:before {
+	content: "\e607";
+}
+
+.icon-menu-baq:before {
+	content: "\e608";
+}
+
+.icon-menu-sidemenu:before {
+	content: "\e609";
+}
+
+.icon-more-download:before {
+	content: "\e60a";
+}
+
+.icon-more-play:before {
+	content: "\e60b";
+}
+
+.icon-parameters-weight:before {
+	content: "\e60c";
+}
+
+.icon-scroll-arrow-down:before {
+	content: "\e60d";
+}
+
+.icon-scroll-arrow-up:before {
+	content: "\e60e";
+}
+
+.icon-social-fb:before {
+	content: "\e60f";
+}
+
+.icon-social-in:before {
+	content: "\e610";
+}
+
+.icon-social-tw:before {
+	content: "\e611";
+}
+
+.icon-subsection-adaptability:before {
+	content: "\e612";
+}
+
+.icon-subsection-engine:before {
+	content: "\e613";
+}
+
+.icon-subsection-exploded:before {
+	content: "\e614";
+}
+
+.icon-subsection-gcs:before {
+	content: "\e615";
+}
+
+.icon-subsection-options:before {
+	content: "\e616";
+}
+
+.icon-subsection-package:before {
+	content: "\e617";
+}
+
+.icon-subsection-payload:before {
+	content: "\e618";
+}
+
+.icon-subsection-performance:before {
+	content: "\e619";
+}
+
+.icon-subsection-takeoff:before {
+	content: "\e61a";
+}
+
+.icon-subsection-techspecs:before {
+	content: "\e61b";
+}
+

@@ -1,3 +1,4 @@
 head.load("js/lib/jquery.js", 
-					"js/lib/cycle.js",
-					"js/common.js");
+		  "js/lib/slick.min.js",
+		  "js/lib/picturefill.min.js",
+		  "js/common.js");

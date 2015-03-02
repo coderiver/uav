@@ -49,14 +49,49 @@
 
 
 body
-	font-family: Arial, sans-serif 
+	font-family: 'Roboto', Arial, sans-serif
+	font-weight: 300
 	font-size: 12px 
 	line-height: 1.4
+	background: #546e80 
 
+.out, .container
+	position: relative
+	height: 100%
 
 // common blocks      
+.header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	height: 41px
+	background: #2c3941
+	text-align: center
+	z-index: 2
+	ul
+		font-size: 0
+		li
+			display: inline-block
+			vertical-align: middle
+			margin: 0 40px 
+			a
+				font-size: 20px
+				color: #fff
+				text-decoration: none	
 
-
+.page1, .page2
+	position: relative
+	height: 100%
+	background: green
+	font-size: 30px
+	color: #fff
+	text-align: center
+	font-size: 0
+	img
+		max-width: 100% 	 
+.page2
+	background: darkred 
 
 
 

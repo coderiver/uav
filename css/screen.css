@@ -4,7 +4,7 @@ body, html { height: 100%; }
 
 img, fieldset, a img { border: none; }
 
-input[type="text"], input[type="email"], input[type="tel"], textarea { -webkit-appearance: none; border-radius: 0; }
+input[type="text"], input[type="email"], input[type="tel"], textarea { -webkit-appearance: none; }
 
 input[type="submit"], button { cursor: pointer; }
 input[type="submit"]::-moz-focus-inner, button::-moz-focus-inner { padding: 0; border: 0; }
@@ -20,7 +20,19 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+body { font-family: "Roboto", Arial, sans-serif; font-weight: 300; font-size: 12px; line-height: 1.4; background: #546e80; }
+
+.out, .container { position: relative; height: 100%; }
+
+.header { position: fixed; top: 0; left: 0; right: 0; height: 41px; background: #2c3941; text-align: center; z-index: 2; }
+.header ul { font-size: 0; }
+.header ul li { display: inline-block; vertical-align: middle; margin: 0 40px; }
+.header ul li a { font-size: 20px; color: #fff; text-decoration: none; }
+
+.page1, .page2 { position: relative; height: 100%; background: green; font-size: 30px; color: #fff; text-align: center; font-size: 0; }
+.page1 img, .page2 img { max-width: 100%; }
+
+.page2 { background: darkred; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
