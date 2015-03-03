@@ -65,20 +65,74 @@ body
 	top: 0
 	left: 0
 	right: 0
-	height: 41px
+	+clr
+	height: 40px
 	background: #2c3941
 	text-align: center
 	z-index: 2
-	ul
+	// ul
+	// 	font-size: 0
+	// 	li
+	// 		display: inline-block
+	// 		vertical-align: middle
+	// 		margin: 0 40px 
+	// 		a
+	// 			font-size: 20px
+	// 			color: #fff
+	// 			text-decoration: none
+.logo
+	position: relative
+	float: left
+	width: 200px
+	height: 70px
+	padding: 19px 0 0 42px 
+	margin-right: 74px 
+	background: #fff
+	box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.4) 
+	&:before
+		content: ""
+		position: absolute
+		top: -25px
+		right: -60px
+		height: 100% 
+		width: 100px
+		background: #fff
+		+rotate(-45)
+		box-shadow: 0 0px 4px rgba(0, 0, 0, 0.4) 
+		z-index: -1
+	a
+		display: inline-block
+		vertical-align: middle
+		+sr(logo)
+.socials
+	float: left
+	height: 40px
+	+vertical
+	+clr
+	&__title, &__list
+		display: inline-block
+		vertical-align: middle
+		color: #fff
+	&__title
+		font-size: 10px
+		font-style: italic 	
+	&__list
 		font-size: 0
 		li
 			display: inline-block
 			vertical-align: middle
-			margin: 0 40px 
+			margin-left: 11px
 			a
-				font-size: 20px
-				color: #fff
-				text-decoration: none	
+				display: inline-block
+				width: 21px
+				height: 21px
+				border-radius: 50%
+				text-decoration: none
+				border: 1px solid #fff
+				text-align: center
+				span
+					font-size: 20px
+					color: #fff 	
 
 .page1, .page2
 	position: relative
