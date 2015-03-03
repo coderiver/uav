@@ -164,10 +164,13 @@ a
 			font-size: 11px
 
 .menu
-	font-size: 0
-	text-align: center
+	.menu__list
+		display: table
+		width: 100%
+		text-align: center
+		table-layout: fixed
 	.menu__item
-		display: inline-block
+		display: table-cell
 		width: 16.66%
 		vertical-align: top
 		color: #FFF 
