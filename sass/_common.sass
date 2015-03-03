@@ -54,6 +54,8 @@ body
 	font-size: 12px 
 	line-height: 1.4
 	background: #546e80 
+a
+	text-decoration: none
 
 .out, .container
 	position: relative
@@ -70,16 +72,41 @@ body
 	background: #2c3941
 	text-align: center
 	z-index: 2
-	// ul
-	// 	font-size: 0
-	// 	li
-	// 		display: inline-block
-	// 		vertical-align: middle
-	// 		margin: 0 40px 
-	// 		a
-	// 			font-size: 20px
-	// 			color: #fff
-	// 			text-decoration: none
+	.build-quote
+		padding: 0 20px
+		span
+			line-height: 40px
+	
+.build-quote
+	float: right
+	font-size: 0
+	color: #FFF 
+	span,
+	.icon
+		display: inline-block
+		vertical-align: middle
+	span
+		margin-right: 15px
+		font-size: 12px
+	.icon
+		font-size: 20px
+
+.nav
+	float: right
+	a
+		position: relative
+		float: left
+		padding: 0 20px
+		line-height: 40px
+		color: #FFF
+		text-transform: uppercase
+	.icon
+		position: absolute
+		left: 50%
+		bottom: 3px
+		margin-left: -10px
+		font-size: 9px 
+	
 .logo
 	position: relative
 	float: left
@@ -104,35 +131,36 @@ body
 		display: inline-block
 		vertical-align: middle
 		+sr(logo)
+
 .socials
 	float: left
 	height: 40px
 	+vertical
 	+clr
-	&__title, &__list
+	.socials__title, .socials__list
 		display: inline-block
 		vertical-align: middle
 		color: #fff
-	&__title
+	.socials__title
 		font-size: 10px
-		font-style: italic 	
-	&__list
+		font-style: italic 
+	.socials__list
 		font-size: 0
-		li
+		a
 			display: inline-block
-			vertical-align: middle
+			width: 21px
+			height: 21px
 			margin-left: 11px
-			a
-				display: inline-block
-				width: 21px
-				height: 21px
-				border-radius: 50%
-				text-decoration: none
-				border: 1px solid #fff
-				text-align: center
-				span
-					font-size: 20px
-					color: #fff 	
+			border-radius: 50%
+			text-decoration: none
+			border: 1px solid #fff
+			+vertical
+		.icon
+			font-size: 9px
+			color: #fff 	
+			vertical-align: middle
+		.icon-social-fb
+			font-size: 11px
 
 .page1, .page2
 	position: relative
