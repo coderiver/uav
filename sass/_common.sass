@@ -47,10 +47,11 @@
 // p
 // 	+jpg(bla)
 
+$blue: #1262b2
 
 body
 	min-width: 1024px
-	background: #546e80 
+	background: #546e80
 	font-family: 'Roboto', Arial, sans-serif
 	font-weight: 300
 	font-size: 12px 
@@ -164,16 +165,24 @@ a
 			font-size: 11px
 
 .menu
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 40px
 	.menu__list
 		display: table
 		width: 100%
+		padding-left: 34px
 		text-align: center
 		table-layout: fixed
 	.menu__item
 		display: table-cell
 		width: 16.66%
 		vertical-align: top
-		color: #FFF 
+		color: #FFF
+		&:hover
+			.menu__type
+				background: $blue 
 	.menu__type
 		display: inline-block
 		width: 60px
@@ -182,6 +191,7 @@ a
 		border: 1px solid #fff
 		border-radius: 50%
 		vertical-align: top
+		+tr(background .2s)
 		+vertical
 		.icon
 			vertical-align: middle
@@ -193,6 +203,31 @@ a
 	.menu__title
 		font-size: 11px
 		text-transform: uppercase
+	.menu__nav
+		position: absolute
+		top: 0
+		left: 0
+		background: #FFF 
+	.menu__links
+		display: none
+		float: left
+		padding-left: 20px
+		a
+			float: left
+			padding: 0 12px
+			line-height: 40px
+			text-transform: uppercase
+			color: #2D3A43 
+	.menu__btn
+		float: left
+		width: 34px
+		height: 40px
+		background: #FFF
+		font-size: 0
+		.icon
+			font-size: 12px
+			color: #2C3941  
+
 
 
 .page1, .page2
