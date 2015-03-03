@@ -29,10 +29,15 @@ body { min-width: 1024px; background: #546e80; font-family: "Roboto", Arial, san
 
 a { text-decoration: none; }
 
-.out { position: relative; width: 1024px; height: 100%; margin: 0 auto; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+.center { max-width: 1500px; margin: 0 auto; }
 
-.header { position: relative; height: 40px; background: #2c3941; text-align: center; *zoom: 1; z-index: 2; }
-.header:after { content: " "; display: table; clear: both; }
+.page { position: relative; overflow: hidden; }
+.page .page__bg { position: absolute; top: -1000px; left: 0; right: 0; bottom: -1000px; text-align: center; text-align: center; font-size: 0; overflow: hidden; }
+.page .page__bg:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.page .page__bg img { width: 100%; height: auto; vertical-align: middle; }
+.page .page__in { height: 100vh; min-height: 768px; }
+
+.header { position: absolute; left: 0; right: 0; height: 40px; background: #2c3941; text-align: center; z-index: 10; }
 .header .build-quote { padding: 0 20px; }
 .header .build-quote span { line-height: 40px; }
 
@@ -60,7 +65,7 @@ a { text-decoration: none; }
 .socials .socials__list .icon { font-size: 9px; color: white; vertical-align: middle; }
 .socials .socials__list .icon-social-fb { font-size: 11px; }
 
-.menu { position: absolute; left: 0; right: 0; bottom: 40px; }
+.menu { position: absolute; left: 0; right: 0; bottom: 40px; z-index: 10; }
 .menu .menu__list { display: table; width: 100%; padding-left: 34px; text-align: center; table-layout: fixed; }
 .menu .menu__item { display: table-cell; width: 16.66%; vertical-align: top; color: white; }
 .menu .menu__item:hover .menu__type { background: #1262b2; }

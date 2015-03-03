@@ -59,21 +59,39 @@ body
 a
 	text-decoration: none
 
-.out
-	position: relative
-	width: 1024px
-	height: 100%
+// common blocks    
+.center
+	max-width: 1500px
 	margin: 0 auto
-	box-shadow: 0 0 10px rgba(0,0,0,.4)
 
-// common blocks      
-.header
+.page
 	position: relative
+	overflow: hidden
+	.page__bg
+		position: absolute
+		top: -1000px
+		left: 0
+		right: 0
+		bottom: -1000px
+		text-align: center
+		+vertical
+		overflow: hidden
+		img
+			width: 100%
+			height: auto
+			vertical-align: middle
+	.page__in
+		height: 100vh
+		min-height: 768px
+
+.header
+	position: absolute
+	left: 0
+	right: 0
 	height: 40px
 	background: #2c3941
 	text-align: center
-	+clr
-	z-index: 2
+	z-index: 10
 	.build-quote
 		padding: 0 20px
 		span
@@ -169,6 +187,7 @@ a
 	left: 0
 	right: 0
 	bottom: 40px
+	z-index: 10 
 	.menu__list
 		display: table
 		width: 100%
