@@ -95,7 +95,7 @@ picture { display: inline-block; vertical-align: middle; }
 .slider .slider__content { padding: 100px 42px 0; position: absolute; top: 0; right: 0; left: 0; bottom: 0; }
 .slider .slider__content > div { max-width: 450px; }
 
-.our-prod { position: relative; height: 100%; padding-top: 100px; }
+.our-prod { position: relative; height: 100%; }
 .our-prod .center { padding: 0 42px; }
 .our-prod .our-prod__topper { *zoom: 1; margin-bottom: 38px; }
 .our-prod .our-prod__topper:after { content: " "; display: table; clear: both; }
@@ -105,7 +105,8 @@ picture { display: inline-block; vertical-align: middle; }
 .our-prod .our-prod__content:after { content: " "; display: table; clear: both; }
 .our-prod .our-prod__gallery { float: left; width: 66%; }
 
-.gallery .gallery__item { font-size: 0; text-align: center; }
+.gallery { text-align: center; }
+.gallery .gallery__item { font-size: 0; }
 .gallery .gallery__item img { max-width: 100%; }
 
 .slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
@@ -134,6 +135,7 @@ picture { display: inline-block; vertical-align: middle; }
 .slick-prev:hover, .slick-next:hover { background: #1262b2; }
 .slick-prev:focus, .slick-next:focus { outline: none; }
 .slick-prev.slick-disabled, .slick-next.slick-disabled { opacity: 0.2; }
+.gallery .slick-prev, .gallery .slick-next { background: transparent; top: auto; bottom: 0; }
 
 .slick-prev { left: 42px; font-family: icomoon; }
 .slick-prev:before { content: ""; display: inline-block; vertical-align: middle; font-size: 12px; color: #fff; }
@@ -147,6 +149,11 @@ picture { display: inline-block; vertical-align: middle; }
 .slick-dots li:before { display: none; }
 .slick-dots button { display: block; width: 35px; height: 35px; background: #2c3941; border-radius: 50%; cursor: pointer; -moz-transition: background 200ms; -o-transition: background 200ms; -webkit-transition: background 200ms; transition: background 200ms; color: #fff; font-size: 11px; }
 .slick-dots button:hover { background: #1262b2; }
+.gallery .slick-dots { position: relative; display: inline-block !important; margin-top: 42px; bottom: 0; left: 0; text-align: center; }
+.gallery .slick-dots li { margin: 0 16px; }
+.gallery .slick-dots li.slick-active button { background: #fff; }
+.gallery .slick-dots button { width: 8px; height: 8px; border: 1px solid #fff; background: transparent; font: 0/0 a; text-shadow: none; color: transparent; }
+.gallery .slick-dots button:hover { background: #fff; }
 
 .menu { position: absolute; top: 100%; left: 0; right: 0; height: 105px; margin-top: -140px; font-size: 0; overflow: hidden; -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; z-index: 10; }
 .menu.is-fixed { position: fixed; top: 0; height: 40px; margin: 0; background: #2c3941; }
@@ -163,7 +170,7 @@ picture { display: inline-block; vertical-align: middle; }
 .menu .menu__list:before, .menu .menu__list:after { content: ""; position: absolute; top: 29px; height: 0; border-top: 2px dotted #fff; -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; }
 .menu .menu__list:before { left: -1000px; right: 100%; margin-right: 1px; }
 .menu .menu__list:after { right: -1000px; left: 100%; margin-left: 1px; }
-.menu .menu__item { position: relative; display: inline-block; width: 16.66%; vertical-align: top; color: #FFF; overflow: hidden; }
+.menu .menu__item { position: relative; display: inline-block; width: 16.66%; vertical-align: top; overflow: hidden; }
 .menu .menu__item:before, .menu .menu__item:after { content: ""; position: absolute; top: 29px; height: 0; border-top: 2px dotted #fff; -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; }
 .menu .menu__item:before { left: 1px; right: 50%; margin-right: 50px; }
 .menu .menu__item:after { right: 1px; left: 50%; margin-left: 50px; }
@@ -186,11 +193,11 @@ picture { display: inline-block; vertical-align: middle; }
 .page .page__in { position: absolute; top: 80px; left: 0; right: 0; bottom: 40px; }
 .page > .center { position: relative; height: 100%; z-index: 4; }
 
-.about { position: absolute; top: 35px; right: 0; width: 300px; color: #fff; }
-.about .about__title, .about .about__title-sub { margin-bottom: 20px; }
-.about .about__title { margin-bottom: 20px; font-size: 30px; font-weight: 100; line-height: 1.2; }
-.about .about__title-sub { font-style: italic; }
-.about .about__text { margin-bottom: 25px; }
+.about { position: absolute; top: 35px; right: 0; width: 300px; }
+
+.content { margin-bottom: 25px; }
+.content h1, .content p { margin-bottom: 20px; }
+.content h1 { font-size: 30px; font-weight: 100; line-height: 1.2; }
 
 .product-pic { position: absolute; top: 50px; right: 350px; left: 0; bottom: 250px; text-align: center; font-size: 0; }
 .product-pic:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
@@ -206,7 +213,7 @@ picture { display: inline-block; vertical-align: middle; }
 .share .share__title { margin-right: 10px; font-style: italic; }
 .share .share__list a { display: inline-block; width: 16px; height: 16px; border-radius: 50%; background: #1262b2; vertical-align: top; text-align: center; font-size: 0; }
 .share .share__list a:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.share .share__list .icon { vertical-align: middle; color: #FFF; font-size: 9px; }
+.share .share__list .icon { vertical-align: middle; font-size: 9px; }
 
 .hr { margin-bottom: 25px; border: 1px solid #AFBDC7; border-width: 0 0 1px 0; overflow: hidden; }
 .hr:before, .hr:after { content: ""; width: 30px; height: 3px; background: #AFBDC7; }
@@ -214,5 +221,8 @@ picture { display: inline-block; vertical-align: middle; }
 .hr:after { float: right; }
 
 .scroll { position: absolute; bottom: 175px; left: 50%; width: 100px; margin-left: -50px; color: #b7c7d1; text-align: center; }
+.scroll.scroll_main { bottom: 0; color: #2c3941; }
 .scroll .scroll__title { margin-bottom: 5px; text-transform: uppercase; }
 .scroll .icon { font-size: 20px; }
+
+.content.content_top-left { position: absolute; }
