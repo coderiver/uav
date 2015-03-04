@@ -78,15 +78,10 @@ picture { display: inline-block; vertical-align: middle; }
 
 .sertificate { position: absolute; top: 60px; left: 230px; font-size: 11px; font-style: italic; color: #2c3941; }
 
-<<<<<<< HEAD
-.page1, .page2 { position: relative; height: 100%; background: green; font-size: 30px; color: white; text-align: center; font-size: 0; }
-.page1 img, .page2 img { max-width: 100%; }
-=======
-.btn { display: inline-block; height: 30px; padding: 7px 33px 0; border-radius: 15px; color: #fff; background: #1262b2; }
->>>>>>> f706ee8497cd29e0cf66370d19ca58229586ba65
+.btn { display: inline-block; height: 30px; padding: 7px 33px 0; border-radius: 15px; color: white; background: #1262b2; }
 
-.scrolldown { position: absolute; bottom: 42px; left: 50%; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); display: inline-block; text-transform: uppercase; color: #2c3941; }
-.scrolldown:before { content: ""; position: absolute; bottom: -22px; left: 50%; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); font-family: icomoon; color: #2c3941; font-size: 20px; }
+.scrolldown { position: absolute; bottom: 42px; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); display: inline-block; text-transform: uppercase; color: #2c3941; }
+.scrolldown:before { content: "\e60d"; position: absolute; bottom: -22px; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); font-family: icomoon; color: #2c3941; font-size: 20px; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
@@ -138,43 +133,39 @@ picture { display: inline-block; vertical-align: middle; }
 .slick-dots li { position: relative; display: inline-block; text-align: center; margin: 0 10px; }
 .slick-dots li.slick-active button { background: #1262b2; }
 .slick-dots li:before { display: none; }
-<<<<<<< HEAD
-.slick-dots button { display: block; width: 6px; height: 6px; background: white; -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); cursor: pointer; font: 0/0 a; text-shadow: none; color: transparent; border-radius: 50%; }
-.slick-dots button:hover { box-shadow: none; }
-=======
-.slick-dots button { display: block; width: 35px; height: 35px; background: #2c3941; border-radius: 50%; cursor: pointer; -moz-transition: background 200ms; -o-transition: background 200ms; -webkit-transition: background 200ms; transition: background 200ms; color: #fff; font-size: 11px; }
+.slick-dots button { display: block; width: 35px; height: 35px; background: #2c3941; border-radius: 50%; cursor: pointer; -webkit-transition: background 200ms; -moz-transition: background 200ms; -o-transition: background 200ms; transition: background 200ms; color: white; font-size: 11px; }
 .slick-dots button:hover { background: #1262b2; }
->>>>>>> f706ee8497cd29e0cf66370d19ca58229586ba65
 
-.menu { position: absolute; left: 0; right: 0; bottom: 40px; font-size: 0; overflow: hidden; z-index: 10; }
-.menu.is-fixed { position: fixed; top: 0; bottom: auto; height: 40px; background: #2c3941; }
+.menu { position: absolute; top: 100%; left: 0; right: 0; height: 105px; margin-top: -140px; font-size: 0; overflow: hidden; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; z-index: 10; }
+.menu.is-fixed { position: fixed; top: 0; height: 40px; margin: 0; background: #2c3941; }
 .menu.is-fixed .menu__list { padding-left: 34px; }
-.menu.is-fixed .menu__list:before { display: none; }
-.menu.is-fixed .menu__list:after { top: 11px; margin: 0; border-color: #566167; }
+.menu.is-fixed .menu__list:before, .menu.is-fixed .menu__list:after { top: 11px; margin: 0; border-color: #566167; }
 .menu.is-fixed .menu__item:before, .menu.is-fixed .menu__item:after { top: 11px; border-color: #566167; }
 .menu.is-fixed .menu__item:before { margin-right: 18px; }
 .menu.is-fixed .menu__item:after { margin-left: 18px; }
 .menu.is-fixed .menu__type { width: 12px; height: 12px; margin: -7px 0 3px; }
 .menu.is-fixed .menu__type .icon { font-size: 0; }
 .menu.is-fixed .menu__arr { margin-bottom: 3px; }
-.menu.is-fixed .menu__nav { display: block; }
-.menu .menu__list { position: relative; text-align: center; z-index: 2; }
-.menu .menu__list:before, .menu .menu__list:after { content: ""; position: absolute; top: 29px; height: 0; border-top: 2px dotted white; }
+.menu.is-fixed .menu__nav { opacity: 1; visibility: visible; }
+.menu .menu__list { position: relative; text-align: center; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; z-index: 2; }
+.menu .menu__list:before, .menu .menu__list:after { content: ""; position: absolute; top: 29px; height: 0; border-top: 2px dotted white; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; }
 .menu .menu__list:before { left: -1000px; right: 100%; margin-right: 1px; }
 .menu .menu__list:after { right: -1000px; left: 100%; margin-left: 1px; }
 .menu .menu__item { position: relative; display: inline-block; width: 16.66%; vertical-align: top; color: white; overflow: hidden; }
-.menu .menu__item:before, .menu .menu__item:after { content: ""; position: absolute; top: 29px; height: 0; border-top: 2px dotted white; }
+.menu .menu__item:before, .menu .menu__item:after { content: ""; position: absolute; top: 29px; height: 0; border-top: 2px dotted white; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; }
 .menu .menu__item:before { left: 1px; right: 50%; margin-right: 50px; }
 .menu .menu__item:after { right: 1px; left: 50%; margin-left: 50px; }
 .menu .menu__item:hover .menu__type { background: #1262b2; }
-.menu .menu__type { display: inline-block; width: 60px; height: 60px; margin-bottom: 10px; border: 1px solid white; border-radius: 50%; vertical-align: top; -webkit-transition: background 0.2s; -moz-transition: background 0.2s; -o-transition: background 0.2s; transition: background 0.2s; text-align: center; font-size: 0; }
+.menu .menu__type { display: inline-block; width: 60px; height: 60px; margin-bottom: 10px; border: 1px solid white; border-radius: 50%; vertical-align: top; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; text-align: center; font-size: 0; }
 .menu .menu__type:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.menu .menu__type .icon { vertical-align: middle; font-size: 25px; }
+.menu .menu__type .icon { vertical-align: middle; font-size: 25px; -webkit-transition: font-size 1s; -moz-transition: font-size 1s; -o-transition: font-size 1s; transition: font-size 1s; }
 .menu .menu__arr { margin-bottom: 10px; }
 .menu .menu__arr .icon { font-size: 10px; }
 .menu .menu__title { font-size: 11px; text-transform: uppercase; }
-.menu .menu__nav { display: none; position: absolute; top: 0; left: 0; background: white; z-index: 4; }
-.menu .menu__links { display: none; float: left; padding-left: 20px; }
-.menu .menu__links a { float: left; padding: 0 12px; line-height: 40px; text-transform: uppercase; color: #2d3a43; }
+.menu .menu__nav { position: absolute; top: 0; left: 0; background: white; opacity: 0; visibility: hidden; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; z-index: 4; }
+.menu .menu__links { float: left; width: 0; -webkit-transition: width 0.3s; -moz-transition: width 0.3s; -o-transition: width 0.3s; transition: width 0.3s; white-space: nowrap; }
+.menu .menu__links.is-show { width: 260px; }
+.menu .menu__links a { display: inline-block; padding: 0 12px; line-height: 40px; text-transform: uppercase; font-size: 11px; color: #2d3a43; vertical-align: top; }
+.menu .menu__links a:first-child { padding: 0 12px 0 32px; }
 .menu .menu__btn { float: left; width: 34px; height: 40px; background: white; font-size: 0; }
 .menu .menu__btn .icon { font-size: 12px; color: #2c3941; }
