@@ -13,7 +13,7 @@ head.ready(function() {
 	}
 	slick();
 
-	// ajax load
+	//ajax load
 	// var hash_var = document.location.hash;
 	// hash_var = hash_var.substr(1);
 
