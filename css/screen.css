@@ -169,3 +169,31 @@ picture { display: inline-block; vertical-align: middle; }
 .menu .menu__links a:first-child { padding: 0 12px 0 32px; }
 .menu .menu__btn { float: left; width: 34px; height: 40px; background: white; font-size: 0; }
 .menu .menu__btn .icon { font-size: 12px; color: #2c3941; }
+
+.prod { position: absolute; top: 80px; left: 0; right: 0; bottom: 40px; }
+.prod .prod__about { position: absolute; top: 35px; right: 0; width: 300px; color: white; }
+.prod .prod__title, .prod .prod__title-sub { margin-bottom: 20px; }
+.prod .prod__title { margin-bottom: 20px; font-size: 30px; font-weight: 100; line-height: 1.2; }
+.prod .prod__title-sub { font-style: italic; }
+.prod .prod__text { margin-bottom: 25px; }
+.prod .prod__pic { position: absolute; top: 50px; right: 350px; left: 0; bottom: 250px; text-align: center; font-size: 0; }
+.prod .prod__pic:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.prod .prod__pic img { max-width: 100%; max-height: 100%; vertical-align: middle; }
+.prod .center { position: relative; height: 100%; }
+
+.share-wrap { margin-bottom: 30px; *zoom: 1; }
+.share-wrap:after { content: " "; display: table; clear: both; }
+.share-wrap .share { float: left; margin-top: 2px; }
+.share-wrap .build-quote { float: right; }
+.share-wrap .build-quote span { font-weight: 600; }
+
+.share .share__title, .share .share__list { display: inline-block; vertical-align: middle; }
+.share .share__title { margin-right: 10px; font-style: italic; }
+.share .share__list a { display: inline-block; width: 16px; height: 16px; border-radius: 50%; background: #1262b2; vertical-align: top; text-align: center; font-size: 0; }
+.share .share__list a:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.share .share__list .icon { vertical-align: middle; color: white; font-size: 9px; }
+
+.hr { margin-bottom: 25px; border: 1px solid #afbdc7; border-width: 0 0 1px 0; overflow: hidden; }
+.hr:before, .hr:after { content: ""; width: 30px; height: 3px; background: #afbdc7; }
+.hr:before { float: left; }
+.hr:after { float: right; }
