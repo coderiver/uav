@@ -1,56 +1,10 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book", Arial, sans-serif 
-// insert pics into css
-// div
-// 	+pic("blabla.png")
-// span
-// 	+png(blabla)
-// p
-// 	+jpg(bla)
 
+// vars
 $blue: #1262b2
+$dark: #2c3941
 
 body
-	min-width: 1024px
+	min-height: 768px
 	background: #7C9EB5
 	+background-image(radial-gradient(#7C9EB5 0%, #4E6677 100%))
 	font-family: 'Roboto', Arial, sans-serif
@@ -59,36 +13,62 @@ body
 	line-height: 1.3
 a
 	text-decoration: none
+picture
+	display: inline-block
+	vertical-align: middle	
 .wrap
+	position: relative 
 	min-height: 100%
+	height: 100%
 	background: url(../img/patern.png)
 	+retina
 		background: url(../img/patern-retina.png)	
 
+//mixins
+=contain
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+
 // common blocks    
 .center
+	position: relative
 	max-width: 1500px
 	margin: 0 auto
+	+clr
 
-.page
+.container
+	position: relative
+	height: 100% 
+
+.img-wrap
 	position: relative
 	overflow: hidden
-	.page__bg
+	.img-wrap__bg
 		position: absolute
 		top: -1000px
 		left: 0
 		right: 0
 		bottom: -1000px
-		text-align: center
 		+vertical
 		overflow: hidden
 		img
 			width: 100%
 			height: auto
 			vertical-align: middle
-	.page__in
+	.img-wrap__in
 		height: 100vh
 		min-height: 768px
+
+.h1
+	margin-bottom: 10px
+	font-size: 30px
+	font-weight: 100
+	color: #fff
+	&.h1_dark
+		color: $dark
 
 .header
 	position: absolute
@@ -141,7 +121,7 @@ a
 	padding: 19px 0 0 42px 
 	margin-right: 74px 
 	background: #fff
-	box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.4) 
+	box-shadow: -4px 4px 4px -4px rgba(0, 0, 0, 0.4) 
 	&:before
 		content: ""
 		position: absolute
@@ -252,8 +232,13 @@ a
 		.icon
 			font-size: 12px
 			color: #2C3941  
-
-
+.sertificate
+	position: absolute
+	top: 60px
+	left: 230px
+	font-size: 11px
+	font-style: italic
+	color: #2c3941
 
 .page1, .page2
 	position: relative
