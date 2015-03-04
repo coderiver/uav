@@ -50,7 +50,7 @@ picture { display: inline-block; vertical-align: middle; }
 .h1.h1_dark { color: #2c3941; }
 
 .header { position: absolute; left: 0; right: 0; height: 40px; background: #2c3941; text-align: center; z-index: 10; }
-.header .build-quote { padding: 0 20px; }
+.header .build-quote { padding: 0 42px 0 20px; }
 .header .build-quote span { line-height: 40px; }
 
 .build-quote { float: right; font-size: 0; color: #FFF; }
@@ -90,12 +90,26 @@ picture { display: inline-block; vertical-align: middle; }
 .l .l-col2 { float: right; width: 70%; }
 
 .main { position: relative; height: 100%; }
+.main .center { padding: 0 42px; }
 .main .btn { position: absolute; bottom: 42px; right: 42px; }
 
 .slider { height: 100%; }
 .slider .slider__item { height: 100%; }
-.slider .slider__content { position: absolute; top: 0; right: 0; left: 0; bottom: 0; padding-top: 100px; }
+.slider .slider__content { padding: 100px 42px 0; position: absolute; top: 0; right: 0; left: 0; bottom: 0; }
 .slider .slider__content > div { max-width: 450px; }
+
+.our-prod { position: relative; height: 100%; padding-top: 100px; }
+.our-prod .center { padding: 0 42px; }
+.our-prod .our-prod__topper { *zoom: 1; margin-bottom: 38px; }
+.our-prod .our-prod__topper:after { content: " "; display: table; clear: both; }
+.our-prod .our-prod__topper .h1 { float: left; }
+.our-prod .our-prod__topper .btn { float: right; margin-top: 9px; }
+.our-prod .our-prod__content { *zoom: 1; }
+.our-prod .our-prod__content:after { content: " "; display: table; clear: both; }
+.our-prod .our-prod__gallery { float: left; width: 66%; }
+
+.gallery .gallery__item { font-size: 0; text-align: center; }
+.gallery .gallery__item img { max-width: 100%; }
 
 .slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 

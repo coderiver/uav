@@ -1,14 +1,29 @@
 head.ready(function() {
 
+	// main page slider
+	function slick(){
+		$('.js-slick').slick({
+			fade: true,
+			speed: 600,
+			dots: true,
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1
+		});
+	}
+	slick();
+
+	// ajax load
 	// var hash_var = document.location.hash;
 	// hash_var = hash_var.substr(1);
 
 	// if (hash_var == "") {
 	// 	$.ajax({
-	// 	  url: 'page1.html',
+	// 	  url: 'main.html',
 	// 	  cache: false,
 	// 	  success: function(html) { 
 	// 	  	$('.container').html(html).show(); 
+	// 	  	slick();
 	// 	  }
 	// 	});
 	// }
@@ -51,16 +66,8 @@ head.ready(function() {
 	// 	return false;
 	// });
 
-	// main page slider
 
-	$('.js-slick').slick({
-		fade: true,
-		speed: 600,
-		dots: true,
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1
-	});
+	
 
 
 });

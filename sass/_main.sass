@@ -2,6 +2,8 @@
 .main
 	position: relative
 	height: 100%
+	.center
+		padding: 0 42px
 	.btn
 		position: absolute
 		bottom: 42px
@@ -11,10 +13,38 @@
 	.slider__item
 		height: 100% 
 	.slider__content
-		+contain 	
-		padding-top: 100px
+		padding: 100px 42px 0 
+		+contain
 		& > div
 			max-width: 450px
+			
+// our products page
+.our-prod
+	+wrap
+	padding-top: 100px
+	.center
+		padding: 0 42px 
+	.our-prod__topper
+		+clr
+		margin-bottom: 38px
+		.h1
+			float: left
+		.btn
+			float: right
+			margin-top: 9px
+	.our-prod__content
+		+clr
+	.our-prod__gallery
+		float: left
+		width: 66%
+.gallery
+	.gallery__item
+		font-size: 0
+		text-align: center
+		img
+			max-width: 100%				 
+
+
 
 
 
