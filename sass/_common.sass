@@ -25,6 +25,9 @@ picture
 		background: url(../img/patern-retina.png)	
 
 //mixins
+=icon
+	font-family: icomoon
+	
 =contain
 	position: absolute
 	top: 0
@@ -175,19 +178,31 @@ picture
 	font-style: italic
 	color: #2c3941
 
-.page1, .page2
-	position: relative
-	height: 100%
-	background: green
-	font-size: 30px
+.btn
+	display: inline-block
+	height: 30px
+	padding: 7px 33px 0
+	border-radius: 15px
 	color: #fff
-	text-align: center
-	font-size: 0
-	img
-		max-width: 100% 	 
-.page2
-	background: darkred 
+	background: $blue  
 
+.scrolldown
+	position: absolute
+	bottom: 42px
+	left: 50%
+	+transform(translateX(-50%))
+	display: inline-block
+	text-transform: uppercase
+	color: $dark
+	&:before
+		content: "\e60d"
+		position: absolute
+		bottom: -22px
+		left: 50%
+		+transform(translateX(-50%))
+		+icon
+		color: $dark
+		font-size: 20px 
 
 
 
