@@ -1,21 +1,92 @@
 // styles for product pages
 .menu
     position: absolute
+    top: 100%
     left: 0
     right: 0
-    bottom: 40px
-    z-index: 10 
+    height: 105px
+    margin-top: -140px
+    font-size: 0
+    overflow: hidden
+    +tr(all 1s)
+    z-index: 10
+    &.is-fixed
+        position: fixed
+        top: 0
+        height: 40px
+        margin: 0
+        background: $dark 
+        .menu__list
+            padding-left: 34px
+            &:before,
+            &:after
+                top: 11px
+                margin: 0
+                border-color: #566167
+        .menu__item
+            &:before,
+            &:after
+                top: 11px
+                border-color: #566167
+            &:before
+                margin-right: 18px
+            &:after
+                margin-left: 18px 
+        .menu__type
+            width: 12px
+            height: 12px
+            margin: -7px 0 3px
+            .icon
+                font-size: 0
+        .menu__arr
+            margin-bottom: 3px
+        .menu__nav
+            opacity: 1
+            visibility: visible 
     .menu__list
-        display: table
-        width: 100%
-        padding-left: 34px
+        position: relative
         text-align: center
-        table-layout: fixed
+        +tr(all 1s)
+        z-index: 2 
+        &:before,
+        &:after
+            content: ""
+            position: absolute
+            top: 29px
+            height: 0
+            border-top: 2px dotted #fff
+            +tr(all 1s)
+        &:before
+            left: -1000px
+            right: 100%
+            margin-right: 1px
+        &:after
+            right: -1000px
+            left: 100%
+            margin-left: 1px 
     .menu__item
-        display: table-cell
+        position: relative
+        display: inline-block
         width: 16.66%
         vertical-align: top
         color: #FFF
+        overflow: hidden
+        &:before,
+        &:after
+            content: ""
+            position: absolute
+            top: 29px
+            height: 0
+            border-top: 2px dotted #fff
+            +tr(all 1s)
+        &:before
+            left: 1px
+            right: 50%
+            margin-right: 50px
+        &:after
+            right: 1px
+            left: 50%
+            margin-left: 50px 
         &:hover
             .menu__type
                 background: $blue 
@@ -23,17 +94,18 @@
         display: inline-block
         width: 60px
         height: 60px
-        margin-bottom: 5px
+        margin-bottom: 10px
         border: 1px solid #fff
         border-radius: 50%
         vertical-align: top
-        +tr(background .2s)
+        +tr(all 1s)
         +vertical
         .icon
             vertical-align: middle
             font-size: 25px
+            +tr(font-size 1s)
     .menu__arr
-        margin-bottom: 5px
+        margin-bottom: 10px
         .icon
             font-size: 10px
     .menu__title
@@ -43,17 +115,28 @@
         position: absolute
         top: 0
         left: 0
-        background: #FFF 
+        background: #FFF
+        opacity: 0
+        visibility: hidden
+        +tr(all 1s) 
+        z-index: 4  
     .menu__links
-        display: none
         float: left
-        padding-left: 20px
+        width: 0
+        +tr(width .3s)
+        white-space: nowrap
+        &.is-show
+            width: 260px
         a
-            float: left
+            display: inline-block
             padding: 0 12px
             line-height: 40px
             text-transform: uppercase
-            color: #2D3A43 
+            font-size: 11px
+            color: #2D3A43
+            vertical-align: top
+            &:first-child
+                padding: 0 12px 0 32px
     .menu__btn
         float: left
         width: 34px
@@ -63,3 +146,134 @@
         .icon
             font-size: 12px
             color: #2C3941
+            
+.prod
+    position: absolute
+    top: 80px
+    left: 0
+    right: 0
+    bottom: 40px
+    .prod__about
+        position: absolute
+        top: 35px
+        right: 0
+        width: 300px
+        color: #fff
+    .prod__title,
+    .prod__title-sub
+        margin-bottom: 20px
+    .prod__title
+        margin-bottom: 20px
+        font-size: 30px
+        font-weight: 100 
+        line-height: 1.2
+    .prod__title-sub
+        font-style: italic
+    .prod__text
+        margin-bottom: 25px
+    .prod__pic
+        position: absolute
+        top: 50px
+        right: 350px
+        left: 0
+        bottom: 250px
+        +vertical
+        img
+            max-width: 100%
+            max-height: 100%
+            vertical-align: middle
+    .center
+        position: relative
+        height: 100%
+
+.share-wrap
+    margin-bottom: 30px
+    +clr
+    .share
+        float: left
+        margin-top: 2px
+    .build-quote
+        float: right
+        span
+            font-weight: 600 
+
+.share
+    .share__title,
+    .share__list
+        display: inline-block
+        vertical-align: middle
+    .share__title
+        margin-right: 10px
+        font-style: italic
+    .share__list
+        a
+            display: inline-block
+            width: 16px
+            height: 16px
+            border-radius: 50%
+            background: $blue 
+            vertical-align: top
+            +vertical
+        .icon
+            vertical-align: middle
+            color: #FFF 
+            font-size: 9px
+    
+.hr
+    margin-bottom: 25px
+    border: 1px solid #AFBDC7
+    border-width: 0 0 1px 0
+    overflow: hidden
+    &:before,
+    &:after
+        content: ""
+        width: 30px
+        height: 3px
+        background: #AFBDC7
+    &:before
+        float: left
+    &:after
+        float: right
+
+.scroll
+    position: absolute
+    bottom: 175px
+    left: 50%
+    width: 100px
+    margin-left: -50px
+    color: #b7c7d1
+    text-align: center
+    .scroll__title
+        margin-bottom: 5px
+        text-transform: uppercase
+    .icon
+        font-size: 20px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
