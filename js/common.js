@@ -56,6 +56,7 @@ head.ready(function() {
 	$('.js-slick').slick({
 		fade: true,
 		speed: 600,
+		dots: true,
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1

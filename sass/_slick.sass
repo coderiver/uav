@@ -111,29 +111,29 @@
 	text-align: center
 	position: absolute
 	margin: 0
-	bottom: 0
-	left: 0
-	right: 0
+	bottom: 42px
+	left: 42px
 	li
 		position: relative
 		display: inline-block
-		padding: 0 3px 
+		text-align: center
+		margin: 0 10px  
 		&.slick-active
 			button
-				opacity: 0.3
-				box-shadow: none
+				background: $blue 
 		&:before
 			display: none 
 				 
 	button
 		display: block
-		width: 6px
-		height: 6px
-		background: #fff
-		+box-shadow(0 1px 5px rgba(0,0,0,.25))
+		width: 35px
+		height: 35px
+		background: $dark
+		border-radius: 50%
 		cursor: pointer
-		+hide-text
-		border-radius: 50% 
+		+tr(background 200ms)
+		color: #fff
+		font-size: 11px 
 		&:hover
-			box-shadow: none
+			background: $blue
 	
