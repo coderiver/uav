@@ -184,16 +184,19 @@ picture { display: inline-block; vertical-align: middle; }
 .menu .menu__btn { float: left; width: 34px; height: 40px; background: white; font-size: 0; }
 .menu .menu__btn .icon { font-size: 12px; color: #2c3941; }
 
-.prod { position: absolute; top: 80px; left: 0; right: 0; bottom: 40px; }
-.prod .prod__about { position: absolute; top: 35px; right: 0; width: 300px; color: white; }
-.prod .prod__title, .prod .prod__title-sub { margin-bottom: 20px; }
-.prod .prod__title { margin-bottom: 20px; font-size: 30px; font-weight: 100; line-height: 1.2; }
-.prod .prod__title-sub { font-style: italic; }
-.prod .prod__text { margin-bottom: 25px; }
-.prod .prod__pic { position: absolute; top: 50px; right: 350px; left: 0; bottom: 250px; text-align: center; font-size: 0; }
-.prod .prod__pic:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.prod .prod__pic img { max-width: 100%; max-height: 100%; vertical-align: middle; }
-.prod .center { position: relative; height: 100%; }
+.page { position: relative; height: 100%; padding: 0 40px; }
+.page .page__in { position: absolute; top: 80px; left: 0; right: 0; bottom: 40px; }
+.page > .center { position: relative; height: 100%; z-index: 4; }
+
+.about { position: absolute; top: 35px; right: 0; width: 300px; color: white; }
+.about .about__title, .about .about__title-sub { margin-bottom: 20px; }
+.about .about__title { margin-bottom: 20px; font-size: 30px; font-weight: 100; line-height: 1.2; }
+.about .about__title-sub { font-style: italic; }
+.about .about__text { margin-bottom: 25px; }
+
+.product-pic { position: absolute; top: 50px; right: 350px; left: 0; bottom: 250px; text-align: center; font-size: 0; }
+.product-pic:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.product-pic img { max-width: 100%; max-height: 100%; vertical-align: middle; }
 
 .share-wrap { margin-bottom: 30px; *zoom: 1; }
 .share-wrap:after { content: " "; display: table; clear: both; }
