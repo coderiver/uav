@@ -197,3 +197,7 @@ picture { display: inline-block; vertical-align: middle; }
 .hr:before, .hr:after { content: ""; width: 30px; height: 3px; background: #afbdc7; }
 .hr:before { float: left; }
 .hr:after { float: right; }
+
+.scroll { position: absolute; bottom: 175px; left: 50%; width: 100px; margin-left: -50px; color: #b7c7d1; text-align: center; }
+.scroll .scroll__title { margin-bottom: 5px; text-transform: uppercase; }
+.scroll .icon { font-size: 20px; }
