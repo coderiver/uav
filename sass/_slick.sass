@@ -89,6 +89,10 @@
 		outline: none
 	&.slick-disabled
 		opacity: 0.2
+	.gallery &
+		background: transparent
+		top: auto
+		bottom: 0 	
 .slick-prev
 	left: 42px
 	font-family: icomoon
@@ -135,5 +139,26 @@
 		color: #fff
 		font-size: 11px 
 		&:hover
-			background: $blue		
+			background: $blue
+	.gallery &
+		position: relative
+		display: inline-block!important
+		margin-top: 42px
+		bottom: 0
+		left: 0  
+		text-align: center
+		li
+			margin: 0 16px
+			&.slick-active
+				button
+					background: #fff
+		button
+			width: 8px
+			height: 8px
+			border: 1px solid #fff
+			background: transparent
+			+hide-text
+			&:hover
+				background: #fff    	
+
 	

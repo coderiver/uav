@@ -94,7 +94,7 @@ picture { display: inline-block; vertical-align: middle; }
 .slider .slider__content { padding: 100px 42px 0; position: absolute; top: 0; right: 0; left: 0; bottom: 0; }
 .slider .slider__content > div { max-width: 450px; }
 
-.our-prod { position: relative; height: 100%; padding-top: 100px; }
+.our-prod { position: relative; height: 100%; }
 .our-prod .center { padding: 0 42px; }
 .our-prod .our-prod__topper { *zoom: 1; margin-bottom: 38px; }
 .our-prod .our-prod__topper:after { content: " "; display: table; clear: both; }
@@ -104,7 +104,8 @@ picture { display: inline-block; vertical-align: middle; }
 .our-prod .our-prod__content:after { content: " "; display: table; clear: both; }
 .our-prod .our-prod__gallery { float: left; width: 66%; }
 
-.gallery .gallery__item { font-size: 0; text-align: center; }
+.gallery { text-align: center; }
+.gallery .gallery__item { font-size: 0; }
 .gallery .gallery__item img { max-width: 100%; }
 
 .slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
@@ -133,6 +134,7 @@ picture { display: inline-block; vertical-align: middle; }
 .slick-prev:hover, .slick-next:hover { background: #1262b2; }
 .slick-prev:focus, .slick-next:focus { outline: none; }
 .slick-prev.slick-disabled, .slick-next.slick-disabled { opacity: 0.2; }
+.gallery .slick-prev, .gallery .slick-next { background: transparent; top: auto; bottom: 0; }
 
 .slick-prev { left: 42px; font-family: icomoon; }
 .slick-prev:before { content: "\e602"; display: inline-block; vertical-align: middle; font-size: 12px; color: white; }
@@ -146,6 +148,11 @@ picture { display: inline-block; vertical-align: middle; }
 .slick-dots li:before { display: none; }
 .slick-dots button { display: block; width: 35px; height: 35px; background: #2c3941; border-radius: 50%; cursor: pointer; -webkit-transition: background 200ms; -moz-transition: background 200ms; -o-transition: background 200ms; transition: background 200ms; color: white; font-size: 11px; }
 .slick-dots button:hover { background: #1262b2; }
+.gallery .slick-dots { position: relative; display: inline-block !important; margin-top: 42px; bottom: 0; left: 0; text-align: center; }
+.gallery .slick-dots li { margin: 0 16px; }
+.gallery .slick-dots li.slick-active button { background: #fff; }
+.gallery .slick-dots button { width: 8px; height: 8px; border: 1px solid #fff; background: transparent; font: 0/0 a; text-shadow: none; color: transparent; }
+.gallery .slick-dots button:hover { background: #fff; }
 
 .menu { position: absolute; top: 100%; left: 0; right: 0; height: 105px; margin-top: -140px; font-size: 0; overflow: hidden; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; z-index: 10; }
 .menu.is-fixed { position: fixed; top: 0; height: 40px; margin: 0; background: #2c3941; }
@@ -163,7 +170,11 @@ picture { display: inline-block; vertical-align: middle; }
 .menu .menu__list:before { left: -1000px; right: 100%; margin-right: 1px; }
 .menu .menu__list:after { right: -1000px; left: 100%; margin-left: 1px; }
 .menu .menu__item { position: relative; display: inline-block; width: 16.66%; vertical-align: top; overflow: hidden; }
+<<<<<<< HEAD
 .menu .menu__item:before, .menu .menu__item:after { content: ""; position: absolute; top: 29px; height: 0; border-top: 2px dotted white; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; }
+=======
+.menu .menu__item:before, .menu .menu__item:after { content: ""; position: absolute; top: 29px; height: 0; border-top: 2px dotted #fff; -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; }
+>>>>>>> 3a47bac3c484e91c076e29d28a64862c72241de6
 .menu .menu__item:before { left: 1px; right: 50%; margin-right: 50px; }
 .menu .menu__item:after { right: 1px; left: 50%; margin-left: 50px; }
 .menu .menu__item:hover .menu__type { background: #1262b2; }
