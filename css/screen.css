@@ -77,22 +77,6 @@ picture { display: inline-block; vertical-align: middle; }
 .socials .socials__list .icon { font-size: 9px; color: #fff; vertical-align: middle; }
 .socials .socials__list .icon-social-fb { font-size: 11px; }
 
-.menu { position: absolute; left: 0; right: 0; bottom: 40px; z-index: 10; }
-.menu .menu__list { display: table; width: 100%; padding-left: 34px; text-align: center; table-layout: fixed; }
-.menu .menu__item { display: table-cell; width: 16.66%; vertical-align: top; color: #FFF; }
-.menu .menu__item:hover .menu__type { background: #1262b2; }
-.menu .menu__type { display: inline-block; width: 60px; height: 60px; margin-bottom: 5px; border: 1px solid #fff; border-radius: 50%; vertical-align: top; -moz-transition: background 0.2s; -o-transition: background 0.2s; -webkit-transition: background 0.2s; transition: background 0.2s; text-align: center; font-size: 0; }
-.menu .menu__type:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.menu .menu__type .icon { vertical-align: middle; font-size: 25px; }
-.menu .menu__arr { margin-bottom: 5px; }
-.menu .menu__arr .icon { font-size: 10px; }
-.menu .menu__title { font-size: 11px; text-transform: uppercase; }
-.menu .menu__nav { position: absolute; top: 0; left: 0; background: #FFF; }
-.menu .menu__links { display: none; float: left; padding-left: 20px; }
-.menu .menu__links a { float: left; padding: 0 12px; line-height: 40px; text-transform: uppercase; color: #2D3A43; }
-.menu .menu__btn { float: left; width: 34px; height: 40px; background: #FFF; font-size: 0; }
-.menu .menu__btn .icon { font-size: 12px; color: #2C3941; }
-
 .sertificate { position: absolute; top: 60px; left: 230px; font-size: 11px; font-style: italic; color: #2c3941; }
 
 .page1, .page2 { position: relative; height: 100%; background: green; font-size: 30px; color: #fff; text-align: center; font-size: 0; }
@@ -151,3 +135,19 @@ picture { display: inline-block; vertical-align: middle; }
 .slick-dots li:before { display: none; }
 .slick-dots button { display: block; width: 6px; height: 6px; background: #fff; -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); cursor: pointer; font: 0/0 a; text-shadow: none; color: transparent; border-radius: 50%; }
 .slick-dots button:hover { box-shadow: none; }
+
+.menu { position: absolute; left: 0; right: 0; bottom: 40px; z-index: 10; }
+.menu .menu__list { display: table; width: 100%; padding-left: 34px; text-align: center; table-layout: fixed; }
+.menu .menu__item { display: table-cell; width: 16.66%; vertical-align: top; color: #FFF; }
+.menu .menu__item:hover .menu__type { background: #1262b2; }
+.menu .menu__type { display: inline-block; width: 60px; height: 60px; margin-bottom: 5px; border: 1px solid #fff; border-radius: 50%; vertical-align: top; -moz-transition: background 0.2s; -o-transition: background 0.2s; -webkit-transition: background 0.2s; transition: background 0.2s; text-align: center; font-size: 0; }
+.menu .menu__type:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.menu .menu__type .icon { vertical-align: middle; font-size: 25px; }
+.menu .menu__arr { margin-bottom: 5px; }
+.menu .menu__arr .icon { font-size: 10px; }
+.menu .menu__title { font-size: 11px; text-transform: uppercase; }
+.menu .menu__nav { position: absolute; top: 0; left: 0; background: #FFF; }
+.menu .menu__links { display: none; float: left; padding-left: 20px; }
+.menu .menu__links a { float: left; padding: 0 12px; line-height: 40px; text-transform: uppercase; color: #2D3A43; }
+.menu .menu__btn { float: left; width: 34px; height: 40px; background: #FFF; font-size: 0; }
+.menu .menu__btn .icon { font-size: 12px; color: #2C3941; }
