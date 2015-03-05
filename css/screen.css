@@ -45,14 +45,16 @@ picture { display: inline-block; vertical-align: middle; }
 .img-wrap .img-wrap__bg img { width: 100%; height: auto; vertical-align: middle; }
 .img-wrap .img-wrap__in { height: 100vh; min-height: 768px; }
 
-.h1 { margin-bottom: 10px; font-size: 30px; font-weight: 100; color: white; }
-.h1.h1_dark { color: #2c3941; }
+.title { margin-bottom: 10px; font-size: 30px; font-weight: 100; color: white; }
+.title.title_dark { color: #2c3941; }
 
 .header { position: absolute; left: 0; right: 0; height: 40px; background: #2c3941; text-align: center; z-index: 10; }
-.header .build-quote { padding: 0 0 0 20px; }
+.header .build-quote { float: right; padding: 0 0 0 20px; }
 .header .build-quote span { line-height: 40px; }
 
-.build-quote { float: right; font-size: 0; color: white; }
+.build-quote { font-size: 0; color: white; }
+.build-quote.build-quote_bold { font-weight: 700; }
+.build-quote.build-quote_mb40 { margin-right: 40px; }
 .build-quote span, .build-quote .icon { display: inline-block; vertical-align: middle; }
 .build-quote span { margin-right: 15px; font-size: 12px; }
 .build-quote .icon { font-size: 20px; }
@@ -76,7 +78,8 @@ picture { display: inline-block; vertical-align: middle; }
 .socials .socials__list .icon { font-size: 9px; color: white; vertical-align: middle; }
 .socials .socials__list .icon-social-fb { font-size: 11px; }
 
-.sertificate { position: absolute; top: 60px; left: 230px; font-size: 11px; font-style: italic; color: #2c3941; }
+.sertificate { position: absolute; top: 60px; left: 270px; font-size: 11px; font-style: italic; color: white; }
+.sertificate.sertificate_main { color: #2c3941; }
 
 .btn { display: inline-block; height: 30px; padding: 7px 33px 0; border-radius: 15px; color: white; background: #1262b2; }
 
@@ -103,6 +106,7 @@ picture { display: inline-block; vertical-align: middle; }
 .our-prod .our-prod__content { *zoom: 1; }
 .our-prod .our-prod__content:after { content: " "; display: table; clear: both; }
 .our-prod .our-prod__gallery { float: left; width: 66%; }
+.our-prod .our-prod__info { float: right; width: 30%; }
 
 .gallery { text-align: center; }
 .gallery .gallery__item { font-size: 0; }

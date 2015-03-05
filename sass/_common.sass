@@ -71,12 +71,12 @@ picture
 		height: 100vh
 		min-height: 768px
 
-.h1
+.title
 	margin-bottom: 10px
 	font-size: 30px
 	font-weight: 100
 	color: #fff
-	&.h1_dark
+	&.title_dark
 		color: $dark
 
 .header
@@ -88,14 +88,18 @@ picture
 	text-align: center
 	z-index: 10
 	.build-quote
+		float: right
 		padding: 0 0 0 20px
 		span
 			line-height: 40px
 	
 .build-quote
-	float: right
 	font-size: 0
-	color: #FFF 
+	color: #FFF
+	&.build-quote_bold
+		font-weight: 700
+	&.build-quote_mb40
+		margin-right: 40px	
 	span,
 	.icon
 		display: inline-block
@@ -105,6 +109,7 @@ picture
 		font-size: 12px
 	.icon
 		font-size: 20px
+		
 
 .nav
 	float: right
@@ -179,10 +184,12 @@ picture
 .sertificate
 	position: absolute
 	top: 60px
-	left: 230px
+	left: 270px
 	font-size: 11px
 	font-style: italic
-	color: #2c3941
+	color: #fff
+	&.sertificate_main
+		color: #2c3941
 
 .btn
 	display: inline-block
