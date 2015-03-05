@@ -203,7 +203,25 @@ picture
 	padding: 7px 33px 0
 	border-radius: 15px
 	color: #fff
-	background: $blue  
+	background: $blue
+	
+// form
+.input
+	display: inline-block
+	height: 30px
+	width: 100%
+	border-radius: 15px
+	border: 1px solid #fff
+	padding: 0 15px
+	background: transparent
+	font-family: 'Roboto', Arial, sans-serif
+	font-weight: 300
+	color: #fff
+	+placeholder
+		color: #fff
+	&:focus
+		+placeholder
+			font-size: 0	 
 
 
 
