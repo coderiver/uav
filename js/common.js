@@ -13,6 +13,19 @@ head.ready(function() {
 	}
 	slick();
 
+	function gallery(){
+		$('.js-gallery').slick({
+			fade: true,
+			speed: 600,
+			dots: true,
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1
+		});
+	}
+	gallery();
+	$('.gallery .slick-prev, .gallery .slick-next, .gallery .slick-dots').wrapAll('<div class="slick-controls">');
+
 	//ajax load
 	// var hash_var = document.location.hash;
 	// hash_var = hash_var.substr(1);
