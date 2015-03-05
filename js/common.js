@@ -26,6 +26,13 @@ head.ready(function() {
 	gallery();
 	$('.gallery .slick-prev, .gallery .slick-next, .gallery .slick-dots').wrapAll('<div class="slick-controls">');
 
+	// $('.js-slick-2').slick({
+	// 	speed: 600,
+	// 	infinite: true,
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1
+	// });
+
 	//ajax load
 	// var hash_var = document.location.hash;
 	// hash_var = hash_var.substr(1);
