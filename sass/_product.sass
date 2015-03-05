@@ -294,7 +294,65 @@
     .icon-more-download
         font-size: 20px
 
+.links
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    text-align: center
+    .links__row
+        margin-top: 5px
+        a
+            position: relative
+            margin-left: 22px
+            +tr(color .2s)
+            &:before
+                content: ""
+                position: absolute
+                top: 4px
+                left: -14px
+                width: 6px
+                height: 6px
+                background: $blue 
+                border-radius: 50%
+            &:hover
+                text-decoration: underline
+            &:first-child
+                margin: 0
+                &:before
+                    display: none
 
+.el
+    position: absolute
+    top: 140px
+    left: 0
+    right: 0
+    bottom: 140px
+    text-align: center
+    .el__pic
+        position: relative
+        display: inline-block
+        height: 100%
+        img
+            max-height: 100%
+    .el__item
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 4 
+    .el__plus
+        width: 18px
+        height: 18px
+        background: #fff
+        border: 1px solid $blue
+        border-radius: 50% 
+        color: $blue
+        +vertical
+        cursor: pointer
+        .icon
+            font-size: 10px
+            vertical-align: middle
+        
 
 
 
