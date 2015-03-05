@@ -1,0 +1,67 @@
+// footer
+.footer
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 5
+    .footer__content
+        padding: 30px 0
+        background: $dark
+    .footer__nav
+        float: left
+        width: 66%
+        +clr
+    .footer__right
+        float: right
+        width: 30%
+        .socials
+            float: right     
+    .footer__list
+        float: left
+        width: 50%
+        & > li
+            position: relative
+            margin-bottom: 3px
+            padding-left: 13px
+            &:before
+                content: ""
+                position: absolute
+                top: 50%
+                left: 0
+                width: 5px
+                height: 5px
+                margin-top: -2px 
+                border-radius: 50%
+                background: $blue
+            a
+                &:hover
+                    text-decoration: underline              
+    .footer__bottom
+        height: 50px
+        background: #303d45
+        font-size: 10px
+        .copyrights
+            float: left
+            padding-top: 18px
+        .design
+            float: right
+            padding-top: 18px
+            .icon
+                display: inline-block
+                vertical-align: middle
+                margin-left: 9px
+                color: $blue
+                font-size: 21px    
+.sign-in
+    +clr
+    margin-bottom: 19px
+    font-size: 0
+    .sign-in__right
+        float: right
+        width: 60px
+        .btn
+            padding: 0 10px 0
+    .sign-in__left
+        overflow: hidden
+        padding-right: 20px             

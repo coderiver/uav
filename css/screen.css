@@ -53,11 +53,7 @@ picture { display: inline-block; vertical-align: middle; }
 .header .build-quote { float: right; padding: 0 0 0 20px; }
 .header .build-quote span { line-height: 40px; }
 
-<<<<<<< HEAD
-.build-quote { display: block; font-size: 0; color: white; }
-=======
 .build-quote { display: block; font-size: 0; color: #FFF; }
->>>>>>> aba8a1e323ff7fbc99fe523034b75901d247a213
 .build-quote.build-quote_bold { font-weight: 700; }
 .build-quote.build-quote_mb40 { margin-bottom: 40px; }
 .build-quote span, .build-quote .icon { display: inline-block; vertical-align: middle; }
@@ -87,6 +83,18 @@ picture { display: inline-block; vertical-align: middle; }
 .sertificate.sertificate_main { color: #2c3941; }
 
 .btn { display: inline-block; height: 30px; padding: 7px 33px 0; border-radius: 15px; color: #fff; background: #1262b2; }
+
+.input { display: inline-block; height: 30px; width: 100%; border-radius: 15px; border: 1px solid #fff; padding: 0 15px; background: transparent; font-family: "Roboto", Arial, sans-serif; font-weight: 300; color: #fff; }
+.input:-ms-input-placeholder { color: #fff; }
+.input:-moz-placeholder { color: #fff; }
+.input::-moz-placeholder { color: #fff; }
+.input::-webkit-input-placeholder { color: #fff; }
+.input::placeholder { color: #fff; }
+.input:focus:-ms-input-placeholder { font-size: 0; }
+.input:focus:-moz-placeholder { font-size: 0; }
+.input:focus::-moz-placeholder { font-size: 0; }
+.input:focus::-webkit-input-placeholder { font-size: 0; }
+.input:focus::placeholder { font-size: 0; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
@@ -276,7 +284,7 @@ picture { display: inline-block; vertical-align: middle; }
 
 .links { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; }
 .links .links__row { margin-top: 5px; }
-.links .links__row a { position: relative; margin-left: 22px; -webkit-transition: color 0.2s; -moz-transition: color 0.2s; -o-transition: color 0.2s; transition: color 0.2s; }
+.links .links__row a { position: relative; margin-left: 22px; -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
 .links .links__row a:before { content: ""; position: absolute; top: 4px; left: -14px; width: 6px; height: 6px; background: #1262b2; border-radius: 50%; }
 .links .links__row a:hover { text-decoration: underline; }
 .links .links__row a:first-child { margin: 0; }
@@ -286,6 +294,27 @@ picture { display: inline-block; vertical-align: middle; }
 .el .el__pic { position: relative; display: inline-block; height: 100%; }
 .el .el__pic img { max-height: 100%; }
 .el .el__item { position: absolute; top: 0; left: 0; z-index: 4; }
-.el .el__plus { width: 18px; height: 18px; background: white; border: 1px solid #1262b2; border-radius: 50%; color: #1262b2; text-align: center; font-size: 0; cursor: pointer; }
+.el .el__plus { width: 18px; height: 18px; background: #fff; border: 1px solid #1262b2; border-radius: 50%; color: #1262b2; text-align: center; font-size: 0; cursor: pointer; }
 .el .el__plus:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .el .el__plus .icon { font-size: 10px; vertical-align: middle; }
+
+.footer { position: absolute; bottom: 0; left: 0; right: 0; z-index: 5; }
+.footer .footer__content { padding: 30px 0; background: #2c3941; }
+.footer .footer__nav { float: left; width: 66%; *zoom: 1; }
+.footer .footer__nav:after { content: " "; display: table; clear: both; }
+.footer .footer__right { float: right; width: 30%; }
+.footer .footer__right .socials { float: right; }
+.footer .footer__list { float: left; width: 50%; }
+.footer .footer__list > li { position: relative; margin-bottom: 3px; padding-left: 13px; }
+.footer .footer__list > li:before { content: ""; position: absolute; top: 50%; left: 0; width: 5px; height: 5px; margin-top: -2px; border-radius: 50%; background: #1262b2; }
+.footer .footer__list > li a:hover { text-decoration: underline; }
+.footer .footer__bottom { height: 50px; background: #303d45; font-size: 10px; }
+.footer .footer__bottom .copyrights { float: left; padding-top: 18px; }
+.footer .footer__bottom .design { float: right; padding-top: 18px; }
+.footer .footer__bottom .design .icon { display: inline-block; vertical-align: middle; margin-left: 9px; color: #1262b2; font-size: 21px; }
+
+.sign-in { *zoom: 1; margin-bottom: 19px; font-size: 0; }
+.sign-in:after { content: " "; display: table; clear: both; }
+.sign-in .sign-in__right { float: right; width: 60px; }
+.sign-in .sign-in__right .btn { padding: 0 10px 0; }
+.sign-in .sign-in__left { overflow: hidden; padding-right: 20px; }
