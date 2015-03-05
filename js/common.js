@@ -26,12 +26,12 @@ head.ready(function() {
 	gallery();
 	$('.gallery .slick-prev, .gallery .slick-next, .gallery .slick-dots').wrapAll('<div class="slick-controls">');
 
-	// $('.js-slick-2').slick({
-	// 	speed: 600,
-	// 	infinite: true,
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1
-	// });
+	$('.js-slick-2').slick({
+		speed: 600,
+		infinite: true,
+		slidesToShow: 6,
+		slidesToScroll: 1
+	});
 
 	//ajax load
 	// var hash_var = document.location.hash;
