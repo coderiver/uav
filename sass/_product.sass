@@ -175,7 +175,7 @@
 
 .content
     margin-bottom: 25px
-    h1, p
+    h1, >div
         margin-bottom: 20px
     h1
         font-size: 30px
@@ -202,8 +202,6 @@
         margin-top: 2px
     .build-quote
         float: right
-        span
-            font-weight: 600 
 
 .share
     .share__title,
@@ -263,8 +261,36 @@
     &.content_top-left
         position: absolute
 
-
-
+.actions
+    text-align: right
+    .actions__item
+        margin-bottom: 15px
+    .actions__link
+        display: inline-block
+        max-width: 60px
+        vertical-align: top
+        text-align: center
+        &:hover
+            .actions__ico
+                background: $blue
+            .actions__title
+                text-decoration: underline
+    .actions__ico
+        display: inline-block
+        width: 35px
+        height: 35px
+        margin-bottom: 5px
+        background: $dark
+        border-radius: 50%
+        vertical-align: top
+        +tr(background .2s)
+        +vertical
+    .icon
+        vertical-align: middle
+    .icon-more-play
+        font-size: 20px
+    .icon-more-download
+        font-size: 20px
 
 
 
