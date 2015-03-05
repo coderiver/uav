@@ -168,10 +168,18 @@
     &.block_top-left
         top: 0
         left: 0
+    &.block_bottom-right
+        bottom: 0
+        right: 0
+    &.block_bottom-left
+        bottom: 0
+        left: 0
     &.block_w220
         width: 220px
     &.block_w300
         width: 300px
+    &.block_w500
+        width: 500px
 
 .content
     margin-bottom: 25px
@@ -402,10 +410,92 @@
         .icon
             font-size: 10px
 
+.info
+    +clr
+    .info__col,
+    .info__ico
+        float: left
+    .info__ico
+        margin: -2px 20px 0 0
+    .info__col_border
+        margin-left: 20px
+        padding-left: 20px
+        border-left: 1px solid #4a5f6f
+    .info__title
+        margin-bottom: 20px
+        font-size: 14px
+    .info__size
+        li
+            position: relative
+            margin-bottom: 20px
+            padding-left: 13px
+            &:first-child
+                &:after
+                    display: none
+            &:before,
+            &:after
+                content: ""
+                position: absolute
+            &:before
+                top: 4px
+                left: -4px
+                width: 7px
+                height: 7px
+                background: $dark
+                border-radius: 50% 
+            &:after
+                bottom: 8px
+                left: -1px
+                width: 1px
+                height: 38px
+                background: $dark 
+        span
+            display: inline-block
+            width: 17px
+            font-weight: 700
+    .info__weight
+        font-size: 24px
+        font-weight: 100 
+        line-height: 1
+        span
+            padding-right: 10px
+            font-size: 36px
 
+.options
+    .options__title
+        margin-bottom: 25px 
+        font-size: 14px
+        font-style: italic
 
+.btns
+    display: inline-block
+    border-radius: 15px
+    font-size: 0
+    vertical-align: top
+    overflow: hidden
+    & + .btns
+        margin-left: 15px
+    .btn
+        border-radius: 0
+        background: $dark 
+        font-size: 12px
+        &:hover
+            text-decoration: underline
+        &.is-active
+            background: $blue
+            text-decoration: none 
+            cursor: default
 
-
+.disclaimer
+    position: relative
+    .disclaimer__title
+        margin-bottom: 8px 
+        font-size: 14px
+        font-style: italic
+    img
+        position: absolute
+        top: 2px
+        left: -20px
 
 
 
