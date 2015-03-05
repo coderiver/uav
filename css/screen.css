@@ -201,8 +201,9 @@ picture { display: inline-block; vertical-align: middle; }
 .block.block_w300 { width: 300px; }
 
 .content { margin-bottom: 25px; }
-.content h1, .content > div { margin-bottom: 20px; }
-.content h1 { font-size: 30px; font-weight: 100; line-height: 1.2; }
+.content .content__title { margin-bottom: 20px; font-size: 30px; font-weight: 100; line-height: 1.2; }
+.content .content__italic { margin-bottom: 20px; font-style: italic; }
+.content .content__text > div { margin-bottom: 20px; }
 
 .product-pic { position: absolute; top: 50px; right: 350px; left: 0; bottom: 250px; text-align: center; font-size: 0; }
 .product-pic:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
@@ -211,7 +212,7 @@ picture { display: inline-block; vertical-align: middle; }
 .share-wrap { margin-bottom: 30px; *zoom: 1; }
 .share-wrap:after { content: " "; display: table; clear: both; }
 .share-wrap .share { float: left; margin-top: 2px; }
-.share-wrap .build-quote { float: right; }
+.share-wrap .build-quote, .share-wrap .btn { float: right; }
 
 .share .share__title, .share .share__list { display: inline-block; vertical-align: middle; }
 .share .share__title { margin-right: 10px; font-style: italic; }
@@ -228,8 +229,6 @@ picture { display: inline-block; vertical-align: middle; }
 .scroll.scroll_main { bottom: 0; color: #2c3941; }
 .scroll .scroll__title { margin-bottom: 5px; text-transform: uppercase; }
 .scroll .icon { font-size: 20px; }
-
-.content.content_top-left { position: absolute; }
 
 .actions { text-align: right; }
 .actions .actions__item { margin-bottom: 15px; }
