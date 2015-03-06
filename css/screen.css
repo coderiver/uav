@@ -90,6 +90,7 @@ picture { display: inline-block; vertical-align: middle; }
 .page__bg { position: absolute; left: 0; top: 50%; -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 .page__bg img { width: 100%; }
 .page__bg.leftside-bg { top: 45%; width: 70%; }
+.page__bg.fullsize-bg { top: 0; right: 0; bottom: 0; -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); }
 
 .form { position: relative; }
 .form .form__row { margin-bottom: 20px; *zoom: 1; }
@@ -279,6 +280,7 @@ picture { display: inline-block; vertical-align: middle; }
 .block.block_w220 { width: 220px; }
 .block.block_w300 { width: 300px; }
 .block.block_w500 { width: 500px; }
+.block.block_dark { color: #2c3941; }
 
 .content { margin-bottom: 25px; }
 .content .content__title { margin-bottom: 20px; font-size: 30px; font-weight: 100; line-height: 1.2; }
