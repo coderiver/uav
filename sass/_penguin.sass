@@ -1,15 +1,134 @@
 // styles for penguin pages
+.page
+	&.page_dark
+		.build-quote
+			span, i
+				color: $dark
+		.actions
+			a
+				color: $dark
+			i
+				color: #fff
+		.options
+			color: $dark
+		.drag-slider
+			.drag-slider__title, .drag-slider__value
+				color: $dark
+		.info, 
+		.speed__title, 
+		.speed__market, 
+		.speed__value
+			color: $dark
+		.speed__market
+			&:before
+				background: $dark 
 .advice
-    +clr
-    .advice__left
-        float: left
-        width: 60%
-        padding-top: 10px
-        & > div
-            margin-bottom: 7px 
-    .advice__right
-        float: right
-        width: 40%
-        font-size: 0
-        img
-            width: 100%     
+	+clr
+	.advice__left
+		float: left
+		width: 60%
+		padding-top: 10px
+		& > div
+			margin-bottom: 7px 
+	.advice__right
+		float: right
+		width: 40%
+		font-size: 0
+		img
+			width: 100%
+.drag-slider
+	.drag-slider__title
+		margin-bottom: 12px
+		font-size: 14px
+		color: #fff
+		font-style: italic
+	.drag-slider__item
+		padding: 7px	
+	.drag-slider__body
+		position: relative
+		height: 1px
+		margin-bottom: 10px
+		background: $dark
+		&:before, &:after
+			content: ""
+			position: absolute
+			top: -3px
+			left: -7px
+			width: 7px
+			height: 7px
+			border-radius: 50%
+			background: $dark
+		&:after
+			left: auto
+			right: -7px	 
+	.drag-slider__handle
+		position: absolute
+		top: -6px
+		height: 13px
+		width: 25px
+		padding: 3px 0 
+		border-radius: 5px
+		background: $dark
+		text-align: center
+		cursor: pointer  		  				
+		span
+			display: inline-block
+			vertical-align: top
+			height: 7px
+			width: 1px 
+			margin: 0 1px
+			background: #fff
+	.drag-slider__value
+		text-align: center
+		font-size: 14px
+		color: #fff
+		font-style: italic
+.speed
+	position: relative
+	padding: 37px 0 
+	.speed__line
+		position: relative
+		height: 1px
+		background: $dark
+		&:before, &:after
+			content: ""
+			position: absolute
+			top: -3px
+			left: -7px
+			width: 7px
+			height: 7px
+			border-radius: 50%
+			background: $dark
+		&:after
+			left: auto
+			right: -7px
+	.speed__item
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		text-align: center
+		&.speed__item_center
+			left: 50%
+			+transform(translateX(-50%))
+		&.speed__item_right
+			left: auto
+			right: 0					
+	.speed__title
+		font-size: 14px
+		font-style: italic
+		margin-bottom: 42px
+	.speed__market
+		position: absolute
+		top: 20px
+		left: 50%
+		+transform(translateX(-50%)) 
+		height: 100%
+		&:before
+			content: ""
+			position: absolute
+			top: 14px
+			left: 50%
+			width: 1px
+			height: 7px
+			background: #fff   		

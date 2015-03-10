@@ -277,11 +277,10 @@ picture { display: inline-block; vertical-align: middle; }
 .block.block_top-left { top: 0; left: 0; }
 .block.block_bottom-right { bottom: 0; right: 0; }
 .block.block_bottom-left { bottom: 0; left: 0; }
-.block.block_top-center { top: 0; left: 50%; }
+.block.block_top-center { top: 0; left: 50%; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); }
 .block.block_w220 { width: 220px; }
 .block.block_w300 { width: 300px; }
 .block.block_w500 { width: 500px; }
-.block.block_dark { color: #2c3941; }
 
 .content { margin-bottom: 25px; }
 .content .content__title { margin-bottom: 20px; font-size: 30px; font-weight: 100; line-height: 1.2; }
@@ -372,6 +371,10 @@ picture { display: inline-block; vertical-align: middle; }
 .info .info__weight { font-size: 24px; font-weight: 100; line-height: 1; }
 .info .info__weight span { padding-right: 10px; font-size: 36px; }
 
+.options { *zoom: 1; }
+.options:after { content: " "; display: table; clear: both; }
+.options .options__col { float: left; margin-left: 20px; }
+.options .options__col:first-child { margin-left: 0; }
 .options .options__title { margin-bottom: 25px; font-size: 14px; font-style: italic; }
 
 .btns { display: inline-block; border-radius: 15px; font-size: 0; vertical-align: top; overflow: hidden; }
@@ -419,9 +422,37 @@ picture { display: inline-block; vertical-align: middle; }
 .sign-in .sign-in__right .btn { padding: 0 10px 0; }
 .sign-in .sign-in__left { overflow: hidden; padding-right: 20px; }
 
+.page.page_dark .build-quote span, .page.page_dark .build-quote i { color: #2c3941; }
+.page.page_dark .actions a { color: #2c3941; }
+.page.page_dark .actions i { color: #fff; }
+.page.page_dark .options { color: #2c3941; }
+.page.page_dark .drag-slider .drag-slider__title, .page.page_dark .drag-slider .drag-slider__value { color: #2c3941; }
+.page.page_dark .info, .page.page_dark .speed__title, .page.page_dark .speed__market, .page.page_dark .speed__value { color: #2c3941; }
+.page.page_dark .speed__market:before { background: #2c3941; }
+
 .advice { *zoom: 1; }
 .advice:after { content: " "; display: table; clear: both; }
 .advice .advice__left { float: left; width: 60%; padding-top: 10px; }
 .advice .advice__left > div { margin-bottom: 7px; }
 .advice .advice__right { float: right; width: 40%; font-size: 0; }
 .advice .advice__right img { width: 100%; }
+
+.drag-slider .drag-slider__title { margin-bottom: 12px; font-size: 14px; color: #fff; font-style: italic; }
+.drag-slider .drag-slider__item { padding: 7px; }
+.drag-slider .drag-slider__body { position: relative; height: 1px; margin-bottom: 10px; background: #2c3941; }
+.drag-slider .drag-slider__body:before, .drag-slider .drag-slider__body:after { content: ""; position: absolute; top: -3px; left: -7px; width: 7px; height: 7px; border-radius: 50%; background: #2c3941; }
+.drag-slider .drag-slider__body:after { left: auto; right: -7px; }
+.drag-slider .drag-slider__handle { position: absolute; top: -6px; height: 13px; width: 25px; padding: 3px 0; border-radius: 5px; background: #2c3941; text-align: center; cursor: pointer; }
+.drag-slider .drag-slider__handle span { display: inline-block; vertical-align: top; height: 7px; width: 1px; margin: 0 1px; background: #fff; }
+.drag-slider .drag-slider__value { text-align: center; font-size: 14px; color: #fff; font-style: italic; }
+
+.speed { position: relative; padding: 37px 0; }
+.speed .speed__line { position: relative; height: 1px; background: #2c3941; }
+.speed .speed__line:before, .speed .speed__line:after { content: ""; position: absolute; top: -3px; left: -7px; width: 7px; height: 7px; border-radius: 50%; background: #2c3941; }
+.speed .speed__line:after { left: auto; right: -7px; }
+.speed .speed__item { position: absolute; top: 0; bottom: 0; left: 0; text-align: center; }
+.speed .speed__item.speed__item_center { left: 50%; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+.speed .speed__item.speed__item_right { left: auto; right: 0; }
+.speed .speed__title { font-size: 14px; font-style: italic; margin-bottom: 42px; }
+.speed .speed__market { position: absolute; top: 20px; left: 50%; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); height: 100%; }
+.speed .speed__market:before { content: ""; position: absolute; top: 14px; left: 50%; width: 1px; height: 7px; background: #fff; }
