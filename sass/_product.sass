@@ -162,6 +162,7 @@
 
 .block
     position: absolute
+    z-index: 6 
     &.block_top-right
         top: 0
         right: 0
@@ -421,9 +422,12 @@
     .info__ico
         float: left
     .info__ico
-        margin: -2px 20px 0 0
-    .info__col_border
+        margin-top: -2px 
+        .icon
+            font-size: 20px
+    .info__col
         margin-left: 20px
+    .info__col_border
         padding-left: 20px
         border-left: 1px solid #4a5f6f
     .info__title
@@ -497,10 +501,11 @@
         margin-bottom: 8px 
         font-size: 14px
         font-style: italic
-    img
+    .icon
         position: absolute
         top: 2px
         left: -20px
+        font-size: 13px
 
 .size
     a, span
@@ -532,10 +537,28 @@
 
 .catapult
     position: absolute
-    top: 160px
+    top: 50%
     left: 0
     right: 0
-    bottom: 280px 
+    height: 460px
+    margin-top: -230px 
+    .catapult__man,
+    .catapult__el
+        position: absolute
+        left: 0
+        right: 0
+        text-align: center
+    .catapult__man
+        top: 0
+        img
+            height: 385px 
+    .catapult__el
+        bottom: 0
+    .catapult__el_1
+        padding-right: 70px
+        img
+            height: 325px
+
 
 
 
