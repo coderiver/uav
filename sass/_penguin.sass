@@ -134,21 +134,21 @@
 			background: #fff
 .dimensions
 	+clr
-	&__item
+	.dimensions__item
 		float: left
 		width: 120px
 		text-align: center
 		border-right: 1px solid #475c6a
 		&:first-child
 			border-left: 1px solid #475C6A
-	&__title
+	.dimensions__title
 		text-transform: uppercase
 		font-size: 11px
-	&__arr
+	.dimensions__arr
 		padding: 5px 0
-	&__bottom
+	.dimensions__bottom
 		font-size: 12px
-	&__value
+	.dimensions__value
 		font-size: 36px
 		font-weight: 100
 		line-height: 1
@@ -160,4 +160,93 @@
 		position: absolute
 		top: -4px
 		right: -4px
-		font-size: 8px 			   				 
+		font-size: 8px
+.text-wrap
+	margin-top: 40px
+	width: 220px
+	padding: 20px
+	background: rgba(#000, 0.5)
+	color: #fff
+	font-size: 12px     		 			   				 
+	.title
+		color: #fff
+	.page_dark &
+		background: rgba(#fff, 0.5)
+		color: $dark
+		.title
+			color: $dark	
+.round-menu
+	+clr
+	&.round-menu_big
+		margin-top: 30px
+		.round-menu__item
+			&:before
+				display: none
+		.round-menu__link
+			width: 100px
+			height: 100px
+		.round-menu__content
+			height: 100px	 		
+	.round-menu__item
+		position: relative 
+		float: left
+		margin-left: 20px
+		&:before
+			content: "\e601"
+			position: absolute
+			top: -20px
+			left: 50%
+			+icon
+			opacity: 0
+			+tr(opacity 200ms)
+			+transform(translateX(-50%))
+			color: #fff
+		&:hover
+			&:before
+				opacity: 1
+		&:first-child
+			margin-left: 0
+	.round-menu__link
+		position: relative
+		display: block
+		width: 80px
+		height: 80px
+		border-radius: 50%
+		border: 1px solid #fff
+		overflow: hidden
+		+gpu
+		&:hover
+			.round-menu__img
+				picture
+					opacity: 1 
+			.round-menu__content
+				opacity: 0 
+	.round-menu__img
+		position: absolute
+		top: -500px
+		bottom: -500px
+		left: -500px
+		right: -500px
+		font-size: 0
+		+vertical
+		background: #000
+		z-index: 1
+		picture
+			opacity: 0.6 
+			+tr(opacity 200ms)
+		img
+			display: inline-block
+			vertical-align: middle
+			border-radius: 50%
+	.round-menu__content
+		position: relative
+		height: 80px
+		padding: 0 10px  
+		line-height: 1.4  
+		+tr(opacity 200ms)
+		+vertical 
+		z-index: 2
+		span
+			display: inline-block
+			vertical-align: middle
+			font-size: 11px		 		
