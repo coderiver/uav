@@ -287,6 +287,8 @@ picture { display: inline-block; vertical-align: middle; }
 .content .content__title { margin-bottom: 20px; font-size: 30px; font-weight: 100; line-height: 1.2; }
 .content .content__italic { margin-bottom: 20px; font-style: italic; }
 .content .content__text > div { margin-bottom: 20px; }
+.content.content_w270 { width: 270px; margin-top: 35px; }
+.content.content_w270 .content__text { width: 80%; }
 
 .product-pic { position: absolute; top: 50px; right: 350px; left: 0; bottom: 250px; text-align: center; font-size: 0; }
 .product-pic:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
@@ -314,6 +316,10 @@ picture { display: inline-block; vertical-align: middle; }
 .scroll .icon { font-size: 20px; }
 
 .actions { text-align: right; }
+.actions.actions_wide { text-align: left; }
+.actions.actions_wide .actions__link { max-width: 100%; }
+.actions.actions_wide .actions__ico { vertical-align: middle; margin-right: 5px; }
+.actions.actions_wide .actions__title { display: inline-block; vertical-align: middle; }
 .actions .actions__item { margin-bottom: 15px; }
 .actions .actions__link { display: inline-block; max-width: 60px; vertical-align: top; text-align: center; }
 .actions .actions__link:hover .actions__ico { background: #1262b2; }
@@ -498,3 +504,10 @@ picture { display: inline-block; vertical-align: middle; }
 .round-menu .round-menu__content { position: relative; height: 80px; padding: 0 10px; line-height: 1.4; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; text-align: center; font-size: 0; z-index: 2; }
 .round-menu .round-menu__content:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .round-menu .round-menu__content span { display: inline-block; vertical-align: middle; font-size: 11px; }
+
+.more { margin-top: 50px; }
+.more .more__topper { text-align: center; }
+.more .more__title { margin-bottom: 10px; }
+.more .round-menu_big { margin-top: 10px; }
+.more .round-menu__item { float: none; margin-left: 13px; margin-bottom: 19px; }
+.more .round-menu__item:first-child { margin-left: 13px; }

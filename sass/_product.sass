@@ -201,6 +201,11 @@
     .content__text
         >div
             margin-bottom: 20px
+    &.content_w270
+        width: 270px
+        margin-top: 35px
+        .content__text
+            width: 80%       
 
 .product-pic
     position: absolute
@@ -281,6 +286,16 @@
 
 .actions
     text-align: right
+    &.actions_wide
+        text-align: left
+        .actions__link
+            max-width: 100%
+        .actions__ico
+            vertical-align: middle
+            margin-right: 5px
+        .actions__title
+            display: inline-block
+            vertical-align: middle   
     .actions__item
         margin-bottom: 15px
     .actions__link
