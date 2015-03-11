@@ -356,7 +356,11 @@
         left: 0
         z-index: 4 
         &.is-active
-            z-index: 8 
+            z-index: 8
+            .el__plus
+                border-color: #fff
+                background: $blue
+                color: #fff
     .el__plus
         width: 18px
         height: 18px
@@ -369,6 +373,10 @@
         .icon
             font-size: 10px
             vertical-align: middle
+        &:hover
+            border-color: #fff
+            background: $blue
+            color: #fff
     .el__info
         position: absolute
         top: 30px
