@@ -12,12 +12,14 @@
 	-ms-touch-action: pan-y
 	touch-action: pan-y
 	-webkit-tap-highlight-color: transparent
+	z-index: 1
 .slick-list
 	position: relative
 	overflow: hidden
 	display: block
 	margin: 0
 	padding: 0
+	z-index: 1
 	&:focus
 		outline: none
 	.slick-loading &
@@ -86,6 +88,7 @@
 	border-radius: 50%
 	background: $dark
 	+tr(background 200ms)
+	z-index: 2
 	&:hover
 		background: $blue 
 	&:focus
@@ -100,7 +103,7 @@
 		background: transparent
 		margin-top: -18px   	 	
 .slick-prev
-	left: -32px
+	left: 32px
 	font-family: icomoon
 	&:before
 		content: "\e602"
@@ -109,7 +112,7 @@
 		font-size: 12px
 		color: #fff 
 .slick-next
-	right: -32px
+	right: 32px
 	font-family: icomoon
 	&:before
 		content: "\e603"
@@ -123,6 +126,7 @@
 	margin: 0
 	bottom: 42px
 	left: 42px
+	z-index: 2
 	li
 		position: relative
 		display: inline-block
