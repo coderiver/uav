@@ -396,11 +396,12 @@ picture { display: inline-block; vertical-align: middle; }
 .size span:before { content: ""; display: inline-block; width: 9px; height: 9px; background: #FFF; border-radius: 9px; box-shadow: 1.5px 2.6px 5px rgba(16, 22, 25, 0.75); vertical-align: top; }
 
 .catapult { position: absolute; top: 50%; left: 0; right: 0; height: 460px; margin-top: -230px; }
-.catapult .catapult__man, .catapult .catapult__el { position: absolute; left: 0; right: 0; text-align: center; }
+.catapult .catapult__man, .catapult .catapult__el { position: absolute; left: 0; right: 0; top: 0; text-align: center; }
+.catapult .catapult__man img, .catapult .catapult__el img { height: 100%; }
 .catapult .catapult__man { top: 0; }
 .catapult .catapult__man img { height: 385px; }
 .catapult .catapult__el { bottom: 0; }
-.catapult .catapult__el_1 { padding-right: 70px; }
+.catapult .catapult__el_1 { top: auto; padding-right: 70px; }
 .catapult .catapult__el_1 img { height: 325px; }
 
 .footer { position: absolute; bottom: 0; left: 0; right: 0; z-index: 5; }
@@ -458,3 +459,15 @@ picture { display: inline-block; vertical-align: middle; }
 .speed .speed__title { font-size: 14px; font-style: italic; margin-bottom: 42px; }
 .speed .speed__market { position: absolute; top: 20px; left: 50%; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); height: 100%; }
 .speed .speed__market:before { content: ""; position: absolute; top: 14px; left: 50%; width: 1px; height: 7px; background: #fff; }
+
+.dimensions { *zoom: 1; }
+.dimensions:after { content: " "; display: table; clear: both; }
+.dimensions__item { float: left; width: 120px; text-align: center; border-right: 1px solid #475c6a; }
+.dimensions__item:first-child { border-left: 1px solid #475C6A; }
+.dimensions__title { text-transform: uppercase; font-size: 11px; }
+.dimensions__arr { padding: 5px 0; }
+.dimensions__bottom { font-size: 12px; }
+.dimensions__value { font-size: 36px; font-weight: 100; line-height: 1; }
+
+.square { position: relative; display: inline-block; }
+.square:before { content: "2"; position: absolute; top: -4px; right: -4px; font-size: 8px; }
