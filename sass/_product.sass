@@ -181,12 +181,28 @@
         top: 0
         left: 50%
         +transform(translateX(-50%))
+    &.block_mid
+        top: 70px
+        left: 0
+        right: 80px
+        bottom: 100px       
     &.block_w220
         width: 220px
     &.block_w300
         width: 300px
     &.block_w500
         width: 500px  
+.mid
+    position: relative
+    height: 100%
+    padding: 70px 80px 100px 0
+    &.mid_top
+        padding: 0 80px 100px 0 
+    &__in
+        position: relative
+        height: 100%
+        .content.content_w270
+            margin-top: 0   
 
 .content
     margin-bottom: 25px

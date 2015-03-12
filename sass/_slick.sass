@@ -169,6 +169,26 @@
 			background: transparent
 			+hide-text
 			&:hover
-				background: #fff    	
+				background: #fff
+	.popup-slider &
+		position: absolute
+		bottom: -14px
+		left: 50%
+		+transform(translateX(-50%))
+		li
+			margin: 0 16px
+			&.slick-active
+				button
+					border-color: $blue
+					background: $blue
+		button
+			width: 8px
+			height: 8px
+			border: 1px solid $dark
+			background: transparent
+			+hide-text
+			&:hover
+				border-color: $blue
+				background: $blue  		    	
 
 	

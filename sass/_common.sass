@@ -10,8 +10,12 @@ body
 	font-family: 'Roboto', Arial, sans-serif
 	font-weight: 300
 	color: #fff
-	font-size: 12px 
+	font-size: 14px 
 	line-height: 1.4
+	+r(1024)
+		font-size: 12px	
+	&.no-scroll
+		position: fixed
 a
 	text-decoration: none
 	color: #fff
@@ -83,10 +87,14 @@ picture
 
 .title
 	margin-bottom: 10px
-	font-size: 30px
+	font-size: 48px
 	font-weight: 100
 	line-height: 1.2
 	color: #fff
+	+r(1500)
+		font-size: 36px
+	+r(1024)
+		font-size: 30px	
 	&.title_dark
 		color: $dark
 
@@ -209,6 +217,7 @@ picture
 	padding: 7px 33px 0
 	border-radius: 15px
 	color: #fff
+	font-size: 12px
 	text-align: center
 	background: $blue
 	&.btn_gray

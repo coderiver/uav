@@ -1,6 +1,6 @@
 head.ready(function() {
 
-	// main page slider
+	// sliders init
 	function slick(){
 		$('.js-slick').slick({
 			fade: true,
@@ -32,6 +32,38 @@ head.ready(function() {
 		slidesToShow: 6,
 		slidesToScroll: 1
 	});
+
+	function popupSlider(){
+		$('.js-popup-slider').slick({
+			speed: 600,
+			dots: true,
+			arrows: false,
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1
+		});
+		$('.popup-slider__prev').on('click', function(){
+			$('.js-popup-slider').slick('slickPrev');
+		});
+		$('.popup-slider__next').on('click', function(){
+			$('.js-popup-slider').slick('slickNext');
+		});
+	}
+
+
+	// popup init
+
+	$('.js-popup-btn').on('click', function(){
+		$('body').addClass('no-scroll');
+		$('.js-popup').show();
+		popupSlider();
+		return false;
+	});
+	$('.js-popup-close').on('click', function(){
+		$('.js-popup').hide();
+		$('body').removeClass('no-scroll');
+	});
+
 
 	//ajax load
 	// var hash_var = document.location.hash;

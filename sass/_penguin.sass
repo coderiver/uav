@@ -163,11 +163,13 @@
 		font-size: 8px
 .text-wrap
 	margin-top: 40px
-	width: 220px
+	width: 330px
 	padding: 20px
 	background: rgba(#000, 0.5)
 	color: #fff
-	font-size: 12px     		 			   				 
+	font-size: 12px
+	+r(1440)
+		width: 220px     		 			   				 
 	.title
 		color: #fff
 	.page_dark &
@@ -266,3 +268,97 @@
 		margin-bottom: 19px
 		&:first-child
 			margin-left: 13px 		  						 		
+.preview
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 300px
+	+vertical
+	img
+		display: inline-block
+		vertical-align: middle
+		max-width: 100%
+	&.preview_full
+		img, picture
+			width: 100%
+
+// popup
+.popup
+	position: fixed
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	background: #7C9EB5
+	+background-image(radial-gradient(#7C9EB5 0%, #4E6677 100%))
+	z-index: 100
+	.popup__close
+		position: absolute
+		top: 40px
+		right: 42px
+		width: 35px
+		height: 35px
+		border-radius: 50%
+		background: $dark
+		+vertical
+		cursor: pointer
+		z-index: 3
+		span
+			color: #bcc0c3
+			font-size: 12px
+			vertical-align: middle 
+	.popup__bg
+		height: 100%
+		+vertical
+		picture
+			width: 100%
+		img
+			display: inline-block
+			vertical-align: middle
+	.popup__content
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		width: 50%
+		padding: 6% 5%
+		background: #fff
+		color: $dark
+		z-index: 2
+		.title
+			color: $dark
+			margin-bottom: 20px
+.popup-slider
+	height: 100% 
+	.popup-slider__item
+		text-align: left 
+		padding-bottom: 115px
+	.popup-slider__text
+		font-size: 18px
+		& > div
+			margin-bottom: 20px
+		+r(1500)
+			font-size: 15px
+		+r(1024)
+			font-size: 12px
+	.popup-slider__nav
+		+clr
+		button
+			background: transparent 
+		.popup-slider__prev
+			float: left
+			&:before
+				content: "\e602"
+				display: inline-block
+				vertical-align: middle
+				margin-right: 10px
+				+icon
+		.popup-slider__next
+			float: right					
+			&:after
+				content: "\e603"
+				display: inline-block
+				vertical-align: middle
+				margin-left: 10px
+				+icon
