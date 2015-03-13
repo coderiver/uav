@@ -64,6 +64,14 @@ head.ready(function() {
 		$('body').removeClass('no-scroll');
 	});
 
+	// catalog slider init
+
+	$('.js-catalog').slick({
+		speed: 600,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
 
 	//ajax load
 	// var hash_var = document.location.hash;
