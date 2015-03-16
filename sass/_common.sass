@@ -61,6 +61,8 @@ picture
 	padding: 0 40px
 	margin: 0 auto
 	+clr
+	+r(768)
+		padding: 0 20px 
 
 .container
 	position: relative
@@ -84,6 +86,17 @@ picture
 	.img-wrap__in
 		height: 100vh
 		min-height: 768px
+	+r(1023)
+		.img-wrap__bg
+			top: 0
+			bottom: 0
+			left: -1000px
+			right: -1000px
+			picture
+				height: 100% 
+			img
+				width: auto
+				height: 100%	
 
 .title
 	margin-bottom: 10px
@@ -111,7 +124,27 @@ picture
 		padding: 0 0 0 20px
 		span
 			line-height: 40px
-	
+		+r(1023)
+			padding: 0 	
+	+r(1024)
+		& > .center
+			padding: 0 20px 0 0
+		.logo
+			padding: 19px 0 0 0
+			width: 160px
+			margin-right: 54px 	 		
+	&.is-small
+		.sertificate
+			display: none
+		.logo
+			height: 40px
+			padding: 3px 0 0 26px 
+			&:before
+				top: -29px		
+				right: -72px
+		+r(1024)
+			.logo
+				padding: 3px 0 0 3px 		
 .build-quote
 	display: block
 	font-size: 0
@@ -183,7 +216,9 @@ picture
 		color: #fff
 	.socials__title
 		font-size: 10px
-		font-style: italic 
+		font-style: italic
+		+r(1023)
+			display: none 
 	.socials__list
 		font-size: 0
 		a

@@ -11,7 +11,10 @@
     +tr(all 1s)
     z-index: 10
     .center
-        padding: 0 40px 0 0 
+        padding: 0 40px 0 0
+    &.is-hidden
+        visibility: hidden
+        z-index: -1     
     &.is-fixed
         position: fixed
         top: 0
@@ -146,8 +149,7 @@
         font-size: 0
         .icon
             font-size: 12px
-            color: #2C3941
-       
+            color: #2C3941      
 .page
     position: relative
     height: 100%
@@ -157,6 +159,10 @@
         left: 40px
         right: 40px
         bottom: 40px
+        +r(768)
+            left: 20px
+            right: 20px
+            bottom: 20px 
     >.center
         position: relative
         height: 100%
@@ -241,9 +247,14 @@
     .share
         float: left
         margin-top: 2px
+        +r(1023)
+            float: none
     .build-quote,
     .btn
         float: right
+        +r(1023)
+            float: left
+            margin-top: 20px 
 
 .share
     .share__title,

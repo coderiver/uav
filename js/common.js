@@ -26,12 +26,16 @@ head.ready(function() {
 	gallery();
 	$('.gallery .slick-prev, .gallery .slick-next, .gallery .slick-dots').wrapAll('<div class="slick-controls">');
 
-	$('.js-slick-2').slick({
-		speed: 600,
-		infinite: true,
-		slidesToShow: 6,
-		slidesToScroll: 1
-	});
+	function slick2(){
+		$('.js-slick-2').slick({
+			speed: 600,
+			infinite: true,
+			slidesToShow: 6,
+			slidesToScroll: 1
+		});
+	}
+	slick2();
+	
 
 	function popupSlider(){
 		$('.js-popup-slider').slick({
@@ -79,7 +83,7 @@ head.ready(function() {
 
 	// if (hash_var == "") {
 	// 	$.ajax({
-	// 	  url: 'main.html',
+	// 	  url: 'ajax/main.html',
 	// 	  cache: false,
 	// 	  success: function(html) { 
 	// 	  	$('.container').html(html).show(); 
@@ -105,7 +109,7 @@ head.ready(function() {
 	// 	$('.container').fadeOut(300);
 	// 	var link = $(this).attr('href');
 	// 	$.ajax({
-	// 	  url: link + '.html',
+	// 	  url: 'ajax/' + link + '.html',
 	// 	  cache: false,
 	// 	  success: function(html) { 
 	// 	  	$('.container').html(html).hide().fadeIn(300);

@@ -16,7 +16,7 @@
 <!-- wrap -->
 <div class="wrap">
 	<!-- header -->
-	<header class="header">
+	<header class="header is-small">
 		<!-- center -->
 		<div class="center">
 			<!-- logo -->
@@ -39,13 +39,85 @@
 			</a>
 			<!-- nav -->
 			<nav class="nav">
-				<a href="#">Products<i class="icon icon-arrow-main-down"></i></a>
-				<a href="#">company<i class="icon icon-arrow-main-down"></i></a>
-				<a href="#">contacts<i class="icon icon-arrow-main-down"></i></a>
+				<a href="our-products" class="js-link">Products<i class="icon icon-arrow-main-down"></i></a>
+				<a href="about" class="js-link">company<i class="icon icon-arrow-main-down"></i></a>
+				<a href="contacts" class="js-link">contacts<i class="icon icon-arrow-main-down"></i></a>
 			</nav>
 			<div class="sertificate">Unmanned platforms and subsystems  |  ISO 9001:2008 Certified</div>
 		</div>
 	</header>
+	<!-- menu -->
+	<div class="menu js-menu is-hidden">
+		<!-- center -->
+		<div class="center">
+			<div class="menu__nav">
+				<div class="menu__links js-menu-links">
+					<a href="#">Products</a>
+					<a href="#">company</a>
+					<a href="#">contacts</a>
+				</div>
+				<button class="menu__btn js-menu-btn">
+					<i class="icon icon-menu-sidemenu"></i>
+				</button>
+			</div>
+			<div class="menu__list">
+				<a class="menu__item" href="#">
+					<div class="menu__type">
+						<i class="icon icon-subsection-performance"></i>
+					</div>
+					<div class="menu__arr">
+						<i class="icon icon-arrow-main-down"></i>
+					</div>
+					<div class="menu__title">Performance</div>
+				</a>
+				<a class="menu__item" href="#">
+					<div class="menu__type">
+						<i class="icon icon-subsection-adaptability"></i>
+					</div>
+					<div class="menu__arr">
+						<i class="icon icon-arrow-main-down"></i>
+					</div>
+					<div class="menu__title">adaptability</div>
+				</a>
+				<a class="menu__item" href="#">
+					<div class="menu__type">
+						<i class="icon icon-subsection-exploded"></i>
+					</div>
+					<div class="menu__arr">
+						<i class="icon icon-arrow-main-down"></i>
+					</div>
+					<div class="menu__title">exploded view</div>
+				</a>
+				<a class="menu__item" href="#">
+					<div class="menu__type">
+						<i class="icon icon-subsection-techspecs"></i>
+					</div>
+					<div class="menu__arr">
+						<i class="icon icon-arrow-main-down"></i>
+					</div>
+					<div class="menu__title">tech specs</div>
+				</a>
+				<a class="menu__item" href="#">
+					<div class="menu__type">
+						<i class="icon icon-subsection-package"></i>
+					</div>
+					<div class="menu__arr">
+						<i class="icon icon-arrow-main-down"></i>
+					</div>
+					<div class="menu__title">package</div>
+				</a>
+				<a class="menu__item" href="#">
+					<div class="menu__type">
+						<i class="icon icon-subsection-options"></i>
+					</div>
+					<div class="menu__arr">
+						<i class="icon icon-arrow-main-down"></i>
+					</div>
+					<div class="menu__title">options</div>
+				</a>
+			</div>
+		</div>
+	</div>
 	<!-- container -->
 	<div class="container">
 		<!-- main -->
@@ -547,20 +619,6 @@
 			<footer class="footer">
 				<div class="footer__content">
 					<div class="center">
-						<nav class="footer__nav">
-							<ul class="footer__list">
-								<li><a href="#">Research & Education</a></li>
-								<li><a href="#">Technical Data</a></li>
-								<li><a href="#">Testimonials</a></li>
-								<li><a href="#">Terms & Conditions</a></li>
-							</ul>
-							<ul class="footer__list">
-								<li><a href="#">Products</a></li>
-								<li><a href="#">Partners</a></li>
-								<li><a href="#">Company</a></li>
-								<li><a href="#">Contact information</a></li>
-							</ul>
-						</nav>
 						<div class="footer__right">
 							<!-- sign-in -->
 							<div class="sign-in">
@@ -583,6 +641,20 @@
 								</div>
 							</div>
 						</div>
+						<nav class="footer__nav">
+							<ul class="footer__list">
+								<li><a href="#">Research & Education</a></li>
+								<li><a href="#">Technical Data</a></li>
+								<li><a href="#">Testimonials</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+							</ul>
+							<ul class="footer__list">
+								<li><a href="#">Products</a></li>
+								<li><a href="#">Partners</a></li>
+								<li><a href="#">Company</a></li>
+								<li><a href="#">Contact information</a></li>
+							</ul>
+						</nav>
 					</div>
 				</div>
 				<div class="footer__bottom">
