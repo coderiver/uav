@@ -119,6 +119,10 @@ picture
 	background: #2c3941
 	text-align: center
 	z-index: 999
+	.mob-menu
+		+r(767)
+			visibility: visible
+			opacity: 1
 	.build-quote
 		float: right
 		padding: 0 0 0 20px
@@ -132,7 +136,14 @@ picture
 		.logo
 			padding: 19px 0 0 0
 			width: 160px
-			margin-right: 54px 	 		
+			margin-right: 54px
+	+r(767)
+		.logo
+			display: none
+		.socials
+			display: none
+		.nav
+			display: none				 	 		
 	&.is-small
 		.sertificate
 			display: none

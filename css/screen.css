@@ -61,11 +61,15 @@ picture { display: inline-block; vertical-align: middle; }
 .title.title_dark { color: #2c3941; }
 
 .header { position: absolute; left: 0; right: 0; height: 40px; background: #2c3941; text-align: center; z-index: 999; }
+@media only screen and (max-width: 767px) { .header .mob-menu { visibility: visible; opacity: 1; } }
 .header .build-quote { float: right; padding: 0 0 0 20px; }
 .header .build-quote span { line-height: 40px; }
 @media only screen and (max-width: 1023px) { .header .build-quote { padding: 0; } }
 @media only screen and (max-width: 1024px) { .header > .center { padding: 0 20px 0 0; }
   .header .logo { padding: 19px 0 0 0; width: 160px; margin-right: 54px; } }
+@media only screen and (max-width: 767px) { .header .logo { display: none; }
+  .header .socials { display: none; }
+  .header .nav { display: none; } }
 .header.is-small .sertificate { display: none; }
 .header.is-small .logo { height: 40px; padding: 3px 0 0 26px; }
 .header.is-small .logo:before { top: -29px; right: -72px; }
@@ -282,7 +286,7 @@ picture { display: inline-block; vertical-align: middle; }
 .menu.is-fixed .menu__type { width: 12px; height: 12px; margin: -7px 0 3px; }
 .menu.is-fixed .menu__type .icon { font-size: 0; }
 .menu.is-fixed .menu__arr { margin-bottom: 3px; }
-.menu.is-fixed .menu__nav { opacity: 1; visibility: visible; }
+.menu.is-fixed .mob-menu { opacity: 1; visibility: visible; }
 .menu .menu__list { position: relative; text-align: center; -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; z-index: 2; }
 .menu .menu__list:before, .menu .menu__list:after { content: ""; position: absolute; top: 29px; height: 0; border-top: 2px dotted #fff; -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; }
 .menu .menu__list:before { left: -1000px; right: 100%; margin-right: 1px; }
@@ -298,13 +302,16 @@ picture { display: inline-block; vertical-align: middle; }
 .menu .menu__arr { margin-bottom: 10px; }
 .menu .menu__arr .icon { font-size: 10px; }
 .menu .menu__title { font-size: 11px; text-transform: uppercase; }
-.menu .menu__nav { position: absolute; top: 0; left: 0; background: #FFF; opacity: 0; visibility: hidden; -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; z-index: 4; }
-.menu .menu__links { float: left; width: 0; -moz-transition: width 0.3s; -o-transition: width 0.3s; -webkit-transition: width 0.3s; transition: width 0.3s; white-space: nowrap; }
-.menu .menu__links.is-show { width: 260px; }
-.menu .menu__links a { display: inline-block; padding: 0 12px; line-height: 40px; text-transform: uppercase; font-size: 11px; color: #2D3A43; vertical-align: top; }
-.menu .menu__links a:first-child { padding: 0 12px 0 32px; }
-.menu .menu__btn { float: left; width: 34px; height: 40px; background: #FFF; font-size: 0; }
-.menu .menu__btn .icon { font-size: 12px; color: #2C3941; }
+
+.mob-menu { position: absolute; top: 0; left: 0; background: #FFF; opacity: 0; visibility: hidden; -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; z-index: 4; }
+
+.mob-menu__links { float: left; width: 0; -moz-transition: width 0.3s; -o-transition: width 0.3s; -webkit-transition: width 0.3s; transition: width 0.3s; white-space: nowrap; }
+.mob-menu__links.is-show { width: 260px; }
+.mob-menu__links a { display: inline-block; padding: 0 12px; line-height: 40px; text-transform: uppercase; font-size: 11px; color: #2D3A43; vertical-align: top; }
+.mob-menu__links a:first-child { padding: 0 12px 0 32px; }
+
+.mob-menu__btn { float: left; width: 34px; height: 40px; background: #FFF; font-size: 0; }
+.mob-menu__btn .icon { font-size: 12px; color: #2C3941; }
 
 .page { position: relative; height: 100%; }
 .page .page__in { position: absolute; top: 80px; left: 40px; right: 40px; bottom: 40px; }

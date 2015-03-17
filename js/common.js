@@ -136,12 +136,12 @@ head.ready(function() {
 	// menu
 	var menu_trigger = $('.js-menu-trigger'),
 		menu = $('.js-menu'),
-		menu_links = menu.find('.js-menu-links'),
-		menu_btn = menu.find('.js-menu-btn');
+		menu_links = $('.js-menu-links'),
+		menu_btn = $('.js-menu-btn');
 	menu_trigger.on('click', function () {
 		menu.toggleClass('is-fixed');
 	});
-	menu_btn.on('click', function () {
+	menu_btn.on('touchstart click', function () {
 		menu_links.toggleClass('is-show');
 	});
 

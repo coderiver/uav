@@ -45,7 +45,7 @@
                 font-size: 0
         .menu__arr
             margin-bottom: 3px
-        .menu__nav
+        .mob-menu
             opacity: 1
             visibility: visible 
     .menu__list
@@ -115,41 +115,41 @@
     .menu__title
         font-size: 11px
         text-transform: uppercase
-    .menu__nav
-        position: absolute
-        top: 0
-        left: 0
-        background: #FFF
-        opacity: 0
-        visibility: hidden
-        +tr(all 1s) 
-        z-index: 4  
-    .menu__links
-        float: left
-        width: 0
-        +tr(width .3s)
-        white-space: nowrap
-        &.is-show
-            width: 260px
-        a
-            display: inline-block
-            padding: 0 12px
-            line-height: 40px
-            text-transform: uppercase
-            font-size: 11px
-            color: #2D3A43
-            vertical-align: top
-            &:first-child
-                padding: 0 12px 0 32px
-    .menu__btn
-        float: left
-        width: 34px
-        height: 40px
-        background: #FFF
-        font-size: 0
-        .icon
-            font-size: 12px
-            color: #2C3941      
+.mob-menu
+    position: absolute
+    top: 0
+    left: 0
+    background: #FFF
+    opacity: 0
+    visibility: hidden
+    +tr(all 1s) 
+    z-index: 4  
+.mob-menu__links
+    float: left
+    width: 0
+    +tr(width .3s)
+    white-space: nowrap
+    &.is-show
+        width: 260px
+    a
+        display: inline-block
+        padding: 0 12px
+        line-height: 40px
+        text-transform: uppercase
+        font-size: 11px
+        color: #2D3A43
+        vertical-align: top
+        &:first-child
+            padding: 0 12px 0 32px
+.mob-menu__btn
+    float: left
+    width: 34px
+    height: 40px
+    background: #FFF
+    font-size: 0
+    .icon
+        font-size: 12px
+        color: #2C3941      
 .page
     position: relative
     height: 100%
