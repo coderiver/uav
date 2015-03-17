@@ -266,10 +266,15 @@ picture
 	font-size: 0
 	+transform(translateY(-50%))
 	img
-		width: 100%
+		width: 100%	
 	&.leftside-bg
 		top: 45%
 		width: 70%
+		+r(768)
+			position: relative
+			width: 100%
+			top: 0
+			+transform(translateY(0))
 	&.bot-right-bg
 		bottom: 0
 		right: 0

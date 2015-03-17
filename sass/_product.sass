@@ -170,7 +170,15 @@
 
 .block
     position: absolute
-    z-index: 6 
+    +clr
+    z-index: 6
+    .block__col
+        +r(768)
+            float: left
+            width: 45%
+            margin-left: 10%
+            &:first-child
+                margin-left: 0  
     &.block_top-right
         top: 0
         right: 0
@@ -197,7 +205,10 @@
     &.block_w300
         width: 300px
     &.block_w500
-        width: 500px  
+        width: 500px
+    &.block_large
+        +r(768)
+            width: 100%       
 .mid
     position: relative
     height: 100%
@@ -244,17 +255,24 @@
 .share-wrap
     margin-bottom: 30px
     +clr
+    +r(768)
+        margin-bottom: 86px
     .share
         float: left
         margin-top: 2px
         +r(1023)
             float: none
+        +r(768)
+            float: left    
     .build-quote,
     .btn
         float: right
         +r(1023)
             float: left
-            margin-top: 20px 
+            margin-top: 20px
+        +r(768)
+            float: right
+            margin-top: 0     
 
 .share
     .share__title,
@@ -292,6 +310,15 @@
         float: left
     &:after
         float: right
+    &.hr_small
+        display: none
+        margin-bottom: 34px
+        +r(768)
+            display: block
+    &.hr_large
+        display: block
+        +r(768)
+            display: none            
 
 .scroll
     position: absolute
@@ -386,13 +413,15 @@
     left: 0
     right: 0
     bottom: 140px
-    text-align: center
+    +vertical
     .el__pic
         position: relative
         display: inline-block
-        height: 100%
+        vertical-align: middle
         img
-            max-height: 100%
+            display: inline-block
+            vertical-align: middle
+            max-width: 100%
     .el__item
         position: absolute
         top: 0
@@ -524,15 +553,23 @@
 
 .options
     +clr
+    +r(768)
+        text-align: center
     .options__col
         float: left
         margin-left: 20px
         &:first-child  
             margin-left: 0
+        +r(768)
+            float: none
+            margin-left: 0
+            margin-top: 20px    
     .options__title
         margin-bottom: 25px 
         font-size: 14px
         font-style: italic
+        +r(768)
+            margin-bottom: 10px
 
 .btns
     display: inline-block
@@ -609,6 +646,9 @@
         text-align: center
         img
             height: 100%
+            +r(768)
+                max-width: 100%
+                height: auto 
     .catapult__man
         top: 0
         img

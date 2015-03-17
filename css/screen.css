@@ -107,6 +107,7 @@ picture { display: inline-block; vertical-align: middle; }
 .page__bg { position: absolute; left: 0; top: 50%; font-size: 0; -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 .page__bg img { width: 100%; }
 .page__bg.leftside-bg { top: 45%; width: 70%; }
+@media only screen and (max-width: 768px) { .page__bg.leftside-bg { position: relative; width: 100%; top: 0; -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); } }
 .page__bg.bot-right-bg { bottom: 0; right: 0; top: auto; left: auto; width: 90%; -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); }
 .page__bg.fullsize-bg { top: 0; right: 0; bottom: 0; -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); }
 
@@ -310,7 +311,10 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 768px) { .page .page__in { left: 20px; right: 20px; bottom: 20px; } }
 .page > .center { position: relative; height: 100%; z-index: 4; }
 
-.block { position: absolute; z-index: 6; }
+.block { position: absolute; *zoom: 1; z-index: 6; }
+.block:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 768px) { .block .block__col { float: left; width: 45%; margin-left: 10%; }
+  .block .block__col:first-child { margin-left: 0; } }
 .block.block_top-right { top: 0; right: 0; }
 .block.block_top-left { top: 0; left: 0; }
 .block.block_bottom-right { bottom: 0; right: 0; }
@@ -320,6 +324,7 @@ picture { display: inline-block; vertical-align: middle; }
 .block.block_w220 { width: 220px; }
 .block.block_w300 { width: 300px; }
 .block.block_w500 { width: 500px; }
+@media only screen and (max-width: 768px) { .block.block_large { width: 100%; } }
 
 .mid { position: relative; height: 100%; padding: 70px 80px 100px 0; }
 .mid.mid_top { padding: 0 80px 100px 0; }
@@ -339,10 +344,13 @@ picture { display: inline-block; vertical-align: middle; }
 
 .share-wrap { margin-bottom: 30px; *zoom: 1; }
 .share-wrap:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 768px) { .share-wrap { margin-bottom: 86px; } }
 .share-wrap .share { float: left; margin-top: 2px; }
 @media only screen and (max-width: 1023px) { .share-wrap .share { float: none; } }
+@media only screen and (max-width: 768px) { .share-wrap .share { float: left; } }
 .share-wrap .build-quote, .share-wrap .btn { float: right; }
 @media only screen and (max-width: 1023px) { .share-wrap .build-quote, .share-wrap .btn { float: left; margin-top: 20px; } }
+@media only screen and (max-width: 768px) { .share-wrap .build-quote, .share-wrap .btn { float: right; margin-top: 0; } }
 
 .share .share__title, .share .share__list { display: inline-block; vertical-align: middle; }
 .share .share__title { margin-right: 10px; font-style: italic; }
@@ -354,6 +362,10 @@ picture { display: inline-block; vertical-align: middle; }
 .hr:before, .hr:after { content: ""; width: 30px; height: 3px; background: #AFBDC7; }
 .hr:before { float: left; }
 .hr:after { float: right; }
+.hr.hr_small { display: none; margin-bottom: 34px; }
+@media only screen and (max-width: 768px) { .hr.hr_small { display: block; } }
+.hr.hr_large { display: block; }
+@media only screen and (max-width: 768px) { .hr.hr_large { display: none; } }
 
 .scroll { position: absolute; bottom: 175px; left: 50%; width: 100px; margin-left: -50px; color: #b7c7d1; text-align: center; z-index: 999; }
 .scroll.scroll_main { bottom: 0; color: #2c3941; }
@@ -383,9 +395,10 @@ picture { display: inline-block; vertical-align: middle; }
 .links .links__row a:first-child { margin: 0; }
 .links .links__row a:first-child:before { display: none; }
 
-.el { position: absolute; top: 140px; left: 0; right: 0; bottom: 140px; text-align: center; }
-.el .el__pic { position: relative; display: inline-block; height: 100%; }
-.el .el__pic img { max-height: 100%; }
+.el { position: absolute; top: 140px; left: 0; right: 0; bottom: 140px; text-align: center; font-size: 0; }
+.el:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.el .el__pic { position: relative; display: inline-block; vertical-align: middle; }
+.el .el__pic img { display: inline-block; vertical-align: middle; max-width: 100%; }
 .el .el__item { position: absolute; top: 0; left: 0; z-index: 4; }
 .el .el__item.is-active { z-index: 8; }
 .el .el__item.is-active .el__plus { border-color: #fff; background: #1262b2; color: #fff; }
@@ -427,9 +440,12 @@ picture { display: inline-block; vertical-align: middle; }
 
 .options { *zoom: 1; }
 .options:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 768px) { .options { text-align: center; } }
 .options .options__col { float: left; margin-left: 20px; }
 .options .options__col:first-child { margin-left: 0; }
+@media only screen and (max-width: 768px) { .options .options__col { float: none; margin-left: 0; margin-top: 20px; } }
 .options .options__title { margin-bottom: 25px; font-size: 14px; font-style: italic; }
+@media only screen and (max-width: 768px) { .options .options__title { margin-bottom: 10px; } }
 
 .btns { display: inline-block; border-radius: 15px; font-size: 0; vertical-align: top; overflow: hidden; }
 .btns + .btns { margin-left: 15px; }
@@ -450,6 +466,7 @@ picture { display: inline-block; vertical-align: middle; }
 .catapult { position: absolute; top: 50%; left: 0; right: 0; height: 460px; margin-top: -230px; }
 .catapult .catapult__man, .catapult .catapult__el { position: absolute; left: 0; right: 0; top: 0; text-align: center; }
 .catapult .catapult__man img, .catapult .catapult__el img { height: 100%; }
+@media only screen and (max-width: 768px) { .catapult .catapult__man img, .catapult .catapult__el img { max-width: 100%; height: auto; } }
 .catapult .catapult__man { top: 0; }
 .catapult .catapult__man img { height: 385px; }
 .catapult .catapult__el { bottom: 0; }
@@ -516,6 +533,7 @@ picture { display: inline-block; vertical-align: middle; }
 
 .advice { *zoom: 1; }
 .advice:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 768px) { .advice { margin-bottom: 40px; } }
 .advice .advice__left { float: left; width: 60%; padding-top: 10px; }
 .advice .advice__left > div { margin-bottom: 7px; }
 .advice .advice__right { float: right; width: 40%; font-size: 0; }
