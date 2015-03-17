@@ -208,6 +208,7 @@
         width: 500px
     &.block_large
         +r(768)
+            position: relative
             width: 100%       
 .mid
     position: relative
@@ -215,7 +216,7 @@
     padding: 70px 80px 100px 0
     &.mid_top
         padding: 0 80px 100px 0 
-    &__in
+    .mid__in
         position: relative
         height: 100%
         .content.content_w270
@@ -251,6 +252,11 @@
         max-width: 100%
         max-height: 100%
         vertical-align: middle
+    +r(768)
+        position: relative
+        top: 0
+        right: auto
+        bottom: auto      
 
 .share-wrap
     margin-bottom: 30px
@@ -329,6 +335,8 @@
     color: #b7c7d1
     text-align: center
     z-index: 999
+    +r(768)
+        display: none
     &.scroll_main
         bottom: 0
         color: $dark
