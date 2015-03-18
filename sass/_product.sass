@@ -153,6 +153,9 @@
 .page
     position: relative
     height: 100%
+    +r(767) 
+        height: auto
+        min-height: 100%
     .page__in
         position: absolute
         top: 80px
@@ -162,12 +165,22 @@
         +r(768)
             left: 20px
             right: 20px
-            bottom: 20px 
+            bottom: 20px
+        +r(767)
+            position: relative
+            top: auto
+            left: auto
+            right: auto
+            bottom: auto
+            padding-top: 60px
+            padding-bottom: 20px    
     >.center
         position: relative
         height: 100%
-        z-index: 4 
-
+        z-index: 4
+        +r(767) 
+            height: auto
+            min-height: 100% 
 .block
     position: absolute
     +clr
@@ -263,6 +276,9 @@
     +clr
     +r(768)
         margin-bottom: 86px
+    .our-prod__info &
+        +r(767)
+            margin-bottom: 40px    
     .share
         float: left
         margin-top: 2px

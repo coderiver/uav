@@ -9,6 +9,12 @@
 		bottom: 42px
 		right: 42px
 		z-index: 999
+		+r(568)
+			bottom: 22px
+			right: 22px
+		+r(480)
+			right: 22px
+			left: 22px 	
 .slider
 	height: 100%
 	.slider__item
@@ -19,6 +25,8 @@
 		color: $dark
 		& > div
 			max-width: 450px
+		+r(568)
+			padding: 80px 20px 0 	
 			
 // our products page
 .our-prod
@@ -30,9 +38,13 @@
 		margin-bottom: 38px
 		.title
 			float: left
+			+r(360)
+				float: none
 		.btn
 			float: right
 			margin-top: 9px
+			+r(360)
+				float: none
 	.our-prod__content
 		+clr
 	.our-prod__gallery
@@ -61,7 +73,10 @@
 	left: 0
 	right: 0
 	+r(768)
-		padding: 0 20px 							 
+		padding: 0 20px
+	+r(767)
+		position: relative
+		bottom: auto	 							 
 	.footer-menu__list
 		text-align: center
 	.footer-menu__link
@@ -139,7 +154,12 @@
 	position: absolute
 	bottom: 0
 	left: 0
-	right: 0				
+	right: 0
+	+r(767)
+		position: relative
+		bottom: auto
+		left: auto
+		right: auto				
 	.clients__list
 		+justify
 	.clients__item
@@ -147,15 +167,35 @@
 		+r(1023)
 			width: 33.3%
 			text-align: center
-			margin-bottom: 20px 
+			margin-bottom: 20px
+		+r(480)
+			width: 50% 	
 .contacts
 	+clr
+	+r(767)
+		margin-left: -5%
+	+r(414)
+		margin-left: 0	
 	.contacts__col
 		float: left
 		width: 30%
 		margin-left: 5%
 		&:first-child
 			margin-left: 0
+		+r(767)
+			width: 45%
+			&:first-child
+				margin-left: 5%
+		+r(414)
+			width: 100%
+			margin-left: 0
+			&:first-child
+				margin-left: 0			
+		&.contacts__col_form
+			+r(568)
+				width: 95%
+			+r(414)
+				width: 100% 		 	
 	.contacts__text
 		& > div
 			margin-bottom: 20px 		

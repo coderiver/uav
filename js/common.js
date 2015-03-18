@@ -8,7 +8,15 @@ head.ready(function() {
 			dots: true,
 			infinite: true,
 			slidesToShow: 1,
-			slidesToScroll: 1
+			slidesToScroll: 1,
+			responsive: [
+			    {
+			      breakpoint: 481,
+			      settings: {
+			        dots: false
+			      }
+			    }
+			  ]
 		});
 	}
 	slick();
@@ -31,7 +39,27 @@ head.ready(function() {
 			speed: 600,
 			infinite: true,
 			slidesToShow: 6,
-			slidesToScroll: 1
+			slidesToScroll: 1,
+			responsive: [
+			    {
+			    	breakpoint: 768,
+			    	settings: {
+			    		slidesToShow: 4,
+			    	}
+			    },
+			    {
+			    	breakpoint: 481,
+			    	settings: {
+			    		slidesToShow: 3,
+			    	}
+			    },
+			    {
+			    	breakpoint: 376,
+			    	settings: {
+			    		slidesToShow: 2,
+			    	}
+			    }
+			]
 		});
 	}
 	slick2();
