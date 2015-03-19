@@ -78,6 +78,7 @@ picture
 .img-wrap
 	position: relative
 	overflow: hidden
+	height: 100% 
 	.img-wrap__bg
 		position: absolute
 		top: -1000px
@@ -167,6 +168,9 @@ picture
 	display: block
 	font-size: 0
 	color: #FFF
+	.page__in &
+		+r(767)
+			display: none
 	&.build-quote_bold
 		font-weight: 700
 	&.build-quote_mb40
@@ -273,6 +277,8 @@ picture
 	font-size: 12px
 	text-align: center
 	background: $blue
+	+r(600)
+		padding: 7px 15px 0 
 	&.btn_gray
 		width: 100% 
 		background: #2c3941 
@@ -291,7 +297,7 @@ picture
 		+r(768)
 			position: relative
 			width: 100%
-			top: 0
+			top: 40px
 			+transform(translateY(0))
 	&.page__bg_top
 		+r(767)
@@ -310,7 +316,9 @@ picture
 		top: 0
 		right: 0
 		bottom: 0
-		+transform(translateY(0))	 
+		+transform(translateY(0))
+		+r(767)
+			overflow: hidden 
 
 // form
 .form
@@ -385,7 +393,69 @@ picture
 		color: #fff
 	input:checked + span
 		background: #fff
-		color: $dark		 
+		color: $dark
+		
+// mob-nav
+.mob-nav
+	display: none
+	text-align: center
+	font-size: 0
+	margin-bottom: 20px
+	margin-top: 40px
+	+r(767)
+		display: block
+	.page_dark &
+		.mob-nav__prev, .mob-nav__next
+			color: #2c3941
+			& > .icon
+				color: #2c3941
+		.mob-nav__img
+			border-color: #2c3941
+			.icon
+				color: #2c3941	
+	.mob-nav__prev, .mob-nav__next
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		margin: 0 20px
+		max-width: 135px 
+		font-size: 14px
+		color: #fff
+		& > .icon
+			position: absolute
+			left: 50%
+			+transform(translateX(-50%))
+			font-size: 14px
+			color: #fff
+	.mob-nav__prev
+		& > .icon
+			top: -20px
+	.mob-nav__next
+		& > .icon
+			bottom: -20px
+	.mob-nav__first
+		position: relative
+		padding-left: 30px
+		text-align: left
+		.icon
+			position: absolute
+			top: 50%
+			left: -10px
+			+transform(translateY(-50%))
+			font-size: 25px
+			color: #b7c6d1
+	.mob-nav__img
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		border: 1px solid #fff
+		+vertical
+		.icon
+			vertical-align: middle
+			font-size: 25px
+			color: #fff	
+			
+						 
 
 
 

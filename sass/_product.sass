@@ -12,6 +12,10 @@
     z-index: 10
     .center
         padding: 0 40px 0 0
+        .build-quote
+            position: absolute
+            top: 7px
+            right: 10px
     &.is-hidden
         visibility: hidden
         z-index: -1     
@@ -41,6 +45,8 @@
             width: 12px
             height: 12px
             margin: -7px 0 3px
+            +r(767)
+                margin: -7px 0 9px 
             .icon
                 font-size: 0
         .menu__arr
@@ -68,7 +74,11 @@
         &:after
             right: -1000px
             left: 100%
-            margin-left: 1px 
+            margin-left: 1px
+        +r(767)
+            &:before,
+            &:after
+                display: none        
     .menu__item
         position: relative
         display: inline-block
@@ -93,7 +103,18 @@
             margin-left: 50px 
         &:hover
             .menu__type
-                background: $blue 
+                background: $blue
+        +r(767)
+            display: none
+            width: auto 
+            &.is-current
+                display: inline-block
+                overflow: visible
+                &:before,
+                &:after
+                    display: none
+                .menu__arr
+                    display: none
     .menu__type
         display: inline-block
         width: 60px
@@ -115,6 +136,29 @@
     .menu__title
         font-size: 11px
         text-transform: uppercase
+    .menu__arr-left, 
+    .menu__arr-right
+        display: none
+        position: absolute
+        top: 19px
+        width: 35px
+        height: 0
+        font-size: 14px
+        border: 1px dotted #fff
+        +r(767)
+            display: block
+    .menu__arr-left
+        left: -45px
+        .icon
+            position: absolute
+            top: -7px
+            left: -18px
+    .menu__arr-right
+        right: -45px
+        .icon
+            position: absolute
+            top: -7px
+            right: -18px                 
 .mob-menu
     position: absolute
     top: 0
@@ -185,29 +229,64 @@
     position: absolute
     +clr
     z-index: 6
+    +r(767)
+        position: relative
     .block__col
         +r(768)
             float: left
             width: 45%
             margin-left: 10%
             &:first-child
-                margin-left: 0  
+                margin-left: 0
+        +r(600)
+            float: none
+            width: 100%
+            margin-left: 0           
     &.block_top-right
         top: 0
         right: 0
+        +r(767)
+            right: auto
+            top: auto
+            float: right
+        +r(480)
+            float: none
+            width: 100%
+            clear: both
+            margin-bottom: 40px    
     &.block_top-left
         top: 0
         left: 0
+        +r(767)
+            top: auto
+            left: auto
+            float: left
+        +r(480)
+            float: none
+            margin-bottom: 40px     
     &.block_bottom-right
         bottom: 0
         right: 0
+        +r(767)
+            bottom: auto
+            right: auto
+            margin-bottom: 10px   
     &.block_bottom-left
         bottom: 0
         left: 0
+        +r(767)
+            clear: both
+            margin-bottom: 40px
     &.block_top-center
         top: 0
         left: 50%
         +transform(translateX(-50%))
+        +r(767)
+            top: auto
+            left: auto
+            clear: both
+            margin-bottom: 40px
+            +transform(translateX(0))
     &.block_mid
         top: 70px
         left: 0
@@ -215,10 +294,23 @@
         bottom: 100px       
     &.block_w220
         width: 220px
+        +r(480)
+            width: 100% 
     &.block_w300
         width: 300px
+        +r(480)
+            width: auto
+            max-width: 280px
+            margin-left: auto
+            margin-right: auto
+            &.block_top-left
+                width: 100%
+                max-width: 100%  
+               
     &.block_w500
         width: 500px
+        +r(500)
+            width: auto 
     &.block_large
         +r(768)
             position: relative
@@ -276,6 +368,8 @@
     +clr
     +r(768)
         margin-bottom: 86px
+    +r(600)
+        margin-bottom: 30px    
     .our-prod__info &
         +r(767)
             margin-bottom: 40px    
@@ -294,7 +388,10 @@
             margin-top: 20px
         +r(768)
             float: right
-            margin-top: 0     
+            margin-top: 0
+    .build-quote
+        +r(600)
+            display: none             
 
 .share
     .share__title,
@@ -337,10 +434,14 @@
         margin-bottom: 34px
         +r(768)
             display: block
+        +r(600)
+            display: none    
     &.hr_large
         display: block
         +r(768)
-            display: none            
+            display: none
+        +r(600)
+            display: block                
 
 .scroll
     position: absolute
@@ -364,6 +465,8 @@
 
 .actions
     text-align: right
+    +r(480)
+        text-align: center
     &.actions_wide
         text-align: left
         .actions__link
@@ -376,6 +479,9 @@
             vertical-align: middle   
     .actions__item
         margin-bottom: 15px
+        +r(480)
+            display: inline-block
+            margin: 0 20px
     .actions__link
         display: inline-block
         max-width: 60px
@@ -409,6 +515,12 @@
     right: 0
     bottom: 0
     text-align: center
+    +r(767)
+        position: relative
+        left: auto
+        right: auto
+        bottom: auto
+        margin-bottom: 20px 
     .links__row
         margin-top: 5px
         a
@@ -438,6 +550,13 @@
     right: 0
     bottom: 140px
     +vertical
+    +r(767)
+        position: relative
+        top: auto
+        left: auto
+        right: auto
+        bottom: auto
+        margin-bottom: 40px 
     .el__pic
         position: relative
         display: inline-block
@@ -616,6 +735,8 @@
 
 .disclaimer
     position: relative
+    +r(767)
+        margin-left: 20px
     .disclaimer__title
         margin-bottom: 8px 
         font-size: 14px
@@ -660,7 +781,14 @@
     left: 0
     right: 0
     height: 460px
-    margin-top: -230px 
+    margin-top: -230px
+    +r(767)
+        position: relative
+        top: auto
+        left: auto
+        right: auto
+        margin-top: 0
+        height: auto    
     .catapult__man,
     .catapult__el
         position: absolute
@@ -672,7 +800,12 @@
             height: 100%
             +r(768)
                 max-width: 100%
-                height: auto 
+                height: auto
+        +r(767)
+            position: relative
+            left: auto
+            right: auto
+            top: auto         
     .catapult__man
         top: 0
         img
