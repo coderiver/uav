@@ -59,7 +59,23 @@
 		width: 30%
 		+r(1023)
 			float: none
-			width: 100% 	
+			width: 100%
+.btn-mob
+	display: none
+	text-align: center
+	.btn
+		width: 300px
+		max-width: 100%
+	+r(767)
+		display: block
+.scroll-mob
+	display: none
+	padding: 20px 0
+	text-align: center
+	font-size: 25px
+	color: #a7b3bb 
+	+r(767)
+		display: block					 	
 .gallery
 	text-align: center
 	.gallery__item
@@ -76,7 +92,8 @@
 		padding: 0 20px
 	+r(767)
 		position: relative
-		bottom: auto	 							 
+		bottom: auto
+		margin: 0 -100px 20px 	 							 
 	.footer-menu__list
 		text-align: center
 	.footer-menu__link
@@ -159,17 +176,18 @@
 		position: relative
 		bottom: auto
 		left: auto
-		right: auto				
+		right: auto
+		margin-bottom: 20px
+	.clients__title
+		margin-bottom: 20px
+		font-size: 24px
+		font-weight: 100
 	.clients__list
-		+justify
+		padding: 0 20px 	
 	.clients__item
-		+justify-child
-		+r(1023)
-			width: 33.3%
-			text-align: center
-			margin-bottom: 20px
-		+r(480)
-			width: 50% 	
+		height: 80px
+		line-height: 80px  
+		text-align: center		
 .contacts
 	+clr
 	+r(767)
@@ -184,6 +202,7 @@
 			margin-left: 0
 		+r(767)
 			width: 45%
+			margin-bottom: 20px
 			&:first-child
 				margin-left: 5%
 		+r(414)
