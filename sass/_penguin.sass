@@ -28,12 +28,18 @@
 	+clr
 	+r(768)
 		margin-bottom: 40px
+	+r(480)
+		margin-bottom: 0	
 	.advice__left
 		float: left
 		width: 60%
 		padding-top: 10px
 		& > div
-			margin-bottom: 7px 
+			margin-bottom: 7px
+		.btn
+			padding: 7px 5px 0
+			width: 100%
+			max-width: 150px  	
 	.advice__right
 		float: right
 		width: 40%
@@ -89,7 +95,9 @@
 		font-style: italic
 .speed
 	position: relative
-	padding: 37px 0 
+	padding: 37px 0
+	+r(767)
+		padding: 37px 10px  
 	.speed__line
 		position: relative
 		height: 1px
@@ -138,6 +146,8 @@
 			background: #fff
 .dimensions
 	+clr
+	+r(767)
+		margin-bottom: 20px
 	.dimensions__item
 		float: left
 		width: 120px
@@ -145,7 +155,7 @@
 		border-right: 1px solid #475c6a
 		&:first-child
 			border-left: 1px solid #475C6A
-		+r(480)
+		+r(767)
 			width: 33.3% 	
 	.dimensions__title
 		text-transform: uppercase

@@ -106,7 +106,7 @@ picture
 				height: 100% 
 			img
 				width: auto
-				height: 100%	
+				height: 100% 				
 
 .title
 	margin-bottom: 10px
@@ -292,14 +292,19 @@ picture
 	font-size: 0
 	+transform(translateY(-50%))
 	img
-		width: 100%	
+		width: 100%
+	+r(767)
+		position: relative
+		left: auto
+		top: auto
+		padding-top: 40px   		
 	&.leftside-bg
 		top: 45%
 		width: 70%
 		+r(768)
 			position: relative
 			width: 100%
-			top: 40px
+			top: auto
 			+transform(translateY(0))
 	&.page__bg_top
 		+r(767)
@@ -320,7 +325,29 @@ picture
 		bottom: 0
 		+transform(translateY(0))
 		+r(767)
-			overflow: hidden 
+			right: auto
+			top: auto
+			bottom: auto
+			width: 100%
+	.img-wrap
+		+r(767)
+			height: auto
+			overflow: visible
+			.img-wrap__bg
+				position: relative
+				top: auto
+				left: auto
+				right: auto
+				bottom: auto
+				picture
+					width: 100%
+					height: auto
+				img
+					width: 100%
+					height: auto
+			.img-wrap__in
+				height: auto
+				min-height: 1px		  
 
 // form
 .form
@@ -402,7 +429,7 @@ picture
 	display: none
 	text-align: center
 	font-size: 0
-	margin-bottom: 20px
+	margin-bottom: 40px
 	margin-top: 40px
 	+r(767)
 		display: block

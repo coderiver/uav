@@ -217,7 +217,11 @@
             right: auto
             bottom: auto
             padding-top: 60px
-            padding-bottom: 20px    
+        &.details
+            .block_top-left
+                display: none
+            .links
+                display: none            
     >.center
         position: relative
         height: 100%
@@ -246,14 +250,9 @@
         top: 0
         right: 0
         +r(767)
-            right: auto
-            top: auto
-            float: right
-        +r(480)
             float: none
             width: 100%
-            clear: both
-            margin-bottom: 40px    
+            clear: both    
     &.block_top-left
         top: 0
         left: 0
@@ -276,7 +275,6 @@
         left: 0
         +r(767)
             clear: both
-            margin-bottom: 40px
     &.block_top-center
         top: 0
         left: 50%
@@ -294,23 +292,23 @@
         bottom: 100px       
     &.block_w220
         width: 220px
-        +r(480)
+        +r(767)
             width: 100% 
     &.block_w300
         width: 300px
-        +r(480)
+        +r(767)
             width: auto
-            max-width: 280px
             margin-left: auto
             margin-right: auto
             &.block_top-left
                 width: 100%
-                max-width: 100%  
-               
+                max-width: 100%
+        +r(320)
+            max-width: 280px
     &.block_w500
         width: 500px
-        +r(500)
-            width: auto 
+        +r(767)
+            width: 100% 
     &.block_large
         +r(768)
             position: relative
@@ -465,7 +463,8 @@
 
 .actions
     text-align: right
-    +r(480)
+    +r(767)
+        margin-bottom: 20px
         text-align: center
     &.actions_wide
         text-align: left
@@ -479,7 +478,7 @@
             vertical-align: middle   
     .actions__item
         margin-bottom: 15px
-        +r(480)
+        +r(767)
             display: inline-block
             margin: 0 20px
     .actions__link
@@ -594,11 +593,12 @@
             color: #fff
     .el__info
         position: absolute
-        top: 30px
-        left: -101px
         width: 220px
+        margin-left: -103px
+        margin-top: 25px  
         padding: 30px 20px 20px
-        background: $dark 
+        background: $dark
+        z-index: 5 
         &:before
             content: ""
             position: absolute
@@ -606,6 +606,14 @@
             left: 50%
             margin-left: -8px
             +arr(16,8,$dark,t)
+        +r(767)
+            position: relative
+            top: auto!important
+            left: auto!important
+            margin-left: 0
+            margin-top: 0
+            margin-right: 0  
+            width: 100%      
     .el__close
         position: absolute
         top: 10px
@@ -622,6 +630,9 @@
     .el__text
         margin-bottom: 20px
         text-align: left
+        font-size: 14px
+        +r(767)
+            text-align: center
     .el__nav
         +clr
         button
@@ -641,10 +652,17 @@
             font-size: 10px
 
 .info
-    +clr
+    font-size: 0
+    +r(767)
+        margin-top: -150px
+        .params &
+            margin-top: 0
+            margin-bottom: 20px
+            text-align: center
     .info__col,
     .info__ico
-        float: left
+        display: inline-block
+        vertical-align: top
     .info__ico
         margin-top: -2px 
         .icon
@@ -697,7 +715,7 @@
 .options
     +clr
     +r(768)
-        text-align: center
+        //
     .options__col
         float: left
         margin-left: 20px
@@ -721,7 +739,7 @@
     vertical-align: top
     overflow: hidden
     & + .btns
-        margin-left: 15px
+        margin-left: 15px    
     .btn
         border-radius: 0
         background: $dark 
@@ -732,11 +750,15 @@
             background: $blue
             text-decoration: none 
             cursor: default
-
+    +r(767)
+        display: block        
+        .btn
+            width: 50%
 .disclaimer
     position: relative
     +r(767)
         margin-left: 20px
+        margin-bottom: 20px
     .disclaimer__title
         margin-bottom: 8px 
         font-size: 14px
@@ -748,6 +770,8 @@
         font-size: 13px
 
 .size
+    +r(767)
+        text-align: center
     a, span
         display: inline-block
         vertical-align: middle
@@ -798,7 +822,7 @@
         text-align: center
         img
             height: 100%
-            +r(768)
+            +r(1024)
                 max-width: 100%
                 height: auto
         +r(767)
