@@ -301,8 +301,7 @@ picture
 	&.leftside-bg
 		top: 45%
 		width: 70%
-		+r(768)
-			position: relative
+		+r(767)
 			width: 100%
 			top: auto
 			+transform(translateY(0))
@@ -311,7 +310,12 @@ picture
 			position: relative
 			width: 100%
 			top: 0
-			+transform(translateY(0)) 		
+			+transform(translateY(0))
+			picture
+				width: 100%
+				img
+					width: 100%
+					height: auto  		
 	&.bot-right-bg
 		bottom: 0
 		right: 0
@@ -441,12 +445,21 @@ picture
 		.mob-nav__img
 			border-color: #2c3941
 			.icon
-				color: #2c3941	
+				color: #2c3941
+		+r(767)
+			.mob-nav__prev, .mob-nav__next
+				color: #fff
+				& > .icon
+					color: #fff
+			.mob-nav__img
+				border-color: #fff
+				.icon
+					color: #fff				
 	.mob-nav__prev, .mob-nav__next
 		position: relative
 		display: inline-block
 		vertical-align: middle
-		margin: 0 20px
+		margin: 0 25px
 		max-width: 135px 
 		font-size: 14px
 		color: #fff
@@ -456,6 +469,11 @@ picture
 			+transform(translateX(-50%))
 			font-size: 14px
 			color: #fff
+	& > .icon
+		display: inline-block
+		vertical-align: middle
+		font-size: 20px
+		color: #b7c6d1		
 	.mob-nav__prev
 		& > .icon
 			top: -20px

@@ -96,6 +96,22 @@ head.ready(function() {
 		});
 	}
 
+	// tabs mobile init
+
+	$('.js-tabs-3').slick({
+		infinite: false,
+		speed: 600,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+		    {
+		    	breakpoint: 768,
+		    	settings: {
+		    		slidesToShow: 1,
+		    	}
+		    }
+		]
+	});
 
 	// popup init
 
