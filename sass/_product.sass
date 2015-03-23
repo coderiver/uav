@@ -381,7 +381,9 @@
         position: relative
         top: 0
         right: auto
-        bottom: auto      
+        bottom: auto
+    +r(767)
+        margin-bottom: 20px         
 
 .share-wrap
     margin-bottom: 30px
@@ -707,6 +709,7 @@
         margin-bottom: 20px
         font-size: 14px
     .info__size
+        font-size: 12px
         li
             position: relative
             margin-bottom: 20px
@@ -889,6 +892,11 @@
             height: 385px 
     .catapult__el
         bottom: 0
+        +r(767)
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
     .catapult__el_1
         top: auto
         padding-right: 70px
@@ -901,14 +909,33 @@
             height: 250px   
 .accesories
     +clr
+    +r(767)
+        display: -webkit-flex
+        display: flex
+        -webkit-flex-direction: column
+        -ms-flex-direction: column
+        flex-direction: column
     .accesories__left
         overflow: hidden
         padding-right: 2% 
         .title
-            margin-bottom: 50px  
+            margin-bottom: 50px
+        +r(767)
+            width: 100%
+            overflow: visible
+            -webkit-order: 1
+            -ms-order: 1
+            order: 1
+            padding-right: 0       
     .accesories__right
         float: right
-        width: 300px                
+        width: 300px
+        +r(767)
+            float: none
+            width: 100%
+            -webkit-order: 2
+            -ms-order: 2
+            order: 2                 
 .quote
     margin-bottom: 20px 
     padding: 18px 18px 0
@@ -928,6 +955,13 @@
             margin-bottom: 15px              
 .catalog
     position: relative
+    +r(767)
+        display: none
+    .catalog-mob &
+        font-size: 0
+        text-align: center
+        .catalog__item
+            width: auto     
     .catalog__list
         font-size: 0
     .catalog__item
@@ -979,6 +1013,10 @@
             display: inline-block
             vertical-align: middle
             font-size: 11px        
-
+.catalog-mob
+    display: none
+    margin: 0 -100px 40px
+    +r(767)
+        display: block
 
 
