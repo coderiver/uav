@@ -113,12 +113,20 @@ head.ready(function() {
 			arrows: false,
 			infinite: true,
 			slidesToShow: 1,
-			slidesToScroll: 1
+			slidesToScroll: 1,
+			responsive: [
+			    {
+			    	breakpoint: 768,
+			    	settings: {
+			    		adaptiveHeight: true
+			    	}
+			    }
+			]
 		});
-		$('.popup-slider__prev').on('click', function(){
+		$('.popup-slider__prev').on('touchstart click', function(){
 			$('.js-popup-slider').slick('slickPrev');
 		});
-		$('.popup-slider__next').on('click', function(){
+		$('.popup-slider__next').on('touchstart click', function(){
 			$('.js-popup-slider').slick('slickNext');
 		});
 	}
@@ -142,13 +150,13 @@ head.ready(function() {
 
 	// popup init
 
-	$('.js-popup-btn').on('click', function(){
+	$('.js-popup-btn').on('touchstart click', function(){
 		$('body').addClass('no-scroll');
 		$('.js-popup').show();
 		popupSlider();
 		return false;
 	});
-	$('.js-popup-close').on('click', function(){
+	$('.js-popup-close').on('touchstart click', function(){
 		$('.js-popup').hide();
 		$('body').removeClass('no-scroll');
 	});
