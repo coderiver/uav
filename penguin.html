@@ -298,14 +298,8 @@
 						<div class="drag-slider">
 							<div class="drag-slider__title">Choose payload weight:</div>
 							<div class="drag-slider__item">
-								<div class="drag-slider__body">
-									<div class="drag-slider__handle" style="left: 45%;">
-										<span></span>
-										<span></span>
-										<span></span>
-									</div>
-								</div>
-								<div class="drag-slider__value">4 kg</div>
+								<div class="drag-slider__body js-drag-slider"></div>
+								<div class="drag-slider__value"><input type="text" id="amount" readonly></div>
 							</div>
 						</div>
 					</div>
@@ -420,65 +414,59 @@
 						</div>
 					</div>
 					<!-- el -->
-					<div class="el">
+					<div class="el js-tooltip">
 						<div class="el__pic">
 							<img src="img/prod2.png" alt="">
 							<!-- 1 -->
-							<div class="el__item" style="top: 27%; left: 18%;">
+							<div class="el__item" style="top: 31%; left: 18%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
 								<div class="el__plus">
 									<i class="icon icon-exploded-plus"></i>
 								</div>
 							</div>
 							<!-- 2 -->
-							<div class="el__item" style="top: 73%; left: 26%;">
+							<div class="el__item" style="top: 77%; left: 26%;" data-img="img/prod5-mobile.png" data-text="<div>Modular rail with integrated pneumatic cylinder.2</div><div>User -upgradable catapult length.2</div>">
 								<div class="el__plus">
 									<i class="icon icon-exploded-plus"></i>
 								</div>
 							</div>
 							<!-- 3 -->
-							<div class="el__item" style="top: 52%; left: 33%;">
+							<div class="el__item" style="top: 56%; left: 33%;" data-img="img/plain2.png" data-text="<div>Modular rail with integrated pneumatic cylinder.3</div><div>User -upgradable catapult length.3</div>">
 								<div class="el__plus">
 									<i class="icon icon-exploded-plus"></i>
 								</div>
 							</div>
 							<!-- 4 -->
-							<div class="el__item" style="top: 34%; left: 40%;">
+							<div class="el__item" style="top: 38%; left: 40%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
 								<div class="el__plus">
 									<i class="icon icon-exploded-plus"></i>
 								</div>
 							</div>
 							<!-- 5 -->
-							<div class="el__item is-active" style="top: 47%; left: 49%;">
+							<div class="el__item" style="top: 51%; left: 49%;" data-img="img/prod5-mobile.png" data-text="<div>Modular rail with integrated pneumatic cylinder.2</div><div>User -upgradable catapult length.2</div>">
 								<div class="el__plus">
 									<i class="icon icon-exploded-plus"></i>
 								</div>
 							</div>
 							<!-- 6 -->
-							<div class="el__item" style="top: 51%; left: 53%;">
+							<div class="el__item" style="top: 55%; left: 53%;" data-img="img/plain2.png" data-text="<div>Modular rail with integrated pneumatic cylinder.3</div><div>User -upgradable catapult length.3</div>">
 								<div class="el__plus">
 									<i class="icon icon-exploded-plus"></i>
 								</div>
 							</div>
 							<!-- 7 -->
-							<div class="el__item" style="top: 21%; left: 91%;">
+							<div class="el__item" style="top: 25%; left: 91%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
 								<div class="el__plus">
 									<i class="icon icon-exploded-plus"></i>
 								</div>
 							</div>
 						</div>
 						<!-- el__info -->
-						<div class="el__info" style="top: 53%; left: 49%;">
+						<div class="el__info" style="display: none;">
 							<button class="el__close">
 								<i class="icon icon-exploded-close"></i>
 							</button>
 							<div class="el__preview">
-								<picture>
-								    <!--[if IE 9]><video style="display: none;"><![endif]-->
-								    <source srcset="img/engine-retina.png" media="(min-width: 1921px)">
-								    <source srcset="img/engine.png" media="(min-width: 240px)">
-								    <!--[if IE 9]></video><![endif]-->
-								    <img srcset="img/engine.png" alt="img">  
-								</picture>
+								<img src="img/engine.png" alt="img">  
 							</div>
 							<div class="el__text">
 								<div>Modular rail with integrated pneumatic cylinder.</div>
@@ -1676,6 +1664,38 @@
 		</div>
 	</div>
 </div>
+<!-- mobile navigation -->
+<nav class="nav-drop js-nav-drop" style="display: none;">
+	<div class="nav-drop__topper">
+		<span class="nav-drop__logo"></span>
+		<div class="nav-drop__close js-nav-drop-close">
+			<span class="icon icon-exploded-close"></span>
+		</div>
+	</div>
+	<ul class="nav-drop__links">
+		<li>
+			<a href="#">home</a>
+		</li>
+		<li>
+			<a href="#">products</a>
+		</li>
+		<li>
+			<a href="#">company</a>
+		</li>
+		<li>
+			<a href="#">contacts</a>
+		</li>
+	</ul>
+	<div class="nav-drop__socials">
+		<div class="socials">
+			<div class="socials__list">
+				<a href="#"><i class="icon icon-social-fb"></i></a>
+				<a href="#"><i class="icon icon-social-in"></i></a>
+				<a href="#"><i class="icon icon-social-tw"></i></a>
+			</div>
+		</div>
+	</div>
+</nav>
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

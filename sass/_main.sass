@@ -217,7 +217,74 @@
 				width: 100% 		 	
 	.contacts__text
 		& > div
-			margin-bottom: 20px 		
+			margin-bottom: 20px
+			
+// mob-nav
+.nav-drop
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	height: 100vh
+	overflow-y: auto
+	background: #fff 
+	z-index: 999
+	&.is-open
+		display: block
+	.nav-drop__close
+		position: absolute
+		top: 50%
+		right: 20px
+		margin-top: -8px
+		line-height: 1
+		cursor: pointer
+		color: #344148
+		font-size: 16px
+	.nav-drop__topper
+		position: relative
+		height: 10vh
+		line-height: 10vh 
+		text-align: center
+		border-bottom: 1px solid #2c3941 
+	.nav-drop__logo
+		display: inline-block
+		vertical-align: middle
+		+s(logo-mob)
+	.nav-drop__links
+		li
+			height: 20vh
+			line-height: 20vh 
+			padding: 0 25px
+			border-bottom: 1px solid #2c3941
+			a
+				position: relative
+				display: inline-block
+				vertical-align: middle
+				padding-left: 27px
+				color: #2c3941
+				text-transform: uppercase
+				font-size: 18px 
+				&:before
+					content: "\e603"
+					position: absolute
+					top: 50%
+					left: 0
+					margin-top: -7px 
+					line-height: 1
+					+icon
+					font-size: 14px
+					color: #2c3941
+	.nav-drop__socials
+		padding-top: 3px
+		.socials
+			float: none
+			.socials__list
+				& > a
+					border-color: #2c3941
+			.icon
+				color: #2c3941
+
+
 
 
 

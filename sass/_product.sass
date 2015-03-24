@@ -173,6 +173,8 @@
     width: 0
     +tr(width .3s)
     white-space: nowrap
+    +r(600)
+        display: none
     &.is-show
         width: 260px
     a
@@ -590,7 +592,6 @@
         bottom: auto
         margin-bottom: 40px 
     .el__pic
-        position: relative
         display: inline-block
         vertical-align: middle
         img
@@ -627,8 +628,8 @@
     .el__info
         position: absolute
         width: 220px
-        margin-left: -103px
-        margin-top: 25px  
+        margin-left: -101px
+        margin-top: 26px  
         padding: 30px 20px 20px
         background: $dark
         z-index: 5 

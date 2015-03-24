@@ -234,8 +234,80 @@ head.ready(function() {
 	menu_trigger.on('click', function () {
 		menu.toggleClass('is-fixed');
 	});
-	menu_btn.on('touchstart click', function () {
-		menu_links.toggleClass('is-show');
+	menu_btn.on('click', function () {
+		if ($(window).width() >= 601) {
+			menu_links.toggleClass('is-show');
+		}
+		else {
+			$('body').addClass('no-scroll');
+			$('.js-nav-drop').show();
+		}
+		
 	});
+
+	$('.js-nav-drop-close').on('click', function(){
+		$('body').removeClass('no-scroll');
+		$('.js-nav-drop').hide();
+	});
+
+	// drag slider init
+
+	$('.js-drag-slider').slider({
+		max: 10,
+		min: 1,
+		value: 5,
+		slide: function( event, ui ) {
+        	$( "#amount" ).val( ui.value + ' kg' );
+      	}
+	});
+	$( "#amount" ).val( $(".js-drag-slider").slider("value") + ' kg');
+
+	// tooltip
+
+	function tooltip(){
+		var item = $('.js-tooltip');
+
+		item.each(function(){
+			
+			// click event on plus
+			$('.el__plus').on('click', function(){
+				var style = $(this).parent().attr('style'),
+					img = $(this).parent().attr('data-img'),
+					text = $(this).parent().attr('data-text'),
+					block = $(this).parents('.js-tooltip').find('.el__info'),
+					block_img = block.find('.el__preview img'),
+					block_text = block.find('.el__text');
+				
+					console.log(text);
+				// get coors for popup from css styles
+				function getTop(str) {
+				 	var arr = str.split(";"),
+				 		top = arr[0].slice(5),
+				 		left = arr[1].slice(6);
+					block.css({
+						top: top,
+						left: left
+					})
+				}
+				getTop(style);
+
+				// switching active elememt
+				$('.el__item').removeClass('is-active');
+				$(this).parent().addClass('is-active');
+				block_img.attr('src', img);
+				block_text.html(text);
+				block.show();
+
+			});
+		
+			// close popup
+			$('.el__close').on('click', function(){
+				$(this).parent().hide();
+				$('.el__item').removeClass('is-active');
+			});
+						
+		});
+	};
+	tooltip();
 
 });
