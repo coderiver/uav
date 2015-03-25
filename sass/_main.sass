@@ -108,8 +108,8 @@
 		+gpu
 		&:hover
 			.footer-menu__bg
-				picture
-					opacity: 0.6 
+				&:after
+					opacity: 1
 			.footer-menu__content
 				opacity: 1 	 
 	.footer-menu__bg
@@ -120,8 +120,18 @@
 		right: -500px
 		font-size: 0
 		+vertical
-		background: #000
 		z-index: 1
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			background: rgba(#000, 0.4)
+			z-index: 2
+			opacity: 0 
+			+tr(opacity 200ms) 
 		picture
 			+tr(opacity 200ms)
 		img
