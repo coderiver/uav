@@ -108,7 +108,13 @@ picture
 				height: 100% 
 			img
 				width: auto
-				height: 100% 				
+				height: 100%
+			.main &
+				top: -1000px
+				bottom: -1000px
+				picture
+					width: auto
+					height: auto  					
 
 .title
 	margin-bottom: 10px
@@ -125,6 +131,7 @@ picture
 
 .header
 	position: fixed
+	top: 0
 	left: 0
 	right: 0
 	height: 40px
@@ -133,7 +140,7 @@ picture
 	z-index: 999
 	.mob-menu
 		+r(767)
-			visibility: visible
+			display: block
 			opacity: 1
 	.build-quote
 		float: right
@@ -141,7 +148,11 @@ picture
 		span
 			line-height: 40px
 		+r(1023)
-			padding: 0 	
+			padding: 0
+		+r(767)
+			padding: 10px 0 0
+			span
+				display: none 	 	
 	+r(1024)
 		& > .center
 			padding: 0 20px 0 0
@@ -149,13 +160,21 @@ picture
 			padding: 19px 0 0 0
 			width: 160px
 			margin-right: 54px
-	+r(767)
+	+r(768)
 		.logo
-			display: none
+			height: 40px
+			padding: 3px 0 0 26px
+			pointer-events: none
+			&:before
+				top: -29px		
+				right: -72px		
+	+r(767)
 		.socials
 			display: none
 		.nav
-			display: none				 	 		
+			display: none
+		.logo
+			width: 200px 					 	 		
 	&.is-small
 		.sertificate
 			display: none
@@ -167,7 +186,10 @@ picture
 				right: -72px
 		+r(1024)
 			.logo
-				padding: 3px 0 0 3px 		
+				padding: 3px 0 0 3px
+		+r(786)
+			.logo
+				padding: 3px 0 0 26px 		 		
 .build-quote
 	display: block
 	font-size: 0
@@ -233,7 +255,6 @@ picture
 		display: inline-block
 		vertical-align: middle
 		+sr(logo)
-
 .socials
 	float: left
 	height: 40px
@@ -260,6 +281,8 @@ picture
 			border: 2px solid #fff
 			+vertical
 			+tr(background 200ms)
+			+retina
+				border: 1px solid #fff
 			&:hover
 				background: $blue 
 		.icon
@@ -277,6 +300,12 @@ picture
 	color: #fff
 	&.sertificate_main
 		color: #2c3941
+	+r(767)
+		left: 0
+		right: 0
+		top: 50px
+		text-align: center
+		padding: 0 20px  	
 
 .btn
 	display: inline-block

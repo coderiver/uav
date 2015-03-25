@@ -111,7 +111,13 @@
 				&:after
 					opacity: 1
 			.footer-menu__content
-				opacity: 1 	 
+				opacity: 1
+		+r(767)
+			.footer-menu__bg
+				&:after
+					opacity: 1
+			.footer-menu__content
+				opacity: 1
 	.footer-menu__bg
 		position: absolute
 		top: -500px
@@ -244,7 +250,7 @@
 	.nav-drop__close
 		position: absolute
 		top: 50%
-		right: 20px
+		left: 20px
 		margin-top: -8px
 		line-height: 1
 		cursor: pointer
@@ -253,8 +259,9 @@
 	.nav-drop__topper
 		position: relative
 		height: 10vh
-		line-height: 10vh 
-		text-align: center
+		line-height: 10vh
+		padding: 0 20px 
+		text-align: right
 		border-bottom: 1px solid #2c3941 
 	.nav-drop__logo
 		display: inline-block

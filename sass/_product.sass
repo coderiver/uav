@@ -165,7 +165,7 @@
     left: 0
     background: #FFF
     opacity: 0
-    visibility: hidden
+    display: none
     +tr(all 1s) 
     z-index: 4  
 .mob-menu__links
@@ -173,6 +173,7 @@
     width: 0
     +tr(width .3s)
     white-space: nowrap
+    overflow: hidden
     +r(600)
         display: none
     &.is-show
