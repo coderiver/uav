@@ -270,7 +270,7 @@ head.ready(function() {
 		item.each(function(){
 			
 			// click event on plus
-			$('.el__plus').on('click', function(){
+			$('.js-tooltip-btn').on('click', function(){
 				var style = $(this).parent().attr('style'),
 					img = $(this).parent().attr('data-img'),
 					text = $(this).parent().attr('data-text'),
@@ -292,7 +292,7 @@ head.ready(function() {
 				getTop(style);
 
 				// switching active elememt
-				$('.el__item').removeClass('is-active');
+				$('.js-tooltip-item').removeClass('is-active');
 				$(this).parent().addClass('is-active');
 				block_img.attr('src', img);
 				block_text.html(text);
@@ -300,14 +300,44 @@ head.ready(function() {
 
 			});
 		
+			// prev next events
+
+			$('.js-tooltip-prev').on('click', function(){
+				if ($('.js-tooltip-item.is-active').prev().length) {
+					$('.js-tooltip-item.is-active').prev().find('.js-tooltip-btn').trigger('click');
+				};
+			});
+			$('.js-tooltip-next').on('click', function(){
+				if ($('.js-tooltip-item.is-active').next().length) {
+					$('.js-tooltip-item.is-active').next().find('.js-tooltip-btn').trigger('click');
+				};
+			});
+
 			// close popup
-			$('.el__close').on('click', function(){
+			$('.js-tooltip-close').on('click', function(){
 				$(this).parent().hide();
-				$('.el__item').removeClass('is-active');
+				$('.js-tooltip-item').removeClass('is-active');
 			});
 						
 		});
 	};
 	tooltip();
+
+	// small header if page is scrolled
+
+	function headerSmall(){
+			var top = $(window).scrollTop();
+			if (top > 1) {
+				$('.header').addClass('is-small');
+			}
+			else {
+				$('.header').removeClass('is-small');
+			}
+		};
+		headerSmall();
+
+	$(window).scroll(function(){
+		headerSmall();
+	});
 
 });

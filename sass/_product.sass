@@ -479,7 +479,7 @@
     +r(768)
         display: none
     &.scroll_main
-        bottom: 0
+        bottom: 42px
         color: $dark
     .scroll__title
         margin-bottom: 5px
@@ -598,6 +598,8 @@
             display: inline-block
             vertical-align: middle
             max-width: 100%
+        +r(767)
+            position: relative    
     .el__item
         position: absolute
         top: 0
@@ -641,6 +643,7 @@
             margin-left: -8px
             +arr(16,8,$dark,t)
         +r(767)
+            display: block!important
             position: relative
             top: auto!important
             left: auto!important

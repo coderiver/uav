@@ -56,6 +56,7 @@ picture { display: inline-block; vertical-align: middle; }
 .img-wrap .img-wrap__bg:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .img-wrap .img-wrap__bg img { width: 100%; height: auto; vertical-align: middle; }
 .img-wrap .img-wrap__in { height: 100vh; min-height: 768px; }
+.main .img-wrap .img-wrap__in { min-height: 1px; }
 @media only screen and (max-width: 1023px) { .img-wrap .img-wrap__bg { top: 0; bottom: 0; left: -1000px; right: -1000px; }
   .img-wrap .img-wrap__bg picture { height: 100%; }
   .img-wrap .img-wrap__bg img { width: auto; height: 100%; } }
@@ -65,7 +66,7 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 1024px) { .title { font-size: 30px; } }
 .title.title_dark { color: #2c3941; }
 
-.header { position: absolute; left: 0; right: 0; height: 40px; background: #2c3941; text-align: center; z-index: 999; }
+.header { position: fixed; left: 0; right: 0; height: 40px; background: #2c3941; text-align: center; z-index: 999; }
 @media only screen and (max-width: 767px) { .header .mob-menu { visibility: visible; opacity: 1; } }
 .header .build-quote { float: right; padding: 0 0 0 20px; }
 .header .build-quote span { line-height: 40px; }
@@ -90,7 +91,8 @@ picture { display: inline-block; vertical-align: middle; }
 
 .nav { float: right; }
 .nav a { position: relative; float: left; padding: 0 20px; line-height: 40px; color: #FFF; text-transform: uppercase; }
-.nav .icon { position: absolute; left: 50%; bottom: 3px; margin-left: -5px; font-size: 10px; }
+.nav a:hover .icon { -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.nav a .icon { position: absolute; left: 50%; bottom: 3px; margin-left: -5px; font-size: 10px; -moz-transition: -moz-transform 300ms; -o-transition: -o-transform 300ms; -webkit-transition: -webkit-transform 300ms; transition: transform 300ms; }
 
 .logo { position: relative; float: left; width: 200px; height: 70px; padding: 19px 0 0 42px; margin-right: 74px; background: #fff; box-shadow: -4px 4px 4px -4px rgba(0, 0, 0, 0.4); }
 .logo:before { content: ""; position: absolute; top: -25px; right: -60px; height: 100%; width: 100px; background: #fff; -ms-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); transform: rotate(-45deg); box-shadow: 0 0px 4px rgba(0, 0, 0, 0.4); z-index: -1; }
@@ -103,8 +105,9 @@ picture { display: inline-block; vertical-align: middle; }
 .socials .socials__title { font-size: 10px; font-style: italic; }
 @media only screen and (max-width: 1023px) { .socials .socials__title { display: none; } }
 .socials .socials__list { font-size: 0; }
-.socials .socials__list a { display: inline-block; width: 21px; height: 21px; margin-left: 11px; border-radius: 50%; text-decoration: none; border: 1px solid #fff; text-align: center; font-size: 0; }
+.socials .socials__list a { display: inline-block; width: 21px; height: 21px; margin-left: 11px; border-radius: 50%; text-decoration: none; border: 2px solid #fff; text-align: center; font-size: 0; -moz-transition: background 200ms; -o-transition: background 200ms; -webkit-transition: background 200ms; transition: background 200ms; }
 .socials .socials__list a:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.socials .socials__list a:hover { background: #1262b2; }
 .socials .socials__list .icon { font-size: 9px; color: #fff; vertical-align: middle; }
 .socials .socials__list .icon-social-fb { font-size: 11px; }
 
@@ -199,7 +202,7 @@ picture { display: inline-block; vertical-align: middle; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-.main { position: relative; height: 100%; }
+.main { position: relative; height: 100vh; }
 .main .center { padding: 0 42px; }
 .main .btn { position: absolute; bottom: 42px; right: 42px; z-index: 999; }
 @media only screen and (max-width: 568px) { .main .btn { bottom: 22px; right: 22px; } }
@@ -516,7 +519,7 @@ picture { display: inline-block; vertical-align: middle; }
 
 .scroll { position: absolute; bottom: 175px; left: 50%; width: 100px; margin-left: -50px; color: #b7c7d1; text-align: center; z-index: 999; }
 @media only screen and (max-width: 768px) { .scroll { display: none; } }
-.scroll.scroll_main { bottom: 0; color: #2c3941; }
+.scroll.scroll_main { bottom: 42px; color: #2c3941; }
 .scroll .scroll__title { margin-bottom: 5px; text-transform: uppercase; }
 .scroll .icon { font-size: 20px; }
 
@@ -555,6 +558,7 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 767px) { .el { position: relative; top: auto; left: auto; right: auto; bottom: auto; margin-bottom: 40px; } }
 .el .el__pic { display: inline-block; vertical-align: middle; }
 .el .el__pic img { display: inline-block; vertical-align: middle; max-width: 100%; }
+@media only screen and (max-width: 767px) { .el .el__pic { position: relative; } }
 .el .el__item { position: absolute; top: 0; left: 0; z-index: 4; }
 .el .el__item.is-active { z-index: 8; }
 .el .el__item.is-active .el__plus { border-color: #fff; background: #1262b2; color: #fff; }
@@ -564,7 +568,7 @@ picture { display: inline-block; vertical-align: middle; }
 .el .el__plus:hover { border-color: #fff; background: #1262b2; color: #fff; }
 .el .el__info { position: absolute; width: 220px; margin-left: -101px; margin-top: 26px; padding: 30px 20px 20px; background: #2c3941; z-index: 5; }
 .el .el__info:before { content: ""; position: absolute; top: -8px; left: 50%; margin-left: -8px; width: 0px; height: 0px; border-style: solid; border-width: 0 8px 8px 8px; border-color: transparent transparent #2c3941 transparent; }
-@media only screen and (max-width: 767px) { .el .el__info { position: relative; top: auto !important; left: auto !important; margin-left: 0; margin-top: 0; margin-right: 0; width: 100%; } }
+@media only screen and (max-width: 767px) { .el .el__info { display: block !important; position: relative; top: auto !important; left: auto !important; margin-left: 0; margin-top: 0; margin-right: 0; width: 100%; } }
 .el .el__close { position: absolute; top: 10px; right: 10px; background: none; color: #FFF; }
 .el .el__close .icon { font-size: 10px; }
 .el .el__preview { margin-bottom: 30px; font-size: 0; }

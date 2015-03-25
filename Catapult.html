@@ -17,12 +17,12 @@
 <div class="wrap">
 	<!-- header -->
 	<header class="header" hidden>
+		<!-- logo -->
+		<div class="logo">
+			<a href="page1" class="js-link"></a>
+		</div>
 		<!-- center -->
 		<div class="center">
-			<!-- logo -->
-			<div class="logo">
-				<a href="page1" class="js-link"></a>
-			</div>
 			<!-- socials -->
 			<div class="socials">
 				<div class="socials__title">Social:</div>
@@ -49,18 +49,18 @@
 	</header>
 	<!-- menu -->
 	<div class="menu js-menu is-fixed">
+		<div class="mob-menu">
+			<div class="mob-menu__links js-menu-links">
+				<a href="#">Products</a>
+				<a href="#">company</a>
+				<a href="#">contacts</a>
+			</div>
+			<button class="mob-menu__btn js-menu-btn">
+				<i class="icon icon-menu-sidemenu"></i>
+			</button>
+		</div>
 		<!-- center -->
 		<div class="center">
-			<div class="mob-menu">
-				<div class="mob-menu__links js-menu-links">
-					<a href="#">Products</a>
-					<a href="#">company</a>
-					<a href="#">contacts</a>
-				</div>
-				<button class="mob-menu__btn js-menu-btn">
-					<i class="icon icon-menu-sidemenu"></i>
-				</button>
-			</div>
 			<div class="menu__list">
 				<a class="menu__item is-current" href="#">
 					<div class="menu__type">
@@ -328,37 +328,37 @@
 						</div>
 					</div>
 					<!-- el -->
-					<div class="el">
+					<div class="el js-tooltip">
 						<div class="el__pic">
 							<img src="img/prod1.png" alt="">
 							<!-- 1 -->
-							<div class="el__item is-active" style="top: 20%; left: 30%;">
-								<div class="el__plus">
+							<div class="el__item is-active js-tooltip-item" style="top: 20%; left: 30%;" data-img="img/pic1.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
+								<div class="el__plus js-tooltip-btn">
 									<i class="icon icon-exploded-plus"></i>
 								</div>
 							</div>
 							<!-- 2 -->
-							<div class="el__item" style="top: 30%; left: 40%;">
-								<div class="el__plus">
+							<div class="el__item js-tooltip-item" style="top: 30%; left: 40%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
+								<div class="el__plus js-tooltip-btn">
 									<i class="icon icon-exploded-plus"></i>
 								</div>
 							</div>
 							<!-- 3 -->
-							<div class="el__item" style="top: 40%; left: 50%;">
-								<div class="el__plus">
+							<div class="el__item js-tooltip-item" style="top: 40%; left: 50%;" data-img="img/pic1.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
+								<div class="el__plus js-tooltip-btn">
 									<i class="icon icon-exploded-plus"></i>
 								</div>
 							</div>
 							<!-- 4 -->
-							<div class="el__item" style="top: 50%; left: 60%;">
-								<div class="el__plus">
+							<div class="el__item js-tooltip-item" style="top: 50%; left: 60%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
+								<div class="el__plus js-tooltip-btn">
 									<i class="icon icon-exploded-plus"></i>
 								</div>
 							</div>
 						</div>
 						<!-- el__info -->
-						<div class="el__info" style="top: 45%; left: 50%;">
-							<button class="el__close">
+						<div class="el__info" style="display: none;">
+							<button class="el__close js-tooltip-close">
 								<i class="icon icon-exploded-close"></i>
 							</button>
 							<div class="el__preview">
@@ -369,11 +369,11 @@
 								<div>User -upgradable catapult length.</div>
 							</div>
 							<div class="el__nav">
-								<button>
+								<button class="js-tooltip-prev">
 									<i class="icon icon-arrow-main-left"></i>
 									<span>Previous</span>
 								</button>
-								<button>
+								<button class="js-tooltip-next">
 									<span>Next</span>
 									<i class="icon icon-arrow-main-right"></i>
 								</button>
