@@ -37,9 +37,7 @@ a[href^=mailto]:hover { color: #1262b2; }
 
 picture { display: inline-block; vertical-align: middle; }
 
-.wrap { position: relative; min-height: 100%; height: 100%; background: url(../img/patern.png); }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .wrap { background: url(../img/patern-retina.png); } }
-@media only screen and (max-width: 767px) { .wrap { height: auto; } }
+.wrap { position: relative; min-height: 100%; height: 100%; }
 
 .center { position: relative; max-width: 1580px; padding: 0 40px; margin: 0 auto; *zoom: 1; }
 .center:after { content: " "; display: table; clear: both; }
@@ -346,6 +344,7 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 360px) { .gallery .slick-prev { left: -27px; } }
 .clients .slick-prev { left: -15px; }
 @media only screen and (max-width: 320px) { .clients .slick-prev { left: 0; } }
+.footer-menu .slick-prev { left: 0; }
 @media only screen and (max-width: 767px) { .footer-menu .slick-prev { left: 28%; } }
 .accesories .slick-prev { top: 46px; left: 0; background: transparent; }
 .catalog-mob .slick-prev { top: 50%; left: 29%; margin-top: -18px; }
@@ -358,6 +357,7 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 360px) { .gallery .slick-next { right: -27px; } }
 .clients .slick-next { right: -15px; }
 @media only screen and (max-width: 320px) { .clients .slick-next { right: 0; } }
+.footer-menu .slick-next { right: 0; }
 @media only screen and (max-width: 767px) { .footer-menu .slick-next { right: 28%; } }
 .accesories .slick-next { top: auto; bottom: 46px; background: transparent; }
 .catalog-mob .slick-next { bottom: auto; top: 50%; right: 29%; margin-top: -18px; }
@@ -436,7 +436,7 @@ picture { display: inline-block; vertical-align: middle; }
 .mob-menu__btn { float: left; width: 34px; height: 40px; background: #FFF; font-size: 0; }
 .mob-menu__btn .icon { font-size: 12px; color: #2C3941; }
 
-.page { position: relative; height: 100%; }
+.page { position: relative; height: 100%; background: url(../img/patern.png); }
 @media only screen and (max-width: 767px) { .page { height: auto; min-height: 100%; } }
 .page .page__in { position: absolute; top: 80px; left: 40px; right: 40px; bottom: 40px; }
 @media only screen and (max-width: 768px) { .page .page__in { left: 20px; right: 20px; bottom: 20px; } }

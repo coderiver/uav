@@ -44,7 +44,7 @@ head.ready(function() {
 				{
 			    	breakpoint: 1280,
 			    	settings: {
-			    		slidesToShow: 3,
+			    		slidesToShow: 6,
 			    	}
 			    },
 			    {
