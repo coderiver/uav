@@ -345,6 +345,7 @@ picture { display: inline-block; vertical-align: middle; }
 .clients .slick-prev { left: -15px; }
 @media only screen and (max-width: 320px) { .clients .slick-prev { left: 0; } }
 .footer-menu .slick-prev { left: 0; }
+@media only screen and (max-width: 1024px) { .footer-menu .slick-prev { left: -20px; } }
 @media only screen and (max-width: 767px) { .footer-menu .slick-prev { left: 28%; } }
 .accesories .slick-prev { top: 46px; left: 0; background: transparent; }
 .catalog-mob .slick-prev { top: 50%; left: 29%; margin-top: -18px; }
@@ -358,6 +359,7 @@ picture { display: inline-block; vertical-align: middle; }
 .clients .slick-next { right: -15px; }
 @media only screen and (max-width: 320px) { .clients .slick-next { right: 0; } }
 .footer-menu .slick-next { right: 0; }
+@media only screen and (max-width: 1024px) { .footer-menu .slick-next { right: -20px; } }
 @media only screen and (max-width: 767px) { .footer-menu .slick-next { right: 28%; } }
 .accesories .slick-next { top: auto; bottom: 46px; background: transparent; }
 .catalog-mob .slick-next { bottom: auto; top: 50%; right: 29%; margin-top: -18px; }
