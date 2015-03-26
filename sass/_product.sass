@@ -16,6 +16,9 @@
             position: absolute
             top: 7px
             right: 10px
+            display: none
+            +r(767)
+                display: block
     &.is-hidden
         visibility: hidden
         z-index: -1     
@@ -53,7 +56,7 @@
             margin-bottom: 3px
         .mob-menu
             opacity: 1
-            visibility: visible 
+            display: block
     .menu__list
         position: relative
         text-align: center
@@ -194,9 +197,45 @@
     height: 40px
     background: #FFF
     font-size: 0
-    .icon
-        font-size: 12px
-        color: #2C3941      
+    i
+        position: relative
+        display: inline-block
+        vertical-align: middle
+        width: 13px
+        height: 2px
+        border-radius: 2px
+        background: #2c3941
+        &:before
+            content: ""
+            position: absolute
+            top: -4px
+            left: 0 
+            width: 13px
+            height: 2px
+            border-radius: 2px
+            background: #2c3941
+            +tr(all 200ms)
+            z-index: 1
+        &:after
+            content: ""
+            position: absolute
+            bottom: -4px
+            left: 0
+            width: 13px
+            height: 2px
+            border-radius: 2px
+            background: #2c3941
+            +tr(all 200ms)
+            z-index: 1
+    &.is-open
+        i
+            background: transparent
+            &:before
+                top: 0
+                +rotate(-45)
+            &:after
+                bottom: 0
+                +rotate(45)                     
 .page
     position: relative
     height: 100%
@@ -204,6 +243,10 @@
     +r(767) 
         height: auto
         min-height: 100%
+    &.page_first
+        +r(768)
+            height: auto
+            min-height: 100%     
     .page__in
         position: absolute
         top: 80px
@@ -232,7 +275,8 @@
         z-index: 4
         +r(767) 
             height: auto
-            min-height: 100% 
+            min-height: 100%
+            
 .block
     position: absolute
     +clr
@@ -488,6 +532,15 @@
         text-transform: uppercase
     .icon
         font-size: 20px
+    .page_first &
+        +r(768) 
+            position: relative
+            bottom: auto
+            left: auto
+            margin: 0 auto 
+            display: block
+        +r(767)
+            display: none        
 
 .actions
     text-align: right
@@ -851,14 +904,15 @@
         background: $dark
         text-align: right
         border-radius: 6px
+        +tr(text-align 200ms)
         &:before
             content: ""
             display: inline-block
             width: 9px
             height: 9px
             background: #FFF
-            border-radius: 9px
-            box-shadow: 1.5px 2.6px 5px rgba(16, 22, 25, 0.75) 
+            border-radius: 50%
+            //box-shadow: 1.5px 2.6px 5px rgba(16, 22, 25, 0.75) 
             vertical-align: top
 
 .catapult

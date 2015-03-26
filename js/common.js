@@ -235,9 +235,9 @@ head.ready(function() {
 	// menu
 	
 	$('.js-menu-btn').on('click', function () {
-		//alert();
 		if ($(window).width() >= 601) {
 			$('.js-menu-links').toggleClass('is-show');
+			$(this).toggleClass('is-open');
 		}
 		else {
 			$('body').addClass('no-scroll');
@@ -337,8 +337,22 @@ head.ready(function() {
 		};
 		headerSmall();
 
+	
+	// size switcher
+
+	$('.js-size').each(function(){
+		$(this).find('a').on('click', function(){
+			$('.js-size').find('a').removeClass('is-active');
+			$(this).addClass('is-active');
+			return false;
+		});
+	});
+
+	// window scroll event
 	$(window).scroll(function(){
 		headerSmall();
 	});
+
+
 
 });
