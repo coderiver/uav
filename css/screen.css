@@ -451,8 +451,8 @@ picture { display: inline-block; vertical-align: middle; }
 .page .page__in { position: absolute; top: 80px; left: 40px; right: 40px; bottom: 40px; }
 @media only screen and (max-width: 768px) { .page .page__in { left: 20px; right: 20px; bottom: 20px; } }
 @media only screen and (max-width: 767px) { .page .page__in { position: relative; top: auto; left: auto; right: auto; bottom: auto; padding-top: 60px; } }
-.page .page__in.details .block_top-left { display: none; }
-.page .page__in.details .links { display: none; }
+@media only screen and (max-width: 767px) { .page .page__in.details .block_top-left { display: none; }
+  .page .page__in.details .links { display: none; } }
 .page > .center { position: relative; height: 100%; z-index: 4; }
 @media only screen and (max-width: 767px) { .page > .center { height: auto; min-height: 100%; } }
 
@@ -580,8 +580,11 @@ picture { display: inline-block; vertical-align: middle; }
 .el { position: absolute; top: 140px; left: 0; right: 0; bottom: 140px; text-align: center; font-size: 0; }
 .el:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 @media only screen and (max-width: 767px) { .el { position: relative; top: auto; left: auto; right: auto; bottom: auto; margin-bottom: 40px; } }
-.el .el__pic { display: inline-block; vertical-align: middle; }
-.el .el__pic img { display: inline-block; vertical-align: middle; max-width: 100%; }
+.el .el__pic { position: relative; display: inline-block; vertical-align: middle; height: 100%; text-align: center; font-size: 0; }
+.el .el__pic:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.el .el__pic img { display: inline-block; vertical-align: middle; max-width: 100%; height: 100%; }
+@media only screen and (max-width: 1023px) { .el .el__pic { height: auto; }
+  .el .el__pic img { height: auto; max-height: 100%; } }
 @media only screen and (max-width: 767px) { .el .el__pic { position: relative; } }
 .el .el__item { position: absolute; top: 0; left: 0; z-index: 4; }
 .el .el__item.is-active { z-index: 8; }
@@ -630,7 +633,9 @@ picture { display: inline-block; vertical-align: middle; }
 .options:after { content: " "; display: table; clear: both; }
 .options .options__col { float: left; margin-left: 20px; }
 .options .options__col:first-child { margin-left: 0; }
-@media only screen and (max-width: 768px) { .options .options__col { float: none; margin-left: 0; margin-top: 20px; } }
+@media only screen and (max-width: 768px) { .options .options__col { float: none; margin-left: 0; margin-top: 20px; min-width: 300px; }
+  .options .options__col .btns { width: 100%; }
+  .options .options__col .btns .btn { width: 50%; padding: 7px 0 0; } }
 .options .options__title { margin-bottom: 25px; font-size: 14px; font-style: italic; }
 @media only screen and (max-width: 768px) { .options .options__title { margin-bottom: 10px; } }
 
@@ -671,11 +676,19 @@ picture { display: inline-block; vertical-align: middle; }
 .catapult .catapult__man { top: 0; }
 .catapult .catapult__man img { height: 385px; }
 .catapult .catapult__el { bottom: 0; }
+@media only screen and (max-width: 1024px) { .catapult .catapult__el { left: 100px; right: 100px; } }
 @media only screen and (max-width: 767px) { .catapult .catapult__el { position: absolute; left: 0; right: 0; top: 0; } }
 .catapult .catapult__el_1 { top: auto; padding-right: 70px; }
 .catapult .catapult__el_1 img { height: 325px; }
 .catapult .catapult__el_2 { top: auto; padding-right: 100px; }
 .catapult .catapult__el_2 img { height: 250px; }
+.catapult .catapult__dims { position: relative; display: inline-block; height: 100%; }
+@media only screen and (max-width: 1024px) { .catapult .catapult__dims { height: auto; max-height: 100%; } }
+.catapult .catapult__dims > img { position: relative; height: auto; max-height: 100%; z-index: 2; }
+@media only screen and (max-width: 767px) { .catapult .catapult__dims > img { opacity: 0; } }
+.catapult .catapult__bg { position: absolute; z-index: 1; }
+.catapult .catapult__dimm { position: absolute; font-size: 12px; color: #2c3941; white-space: nowrap; z-index: 3; }
+@media only screen and (max-width: 767px) { .catapult .catapult__dimm { display: none; } }
 
 .accesories { *zoom: 1; }
 .accesories:after { content: " "; display: table; clear: both; }
