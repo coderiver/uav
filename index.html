@@ -8,6 +8,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,700,300italic&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/jquery.fullPage.css" >
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<link rel="stylesheet" media="all" href="css/style.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -57,9 +58,9 @@
 		</div>
 	</header>
 	<!-- container -->
-	<div class="container">
+	<div class="container" id="js-fullpage">
 		<!-- main -->
-		<div class="main">
+		<div class="main section" data-anchor="slide1">
 			<div class="slider js-slick">
 				<div class="slider__item">
 					<div class="img-wrap">
@@ -154,7 +155,7 @@
 			</div>
 		</div>
 		<!-- page -->
-		<div class="page">
+		<div class="page section" data-anchor="slide2">
 			<!-- center -->
 			<div class="center">
 				<div class="page__in">
@@ -361,7 +362,7 @@
 			</div>
 		</div>
 		<!-- page -->
-		<div class="page">
+		<div class="page section" data-anchor="slide3">
 			<!-- center -->
 			<div class="center">
 				<div class="page__in">
@@ -475,7 +476,7 @@
 			</div>
 		</div>
 		<!-- page -->
-		<div class="page">
+		<div class="page section" data-anchor="slide4">
 			<div class="page__bg page__bg_top non-mobile">
 				<picture>
 				    <!--[if IE 9]><video style="display: none;"><![endif]-->

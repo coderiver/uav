@@ -348,6 +348,12 @@ head.ready(function() {
 		});
 	});
 
+	// fullPageJs
+
+	$('#js-fullpage').fullpage({
+		resize: true
+	});
+
 	// window scroll event
 	$(window).scroll(function(){
 		headerSmall();

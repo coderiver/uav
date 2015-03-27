@@ -453,8 +453,8 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 767px) { .page .page__in { position: relative; top: auto; left: auto; right: auto; bottom: auto; padding-top: 60px; } }
 @media only screen and (max-width: 767px) { .page .page__in.details .block_top-left { display: none; }
   .page .page__in.details .links { display: none; } }
-.page > .center { position: relative; height: 100%; z-index: 4; }
-@media only screen and (max-width: 767px) { .page > .center { height: auto; min-height: 100%; } }
+.page .center { position: relative; height: 100%; z-index: 4; }
+@media only screen and (max-width: 767px) { .page .center { height: auto; min-height: 100%; } }
 
 .block { position: absolute; *zoom: 1; z-index: 6; }
 .block:after { content: " "; display: table; clear: both; }
