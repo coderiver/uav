@@ -664,7 +664,12 @@
                 height: auto
                 max-height: 100%
         +r(767)
-            position: relative     
+            position: relative
+    .el__in
+        position: relative
+        display: inline-block
+        vertical-align: middle
+        height: 100%             
     .el__item
         position: absolute
         top: 0
@@ -729,6 +734,7 @@
         font-size: 0
         img
             max-width: 100%
+            height: auto 
     .el__text
         margin-bottom: 20px
         text-align: left
@@ -938,6 +944,8 @@
     right: 0
     height: 460px
     margin-top: -230px
+    +r(1024)
+        height: 400px
     +r(767)
         position: relative
         top: auto
@@ -987,12 +995,19 @@
         top: auto
         padding-right: 70px
         img
-            height: 325px
-    .catapult__el_2
+            height: 100% 
+    .catapult__el_2, .catapult__el_3
         top: auto
         padding-right: 100px 
         img
-            height: 250px
+            height: 100%
+        +r(1024)
+            .catapult__dims
+                height: 100%
+    .catapult__el_3
+        margin-left: -200px
+        +r(480)
+            margin-left: -100px  
     .catapult__dims
         position: relative
         display: inline-block
@@ -1010,6 +1025,9 @@
     .catapult__bg
         position: absolute
         z-index: 1
+        img
+            width: 100%
+            height: auto 
     .catapult__dimm
         position: absolute
         font-size: 12px

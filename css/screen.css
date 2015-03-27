@@ -586,6 +586,7 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 1023px) { .el .el__pic { height: auto; }
   .el .el__pic img { height: auto; max-height: 100%; } }
 @media only screen and (max-width: 767px) { .el .el__pic { position: relative; } }
+.el .el__in { position: relative; display: inline-block; vertical-align: middle; height: 100%; }
 .el .el__item { position: absolute; top: 0; left: 0; z-index: 4; }
 .el .el__item.is-active { z-index: 8; }
 .el .el__item.is-active .el__plus { border-color: #fff; background: #1262b2; color: #fff; }
@@ -599,7 +600,7 @@ picture { display: inline-block; vertical-align: middle; }
 .el .el__close { position: absolute; top: 10px; right: 10px; background: none; color: #FFF; }
 .el .el__close .icon { font-size: 10px; }
 .el .el__preview { margin-bottom: 30px; font-size: 0; }
-.el .el__preview img { max-width: 100%; }
+.el .el__preview img { max-width: 100%; height: auto; }
 .el .el__text { margin-bottom: 20px; text-align: left; font-size: 14px; }
 @media only screen and (max-width: 767px) { .el .el__text { text-align: center; } }
 .el .el__nav { *zoom: 1; }
@@ -667,6 +668,7 @@ picture { display: inline-block; vertical-align: middle; }
 .size span:before { content: ""; display: inline-block; width: 9px; height: 9px; background: #FFF; border-radius: 50%; vertical-align: top; }
 
 .catapult { position: absolute; top: 50%; left: 0; right: 0; height: 460px; margin-top: -230px; }
+@media only screen and (max-width: 1024px) { .catapult { height: 400px; } }
 @media only screen and (max-width: 767px) { .catapult { position: relative; top: auto; left: auto; right: auto; margin-top: 0; height: auto; }
   .catapult.catapult_resp .catapult__el { position: relative; left: auto; right: auto; top: auto; bottom: auto; } }
 .catapult .catapult__man, .catapult .catapult__el { position: absolute; left: 0; right: 0; top: 0; text-align: center; }
@@ -679,14 +681,18 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 1024px) { .catapult .catapult__el { left: 100px; right: 100px; } }
 @media only screen and (max-width: 767px) { .catapult .catapult__el { position: absolute; left: 0; right: 0; top: 0; } }
 .catapult .catapult__el_1 { top: auto; padding-right: 70px; }
-.catapult .catapult__el_1 img { height: 325px; }
-.catapult .catapult__el_2 { top: auto; padding-right: 100px; }
-.catapult .catapult__el_2 img { height: 250px; }
+.catapult .catapult__el_1 img { height: 100%; }
+.catapult .catapult__el_2, .catapult .catapult__el_3 { top: auto; padding-right: 100px; }
+.catapult .catapult__el_2 img, .catapult .catapult__el_3 img { height: 100%; }
+@media only screen and (max-width: 1024px) { .catapult .catapult__el_2 .catapult__dims, .catapult .catapult__el_3 .catapult__dims { height: 100%; } }
+.catapult .catapult__el_3 { margin-left: -200px; }
+@media only screen and (max-width: 480px) { .catapult .catapult__el_3 { margin-left: -100px; } }
 .catapult .catapult__dims { position: relative; display: inline-block; height: 100%; }
 @media only screen and (max-width: 1024px) { .catapult .catapult__dims { height: auto; max-height: 100%; } }
 .catapult .catapult__dims > img { position: relative; height: auto; max-height: 100%; z-index: 2; }
 @media only screen and (max-width: 767px) { .catapult .catapult__dims > img { opacity: 0; } }
 .catapult .catapult__bg { position: absolute; z-index: 1; }
+.catapult .catapult__bg img { width: 100%; height: auto; }
 .catapult .catapult__dimm { position: absolute; font-size: 12px; color: #2c3941; white-space: nowrap; z-index: 3; }
 @media only screen and (max-width: 767px) { .catapult .catapult__dimm { display: none; } }
 
@@ -786,9 +792,7 @@ picture { display: inline-block; vertical-align: middle; }
 .page.page_dims .disclaimer > .icon { display: none; }
 @media only screen and (max-width: 480px) { .page.page_dims .catapult__man img { height: 300px; } }
 .page.page_dims .catapult__el_1 { height: 64%; padding-right: 0; }
-.page.page_dims .catapult__el_1 img { height: 100%; width: auto; }
-.page.page_dims .catapult__el_2 { height: 50%; margin-bottom: -30px; }
-.page.page_dims .catapult__el_2 img { height: 100%; width: auto; }
+.page.page_dims .catapult__el_2, .page.page_dims .catapult__el_3 { height: 50%; margin-bottom: -30px; }
 .page.page_dims .info__col { margin-left: 15px; }
 .page.page_dims .info__col_border { padding-left: 14px; }
 
