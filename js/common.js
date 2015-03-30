@@ -6,6 +6,7 @@ head.ready(function() {
 		$('.js-fullpage-index').fullpage({
 			resize: true,
 			menu: "#menu",
+			normalScrollElementTouchThreshold: 10,
 			anchors: ['main', 'products', 'company', 'contacts'],
 			afterLoad: function(anchorLink, index){
 				//section 1
@@ -55,6 +56,13 @@ head.ready(function() {
 				$('.container').html(html);
 				
 				if (link == 'main') {
+					//remove fragment as much as it can go without adding an entry in browser history:
+					window.location.replace("#");
+
+					// slice off the remaining '#' in HTML5:    
+					if (typeof window.history.replaceState == 'function') {
+						history.replaceState({}, '', window.location.href.slice(0, -1));
+					}
 					indexFullPage();
 					slick();
 					gallery();
@@ -62,6 +70,7 @@ head.ready(function() {
 					clients();
 				}
 				else {
+					document.location.hash ='product1';
 					productFullPage();
 					dragSlider();
 	            	tooltip();

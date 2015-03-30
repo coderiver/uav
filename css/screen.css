@@ -47,7 +47,7 @@ picture { display: inline-block; vertical-align: middle; }
 .container { position: relative; height: 100%; }
 @media only screen and (max-width: 767px) { .container { height: auto; min-height: 100%; } }
 
-.section { opacity: 0; -moz-transition: opacity 600ms 300ms; -o-transition: opacity 600ms 300ms; -webkit-transition: opacity 600ms; -webkit-transition-delay: 300ms; transition: opacity 600ms 300ms; }
+.section { -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); opacity: 0; -moz-transition: opacity 600ms 300ms; -o-transition: opacity 600ms 300ms; -webkit-transition: opacity 600ms; -webkit-transition-delay: 300ms; transition: opacity 600ms 300ms; }
 @media only screen and (max-width: 767px) { .section { opacity: 1; } }
 .section.active { opacity: 1; }
 
