@@ -1,12 +1,34 @@
 head.ready(function() {
 
+	//ajax load
+	var hash_var = document.location.hash;
+	hash_var = hash_var.slice(1);
+	hash_var = hash_var.replace(/\d/g, '');
+
+	console.log(hash_var);
+
+	if (hash_var == "penguin") {
+			$.ajax({
+				url: hash_var + '/' + hash_var + '.html',
+				cache: false,
+				success: function(html) {
+					$('.container').html(html);
+
+					// penguinFullPage();
+					dragSlider();
+		            tooltip();
+		            catalog();
+		            slick2();
+				}
+			});
+	}
+
 	// fullPageJs
 
 	function indexFullPage(){
 		$('.js-fullpage-index').fullpage({
 			resize: true,
 			menu: "#menu",
-			normalScrollElementTouchThreshold: 10,
 			anchors: ['main', 'products', 'company', 'contacts'],
 			afterLoad: function(anchorLink, index){
 				//section 1
@@ -23,11 +45,34 @@ head.ready(function() {
 	}
 	indexFullPage();
 
-	function productFullPage(){
-		$('.js-fullpage-product').fullpage({
+	function penguinFullPage(){
+		$('.js-fullpage-penguin').fullpage({
 			resize: true,
-			//fixedElements: '.js-menu',
-			anchors: ['product1', 'product2', 'product3', 'product4', 'product5', 'product6', 'product7', 'product8', 'product9', 'product10', 'product11'],
+			anchors: ['penguin1', 'penguin2', 'penguin3', 'penguin4', 
+			'penguin5', 'penguin6', 'penguin7', 'penguin8', 'penguin9', 'penguin10', 'penguin11'],
+			afterRender: function(){
+	            $('.logo a').addClass('js-link').attr('href', 'main/main');
+	        },
+			onLeave: function(index, nextIndex, direction){
+
+	            //after leaving section 1
+	            if(index == 1 && direction =='down'){
+	                $('.header').attr('hidden', 'hidden');
+	                $('.js-menu').addClass('is-fixed');
+	            }
+	            // after returning to section 1
+	            else if(index == 2 && direction == 'up'){
+	            	$('.js-menu').removeClass('is-fixed');	
+	                $('.header').removeAttr('hidden');
+	            }
+	        }	
+		});
+	}
+	function catapultFullPage(){
+		$('.js-fullpage-catapult').fullpage({
+			resize: true,
+			anchors: ['catapult1', 'catapult2', 'catapult3', 'catapult4', 'catapult5', 'catapult6', 
+			'catapult7', 'catapult8', 'catapult9', 'catapult10', 'catapult11'],
 			afterRender: function(){
 	            $('.logo a').addClass('js-link').attr('href', 'main');
 	        },
@@ -50,12 +95,12 @@ head.ready(function() {
 	$('body').on('click', '.js-link', function(){
 		var link = $(this).attr('href');
 		$.ajax({
-			url: 'ajax/' + link + '.html',
+			url: link + '.html',
 			cache: false,
 			success: function(html) {
 				$('.container').html(html);
 				
-				if (link == 'main') {
+				if (link == 'main/main') {
 					//remove fragment as much as it can go without adding an entry in browser history:
 					window.location.replace("#");
 
@@ -69,9 +114,17 @@ head.ready(function() {
 					slick2();
 					clients();
 				}
-				else {
-					document.location.hash ='product1';
-					productFullPage();
+				else if (link == 'penguin/penguin'){
+					document.location.hash ='penguin1';
+					//penguinFullPage();
+					dragSlider();
+	            	tooltip();
+	            	catalog();
+	            	slick2();
+				}
+				else if (link == 'catapult/catapult'){
+					document.location.hash ='catapult1';
+					penguinFullPage();
 					dragSlider();
 	            	tooltip();
 	            	catalog();
