@@ -20,10 +20,10 @@
 	<header class="header">
 		<!-- logo -->
 		<div class="logo">
-			<a href="page1" class="js-link"></a>
+			<a href="#main"></a>
 		</div>
 		<div class="mob-menu">
-			<div class="mob-menu__links js-menu-links">
+			<div id="menu" class="mob-menu__links js-menu-links">
 				<a href="#">Products</a>
 				<a href="#">company</a>
 				<a href="#">contacts</a>
@@ -50,578 +50,627 @@
 			</a>
 			<!-- nav -->
 			<nav class="nav">
-				<a href="our-products" class="js-link">Products<i class="icon icon-arrow-main-down"></i></a>
-				<a href="about" class="js-link">company<i class="icon icon-arrow-main-down"></i></a>
-				<a href="contacts" class="js-link">contacts<i class="icon icon-arrow-main-down"></i></a>
+				<a data-menuanchor="products" href="#products">Products<i class="icon icon-arrow-main-down"></i></a>
+				<a data-menuanchor="company" href="#company">company<i class="icon icon-arrow-main-down"></i></a>
+				<a data-menuanchor="contacts" href="#contacts">contacts<i class="icon icon-arrow-main-down"></i></a>
 			</nav>
 			<div class="sertificate">Unmanned platforms and subsystems  |  ISO 9001:2008 Certified</div>
 		</div>
 	</header>
 	<!-- container -->
-	<div class="container" id="js-fullpage">
-		<!-- main -->
-		<div class="main section" data-anchor="slide1">
-			<div class="slider js-slick">
-				<div class="slider__item">
-					<div class="img-wrap">
-						<div class="img-wrap__bg">
-							<picture>
-							    <!--[if IE 9]><video style="display: none;"><![endif]-->
-							    <source srcset="img/img-large.jpg" media="(min-width: 1024px)">
-							    <source srcset="img/img-big.jpg" media="(min-width: 768px)">
-							    <source srcset="img/img.jpg" media="(min-width: 568px)">
-							    <source srcset="img/img-tablet.jpg" media="(min-width: 320px)">
-							    <source srcset="img/img-mobile.jpg" media="(min-width: 240px)">
-							    <!--[if IE 9]></video><![endif]-->
-							    <img srcset="img/img.jpg" alt="img">  
-							</picture>
-						</div>
-						<div class="img-wrap__in"></div>
-					</div>
-					<div class="center slider__content">
-						<div class="title title_dark">Penguin B Platform</div>
-						<div>Designed as a high performance unmanned airframe, Penguin B is one of the most capable airframes available today.</div>
-					</div>
-				</div>
-				<div class="slider__item">
-					<div class="img-wrap">
-						<div class="img-wrap__bg">
-							<picture>
-							    <!--[if IE 9]><video style="display: none;"><![endif]-->
-							    <source srcset="img/img2-large.jpg" media="(min-width: 1024px)">
-							    <source srcset="img/img2-big.jpg" media="(min-width:768px)">
-							    <source srcset="img/img2.jpg" media="(min-width: 568px)">
-							    <source srcset="img/img2-tablet.jpg" media="(min-width: 320px)">
-							    <source srcset="img/img2-mobile.jpg" media="(min-width: 240px)">
-							    <!--[if IE 9]></video><![endif]-->
-							    <img srcset="img/img2.jpg" alt="img">  
-							</picture>
-						</div>
-						<div class="img-wrap__in"></div>
-					</div>
-					<div class="center slider__content">
-						<div class="title title_dark">Penguin B Platform</div>
-						<div>Designed as a high performance unmanned airframe, Penguin B is one of the most capable airframes available today.</div>
-					</div>
-				</div>
-				<div class="slider__item">
-					<div class="img-wrap">
-						<div class="img-wrap__bg">
-							<picture>
-							    <!--[if IE 9]><video style="display: none;"><![endif]-->
-							    <source srcset="img/img-large.jpg" media="(min-width: 1024px)">
-							    <source srcset="img/img-big.jpg" media="(min-width: 768px)">
-							    <source srcset="img/img.jpg" media="(min-width: 568px)">
-							    <source srcset="img/img-tablet.jpg" media="(min-width: 320px)">
-							    <source srcset="img/img-mobile.jpg" media="(min-width: 240px)">
-							    <!--[if IE 9]></video><![endif]-->
-							    <img srcset="img/img.jpg" alt="img">  
-							</picture>
-						</div>
-						<div class="img-wrap__in"></div>
-					</div>
-					<div class="center slider__content">
-						<div class="title title_dark">Penguin B Platform</div>
-						<div>Designed as a high performance unmanned airframe, Penguin B is one of the most capable airframes available today.</div>
-					</div>
-				</div>
-				<div class="slider__item">
-					<div class="img-wrap">
-						<div class="img-wrap__bg">
-							<picture>
-							    <!--[if IE 9]><video style="display: none;"><![endif]-->
-							    <source srcset="img/img2-large.jpg" media="(min-width: 1500px)">
-							    <source srcset="img/img2-big.jpg" media="(min-width: 1024px)">
-							    <source srcset="img/img2.jpg" media="(min-width: 768px)">
-							    <source srcset="img/img2-tablet.jpg" media="(min-width: 320px)">
-							    <source srcset="img/img2-mobile.jpg" media="(min-width: 240px)">
-							    <!--[if IE 9]></video><![endif]-->
-							    <img srcset="img/img2.jpg" alt="img">  
-							</picture>
-						</div>
-						<div class="img-wrap__in"></div>
-					</div>
-					<div class="center slider__content">
-						<h1 class="title title_dark">Penguin B Platform2</h1>
-						<div>Designed as a high performance unmanned airframe, Penguin B is one of the most capable airframes available today.</div>
-					</div>
-				</div>
-			</div>
-			<a href="#" class="btn">Learn more about the product</a>
-			<!-- scroll -->
-			<div class="scroll scroll_main">
-				<div class="scroll__title">scroll down</div>
-				<i class="icon icon-scroll-arrow-down"></i>
-			</div>
-		</div>
-		<!-- page -->
-		<div class="page section" data-anchor="slide2">
-			<!-- center -->
-			<div class="center">
-				<div class="page__in">
-					<div class="our-prod">
-						<div class="our-prod__topper">
-							<div class="title">Our products</div>
-							<a href="#" class="btn">All products</a>
-						</div>
-						<div class="footer-menu">
-							<div class="footer-menu__list js-slick-2">
-								<div class="footer-menu__item">
-									<a href="#" class="footer-menu__link">
-										<div class="footer-menu__bg">
-											<picture>
-										    <!--[if IE 9]><video style="display: none;"><![endif]-->
-										    <source srcset="img/fm1-retina.jpg" media="(min-width: 1921px)">
-										    <!--[if IE 9]></video><![endif]-->
-										    <img srcset="img/fm1.jpg" alt="img">
-										</picture>
-										</div>
-										<div class="footer-menu__content">
-											<span>Penguin B Airframe</span>
-										</div>
-									</a>
-								</div>
-								<div class="footer-menu__item">
-									<a href="#" class="footer-menu__link">
-										<div class="footer-menu__bg">
-											<picture>
-										    <!--[if IE 9]><video style="display: none;"><![endif]-->
-										    <source srcset="img/fm2-retina.jpg" media="(min-width: 1921px)">
-										    <!--[if IE 9]></video><![endif]-->
-										    <img srcset="img/fm2.jpg" alt="img">
-										</picture>
-										</div>
-										<div class="footer-menu__content">
-											<span>Ground Control Station</span>
-										</div>
-									</a>
-								</div>
-								<div class="footer-menu__item">
-									<a href="#" class="footer-menu__link">
-										<div class="footer-menu__bg">
-											<picture>
-										    <!--[if IE 9]><video style="display: none;"><![endif]-->
-										    <source srcset="img/fm3-retina.jpg" media="(min-width: 1921px)">
-										    <!--[if IE 9]></video><![endif]-->
-										    <img srcset="img/fm3.jpg" alt="img">
-										</picture>
-										</div>
-										<div class="footer-menu__content">
-											<span>Pneumatic Catapult</span>
-										</div>
-									</a>
-								</div>
-								<div class="footer-menu__item">
-									<a href="#" class="footer-menu__link">
-										<div class="footer-menu__bg">
-											<picture>
-										    <!--[if IE 9]><video style="display: none;"><![endif]-->
-										    <source srcset="img/fm4-retina.jpg" media="(min-width: 1921px)">
-										    <!--[if IE 9]></video><![endif]-->
-										    <img srcset="img/fm4.jpg" alt="img">
-										</picture>
-										</div>
-										<div class="footer-menu__content">
-											<span>Fuel Injected Engine</span>
-										</div>
-									</a>
-								</div>
-								<div class="footer-menu__item">
-									<a href="#" class="footer-menu__link">
-										<div class="footer-menu__bg">
-											<picture>
-										    <!--[if IE 9]><video style="display: none;"><![endif]-->
-										    <source srcset="img/fm5-retina.jpg" media="(min-width: 1921px)">
-										    <!--[if IE 9]></video><![endif]-->
-										    <img srcset="img/fm5.jpg" alt="img">
-										</picture>
-										</div>
-										<div class="footer-menu__content">
-											<span>Gimbal Retraction System</span>
-										</div>
-									</a>
-								</div>
-								<div class="footer-menu__item">
-									<a href="#" class="footer-menu__link">
-										<div class="footer-menu__bg">
-											<picture>
-										    <!--[if IE 9]><video style="display: none;"><![endif]-->
-										    <source srcset="img/fm6-retina.jpg" media="(min-width: 1921px)">
-										    <!--[if IE 9]></video><![endif]-->
-										    <img srcset="img/fm6.jpg" alt="img">
-										</picture>
-										</div>
-										<div class="footer-menu__content">
-											<span>UAV Accesories</span>
-										</div>
-									</a>
-								</div>
-								<div class="footer-menu__item">
-									<a href="#" class="footer-menu__link">
-										<div class="footer-menu__bg">
-											<picture>
-										    <!--[if IE 9]><video style="display: none;"><![endif]-->
-										    <source srcset="img/fm2-retina.jpg" media="(min-width: 1921px)">
-										    <!--[if IE 9]></video><![endif]-->
-										    <img srcset="img/fm2.jpg" alt="img">
-										</picture>
-										</div>
-										<div class="footer-menu__content">
-											<span>Ground Control Station</span>
-										</div>
-									</a>
-								</div>
-								<div class="footer-menu__item">
-									<a href="#" class="footer-menu__link">
-										<div class="footer-menu__bg">
-											<picture>
-										    <!--[if IE 9]><video style="display: none;"><![endif]-->
-										    <source srcset="img/fm2-retina.jpg" media="(min-width: 1921px)">
-										    <!--[if IE 9]></video><![endif]-->
-										    <img srcset="img/fm2.jpg" alt="img">
-										</picture>
-										</div>
-										<div class="footer-menu__content">
-											<span>Ground Control Station</span>
-										</div>
-									</a>
-								</div>
+	<div class="container">
+		<div class="js-fullpage-index">
+			<!-- main -->
+			<div class="main section">
+				<div class="slider js-slick">
+					<div class="slider__item">
+						<div class="img-wrap">
+							<div class="img-wrap__bg">
+								<picture>
+								    <!--[if IE 9]><video style="display: none;"><![endif]-->
+								    <source srcset="img/img-large.jpg" media="(min-width: 1024px)">
+								    <source srcset="img/img-big.jpg" media="(min-width: 768px)">
+								    <source srcset="img/img.jpg" media="(min-width: 568px)">
+								    <source srcset="img/img-tablet.jpg" media="(min-width: 320px)">
+								    <source srcset="img/img-mobile.jpg" media="(min-width: 240px)">
+								    <!--[if IE 9]></video><![endif]-->
+								    <img srcset="img/img.jpg" alt="img">  
+								</picture>
 							</div>
+							<div class="img-wrap__in"></div>
 						</div>
-						<div class="our-prod__content">
-							<div class="our-prod__gallery">
-								<div class="gallery js-gallery">
-									<div class="gallery__item">
-										<picture>
-										    <!--[if IE 9]><video style="display: none;"><![endif]-->
-										    <source srcset="img/desk-retina.png" media="(min-width: 1921px)">
-										    <!--[if IE 9]></video><![endif]-->
-										    <img srcset="img/desk.png" alt="img">  
-										</picture>
+						<div class="center slider__content">
+							<div class="title title_dark">Penguin B Platform</div>
+							<div>Designed as a high performance unmanned airframe, Penguin B is one of the most capable airframes available today.</div>
+						</div>
+					</div>
+					<div class="slider__item">
+						<div class="img-wrap">
+							<div class="img-wrap__bg">
+								<picture>
+								    <!--[if IE 9]><video style="display: none;"><![endif]-->
+								    <source srcset="img/img2-large.jpg" media="(min-width: 1024px)">
+								    <source srcset="img/img2-big.jpg" media="(min-width:768px)">
+								    <source srcset="img/img2.jpg" media="(min-width: 568px)">
+								    <source srcset="img/img2-tablet.jpg" media="(min-width: 320px)">
+								    <source srcset="img/img2-mobile.jpg" media="(min-width: 240px)">
+								    <!--[if IE 9]></video><![endif]-->
+								    <img srcset="img/img2.jpg" alt="img">  
+								</picture>
+							</div>
+							<div class="img-wrap__in"></div>
+						</div>
+						<div class="center slider__content">
+							<div class="title title_dark">Penguin B Platform</div>
+							<div>Designed as a high performance unmanned airframe, Penguin B is one of the most capable airframes available today.</div>
+						</div>
+					</div>
+					<div class="slider__item">
+						<div class="img-wrap">
+							<div class="img-wrap__bg">
+								<picture>
+								    <!--[if IE 9]><video style="display: none;"><![endif]-->
+								    <source srcset="img/img-large.jpg" media="(min-width: 1024px)">
+								    <source srcset="img/img-big.jpg" media="(min-width: 768px)">
+								    <source srcset="img/img.jpg" media="(min-width: 568px)">
+								    <source srcset="img/img-tablet.jpg" media="(min-width: 320px)">
+								    <source srcset="img/img-mobile.jpg" media="(min-width: 240px)">
+								    <!--[if IE 9]></video><![endif]-->
+								    <img srcset="img/img.jpg" alt="img">  
+								</picture>
+							</div>
+							<div class="img-wrap__in"></div>
+						</div>
+						<div class="center slider__content">
+							<div class="title title_dark">Penguin B Platform</div>
+							<div>Designed as a high performance unmanned airframe, Penguin B is one of the most capable airframes available today.</div>
+						</div>
+					</div>
+					<div class="slider__item">
+						<div class="img-wrap">
+							<div class="img-wrap__bg">
+								<picture>
+								    <!--[if IE 9]><video style="display: none;"><![endif]-->
+								    <source srcset="img/img2-large.jpg" media="(min-width: 1500px)">
+								    <source srcset="img/img2-big.jpg" media="(min-width: 1024px)">
+								    <source srcset="img/img2.jpg" media="(min-width: 768px)">
+								    <source srcset="img/img2-tablet.jpg" media="(min-width: 320px)">
+								    <source srcset="img/img2-mobile.jpg" media="(min-width: 240px)">
+								    <!--[if IE 9]></video><![endif]-->
+								    <img srcset="img/img2.jpg" alt="img">  
+								</picture>
+							</div>
+							<div class="img-wrap__in"></div>
+						</div>
+						<div class="center slider__content">
+							<h1 class="title title_dark">Penguin B Platform2</h1>
+							<div>Designed as a high performance unmanned airframe, Penguin B is one of the most capable airframes available today.</div>
+						</div>
+					</div>
+				</div>
+				<a href="prod-penguin" class="btn js-link">Learn more about the product</a>
+				<!-- scroll -->
+				<div class="scroll scroll_main">
+					<div class="scroll__title">scroll down</div>
+					<i class="icon icon-scroll-arrow-down"></i>
+				</div>
+			</div>
+			<!-- page -->
+			<div class="page section">
+				<!-- center -->
+				<div class="center">
+					<div class="page__in">
+						<div class="our-prod">
+							<div class="our-prod__topper">
+								<div class="title">Our products</div>
+								<a href="#" class="btn">All products</a>
+							</div>
+							<div class="footer-menu">
+								<div class="footer-menu__list js-slick-2">
+									<div class="footer-menu__item">
+										<a href="#" class="footer-menu__link">
+											<div class="footer-menu__bg">
+												<picture>
+											    <!--[if IE 9]><video style="display: none;"><![endif]-->
+											    <source srcset="img/fm1-retina.jpg" media="(min-width: 1921px)">
+											    <!--[if IE 9]></video><![endif]-->
+											    <img srcset="img/fm1.jpg" alt="img">
+											</picture>
+											</div>
+											<div class="footer-menu__content">
+												<span>Penguin B Airframe</span>
+											</div>
+										</a>
 									</div>
-									<div class="gallery__item">
-										<picture>
-										    <!--[if IE 9]><video style="display: none;"><![endif]-->
-										    <source srcset="img/desk-retina.png" media="(min-width: 1921px)">
-										    <!--[if IE 9]></video><![endif]-->
-										    <img srcset="img/desk.png" alt="img">  
-										</picture>
+									<div class="footer-menu__item">
+										<a href="#" class="footer-menu__link">
+											<div class="footer-menu__bg">
+												<picture>
+											    <!--[if IE 9]><video style="display: none;"><![endif]-->
+											    <source srcset="img/fm2-retina.jpg" media="(min-width: 1921px)">
+											    <!--[if IE 9]></video><![endif]-->
+											    <img srcset="img/fm2.jpg" alt="img">
+											</picture>
+											</div>
+											<div class="footer-menu__content">
+												<span>Ground Control Station</span>
+											</div>
+										</a>
 									</div>
-									<div class="gallery__item">
-										<picture>
-										    <!--[if IE 9]><video style="display: none;"><![endif]-->
-										    <source srcset="img/desk-retina.png" media="(min-width: 1921px)">
-										    <!--[if IE 9]></video><![endif]-->
-										    <img srcset="img/desk.png" alt="img">  
-										</picture>
+									<div class="footer-menu__item">
+										<a href="prod-catapult" class="footer-menu__link js-link">
+											<div class="footer-menu__bg">
+												<picture>
+											    <!--[if IE 9]><video style="display: none;"><![endif]-->
+											    <source srcset="img/fm3-retina.jpg" media="(min-width: 1921px)">
+											    <!--[if IE 9]></video><![endif]-->
+											    <img srcset="img/fm3.jpg" alt="img">
+											</picture>
+											</div>
+											<div class="footer-menu__content">
+												<span>Pneumatic Catapult</span>
+											</div>
+										</a>
 									</div>
-									<div class="gallery__item">
-										<picture>
-										    <!--[if IE 9]><video style="display: none;"><![endif]-->
-										    <source srcset="img/desk-retina.png" media="(min-width: 1921px)">
-										    <!--[if IE 9]></video><![endif]-->
-										    <img srcset="img/desk.png" alt="img">  
-										</picture>
+									<div class="footer-menu__item">
+										<a href="#" class="footer-menu__link">
+											<div class="footer-menu__bg">
+												<picture>
+											    <!--[if IE 9]><video style="display: none;"><![endif]-->
+											    <source srcset="img/fm4-retina.jpg" media="(min-width: 1921px)">
+											    <!--[if IE 9]></video><![endif]-->
+											    <img srcset="img/fm4.jpg" alt="img">
+											</picture>
+											</div>
+											<div class="footer-menu__content">
+												<span>Fuel Injected Engine</span>
+											</div>
+										</a>
+									</div>
+									<div class="footer-menu__item">
+										<a href="#" class="footer-menu__link">
+											<div class="footer-menu__bg">
+												<picture>
+											    <!--[if IE 9]><video style="display: none;"><![endif]-->
+											    <source srcset="img/fm5-retina.jpg" media="(min-width: 1921px)">
+											    <!--[if IE 9]></video><![endif]-->
+											    <img srcset="img/fm5.jpg" alt="img">
+											</picture>
+											</div>
+											<div class="footer-menu__content">
+												<span>Gimbal Retraction System</span>
+											</div>
+										</a>
+									</div>
+									<div class="footer-menu__item">
+										<a href="#" class="footer-menu__link">
+											<div class="footer-menu__bg">
+												<picture>
+											    <!--[if IE 9]><video style="display: none;"><![endif]-->
+											    <source srcset="img/fm6-retina.jpg" media="(min-width: 1921px)">
+											    <!--[if IE 9]></video><![endif]-->
+											    <img srcset="img/fm6.jpg" alt="img">
+											</picture>
+											</div>
+											<div class="footer-menu__content">
+												<span>UAV Accesories</span>
+											</div>
+										</a>
+									</div>
+									<div class="footer-menu__item">
+										<a href="#" class="footer-menu__link">
+											<div class="footer-menu__bg">
+												<picture>
+											    <!--[if IE 9]><video style="display: none;"><![endif]-->
+											    <source srcset="img/fm2-retina.jpg" media="(min-width: 1921px)">
+											    <!--[if IE 9]></video><![endif]-->
+											    <img srcset="img/fm2.jpg" alt="img">
+											</picture>
+											</div>
+											<div class="footer-menu__content">
+												<span>Ground Control Station</span>
+											</div>
+										</a>
+									</div>
+									<div class="footer-menu__item">
+										<a href="#" class="footer-menu__link">
+											<div class="footer-menu__bg">
+												<picture>
+											    <!--[if IE 9]><video style="display: none;"><![endif]-->
+											    <source srcset="img/fm2-retina.jpg" media="(min-width: 1921px)">
+											    <!--[if IE 9]></video><![endif]-->
+											    <img srcset="img/fm2.jpg" alt="img">
+											</picture>
+											</div>
+											<div class="footer-menu__content">
+												<span>Ground Control Station</span>
+											</div>
+										</a>
 									</div>
 								</div>
 							</div>
-							<div class="our-prod__info">
-								<div class="content">
-									<div class="content__title">Ground Control Station</div>
-									<div class="content__text">
-										<div>UAV Factory’s off-the-shelf portable Ground Control Station (GCS) is a flexible and universal solution for controlling unmanned vehicles and payloads. By using a unique, modular electronics compartment (MEC), application specific hardware can be quickly installed. This flexibility allows the GCS to be configured to control unmanned aircraft vehicles (UAV), ground robots, bomb disposal robots, remotely operated vehicles (ROV) and other robotic devices. </div>
+							<div class="our-prod__content">
+								<div class="our-prod__gallery">
+									<div class="gallery js-gallery">
+										<div class="gallery__item">
+											<picture>
+											    <!--[if IE 9]><video style="display: none;"><![endif]-->
+											    <source srcset="img/desk-retina.png" media="(min-width: 1921px)">
+											    <!--[if IE 9]></video><![endif]-->
+											    <img srcset="img/desk.png" alt="img">  
+											</picture>
+										</div>
+										<div class="gallery__item">
+											<picture>
+											    <!--[if IE 9]><video style="display: none;"><![endif]-->
+											    <source srcset="img/desk-retina.png" media="(min-width: 1921px)">
+											    <!--[if IE 9]></video><![endif]-->
+											    <img srcset="img/desk.png" alt="img">  
+											</picture>
+										</div>
+										<div class="gallery__item">
+											<picture>
+											    <!--[if IE 9]><video style="display: none;"><![endif]-->
+											    <source srcset="img/desk-retina.png" media="(min-width: 1921px)">
+											    <!--[if IE 9]></video><![endif]-->
+											    <img srcset="img/desk.png" alt="img">  
+											</picture>
+										</div>
+										<div class="gallery__item">
+											<picture>
+											    <!--[if IE 9]><video style="display: none;"><![endif]-->
+											    <source srcset="img/desk-retina.png" media="(min-width: 1921px)">
+											    <!--[if IE 9]></video><![endif]-->
+											    <img srcset="img/desk.png" alt="img">  
+											</picture>
+										</div>
 									</div>
-									<!-- share-wrap -->
-									<div class="share-wrap">
-										<!-- share -->
-										<div class="share">
-											<div class="share__title">Share this:</div>
-											<div class="share__list">
-												<a href="#"><i class="icon icon-social-fb"></i></a>
-												<a href="#"><i class="icon icon-social-in"></i></a>
-												<a href="#"><i class="icon icon-social-tw"></i></a>
-												<a href="#"><i class="icon icon-exploded-plus"></i></a>
+								</div>
+								<div class="our-prod__info">
+									<div class="content">
+										<div class="content__title">Ground Control Station</div>
+										<div class="content__text">
+											<div>UAV Factory’s off-the-shelf portable Ground Control Station (GCS) is a flexible and universal solution for controlling unmanned vehicles and payloads. By using a unique, modular electronics compartment (MEC), application specific hardware can be quickly installed. This flexibility allows the GCS to be configured to control unmanned aircraft vehicles (UAV), ground robots, bomb disposal robots, remotely operated vehicles (ROV) and other robotic devices. </div>
+										</div>
+										<!-- share-wrap -->
+										<div class="share-wrap">
+											<!-- share -->
+											<div class="share">
+												<div class="share__title">Share this:</div>
+												<div class="share__list">
+													<a href="#"><i class="icon icon-social-fb"></i></a>
+													<a href="#"><i class="icon icon-social-in"></i></a>
+													<a href="#"><i class="icon icon-social-tw"></i></a>
+													<a href="#"><i class="icon icon-exploded-plus"></i></a>
+												</div>
+											</div>
+											<!-- build-quote -->
+											<a href="#" class="btn">Learn more</a>
+										</div>
+									</div>
+								</div>
+								<!-- btn-mob -->
+								<div class="btn-mob">
+									<a href="#" class="btn">All products</a>
+								</div>
+								<!-- scroll-mob -->
+								<div class="scroll-mob">
+									<i class="icon icon-scroll-arrow-down"></i>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- page -->
+			<div class="page section">
+				<!-- center -->
+				<div class="center">
+					<div class="page__in">
+						<div class="our-prod">
+							<div class="our-prod__topper">
+								<div class="title">About us</div>
+								<a href="#" class="btn">Meet the team</a>
+							</div>
+							<div class="our-prod__content">
+								<div class="our-prod__gallery">
+									<div class="video-player">
+										<div class="video-player__in">
+											<picture>
+											    <!--[if IE 9]><video style="display: none;"><![endif]-->
+											    <source srcset="img/video-retina.jpg" media="(min-width: 1921px)">
+											    <!--[if IE 9]></video><![endif]-->
+											    <img srcset="img/video.jpg" alt="img">  
+											</picture>
+										</div>
+										<div class="video-player__controls">
+											<a href="#" class="icon icon-about-play"></a>
+										</div>
+									</div>
+								</div>
+								<div class="our-prod__info">
+									<div class="content">
+										<div class="content__text">
+											<div>UAV Factory Ltd. is one of the world’s leading developers of unmanned composite airframes. In the rapidly-developing field of unmanned aerial vehicles, UAV Factory designs subsystems, develops platforms, and manufactures airframes. The result is a product that is unmatched in quality, and unparalleled in technological advancement. </div>
+											<div>UAV Factory isn’t your average unmanned airframe development company. Instead of only designing systems, or only researching the technology, or only manufacturing airframes, we’ve chosen to do it all. We believe that by investing in every step of the process — from conception to completion — we can produce a product that features exceptional quality at a competitive price. UAV Factory produces nearly every product and component in house. </div>
+										</div>
+										<!-- share-wrap -->
+										<div class="share-wrap">
+											<!-- share -->
+											<div class="share">
+												<div class="share__title">Share this:</div>
+												<div class="share__list">
+													<a href="#"><i class="icon icon-social-fb"></i></a>
+													<a href="#"><i class="icon icon-social-in"></i></a>
+													<a href="#"><i class="icon icon-social-tw"></i></a>
+													<a href="#"><i class="icon icon-exploded-plus"></i></a>
+												</div>
 											</div>
 										</div>
-										<!-- build-quote -->
-										<a href="#" class="btn">Learn more</a>
 									</div>
+								</div> 
+							</div>
+							<!-- clients -->
+							<div class="clients">
+								<div class="clients__title">Our products</div>
+								<div class="clients__list js-clients">
+									<div class="clients__item"><a href="#">
+										<picture>
+										    <!--[if IE 9]><video style="display: none;"><![endif]-->
+										    <source srcset="img/client1-retina.png" media="(min-width: 1921px)">
+										    <!--[if IE 9]></video><![endif]-->
+										    <img srcset="img/client1.png" alt="img">  
+										</picture>
+									</a></div>
+									<div class="clients__item"><a href="#">
+										<picture>
+										    <!--[if IE 9]><video style="display: none;"><![endif]-->
+										    <source srcset="img/client2-retina.png" media="(min-width: 1921px)">
+										    <!--[if IE 9]></video><![endif]-->
+										    <img srcset="img/client2.png" alt="img">  
+										</picture>
+									</a></div>
+									<div class="clients__item"><a href="#">
+										<picture>
+										    <!--[if IE 9]><video style="display: none;"><![endif]-->
+										    <source srcset="img/client3-retina.png" media="(min-width: 1921px)">
+										    <!--[if IE 9]></video><![endif]-->
+										    <img srcset="img/client3.png" alt="img">  
+										</picture>
+									</a></div>
+									<div class="clients__item"><a href="#">
+										<picture>
+										    <!--[if IE 9]><video style="display: none;"><![endif]-->
+										    <source srcset="img/client1-retina.png" media="(min-width: 1921px)">
+										    <!--[if IE 9]></video><![endif]-->
+										    <img srcset="img/client1.png" alt="img">  
+										</picture>
+									</a></div>
+									<div class="clients__item"><a href="#">
+										<picture>
+										    <!--[if IE 9]><video style="display: none;"><![endif]-->
+										    <source srcset="img/client2-retina.png" media="(min-width: 1921px)">
+										    <!--[if IE 9]></video><![endif]-->
+										    <img srcset="img/client2.png" alt="img">  
+										</picture>
+									</a></div>
+									<div class="clients__item"><a href="#">
+										<picture>
+										    <!--[if IE 9]><video style="display: none;"><![endif]-->
+										    <source srcset="img/client3-retina.png" media="(min-width: 1921px)">
+										    <!--[if IE 9]></video><![endif]-->
+										    <img srcset="img/client3.png" alt="img">  
+										</picture>
+									</a></div>
 								</div>
 							</div>
 							<!-- btn-mob -->
 							<div class="btn-mob">
-								<a href="#" class="btn">All products</a>
+								<a href="#" class="btn">Meet the team</a>
 							</div>
 							<!-- scroll-mob -->
 							<div class="scroll-mob">
 								<i class="icon icon-scroll-arrow-down"></i>
-							</div> 
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- page -->
-		<div class="page section" data-anchor="slide3">
-			<!-- center -->
-			<div class="center">
-				<div class="page__in">
-					<div class="our-prod">
-						<div class="our-prod__topper">
-							<div class="title">About us</div>
-							<a href="#" class="btn">Meet the team</a>
-						</div>
-						<div class="our-prod__content">
-							<div class="our-prod__gallery">
-								<div class="video-player">
-									<div class="video-player__in">
-										<picture>
-										    <!--[if IE 9]><video style="display: none;"><![endif]-->
-										    <source srcset="img/video-retina.jpg" media="(min-width: 1921px)">
-										    <!--[if IE 9]></video><![endif]-->
-										    <img srcset="img/video.jpg" alt="img">  
-										</picture>
+			<!-- page -->
+			<div class="page section">
+				<div class="page__bg page__bg_top non-mobile">
+					<picture>
+					    <!--[if IE 9]><video style="display: none;"><![endif]-->
+					    <source srcset="img/plain-retina.png" media="(min-width: 1921px)">
+					    <!--[if IE 9]></video><![endif]-->
+					    <img srcset="img/plain.png" alt="img">  
+					</picture>
+				</div>
+				<!-- center -->
+				<div class="center">
+					<div class="page__in">
+						<div class="contacts">
+							<div class="contacts__col">
+								<div class="title">UAV Factory USA LLC</div>
+								<div class="contacts__text">
+									<div>
+										50 South Buckhout Street, Irvington, NY 10533 USA
 									</div>
-									<div class="video-player__controls">
-										<a href="#" class="icon icon-about-play"></a>
+									<div>
+										Phone: +1 (914) 591 3296<br>
+										Fax: +1 (914) 591 3715
+									</div>
+									<div>
+										Sales: <a href="mailto:josephm@uavfactory.com">josephm@uavfactory.com</a>
 									</div>
 								</div>
 							</div>
-							<div class="our-prod__info">
-								<div class="content">
-									<div class="content__text">
-										<div>UAV Factory Ltd. is one of the world’s leading developers of unmanned composite airframes. In the rapidly-developing field of unmanned aerial vehicles, UAV Factory designs subsystems, develops platforms, and manufactures airframes. The result is a product that is unmatched in quality, and unparalleled in technological advancement. </div>
-										<div>UAV Factory isn’t your average unmanned airframe development company. Instead of only designing systems, or only researching the technology, or only manufacturing airframes, we’ve chosen to do it all. We believe that by investing in every step of the process — from conception to completion — we can produce a product that features exceptional quality at a competitive price. UAV Factory produces nearly every product and component in house. </div>
+							<div class="contacts__col">
+								<div class="title">UAV Factory Ltd., Europe</div>
+								<div class="contacts__text">
+									<div>
+										7 Peldu Street, Jelgava, Latvia, LV-3002
 									</div>
-									<!-- share-wrap -->
-									<div class="share-wrap">
-										<!-- share -->
-										<div class="share">
-											<div class="share__title">Share this:</div>
-											<div class="share__list">
-												<a href="#"><i class="icon icon-social-fb"></i></a>
-												<a href="#"><i class="icon icon-social-in"></i></a>
-												<a href="#"><i class="icon icon-social-tw"></i></a>
-												<a href="#"><i class="icon icon-exploded-plus"></i></a>
+									<div>
+										General enquiries: +371 29191590<br>
+										Sales: +371 29119398<br>
+										Fax: +371 63048747
+									</div>
+									<div>
+										Information: <a href="mailto:info@uavfactory.com">info@uavfactory.com</a><br>
+										Sales: <a href="mailto:sales@uavfactory.com">sales@uavfactory.com</a>
+									</div>
+								</div>
+							</div>
+							<div class="contacts__col contacts__col_form">
+								<div class="title">Contact form</div>
+								<div class="form">
+									<form>
+										<div class="form__row">
+											<input type="text" class="input" placeholder="Enter your name">
+										</div>
+										<div class="form__row">
+											<div class="form__left">
+												<input type="text" class="input" placeholder="Company name">
+											</div>
+											<div class="form__right">
+												<input type="text" class="input" placeholder="Website">
 											</div>
 										</div>
-									</div>
-								</div>
-							</div> 
-						</div>
-						<!-- clients -->
-						<div class="clients">
-							<div class="clients__title">Our products</div>
-							<div class="clients__list js-clients">
-								<div class="clients__item"><a href="#">
-									<picture>
-									    <!--[if IE 9]><video style="display: none;"><![endif]-->
-									    <source srcset="img/client1-retina.png" media="(min-width: 1921px)">
-									    <!--[if IE 9]></video><![endif]-->
-									    <img srcset="img/client1.png" alt="img">  
-									</picture>
-								</a></div>
-								<div class="clients__item"><a href="#">
-									<picture>
-									    <!--[if IE 9]><video style="display: none;"><![endif]-->
-									    <source srcset="img/client2-retina.png" media="(min-width: 1921px)">
-									    <!--[if IE 9]></video><![endif]-->
-									    <img srcset="img/client2.png" alt="img">  
-									</picture>
-								</a></div>
-								<div class="clients__item"><a href="#">
-									<picture>
-									    <!--[if IE 9]><video style="display: none;"><![endif]-->
-									    <source srcset="img/client3-retina.png" media="(min-width: 1921px)">
-									    <!--[if IE 9]></video><![endif]-->
-									    <img srcset="img/client3.png" alt="img">  
-									</picture>
-								</a></div>
-								<div class="clients__item"><a href="#">
-									<picture>
-									    <!--[if IE 9]><video style="display: none;"><![endif]-->
-									    <source srcset="img/client1-retina.png" media="(min-width: 1921px)">
-									    <!--[if IE 9]></video><![endif]-->
-									    <img srcset="img/client1.png" alt="img">  
-									</picture>
-								</a></div>
-								<div class="clients__item"><a href="#">
-									<picture>
-									    <!--[if IE 9]><video style="display: none;"><![endif]-->
-									    <source srcset="img/client2-retina.png" media="(min-width: 1921px)">
-									    <!--[if IE 9]></video><![endif]-->
-									    <img srcset="img/client2.png" alt="img">  
-									</picture>
-								</a></div>
-								<div class="clients__item"><a href="#">
-									<picture>
-									    <!--[if IE 9]><video style="display: none;"><![endif]-->
-									    <source srcset="img/client3-retina.png" media="(min-width: 1921px)">
-									    <!--[if IE 9]></video><![endif]-->
-									    <img srcset="img/client3.png" alt="img">  
-									</picture>
-								</a></div>
-							</div>
-						</div>
-						<!-- btn-mob -->
-						<div class="btn-mob">
-							<a href="#" class="btn">Meet the team</a>
-						</div>
-						<!-- scroll-mob -->
-						<div class="scroll-mob">
-							<i class="icon icon-scroll-arrow-down"></i>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- page -->
-		<div class="page section" data-anchor="slide4">
-			<div class="page__bg page__bg_top non-mobile">
-				<picture>
-				    <!--[if IE 9]><video style="display: none;"><![endif]-->
-				    <source srcset="img/plain-retina.png" media="(min-width: 1921px)">
-				    <!--[if IE 9]></video><![endif]-->
-				    <img srcset="img/plain.png" alt="img">  
-				</picture>
-			</div>
-			<!-- center -->
-			<div class="center">
-				<div class="page__in">
-					<div class="contacts">
-						<div class="contacts__col">
-							<div class="title">UAV Factory USA LLC</div>
-							<div class="contacts__text">
-								<div>
-									50 South Buckhout Street, Irvington, NY 10533 USA
-								</div>
-								<div>
-									Phone: +1 (914) 591 3296<br>
-									Fax: +1 (914) 591 3715
-								</div>
-								<div>
-									Sales: <a href="mailto:josephm@uavfactory.com">josephm@uavfactory.com</a>
-								</div>
-							</div>
-						</div>
-						<div class="contacts__col">
-							<div class="title">UAV Factory Ltd., Europe</div>
-							<div class="contacts__text">
-								<div>
-									7 Peldu Street, Jelgava, Latvia, LV-3002
-								</div>
-								<div>
-									General enquiries: +371 29191590<br>
-									Sales: +371 29119398<br>
-									Fax: +371 63048747
-								</div>
-								<div>
-									Information: <a href="mailto:info@uavfactory.com">info@uavfactory.com</a><br>
-									Sales: <a href="mailto:sales@uavfactory.com">sales@uavfactory.com</a>
-								</div>
-							</div>
-						</div>
-						<div class="contacts__col contacts__col_form">
-							<div class="title">Contact form</div>
-							<div class="form">
-								<form>
-									<div class="form__row">
-										<input type="text" class="input" placeholder="Enter your name">
-									</div>
-									<div class="form__row">
-										<div class="form__left">
-											<input type="text" class="input" placeholder="Company name">
-										</div>
-										<div class="form__right">
-											<input type="text" class="input" placeholder="Website">
-										</div>
-									</div>
-									<div class="form__row">
-										<div class="form__left">
-											<input type="text" class="input" placeholder="Phone number">
-										</div>
-										<div class="form__right">
-											<input type="text" class="input" placeholder="E-mail">
-										</div>
-									</div>
-									<div class="form__row">
-										<textarea class="textarea" placeholder="Your question"></textarea>
-									</div>
-									<div class="form__row">
-										<div class="form__left">
-											<div class="capcha">
-												<img src="img/capcha.png" alt="">
+										<div class="form__row">
+											<div class="form__left">
+												<input type="text" class="input" placeholder="Phone number">
+											</div>
+											<div class="form__right">
+												<input type="text" class="input" placeholder="E-mail">
 											</div>
 										</div>
-										<div class="form__right">
-											<input type="text" class="input" placeholder="Enter capcha">
+										<div class="form__row">
+											<textarea class="textarea" placeholder="Your question"></textarea>
 										</div>
-									</div>
-									<div class="form__row">
-										<div class="form__left">
-											
+										<div class="form__row">
+											<div class="form__left">
+												<div class="capcha">
+													<img src="img/capcha.png" alt="">
+												</div>
+											</div>
+											<div class="form__right">
+												<input type="text" class="input" placeholder="Enter capcha">
+											</div>
 										</div>
-										<div class="form__right">
-											<button type="submit" class="btn">submit</button>
+										<div class="form__row">
+											<div class="form__left">
+												
+											</div>
+											<div class="form__right">
+												<button type="submit" class="btn">submit</button>
+											</div>
 										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- footer -->
-			<footer class="footer">
-				<div class="footer__content">
-					<div class="center">
-						<div class="footer__right">
-							<!-- sign-in -->
-							<div class="sign-in">
-								<form>
-									<div class="sign-in__right">
-										<button type="submit" class="btn">Submit</button>
-									</div>
-									<div class="sign-in__left">
-										<input type="text" class="input" placeholder="Sign up for our newsletter">
-									</div>	
-								</form>
-							</div>
-							<!-- socials -->
-							<div class="socials">
-								<div class="socials__title">Follow UAV Factory on:</div>
-								<div class="socials__list">
-									<a href="#"><i class="icon icon-social-fb"></i></a>
-									<a href="#"><i class="icon icon-social-in"></i></a>
-									<a href="#"><i class="icon icon-social-tw"></i></a>
+									</form>
 								</div>
 							</div>
 						</div>
-						<nav class="footer__nav">
-							<ul class="footer__list">
-								<li><a href="#">Research & Education</a></li>
-								<li><a href="#">Technical Data</a></li>
-								<li><a href="#">Testimonials</a></li>
-								<li><a href="#">Terms & Conditions</a></li>
-							</ul>
-							<ul class="footer__list">
-								<li><a href="#">Products</a></li>
-								<li><a href="#">Partners</a></li>
-								<li><a href="#">Company</a></li>
-								<li><a href="#">Contact information</a></li>
-							</ul>
-						</nav>
 					</div>
 				</div>
-				<div class="footer__bottom">
-					<div class="center">
-						<div class="copyrights">© 2014-UAV Factory. Allrights reserved.</div>
-						<div class="design">
-							Developed by CG Ant <span class="icon icon-contacts-developed"></span>
+				<!-- footer -->
+				<footer class="footer">
+					<div class="footer__content">
+						<div class="center">
+							<div class="footer__right">
+								<!-- sign-in -->
+								<div class="sign-in">
+									<form>
+										<div class="sign-in__right">
+											<button type="submit" class="btn">Submit</button>
+										</div>
+										<div class="sign-in__left">
+											<input type="text" class="input" placeholder="Sign up for our newsletter">
+										</div>	
+									</form>
+								</div>
+								<!-- socials -->
+								<div class="socials">
+									<div class="socials__title">Follow UAV Factory on:</div>
+									<div class="socials__list">
+										<a href="#"><i class="icon icon-social-fb"></i></a>
+										<a href="#"><i class="icon icon-social-in"></i></a>
+										<a href="#"><i class="icon icon-social-tw"></i></a>
+									</div>
+								</div>
+							</div>
+							<nav class="footer__nav">
+								<ul class="footer__list">
+									<li><a href="#">Research & Education</a></li>
+									<li><a href="#">Technical Data</a></li>
+									<li><a href="#">Testimonials</a></li>
+									<li><a href="#">Terms & Conditions</a></li>
+								</ul>
+								<ul class="footer__list">
+									<li><a href="#">Products</a></li>
+									<li><a href="#">Partners</a></li>
+									<li><a href="#">Company</a></li>
+									<li><a href="#">Contact information</a></li>
+								</ul>
+							</nav>
 						</div>
 					</div>
+					<div class="footer__bottom">
+						<div class="center">
+							<div class="copyrights">© 2014-UAV Factory. Allrights reserved.</div>
+							<div class="design">
+								Developed by CG Ant <span class="icon icon-contacts-developed"></span>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- popup -->
+<div class="popup js-popup" style="display: none;">
+	<div class="popup__close js-popup-close">
+		<span class="icon icon-exploded-close"></span>
+	</div>
+	<div class="popup__bg">
+		<picture>
+		    <!--[if IE 9]><video style="display: none;"><![endif]-->
+		    <source srcset="img/desk-retina.png" media="(min-width: 768px)">
+		    <source srcset="img/desk.png" media="(min-width: 320px)">
+		    <!--[if IE 9]></video><![endif]-->
+		    <img srcset="img/desk.png" alt="img">  
+		</picture>
+	</div>
+	<div class="popup__content">
+		<div class="popup-slider">
+			<div class="js-popup-slider">
+				<div class="popup-slider__item">
+					<div class="title">Lightweight<br> design</div>
+					<div class="popup-slider__text">
+						<div>UAV Factory’s off-the-shelf portable Ground Control Station (GCS) is a flexible and universal solution for controlling unmanned vehicles and payloads. By using a unique, modular electronics compartment (MEC), application specific hardware can be quickly installed. This flexibility allows the GCS to be configured to control unmanned aircraft vehicles (UAV), ground robots, bomb disposal robots, remotely operated vehicles (ROV) and other robotic devices. The GCS can also be configured to control and monitor measurement and sensing equipment. </div>
+						<div>Based on Panasonic’s field proven CF-31 Toughbook, the GCS has additional 17’’ sunlight readable touch screen display, advanced power distribution system with hot-swappable dual batteries and status monitoring features. The GCS is housed in a military grade rugged lightweight case which makes it ideal for use in harsh environments.</div>
+					</div>
 				</div>
-			</footer>
+				<div class="popup-slider__item">
+					<div class="title">Lightweight<br> design</div>
+					<div class="popup-slider__text">
+						<div>UAV Factory’s off-the-shelf portable Ground Control Station (GCS) is a flexible and universal solution for controlling unmanned vehicles and payloads. By using a unique, modular electronics compartment (MEC), application specific hardware can be quickly installed. This flexibility allows the GCS to be configured to control unmanned aircraft vehicles (UAV), ground robots, bomb disposal robots, remotely operated vehicles (ROV) and other robotic devices. The GCS can also be configured to control and monitor measurement and sensing equipment. </div>
+						<div>Based on Panasonic’s field proven CF-31 Toughbook, the GCS has additional 17’’ sunlight readable touch screen display, advanced power distribution system with hot-swappable dual batteries and status monitoring features. The GCS is housed in a military grade rugged lightweight case which makes it ideal for use in harsh environments.</div>
+					</div>
+				</div>
+				<div class="popup-slider__item">
+					<div class="title">Lightweight<br> design</div>
+					<div class="popup-slider__text">
+						<div>UAV Factory’s off-the-shelf portable Ground Control Station (GCS) is a flexible and universal solution for controlling unmanned vehicles and payloads. By using a unique, modular electronics compartment (MEC), application specific hardware can be quickly installed. This flexibility allows the GCS to be configured to control unmanned aircraft vehicles (UAV), ground robots, bomb disposal robots, remotely operated vehicles (ROV) and other robotic devices. The GCS can also be configured to control and monitor measurement and sensing equipment. </div>
+						<div>Based on Panasonic’s field proven CF-31 Toughbook, the GCS has additional 17’’ sunlight readable touch screen display, advanced power distribution system with hot-swappable dual batteries and status monitoring features. The GCS is housed in a military grade rugged lightweight case which makes it ideal for use in harsh environments.</div>
+					</div>
+				</div>
+			</div>
+			<div class="popup-slider__nav">
+				<button class="popup-slider__prev">Previous</button>
+				<button class="popup-slider__next">Next</button>
+
+			</div>
 		</div>
 	</div>
 </div>

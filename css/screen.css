@@ -47,6 +47,10 @@ picture { display: inline-block; vertical-align: middle; }
 .container { position: relative; height: 100%; }
 @media only screen and (max-width: 767px) { .container { height: auto; min-height: 100%; } }
 
+.section { opacity: 0; -moz-transition: opacity 600ms 300ms; -o-transition: opacity 600ms 300ms; -webkit-transition: opacity 600ms; -webkit-transition-delay: 300ms; transition: opacity 600ms 300ms; }
+@media only screen and (max-width: 767px) { .section { opacity: 1; } }
+.section.active { opacity: 1; }
+
 @media only screen and (max-width: 767px) { .non-mobile { display: none; } }
 
 .img-wrap { position: relative; overflow: hidden; height: 100%; }
@@ -386,7 +390,7 @@ picture { display: inline-block; vertical-align: middle; }
 .popup-slider .slick-dots button { width: 8px; height: 8px; border: 1px solid #2c3941; background: transparent; font: 0/0 a; text-shadow: none; color: transparent; }
 .popup-slider .slick-dots button:hover { border-color: #1262b2; background: #1262b2; }
 
-.menu { position: absolute; top: 100%; left: 0; right: 0; height: 105px; margin-top: -140px; font-size: 0; overflow: hidden; -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; z-index: 10; }
+.menu { position: absolute; top: 100%; left: 0; right: 0; height: 105px; margin-top: -140px; font-size: 0; overflow: hidden; -moz-transition: top 0.6s, height 0.6s, margin 0.6s, background 0.6s; -o-transition: top 0.6s, height 0.6s, margin 0.6s, background 0.6s; -webkit-transition: top 0.6s, height 0.6s, margin 0.6s, background 0.6s; transition: top 0.6s, height 0.6s, margin 0.6s, background 0.6s; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); z-index: 10; }
 .menu .center { padding: 0 40px 0 0; }
 .menu .center .build-quote { position: absolute; top: 7px; right: 10px; display: none; }
 @media only screen and (max-width: 767px) { .menu .center .build-quote { display: block; } }
@@ -402,13 +406,13 @@ picture { display: inline-block; vertical-align: middle; }
 .menu.is-fixed .menu__type .icon { font-size: 0; }
 .menu.is-fixed .menu__arr { margin-bottom: 3px; }
 .menu.is-fixed .mob-menu { opacity: 1; display: block; }
-.menu .menu__list { position: relative; text-align: center; -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; z-index: 2; }
-.menu .menu__list:before, .menu .menu__list:after { content: ""; position: absolute; top: 29px; height: 0; border-top: 2px dotted #fff; -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; }
+.menu .menu__list { position: relative; text-align: center; -moz-transition: all 0.6s; -o-transition: all 0.6s; -webkit-transition: all 0.6s; transition: all 0.6s; z-index: 2; }
+.menu .menu__list:before, .menu .menu__list:after { content: ""; position: absolute; top: 29px; height: 0; border-top: 2px dotted #fff; -moz-transition: all 0.6s; -o-transition: all 0.6s; -webkit-transition: all 0.6s; transition: all 0.6s; }
 .menu .menu__list:before { left: -1000px; right: 100%; margin-right: 1px; }
 .menu .menu__list:after { right: -1000px; left: 100%; margin-left: 1px; }
 @media only screen and (max-width: 767px) { .menu .menu__list:before, .menu .menu__list:after { display: none; } }
 .menu .menu__item { position: relative; display: inline-block; width: 16.66%; vertical-align: top; overflow: hidden; }
-.menu .menu__item:before, .menu .menu__item:after { content: ""; position: absolute; top: 29px; height: 0; border-top: 2px dotted #fff; -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; }
+.menu .menu__item:before, .menu .menu__item:after { content: ""; position: absolute; top: 29px; height: 0; border-top: 2px dotted #fff; -moz-transition: all 0.6s; -o-transition: all 0.6s; -webkit-transition: all 0.6s; transition: all 0.6s; }
 .menu .menu__item:before { left: 1px; right: 50%; margin-right: 50px; }
 .menu .menu__item:after { right: 1px; left: 50%; margin-left: 50px; }
 .menu .menu__item:hover .menu__type { background: #1262b2; }
@@ -416,9 +420,9 @@ picture { display: inline-block; vertical-align: middle; }
   .menu .menu__item.is-current { display: inline-block; overflow: visible; }
   .menu .menu__item.is-current:before, .menu .menu__item.is-current:after { display: none; }
   .menu .menu__item.is-current .menu__arr { display: none; } }
-.menu .menu__type { display: inline-block; width: 60px; height: 60px; margin-bottom: 10px; border: 1px solid #fff; border-radius: 50%; vertical-align: top; -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; text-align: center; font-size: 0; }
+.menu .menu__type { display: inline-block; width: 60px; height: 60px; margin-bottom: 10px; border: 1px solid #fff; border-radius: 50%; vertical-align: top; -moz-transition: all 0.6s; -o-transition: all 0.6s; -webkit-transition: all 0.6s; transition: all 0.6s; text-align: center; font-size: 0; }
 .menu .menu__type:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.menu .menu__type .icon { vertical-align: middle; font-size: 25px; -moz-transition: font-size 1s; -o-transition: font-size 1s; -webkit-transition: font-size 1s; transition: font-size 1s; }
+.menu .menu__type .icon { vertical-align: middle; font-size: 25px; -moz-transition: font-size 0.5s; -o-transition: font-size 0.5s; -webkit-transition: font-size 0.5s; transition: font-size 0.5s; }
 .menu .menu__arr { margin-bottom: 10px; }
 .menu .menu__arr .icon { font-size: 10px; }
 .menu .menu__title { font-size: 11px; text-transform: uppercase; }
