@@ -103,7 +103,7 @@ picture { display: inline-block; vertical-align: middle; }
 .nav a:hover .icon { -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
 .nav a .icon { position: absolute; left: 50%; bottom: 3px; margin-left: -5px; font-size: 10px; -moz-transition: -moz-transform 300ms; -o-transition: -o-transform 300ms; -webkit-transition: -webkit-transform 300ms; transition: transform 300ms; }
 
-.logo { position: relative; float: left; width: 200px; height: 70px; padding: 19px 0 0 42px; margin-right: 74px; background: #fff; box-shadow: -4px 4px 4px -4px rgba(0, 0, 0, 0.4); }
+.logo { position: relative; float: left; width: 200px; height: 70px; padding: 19px 0 0 42px; margin-right: 74px; background: #fff; box-shadow: -4px 4px 4px -4px rgba(0, 0, 0, 0.4); z-index: 2; }
 .logo:before { content: ""; position: absolute; top: -25px; right: -60px; height: 100%; width: 100px; background: #fff; -ms-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); transform: rotate(-45deg); box-shadow: 0 0px 4px rgba(0, 0, 0, 0.4); z-index: -1; }
 .logo a { display: inline-block; vertical-align: middle; background: url('../img/icons-s69177dbcc8.png') 0 -61px no-repeat; background-position: 0 -31px; width: 140px; height: 30px; -moz-background-size: 140px, 83px; -o-background-size: 140px, 83px; -webkit-background-size: 140px, 83px; background-size: 140px, 83px; }
 
@@ -208,6 +208,11 @@ picture { display: inline-block; vertical-align: middle; }
 .mob-nav .mob-nav__img { width: 60px; height: 60px; border-radius: 50%; border: 1px solid #fff; text-align: center; font-size: 0; }
 .mob-nav .mob-nav__img:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .mob-nav .mob-nav__img .icon { vertical-align: middle; font-size: 25px; color: #fff; }
+
+.tabs-wrap { position: relative; height: 100%; }
+.tabs-wrap .text-wrap { margin-top: 80px; }
+
+.tabs { position: absolute; top: 80px; left: 40px; z-index: 5; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }

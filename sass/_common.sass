@@ -242,7 +242,8 @@ picture
 	padding: 19px 0 0 42px 
 	margin-right: 74px 
 	background: #fff
-	box-shadow: -4px 4px 4px -4px rgba(0, 0, 0, 0.4) 
+	box-shadow: -4px 4px 4px -4px rgba(0, 0, 0, 0.4)
+	z-index: 2
 	&:before
 		content: ""
 		position: absolute
@@ -555,7 +556,19 @@ picture
 		.icon
 			vertical-align: middle
 			font-size: 25px
-			color: #fff	
+			color: #fff
+			
+// tabs
+.tabs-wrap
+	position: relative
+	height: 100%
+	.text-wrap
+		margin-top: 80px
+.tabs
+	position: absolute
+	top: 80px
+	left: 40px
+	z-index: 5	
 			
 						 
 

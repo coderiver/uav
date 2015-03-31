@@ -1,53 +1,12 @@
 head.ready(function() {
 
-	//ajax load
-	var hash_var = document.location.hash;
-	hash_var = hash_var.slice(1);
-	
-	folder = hash_var.replace(/\d/g, '');
-
-	if (hash_var == "penguin") {
-		$.ajax({
-			url: folder + '/' + folder + '.html',
-			cache: false,
-			success: function(html) {
-				$('.container').html(html);
-
-				penguinFullPage();
-				
-				// plugins reinit
-				dragSlider();
-	            tooltip();
-	            catalog();
-	            slick2();
-			}
-		});
-	}
-	if (hash_var == "catapult") {
-		$.ajax({
-			url: folder + '/' + folder + '.html',
-			cache: false,
-			success: function(html) {
-				$('.container').html(html);
-
-				catapultFullPage();
-				
-				// plugins reinit
-				dragSlider();
-	            tooltip();
-	            catalog();
-	            slick2();
-			}
-		});
-	}
-
 	// fullPageJs
 
 	function indexFullPage(){
 		$('.js-fullpage-index').fullpage({
 			resize: true,
 			menu: "#menu",
-			anchors: ['main', 'products', 'company', 'contacts'],
+			anchors: ['home-index', 'home-products', 'home-company', 'home-contacts'],
 			afterLoad: function(anchorLink, index){
 				//section 1
 				if(anchorLink == 'main'){
@@ -61,7 +20,6 @@ head.ready(function() {
 			}	
 		});
 	}
-	indexFullPage();
 
 	function penguinFullPage(){
 		$('.js-fullpage-penguin').fullpage({
@@ -86,6 +44,7 @@ head.ready(function() {
 	        }	
 		});
 	}
+
 	function catapultFullPage(){
 		$('.js-fullpage-catapult').fullpage({
 			resize: true,
@@ -107,6 +66,63 @@ head.ready(function() {
 	                $('.header').removeAttr('hidden');
 	            }
 	        }	
+		});
+	}
+
+	//ajax load
+	var hash = document.location.hash;
+	index = hash.substr(1,4);
+
+	if (index == '' || index == 'home') {
+		$.ajax({
+			url: 'main/main.html',
+			cache: false,
+			success: function(html) {
+				$('.container').html(html);
+
+				indexFullPage();
+				
+				slick();
+				gallery();
+				slick2();
+				clients();
+			}
+		});
+	}
+
+	hash = hash.slice(1);
+	folder = hash.replace(/\d/g, '');
+
+	if (folder == "penguin") {
+		$.ajax({
+			url: folder + '/' + folder + '.html',
+			cache: false,
+			success: function(html) {
+				$('.container').html(html);
+
+				penguinFullPage();
+				
+				dragSlider();
+	            tooltip();
+	            catalog();
+	            slick2();
+			}
+		});
+	}
+	if (folder == "catapult") {
+		$.ajax({
+			url: folder + '/' + folder + '.html',
+			cache: false,
+			success: function(html) {
+				$('.container').html(html);
+
+				catapultFullPage();
+				
+				dragSlider();
+	            tooltip();
+	            catalog();
+	            slick2();
+			}
 		});
 	}
 
@@ -152,6 +168,27 @@ head.ready(function() {
 		});
 		return false;
 	});
+
+	// tabs
+	
+	function tab() {
+       $(".js-tab").each(function(){
+       		var tab_link = $(this).find("a");
+       		var tab_cont = $(this).parents(".js-tab-group").find(".js-tab-cont");
+       		tab_cont.hide();
+       		tab_link.first().addClass("is-active");
+       		$(this).parents(".js-tab-group").find(".js-tab1").show();
+       		tab_link.on("click", function() {
+       		    var index = $(this).attr("href");
+       		    tab_link.removeClass("is-active");
+       		    $(this).addClass("is-active");
+       		    tab_cont.hide();
+       		    $(this).parents(".js-tab-group").find("."+index).show();
+       		    return false;
+       		});
+       });
+  	}
+  	tab();
 
 	// sliders init
 	function slick(){
