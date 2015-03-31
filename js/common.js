@@ -3,24 +3,42 @@ head.ready(function() {
 	//ajax load
 	var hash_var = document.location.hash;
 	hash_var = hash_var.slice(1);
-	hash_var = hash_var.replace(/\d/g, '');
-
-	console.log(hash_var);
+	
+	folder = hash_var.replace(/\d/g, '');
 
 	if (hash_var == "penguin") {
-			$.ajax({
-				url: hash_var + '/' + hash_var + '.html',
-				cache: false,
-				success: function(html) {
-					$('.container').html(html);
+		$.ajax({
+			url: folder + '/' + folder + '.html',
+			cache: false,
+			success: function(html) {
+				$('.container').html(html);
 
-					// penguinFullPage();
-					dragSlider();
-		            tooltip();
-		            catalog();
-		            slick2();
-				}
-			});
+				penguinFullPage();
+				
+				// plugins reinit
+				dragSlider();
+	            tooltip();
+	            catalog();
+	            slick2();
+			}
+		});
+	}
+	if (hash_var == "catapult") {
+		$.ajax({
+			url: folder + '/' + folder + '.html',
+			cache: false,
+			success: function(html) {
+				$('.container').html(html);
+
+				catapultFullPage();
+				
+				// plugins reinit
+				dragSlider();
+	            tooltip();
+	            catalog();
+	            slick2();
+			}
+		});
 	}
 
 	// fullPageJs
@@ -51,7 +69,7 @@ head.ready(function() {
 			anchors: ['penguin1', 'penguin2', 'penguin3', 'penguin4', 
 			'penguin5', 'penguin6', 'penguin7', 'penguin8', 'penguin9', 'penguin10', 'penguin11'],
 			afterRender: function(){
-	            $('.logo a').addClass('js-link').attr('href', 'main/main');
+	            $('.logo a').addClass('js-link').attr('href', 'main/main.html');
 	        },
 			onLeave: function(index, nextIndex, direction){
 
@@ -74,7 +92,7 @@ head.ready(function() {
 			anchors: ['catapult1', 'catapult2', 'catapult3', 'catapult4', 'catapult5', 'catapult6', 
 			'catapult7', 'catapult8', 'catapult9', 'catapult10', 'catapult11'],
 			afterRender: function(){
-	            $('.logo a').addClass('js-link').attr('href', 'main');
+	            $('.logo a').addClass('js-link').attr('href', 'main/main.html');
 	        },
 			onLeave: function(index, nextIndex, direction){
 
@@ -95,12 +113,12 @@ head.ready(function() {
 	$('body').on('click', '.js-link', function(){
 		var link = $(this).attr('href');
 		$.ajax({
-			url: link + '.html',
+			url: link,
 			cache: false,
 			success: function(html) {
 				$('.container').html(html);
 				
-				if (link == 'main/main') {
+				if (link == 'main/main.html') {
 					//remove fragment as much as it can go without adding an entry in browser history:
 					window.location.replace("#");
 
@@ -114,17 +132,17 @@ head.ready(function() {
 					slick2();
 					clients();
 				}
-				else if (link == 'penguin/penguin'){
+				else if (link == 'penguin/penguin.html'){
 					document.location.hash ='penguin1';
-					//penguinFullPage();
+					penguinFullPage();
 					dragSlider();
 	            	tooltip();
 	            	catalog();
 	            	slick2();
 				}
-				else if (link == 'catapult/catapult'){
+				else if (link == 'catapult/catapult.html'){
 					document.location.hash ='catapult1';
-					penguinFullPage();
+					catapultFullPage();
 					dragSlider();
 	            	tooltip();
 	            	catalog();

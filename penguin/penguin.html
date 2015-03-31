@@ -1580,29 +1580,3 @@
 		</a>
 	</div>
 </div>
-<script type="text/javascript">
-
-	$('.js-fullpage-penguin').fullpage({
-		resize: true,
-		anchors: ['penguin1', 'penguin2', 'penguin3', 'penguin4', 
-		'penguin5', 'penguin6', 'penguin7', 'penguin8', 'penguin9', 'penguin10', 'penguin11'],
-		afterRender: function(){
-            $('.logo a').addClass('js-link').attr('href', 'main/main');
-            $.fn.fullpage.moveTo('active');
-        },
-		onLeave: function(index, nextIndex, direction){
-
-            //after leaving section 1
-            if(index == 1 && direction =='down'){
-                $('.header').attr('hidden', 'hidden');
-                $('.js-menu').addClass('is-fixed');
-            }
-            // after returning to section 1
-            else if(index == 2 && direction == 'up'){
-            	$('.js-menu').removeClass('is-fixed');	
-                $('.header').removeAttr('hidden');
-            }
-        }	
-	});
-
-</script>
