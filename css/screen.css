@@ -45,6 +45,7 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 480px) { .center { padding: 0 10px; } }
 
 .container { position: relative; height: 100%; }
+.container > div { will-change: transform; }
 @media only screen and (max-width: 767px) { .container { height: auto; min-height: 100%; } }
 
 .section { -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); opacity: 0; -moz-transition: opacity 600ms 300ms; -o-transition: opacity 600ms 300ms; -webkit-transition: opacity 600ms; -webkit-transition-delay: 300ms; transition: opacity 600ms 300ms; }
@@ -124,7 +125,7 @@ picture { display: inline-block; vertical-align: middle; }
 
 .sertificate { position: absolute; top: 60px; left: 270px; font-size: 11px; font-style: italic; color: #fff; }
 .sertificate.sertificate_main { color: #2c3941; }
-@media only screen and (max-width: 767px) { .sertificate { left: 0; right: 0; top: 50px; text-align: center; padding: 0 20px; } }
+@media only screen and (max-width: 767px) { .sertificate { display: none; } }
 
 .btn { display: inline-block; height: 30px; padding: 7px 33px 0; border-radius: 15px; color: #fff; font-size: 12px; text-align: center; background: #1262b2; }
 @media only screen and (max-width: 600px) { .btn { padding: 7px 15px 0; } }

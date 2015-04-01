@@ -66,6 +66,8 @@ picture
 .container
 	position: relative
 	height: 100%
+	& > div
+		will-change: transform
 	+r(767) 
 		height: auto
 		min-height: 100%
@@ -314,11 +316,7 @@ picture
 	&.sertificate_main
 		color: #2c3941
 	+r(767)
-		left: 0
-		right: 0
-		top: 50px
-		text-align: center
-		padding: 0 20px  	
+		display: none 	
 
 .btn
 	display: inline-block
