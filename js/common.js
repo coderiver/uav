@@ -28,6 +28,7 @@ head.ready(function() {
 	function penguinFullPage(){
 		$('.js-fullpage-penguin').fullpage({
 			resize: true,
+			menu: "#penguin-menu",
 			anchors: ['penguin1', 'penguin2', 'penguin3', 'penguin4', 
 			'penguin5', 'penguin6', 'penguin7', 'penguin8', 'penguin9', 'penguin10', 'penguin11'],
 			afterRender: function(){
@@ -53,6 +54,7 @@ head.ready(function() {
 	function catapultFullPage(){
 		$('.js-fullpage-catapult').fullpage({
 			resize: true,
+			menu: '#catapult-menu',
 			anchors: ['catapult1', 'catapult2', 'catapult3', 'catapult4', 'catapult5', 'catapult6', 
 			'catapult7', 'catapult8', 'catapult9', 'catapult10', 'catapult11'],
 			afterRender: function(){

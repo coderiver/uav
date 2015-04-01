@@ -82,13 +82,19 @@
         +r(767)
             &:before,
             &:after
-                display: none        
+                display: none
+        & > li
+            display: inline-block
+            width: 16.66%
+            vertical-align: top
+            overflow: hidden
+            &.active
+                .menu__item 
+                    .menu__type
+                        background: $blue             
     .menu__item
         position: relative
-        display: inline-block
-        width: 16.66%
-        vertical-align: top
-        overflow: hidden
+        display: block
         &:before,
         &:after
             content: ""
