@@ -1,7 +1,6 @@
 head.ready(function() {
 
-	// fullPageJs
-
+	// fullPageJs init for index slides
 	function indexFullPage(){
 		$('.js-fullpage-index').fullpage({
 			resize: true,
@@ -25,6 +24,7 @@ head.ready(function() {
 		});
 	}
 
+	// fullPageJs init for penguin slides
 	function penguinFullPage(){
 		$('.js-fullpage-penguin').fullpage({
 			resize: true,
@@ -51,6 +51,7 @@ head.ready(function() {
 		});
 	}
 
+	// fullPageJs init for catapult slides
 	function catapultFullPage(){
 		$('.js-fullpage-catapult').fullpage({
 			resize: true,
@@ -78,7 +79,11 @@ head.ready(function() {
 	}
 
 	//ajax load
+
+	// getting current page hash
 	var hash = document.location.hash;
+	
+	// getting first 4 letters for home pages check
 	index = hash.substr(1,4);
 
 	if (index == '' || index == 'home') {
@@ -88,12 +93,15 @@ head.ready(function() {
 			success: function(html) {
 				$('.container').html(html);
 
+				// fullPageJs init for index slides
 				indexFullPage();
 				
+				// fullPageJs destroy for mobile devices
 				if ($(window).width() <= 767) {
 					$('.js-fullpage-index').fullpage.destroy('all');
 				};
 				
+				// other plugins init
 				slick();
 				gallery();
 				slick2();
@@ -102,6 +110,7 @@ head.ready(function() {
 		});
 	}
 
+	// getting folder name from hash
 	hash = hash.slice(1);
 	folder = hash.replace(/\d/g, '');
 
@@ -112,12 +121,15 @@ head.ready(function() {
 			success: function(html) {
 				$('.container').html(html);
 
+				// fullPageJs init for penguin slides
 				penguinFullPage();
 
+				// fullPageJs destroy for mobile devices
 				if ($(window).width() <= 767) {
 					$('.js-fullpage-penguin').fullpage.destroy('all');
 				};
 				
+				// other plugins init
 				dragSlider();
 	            tooltip();
 	            catalog();
@@ -134,12 +146,15 @@ head.ready(function() {
 			success: function(html) {
 				$('.container').html(html);
 
+				// fullPageJs init for catapult slides
 				catapultFullPage();
 
+				// fullPageJs destroy for mobile devices
 				if ($(window).width() <= 767) {
 					$('.js-fullpage-catapult').fullpage.destroy('all');
 				};
 
+				// other plugins init
 				dragSlider();
 				tooltip();
 				catalog();
@@ -193,6 +208,7 @@ head.ready(function() {
 						}, 100);
 					}
 					
+					// other plugins init
 					slick();
 					gallery();
 					slick2();
@@ -204,6 +220,7 @@ head.ready(function() {
 					if ($(window).width() <= 767) {
 						$('.js-fullpage-penguin').fullpage.destroy('all');
 					};
+					// other plugins init
 					dragSlider();
 	            	tooltip();
 	            	catalog();
@@ -217,6 +234,7 @@ head.ready(function() {
 					if ($(window).width() <= 767) {
 						$('.js-fullpage-catapult').fullpage.destroy('all');
 					};
+					// other plugins init
 					dragSlider();
 					tooltip();
 					catalog();
@@ -226,7 +244,8 @@ head.ready(function() {
 				}
 			}
 		});
-
+	
+		// closing mobile menu after relocate
 		if($(this).parents('.js-nav-drop').length){
 			$('body').removeClass('no-scroll');
 			$('.js-nav-drop').hide();
