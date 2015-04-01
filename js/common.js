@@ -417,7 +417,7 @@ head.ready(function() {
 			$('.js-popup-slider').slick('slickNext');
 		});
 	}
-
+	popupSlider();
 	// tabs mobile init
 
 	function tabSlider(){
@@ -436,7 +436,7 @@ head.ready(function() {
 			]
 		});
 	}
-	
+	tabSlider();
 
 	// popup init
 
