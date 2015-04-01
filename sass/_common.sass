@@ -254,7 +254,16 @@ picture
 		background: #fff
 		+rotate(-45)
 		box-shadow: 0 0px 4px rgba(0, 0, 0, 0.4) 
-		z-index: -1
+		z-index: -2
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		background: #fff
+		z-index: -1 	
 	a
 		display: inline-block
 		vertical-align: middle
@@ -562,13 +571,15 @@ picture
 .tabs-wrap
 	position: relative
 	height: 100%
-	.text-wrap
-		margin-top: 80px
 .tabs
 	position: absolute
 	top: 80px
 	left: 40px
-	z-index: 5	
+	z-index: 5
+	+r(767)
+		right: 10px
+		left: 10px
+		text-align: center	
 			
 						 
 
