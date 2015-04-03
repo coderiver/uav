@@ -158,7 +158,7 @@ picture
 			padding: 10px 0 0
 			span
 				display: none 	 	
-	+r(1024)
+	+r(1023)
 		& > .center
 			padding: 0 20px 0 0
 		.logo
@@ -219,9 +219,11 @@ picture
 
 .nav
 	float: right
+	& > li
+		float: left
 	a
 		position: relative
-		float: left
+		display: inline-block
 		padding: 0 20px
 		line-height: 40px
 		color: #FFF
@@ -246,6 +248,7 @@ picture
 	background: #fff
 	box-shadow: -4px 4px 4px -4px rgba(0, 0, 0, 0.4)
 	z-index: 2
+	+transition(all 300ms)
 	&:before
 		content: ""
 		position: absolute
@@ -255,7 +258,8 @@ picture
 		width: 100px
 		background: #fff
 		+rotate(-45)
-		box-shadow: 0 0px 4px rgba(0, 0, 0, 0.4) 
+		+transition(all 300ms)
+		box-shadow: 0 0px 4px rgba(0, 0, 0, 0.4)
 		z-index: -2
 	&:after
 		content: ""
@@ -293,11 +297,9 @@ picture
 			margin-left: 11px
 			border-radius: 50%
 			text-decoration: none
-			border: 2px solid #fff
+			border: 1px solid #fff
 			+vertical
 			+tr(background 200ms)
-			+retina
-				border: 1px solid #fff
 			&:hover
 				background: $blue 
 		.icon
@@ -310,7 +312,7 @@ picture
 	position: absolute
 	top: 60px
 	left: 270px
-	font-size: 11px
+	font-size: 12px
 	font-style: italic
 	color: #fff
 	&.sertificate_main

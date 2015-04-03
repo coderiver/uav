@@ -264,9 +264,17 @@
 		text-align: right
 		border-bottom: 1px solid #2c3941 
 	.nav-drop__logo
-		display: inline-block
-		vertical-align: middle
-		+s(logo-mob)
+		position: absolute
+		top: 3px
+		left: 43px
+		+sr(logo)
+		will-change: top, left, transform, margin-left
+		+tr(all 300ms)
+		&.is-open
+			top: 50%
+			left: 100%
+			margin-left: -160px
+			+transform(translateY(-50%))
 	.nav-drop__links
 		li
 			height: 20vh

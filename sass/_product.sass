@@ -91,7 +91,23 @@
             &.active
                 .menu__item 
                     .menu__type
-                        background: $blue             
+                        background: $blue
+                        +r(767)
+                        background: transparent 
+            +r(767)
+                width: 100% 
+                .menu__item
+                    display: none
+                    width: auto
+                &.active
+                    .menu__item
+                        display: inline-block
+                        overflow: visible
+                        &:before,
+                        &:after
+                            display: none
+                        .menu__arr
+                            display: none
     .menu__item
         position: relative
         display: block
@@ -114,17 +130,6 @@
         &:hover
             .menu__type
                 background: $blue
-        +r(767)
-            display: none
-            width: auto 
-            &.is-current
-                display: inline-block
-                overflow: visible
-                &:before,
-                &:after
-                    display: none
-                .menu__arr
-                    display: none
     .menu__type
         display: inline-block
         width: 60px
