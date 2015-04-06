@@ -28,16 +28,6 @@
 		cursor: pointer
 		cursor: hand
 
-.slick-slider .slick-list,
-.slick-track,
-.slick-slide, 
-.slick-slide img
-	// -webkit-transform: translate3d(0, 0, 0)
-	// -moz-transform: translate3d(0, 0, 0)
-	// -ms-transform: translate3d(0, 0, 0)
-	// -o-transform: translate3d(0, 0, 0)
-	// transform: translate3d(0, 0, 0)
-
 .slick-track
 	position: relative
 	left: 0
@@ -111,7 +101,9 @@
 			opacity: 1
 			&:before
 				content: ""
-				+s(round-small) 	   	 	
+				+s(round-small)
+	.products__menu &
+		background: transparent				   	 	
 .slick-prev
 	left: 32px
 	font-family: icomoon
@@ -147,7 +139,9 @@
 		margin-top: -18px
 	.btns-mobile &
 		left: -20px
-		border-radius: 15px 0 0 15px	 
+		border-radius: 15px 0 0 15px
+	.products__menu &
+		left: 0		 
 .slick-next
 	right: 32px
 	font-family: icomoon
@@ -184,7 +178,9 @@
 		margin-top: -18px 
 	.btns-mobile &
 		right: -20px
-		border-radius: 0 15px 15px 0		 
+		border-radius: 0 15px 15px 0
+	.products__menu &
+		right: 0			 
 .slick-dots
 	text-align: center
 	position: absolute

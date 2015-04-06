@@ -87,24 +87,24 @@ head.ready(function() {
 	// getting first 4 letters for home pages check
 	index = hash.substr(1,4);
 
-	if (index == '' || index == 'home') {
-		$.ajax({
-			url: 'main/main.html',
-			cache: false,
-			success: function(html) {
-				$('.container').html(html);
+	// if (index == '' || index == 'home') {
+	// 	$.ajax({
+	// 		url: 'main/main.html',
+	// 		cache: false,
+	// 		success: function(html) {
+	// 			$('.container').html(html);
 
-				// fullPageJs init for index slides
-				indexFullPage();
+	// 			// fullPageJs init for index slides
+	// 			indexFullPage();
 				
-				// other plugins init
-				slick();
-				gallery();
-				slick2();
-				clients();
-			}
-		});
-	}
+	// 			// other plugins init
+	// 			slick();
+	// 			gallery();
+	// 			slick2();
+	// 			clients();
+	// 		}
+	// 	});
+	// }
 
 	// getting folder name from hash
 	hash = hash.slice(1);
@@ -285,6 +285,29 @@ head.ready(function() {
 	}
 	gallery();
 	
+	function productsMenu(){
+		$('.js-products-menu').slick({
+			speed: 600,
+			infinite: true,
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			responsive: [
+			    {
+			    	breakpoint: 1025,
+			    	settings: {
+			    		slidesToShow: 4,
+			    	}
+			    },
+			    {
+			    	breakpoint: 768,
+			    	settings: {
+			    		slidesToShow: 3,
+			    	}
+			    }
+			]
+		});
+	}
+	productsMenu();
 
 	function slick2(){
 		$('.js-slick-2').slick({
@@ -297,6 +320,12 @@ head.ready(function() {
 			    	breakpoint: 1280,
 			    	settings: {
 			    		slidesToShow: 6,
+			    	}
+			    },
+			    {
+			    	breakpoint: 900,
+			    	settings: {
+			    		slidesToShow: 5,
 			    	}
 			    },
 			    {
