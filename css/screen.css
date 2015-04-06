@@ -222,11 +222,12 @@ picture { display: inline-block; vertical-align: middle; }
 .products .products__type { font-size: 24px; font-weight: 100; }
 .products .products__type img { display: inline-block; width: 60px; height: 60px; margin: 0 auto 15px; }
 .products .products__menu { margin-top: 100px; margin-bottom: 30px; }
-@media only screen and (max-width: 1440px) { .products .products__menu { margin-top: 30px; } }
+@media only screen and (max-height: 900px) { .products .products__menu { margin-top: 50px; } }
+@media only screen and (max-height: 768px) { .products .products__menu { margin-top: 30px; } }
 .products .products__list { margin: 28px 0; }
 .products .products__item { padding: 0 20px; text-align: center; }
 .products .products__img { height: 90px; margin-bottom: 25px; font-size: 0; }
-.products .products__img img { max-width: 130px; margin: 0 auto; }
+.products .products__img img { margin: 0 auto; }
 .products .products__name { font-size: 12px; font-weight: 300; }
 .products .products__bottom { position: absolute; bottom: 0; left: 0; right: 0; }
 @media only screen and (max-width: 767px) { .products .products__bottom { position: relative; bottom: auto; left: auto; right: auto; text-align: center; } }
