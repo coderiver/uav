@@ -87,24 +87,24 @@ head.ready(function() {
 	// getting first 4 letters for home pages check
 	index = hash.substr(1,4);
 
-	// if (index == '' || index == 'home') {
-	// 	$.ajax({
-	// 		url: 'main/main.html',
-	// 		cache: false,
-	// 		success: function(html) {
-	// 			$('.container').html(html);
+	if (index == '' || index == 'home') {
+		$.ajax({
+			url: 'main/main.html',
+			cache: false,
+			success: function(html) {
+				$('.container').html(html);
 
-	// 			// fullPageJs init for index slides
-	// 			indexFullPage();
+				// fullPageJs init for index slides
+				indexFullPage();
 				
-	// 			// other plugins init
-	// 			slick();
-	// 			gallery();
-	// 			slick2();
-	// 			clients();
-	// 		}
-	// 	});
-	// }
+				// other plugins init
+				slick();
+				gallery();
+				slick2();
+				clients();
+			}
+		});
+	}
 
 	// getting folder name from hash
 	hash = hash.slice(1);
