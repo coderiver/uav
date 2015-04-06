@@ -10,6 +10,7 @@ body
 	font-family: 'Roboto', Arial, sans-serif
 	font-weight: 300
 	color: #fff
+	overflow-y: auto 
 	font-size: 14px 
 	line-height: 1.4
 	+r(1024)
@@ -582,18 +583,40 @@ picture
 		text-align: center
 		
 // products
+.page_products
+	.center
+		+r(767)
+			padding: 0 
 .products
+	overflow: hidden
 	.products__topper
 		margin-bottom: 30px
 		font-size: 0
 		text-align: center
-		a, img
-			display: inline-block
-			vertical-align: middle
-		& > img
+		+clr
+		+r(767)
+			padding: 0 10px 
+	.products__picture
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		text-align: center
+		img
 			max-height: 200px
-			margin: 0 60px	
+			max-width: 100%
+			+r(767)
+				display: block
+				margin: 0 auto 
+		img + .products__type
+			right: auto
+			left: -180px
+			+r(767)
+				left: auto	 		
 	.products__type
+		position: absolute
+		top: 50%
+		right: -180px
+		+transform(translateY(-50%))
 		font-size: 24px
 		font-weight: 100
 		img
@@ -601,24 +624,40 @@ picture
 			width: 60px
 			height: 60px
 			margin: 0 auto 15px
+		+r(767)
+			position: relative
+			display: inline-block
+			top: auto
+			left: auto
+			right: auto
+			margin: 0 20px 
+			+transform(translateY(0))
+		+r(414)
+			margin: 0 10px 			
 	.products__menu
+		clear: both
 		margin-top: 100px
 		margin-bottom: 30px
 		+rh(900)
 			margin-top: 50px
 		+rh(768)
-			margin-top: 30px			
+			margin-top: 30px
+		+r(767)
+			padding: 0 10px 	
 	.products__list
 		margin: 28px 0
 	.products__item
 		padding: 0 20px
 		text-align: center
+		+r(767)
+			padding: 0
+			margin: 0 20px 
 	.products__img
 		height: 90px
 		margin-bottom: 25px
 		font-size: 0
 		img
-			margin: 0 auto 
+			margin: 0 auto
 	.products__name
 		font-size: 12px
 		font-weight: 300  		 					 
@@ -632,7 +671,7 @@ picture
 			bottom: auto
 			left: auto
 			right: auto
-			text-align: center 
+			text-align: center
 		.btns
 			margin-bottom: 29px
 			width: 100%

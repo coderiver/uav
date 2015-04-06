@@ -63,6 +63,12 @@
 		display: block
 		height: auto
 		border: 1px solid transparent
+	.products__menu &
+		+tr(opacity 200ms)
+		+r(767)
+			opacity: 0.7
+			&.slick-center
+				opacity: 1
 .slick-controls
 	position: relative
 	display: inline-block
@@ -141,7 +147,11 @@
 		left: -20px
 		border-radius: 15px 0 0 15px
 	.products__menu &
-		left: 0		 
+		left: 0
+		+r(767)
+			left: 28%
+		+r(320)
+			left: 16% 		 
 .slick-next
 	right: 32px
 	font-family: icomoon
@@ -180,7 +190,11 @@
 		right: -20px
 		border-radius: 0 15px 15px 0
 	.products__menu &
-		right: 0			 
+		right: 0
+		+r(767)
+			right: 28%
+		+r(320)
+			right: 16% 				 
 .slick-dots
 	text-align: center
 	position: absolute
