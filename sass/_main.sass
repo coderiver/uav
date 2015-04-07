@@ -207,7 +207,11 @@
 	.clients__item
 		height: 80px
 		line-height: 80px  
-		text-align: center		
+		text-align: center
+		opacity: 0.8 
+		+tr(opacity 200ms)
+		&:hover
+			opacity: 1 		
 .contacts
 	+clr
 	+r(767)

@@ -487,11 +487,11 @@
     .share__list
         a
             display: inline-block
-            width: 16px
-            height: 16px
+            vertical-align: middle
+            width: 18px
+            height: 18px
             border-radius: 50%
             background: $blue 
-            vertical-align: top
             +vertical
         .icon
             vertical-align: middle
@@ -526,6 +526,18 @@
         +r(600)
             display: block                
 
++keyframes(scroll)
+    0%
+        color: #fff
+    100%
+        color: #2c3941
++keyframes(scroll2)
+    0%
+        color: #fff
+    50%
+        color: #2c3941    
+    100%
+        color: #fff               
 .scroll
     position: absolute
     bottom: 175px
@@ -543,8 +555,22 @@
     .scroll__title
         margin-bottom: 5px
         text-transform: uppercase
+        +animation(scroll2 3s infinite)
     .icon
-        font-size: 20px
+        font-size: 14px
+        color: $blue
+        &.icon-scroll_1
+            +animation(scroll 1.2s infinite)
+        &.icon-scroll_2, &.icon-scroll_3
+            position: absolute
+            bottom: -4px
+            left: 50%
+            +transform(translateX(-50%))
+        &.icon-scroll_2
+            +animation(scroll 1.2s 400ms infinite)   
+        &.icon-scroll_3
+            bottom: -12px
+            +animation(scroll 1.2s 800ms infinite)
     .page_first &
         +r(768) 
             position: relative

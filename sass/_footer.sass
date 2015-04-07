@@ -81,6 +81,10 @@
         .design
             float: right
             padding-top: 15px
+            &:hover
+                text-decoration: underline
+                .icon
+                    color: $blue
             +r(375)
                 float: none
                 text-align: center
@@ -88,8 +92,9 @@
                 display: inline-block
                 vertical-align: middle
                 margin-left: 9px
-                color: $blue
-                font-size: 21px    
+                color: #fff
+                font-size: 21px
+                   
 .sign-in
     +clr
     margin-bottom: 19px
