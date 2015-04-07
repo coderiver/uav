@@ -193,7 +193,10 @@ head.ready(function() {
 					if (typeof window.history.replaceState == 'function') {
 						history.replaceState({}, '', window.location.href.slice(0, -1));
 					}
-					indexFullPage();
+					if ($(window).width() > 767) {
+						indexFullPage();
+					};
+					
 
 					var start = link.indexOf('#'),
 						end = link.length;
@@ -232,7 +235,9 @@ head.ready(function() {
 				}
 				else if (link == 'penguin/penguin.html'){
 					document.location.hash ='penguin1';
-					penguinFullPage();
+					if ($(window).width() > 767) {
+						penguinFullPage();
+					};
 					// other plugins init
 					dragSlider();
 	            	tooltip();
@@ -243,7 +248,9 @@ head.ready(function() {
 				}
 				else if (link == 'catapult/catapult.html'){
 					document.location.hash ='catapult1';
-					catapultFullPage();
+					if ($(window).width() > 767) {
+						catapultFullPage();
+					};
 					// other plugins init
 					dragSlider();
 					tooltip();
