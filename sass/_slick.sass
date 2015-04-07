@@ -13,6 +13,18 @@
 	touch-action: pan-y
 	-webkit-tap-highlight-color: transparent
 	z-index: 1
+	&.slider
+		.slick-prev,
+		.slick-next
+			opacity: 0
+		&:hover
+			.slick-prev,
+			.slick-next
+				opacity: 0.65
+		+r(1024)
+			.slick-prev,
+			.slick-next
+				opacity: 0.65		 
 .slick-list
 	position: relative
 	overflow: hidden
@@ -82,10 +94,12 @@
 	height: 36px
 	border-radius: 50%
 	background: $dark
-	+tr(background 200ms)
+	+transition(background 200ms, opacity 200ms)
+	+gpu
 	z-index: 2
 	&:hover
-		background: $blue 
+		opacity: 1
+		background: $blue
 	&:focus
 		outline: none	
 	&.slick-disabled

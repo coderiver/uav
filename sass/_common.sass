@@ -77,7 +77,8 @@ picture
 	opacity: 0
 	+tr(opacity 600ms 300ms)
 	+r(767)
-		opacity: 1 
+		opacity: 1
+		overflow: hidden
 	&.active
 		opacity: 1 		
 .non-mobile
@@ -330,6 +331,8 @@ picture
 	font-size: 12px
 	text-align: center
 	background: $blue
+	&:hover
+		text-decoration: underline
 	+r(600)
 		padding: 7px 15px 0 
 	&.btn_gray

@@ -96,7 +96,9 @@ head.ready(function() {
 				$('.container').html(html);
 
 				// fullPageJs init for index slides
-				indexFullPage();
+				if ($(window).width() > 767) {
+					indexFullPage();
+				};
 				
 				// other plugins init
 				slick();
@@ -137,7 +139,9 @@ head.ready(function() {
 				$('.container').html(html);
 
 				// fullPageJs init for penguin slides
-				penguinFullPage();
+				if ($(window).width() > 767) {
+					penguinFullPage();
+				};
 				
 				// other plugins init
 				dragSlider();
@@ -157,8 +161,9 @@ head.ready(function() {
 				$('.container').html(html);
 
 				// fullPageJs init for catapult slides
-				catapultFullPage();
-
+				if ($(window).width() > 767) {
+					catapultFullPage();
+				};
 				// other plugins init
 				dragSlider();
 				tooltip();
@@ -298,6 +303,11 @@ head.ready(function() {
 			      }
 			    }
 			  ]
+		});
+		// On swipe event
+		$('.js-slick').on('afterChange', function(event, slick, direction){
+			$('.slick-next').css('opacity', '0');
+			$('.slick-prev').css('opacity', '0');
 		});
 	}
 	slick();

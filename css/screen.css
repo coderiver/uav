@@ -49,7 +49,7 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 767px) { .container { height: auto; min-height: 100%; } }
 
 .section { -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); opacity: 0; -moz-transition: opacity 600ms 300ms; -o-transition: opacity 600ms 300ms; -webkit-transition: opacity 600ms; -webkit-transition-delay: 300ms; transition: opacity 600ms 300ms; }
-@media only screen and (max-width: 767px) { .section { opacity: 1; } }
+@media only screen and (max-width: 767px) { .section { opacity: 1; overflow: hidden; } }
 .section.active { opacity: 1; }
 
 @media only screen and (max-width: 767px) { .non-mobile { display: none; } }
@@ -128,6 +128,7 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 767px) { .sertificate { display: none; } }
 
 .btn { display: inline-block; height: 30px; padding: 7px 33px 0; border-radius: 15px; color: #fff; font-size: 12px; text-align: center; background: #1262b2; }
+.btn:hover { text-decoration: underline; }
 @media only screen and (max-width: 600px) { .btn { padding: 7px 15px 0; } }
 .btn.btn_gray { width: 100%; background: #2c3941; }
 
@@ -290,7 +291,9 @@ picture { display: inline-block; vertical-align: middle; }
 
 .gallery { text-align: center; }
 .gallery .gallery__item { font-size: 0; }
-.gallery .gallery__item img { max-width: 100%; }
+.gallery .gallery__item picture { width: 70%; }
+.gallery .gallery__item img { max-width: 100%; width: 100%; }
+@media only screen and (max-width: 1023px) { .gallery .gallery__item img { width: auto; } }
 
 .footer-menu { position: absolute; bottom: 0; left: 0; right: 0; }
 @media only screen and (max-width: 768px) { .footer-menu { padding: 0 20px; } }
@@ -352,6 +355,9 @@ picture { display: inline-block; vertical-align: middle; }
 .nav-drop .nav-drop__socials .socials .icon { color: #2c3941; }
 
 .slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; z-index: 1; }
+.slick-slider.slider .slick-prev, .slick-slider.slider .slick-next { opacity: 0; }
+.slick-slider.slider:hover .slick-prev, .slick-slider.slider:hover .slick-next { opacity: 0.65; }
+@media only screen and (max-width: 1024px) { .slick-slider.slider .slick-prev, .slick-slider.slider .slick-next { opacity: 0.65; } }
 
 .slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; z-index: 1; }
 .slick-list:focus { outline: none; }
@@ -376,8 +382,8 @@ picture { display: inline-block; vertical-align: middle; }
 
 .slick-controls { position: relative; display: inline-block; }
 
-.slick-prev, .slick-next { position: absolute; top: 50%; margin-top: -14px; font: 0/0 a; text-shadow: none; color: transparent; width: 36px; height: 36px; border-radius: 50%; background: #2c3941; -moz-transition: background 200ms; -o-transition: background 200ms; -webkit-transition: background 200ms; transition: background 200ms; z-index: 2; }
-.slick-prev:hover, .slick-next:hover { background: #1262b2; }
+.slick-prev, .slick-next { position: absolute; top: 50%; margin-top: -14px; font: 0/0 a; text-shadow: none; color: transparent; width: 36px; height: 36px; border-radius: 50%; background: #2c3941; -moz-transition: background 200ms, opacity 200ms; -o-transition: background 200ms, opacity 200ms; -webkit-transition: background 200ms, opacity 200ms; transition: background 200ms, opacity 200ms; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); z-index: 2; }
+.slick-prev:hover, .slick-next:hover { opacity: 1; background: #1262b2; }
 .slick-prev:focus, .slick-next:focus { outline: none; }
 .slick-prev.slick-disabled, .slick-next.slick-disabled { opacity: 0.2; }
 .gallery .slick-prev, .gallery .slick-next { background: transparent; top: auto; bottom: -14px; }

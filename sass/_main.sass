@@ -80,9 +80,13 @@
 	text-align: center
 	.gallery__item
 		font-size: 0
+		picture
+			width: 70% 
 		img
 			max-width: 100%
-			
+			width: 100%
+			+r(1023) 
+				width: auto
 .footer-menu
 	position: absolute
 	bottom: 0
