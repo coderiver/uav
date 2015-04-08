@@ -293,6 +293,25 @@ head.ready(function() {
   	}
   	tab();
 
+  	$('body').on('click', '.js-scroll-prev', function(){
+  		var target = $(this).parents('.section').prev('.section');
+  		if ($(target).length) {
+  			$('body, html').animate({
+  				scrollTop: $(target).offset().top
+  			}, 300);
+  		};
+  		return false;
+  	});
+  	$('body').on('click', '.js-scroll-next', function(){
+  		var target = $(this).parents('.section').next('.section');
+  		if ($(target).length) {
+  			$('body, html').animate({
+  				scrollTop: $(target).offset().top
+  			}, 300);
+  		};
+  		return false;
+  	});
+
 	// sliders init
 	function slick(){
 		$('.js-slick').slick({
