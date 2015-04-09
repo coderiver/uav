@@ -677,7 +677,7 @@
     left: 0
     right: 0
     bottom: 140px
-    +vertical
+    text-align: center
     +r(767)
         position: relative
         top: auto
@@ -688,26 +688,16 @@
     .el__pic
         position: relative
         display: inline-block
-        vertical-align: middle
         height: 100%
-        +vertical
-        img
-            display: inline-block
-            vertical-align: middle
-            max-width: 100%
-            height: 100%
-        +r(1023)
-            height: auto 
-            img
-                height: auto
-                max-height: 100%
-        +r(767)
-            position: relative
     .el__in
         position: relative
         display: inline-block
-        vertical-align: middle
-        height: 100%             
+        height: 100%
+        img
+            display: inline-block
+            height: auto
+            min-width: 100px
+            max-height: 100%           
     .el__item
         position: absolute
         top: 0

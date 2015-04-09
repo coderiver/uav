@@ -671,16 +671,11 @@ picture { display: inline-block; vertical-align: middle; }
 .links .links__row a:first-child { margin: 0; }
 .links .links__row a:first-child:before { display: none; }
 
-.el { position: absolute; top: 140px; left: 0; right: 0; bottom: 140px; text-align: center; font-size: 0; }
-.el:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.el { position: absolute; top: 140px; left: 0; right: 0; bottom: 140px; text-align: center; }
 @media only screen and (max-width: 767px) { .el { position: relative; top: auto; left: auto; right: auto; bottom: auto; margin-bottom: 40px; } }
-.el .el__pic { position: relative; display: inline-block; vertical-align: middle; height: 100%; text-align: center; font-size: 0; }
-.el .el__pic:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.el .el__pic img { display: inline-block; vertical-align: middle; max-width: 100%; height: 100%; }
-@media only screen and (max-width: 1023px) { .el .el__pic { height: auto; }
-  .el .el__pic img { height: auto; max-height: 100%; } }
-@media only screen and (max-width: 767px) { .el .el__pic { position: relative; } }
-.el .el__in { position: relative; display: inline-block; vertical-align: middle; height: 100%; }
+.el .el__pic { position: relative; display: inline-block; height: 100%; }
+.el .el__in { position: relative; display: inline-block; height: 100%; }
+.el .el__in img { display: inline-block; height: auto; min-width: 100px; max-height: 100%; }
 .el .el__item { position: absolute; top: 0; left: 0; z-index: 4; }
 .el .el__item.is-active { z-index: 8; }
 .el .el__item.is-active .el__plus { border-color: #fff; background: #1262b2; color: #fff; }
