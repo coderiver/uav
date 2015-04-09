@@ -8,8 +8,6 @@ head.ready(function() {
 			menu: "#index-menu",
 			anchors: ['home-index', 'home-products', 'home-company', 'home-contacts'],
 			afterRender: function(){
-	            $('.nav a.nav__contacts').removeAttr('class');
-	            $('.logo a').removeAttr('class');
 	            $('.header').removeAttr('hidden');
 	            $('.header').removeClass('is-small');
 	        },
