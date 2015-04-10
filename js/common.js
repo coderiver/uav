@@ -693,7 +693,12 @@ head.ready(function() {
 
 	});
 
-	$(window).trigger('resize');
+	// function doOnOrientationChange(){
+	// 	alert();
+	// }
+	
+	//window.addEventListener('orientationchange', doOnOrientationChange);
+	//$(window).trigger('resize');
 
 
 });

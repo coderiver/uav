@@ -666,6 +666,8 @@
         a
             position: relative
             margin-left: 22px
+            font-size: 12px
+            font-weight: 500 
             +tr(color .2s)
             &:before
                 content: ""
@@ -678,24 +680,29 @@
                 border-radius: 50%
             &:hover
                 text-decoration: underline
+            &:active
+                color: $blue
             &:first-child
                 margin: 0
                 &:before
                     display: none
-
+.page__in.details
+    +r(767)
+        padding-top: 0
 .el
-    position: absolute
-    top: 140px
-    left: 0
-    right: 0
-    bottom: 140px
+    position: relative
+    padding-top: 140px
+    max-height: 100%
     text-align: center
+    +r(768)
+        padding-top: 250px
     +r(767)
         position: relative
         top: auto
         left: auto
         right: auto
         bottom: auto
+        padding-top: 0
         margin-bottom: 40px 
     .el__pic
         position: relative
@@ -708,14 +715,20 @@
         position: relative
         display: inline-block
         height: 100%
-        +r(1024)
-            height: auto
-            max-height: 100%
         img
             display: inline-block
             height: auto
-            max-height: 100% 
-            max-width: 100%         
+            width: auto
+            max-height: 555px
+            max-width: 100%
+        +r(1280)
+            img
+                max-height: 450px    
+        +r(1024)
+            height: auto
+            max-height: 100%
+            img
+                max-height: 450px             
     .el__item
         position: absolute
         top: 0
@@ -727,6 +740,7 @@
                 border-color: #fff
                 background: $blue
                 color: #fff
+                +scale(1.5)
     .el__plus
         width: 18px
         height: 18px
@@ -736,6 +750,8 @@
         color: $blue
         +vertical
         cursor: pointer
+        +tr(all 150ms)
+        +gpu
         .icon
             font-size: 10px
             vertical-align: middle
@@ -743,11 +759,12 @@
             border-color: #fff
             background: $blue
             color: #fff
+            +scale(1.3)
     .el__info
         position: absolute
         width: 220px
         margin-left: -101px
-        margin-top: 26px  
+        margin-top: 30px  
         padding: 30px 20px 20px
         background: $dark
         z-index: 5 
