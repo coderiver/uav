@@ -49,8 +49,8 @@ head.ready(function() {
 			resize: true,
 			responsive: 767,
 			menu: "#penguin-menu",
-			anchors: ['penguin1', 'penguin2', 'penguin3', 'penguin4', 
-			'penguin5', 'penguin6', 'penguin7', 'penguin8', 'penguin-contacts'],
+			anchors: ['penguin-index', 'performance', 'exploded_view', 'tech_specs', 'take_off', 
+			'engine', 'payload_module', 'pgcs', 'options', 'penguin-contacts'],
 			afterRender: function(){
 	            $('.logo a').addClass('js-link');
 	            $('.nav a.nav__contacts').addClass('js-link');
@@ -81,7 +81,7 @@ head.ready(function() {
 			resize: true,
 			responsive: 767,
 			menu: '#catapult-menu',
-			anchors: ['catapult1', 'catapult2', 'catapult3', 'catapult4', 'catapult5', 'catapult6', 
+			anchors: ['performance', 'adaptability', 'exploded_view', 'tech_specs', 'catapult5', 'package', 
 			'catapult7', 'catapult8', 'catapult-contacts'],
 			afterRender: function(){
 	            $('.logo a').addClass('js-link');

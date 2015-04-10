@@ -11,8 +11,14 @@
     +transition(top 0.6s, height 0.6s, margin 0.6s, background 0.6s)
     +gpu
     z-index: 10
+    &.menu_penguin
+        .menu__list
+            & > li
+                width: 12.5%
+    +r(767)
+        display: none
     .center
-        padding: 0 40px 0 0
+        //padding: 0 40px 0 0
         .build-quote
             position: absolute
             top: 7px
@@ -36,6 +42,11 @@
                 top: 11px
                 margin: 0
                 border-color: #566167
+            & > li
+                &.active
+                    .menu__item
+                        .menu__type
+                            border-color: $blue        
         .menu__item
             &:before,
             &:after
@@ -93,7 +104,9 @@
                     .menu__type
                         background: $blue
                         +r(767)
-                        background: transparent 
+                            background: transparent
+                    .menu__arr
+                        +rotate(180)     
             +r(767)
                 width: 100% 
                 .menu__item
@@ -130,6 +143,8 @@
         &:hover
             .menu__type
                 background: $blue
+            .menu__arr
+                +rotate(180)    
     .menu__type
         display: inline-block
         width: 60px
@@ -146,6 +161,7 @@
             +tr(font-size 0.5s)
     .menu__arr
         margin-bottom: 10px
+        +tr(transform 200ms)
         .icon
             font-size: 10px
     .menu__title
@@ -536,9 +552,9 @@
         color: #fff               
 .scroll
     position: absolute
-    bottom: 175px
+    bottom: 130px
     left: 50%
-    width: 100px
+    width: 120px
     margin-left: -50px
     color: #b7c7d1
     text-align: center

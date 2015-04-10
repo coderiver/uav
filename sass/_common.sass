@@ -200,7 +200,12 @@ picture
 .build-quote
 	display: block
 	font-size: 0
-	color: #FFF
+	color: #fff
+	+tr(color 200ms)
+	&:hover
+		color: #80BAF5
+		span
+			text-decoration: underline
 	.page__in &
 		+r(767)
 			display: none
@@ -367,7 +372,9 @@ picture
 				margin-top: 401px
 				width: 100%
 				top: auto
-				+transform(translateY(0))	
+				+transform(translateY(0))
+			+r(767)
+				margin-top: 0		
 	&.page__bg_top
 		+r(767)
 			position: relative
