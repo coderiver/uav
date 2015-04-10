@@ -645,8 +645,6 @@ picture { display: inline-block; vertical-align: middle; }
 .scroll .icon.icon-scroll_2, .scroll .icon.icon-scroll_3 { position: absolute; bottom: -4px; left: 50%; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); }
 .scroll .icon.icon-scroll_2 { -webkit-animation: scroll 1.2s 400ms infinite; -moz-animation: scroll 1.2s 400ms infinite; -ms-animation: scroll 1.2s 400ms infinite; -o-animation: scroll 1.2s 400ms infinite; animation: scroll 1.2s 400ms infinite; }
 .scroll .icon.icon-scroll_3 { bottom: -12px; -webkit-animation: scroll 1.2s 800ms infinite; -moz-animation: scroll 1.2s 800ms infinite; -ms-animation: scroll 1.2s 800ms infinite; -o-animation: scroll 1.2s 800ms infinite; animation: scroll 1.2s 800ms infinite; }
-@media only screen and (max-width: 768px) { .page_first .scroll { position: relative; bottom: auto; left: auto; margin: 0 auto; display: block; } }
-@media only screen and (max-width: 767px) { .page_first .scroll { display: none; } }
 
 .actions { text-align: right; }
 @media only screen and (max-width: 767px) { .actions { margin-bottom: 20px; text-align: center; } }
@@ -682,7 +680,7 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 767px) { .page__in.details { padding-top: 0; } }
 
 .el { position: relative; padding-top: 140px; max-height: 100%; text-align: center; }
-@media only screen and (max-width: 768px) { .el { padding-top: 250px; } }
+@media only screen and (max-width: 768px) { .el { padding-top: 180px; } }
 @media only screen and (max-width: 767px) { .el { position: relative; top: auto; left: auto; right: auto; bottom: auto; padding-top: 0; margin-bottom: 40px; } }
 .el .el__pic { position: relative; display: inline-block; height: 100%; }
 @media only screen and (max-width: 1024px) { .el .el__pic { height: auto; max-height: 100%; } }
@@ -761,8 +759,9 @@ picture { display: inline-block; vertical-align: middle; }
 
 .disclaimer { position: relative; }
 @media only screen and (max-width: 767px) { .disclaimer { margin-left: 20px; margin-bottom: 20px; } }
-.disclaimer .disclaimer__title { margin-bottom: 8px; font-size: 14px; font-style: italic; }
-.disclaimer .icon { position: absolute; top: 2px; left: -20px; font-size: 13px; }
+.disclaimer .disclaimer__title { position: relative; display: inline-block; margin-bottom: 8px; font-size: 14px; font-style: italic; }
+.disclaimer .disclaimer__title .icon { position: absolute; top: 2px; left: -20px; font-size: 13px; }
+.disclaimer .disclaimer__title { font-size: 14px; }
 
 @media only screen and (max-width: 767px) { .size { text-align: center; } }
 .size a, .size span { display: inline-block; vertical-align: middle; }
@@ -773,8 +772,11 @@ picture { display: inline-block; vertical-align: middle; }
 
 .catapult { position: absolute; top: 50%; left: 0; right: 0; height: 460px; margin-top: -230px; }
 @media only screen and (max-width: 1024px) { .catapult { height: 400px; } }
-@media only screen and (max-width: 767px) { .catapult { position: relative; top: auto; left: auto; right: auto; margin-top: 0; height: auto; }
-  .catapult.catapult_resp .catapult__el { position: relative; left: auto; right: auto; top: auto; bottom: auto; } }
+@media only screen and (max-width: 767px) { .catapult { position: relative; top: auto; left: auto; right: auto; margin-top: 0; height: auto; } }
+.catapult.catapult_resp { position: relative; top: 0; right: auto; left: auto; margin-top: 100px; }
+@media only screen and (max-width: 768px) { .catapult.catapult_resp { margin-top: 200px; } }
+@media only screen and (max-width: 767px) { .catapult.catapult_resp { margin-top: 0; } }
+.catapult.catapult_resp .catapult__el { position: relative; left: auto; right: auto; top: auto; height: 100%; }
 .catapult .catapult__man, .catapult .catapult__el { position: absolute; left: 0; right: 0; top: 0; text-align: center; }
 .catapult .catapult__man img, .catapult .catapult__el img { height: 100%; }
 @media only screen and (max-width: 1024px) { .catapult .catapult__man img, .catapult .catapult__el img { max-width: 100%; height: auto; } }

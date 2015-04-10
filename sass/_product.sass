@@ -582,16 +582,7 @@
             +animation(scroll 1.2s 400ms infinite)   
         &.icon-scroll_3
             bottom: -12px
-            +animation(scroll 1.2s 800ms infinite)
-    .page_first &
-        +r(768) 
-            position: relative
-            bottom: auto
-            left: auto
-            margin: 0 auto 
-            display: block
-        +r(767)
-            display: none        
+            +animation(scroll 1.2s 800ms infinite)       
 
 .actions
     text-align: right
@@ -695,7 +686,7 @@
     max-height: 100%
     text-align: center
     +r(768)
-        padding-top: 250px
+        padding-top: 180px
     +r(767)
         position: relative
         top: auto
@@ -956,14 +947,18 @@
         margin-left: 20px
         margin-bottom: 20px
     .disclaimer__title
+        position: relative
+        display: inline-block
         margin-bottom: 8px 
         font-size: 14px
         font-style: italic
-    .icon
-        position: absolute
-        top: 2px
-        left: -20px
-        font-size: 13px
+        .icon
+            position: absolute
+            top: 2px
+            left: -20px
+            font-size: 13px
+    .disclaimer__title
+        font-size: 14px        
 
 .size
     +r(767)
@@ -992,8 +987,7 @@
             width: 9px
             height: 9px
             background: #FFF
-            border-radius: 50%
-            //box-shadow: 1.5px 2.6px 5px rgba(16, 22, 25, 0.75) 
+            border-radius: 50% 
             vertical-align: top
 
 .catapult
@@ -1012,13 +1006,22 @@
         right: auto
         margin-top: 0
         height: auto
-        &.catapult_resp
-            .catapult__el
-                position: relative
-                left: auto
-                right: auto
-                top: auto
-                bottom: auto    
+    &.catapult_resp
+        position: relative
+        top: 0
+        right: auto
+        left: auto
+        margin-top: 100px
+        +r(768) 
+            margin-top: 200px
+        +r(767)
+            margin-top: 0    
+        .catapult__el
+            position: relative
+            left: auto
+            right: auto
+            top: auto
+            height: 100%                    
     .catapult__man,
     .catapult__el
         position: absolute
