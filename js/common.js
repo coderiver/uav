@@ -693,5 +693,7 @@ head.ready(function() {
 
 	});
 
+	$(window).trigger('resize');
+
 
 });

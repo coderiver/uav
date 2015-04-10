@@ -137,7 +137,7 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 767px) { .page__bg { position: relative; left: auto; top: auto; padding-top: 40px; } }
 .page__bg.leftside-bg { top: 45%; width: 70%; }
 @media only screen and (max-width: 767px) { .page__bg.leftside-bg { width: 100%; top: auto; -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); } }
-@media only screen and (max-width: 768px) { .page_first .page__bg.leftside-bg { position: relative; left: auto; padding-top: 40px; width: 100%; top: auto; -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); } }
+@media only screen and (max-width: 768px) { .page_first .page__bg.leftside-bg { position: relative; left: auto; padding-top: 40px; margin-top: 401px; width: 100%; top: auto; -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); } }
 @media only screen and (max-width: 767px) { .page__bg.page__bg_top { position: relative; width: 100%; top: 0; -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); }
   .page__bg.page__bg_top picture { width: 100%; }
   .page__bg.page__bg_top picture img { width: 100%; height: auto; } }
@@ -512,7 +512,6 @@ picture { display: inline-block; vertical-align: middle; }
 
 .page { position: relative; height: 100%; background: url(../img/patern.png); }
 @media only screen and (max-width: 767px) { .page { height: auto; min-height: 100%; } }
-@media only screen and (max-width: 768px) { .page.page_first { height: auto; min-height: 100%; } }
 .page .page__in { position: absolute; top: 80px; left: 40px; right: 40px; bottom: 40px; }
 @media only screen and (max-width: 768px) { .page .page__in { left: 20px; right: 20px; bottom: 20px; } }
 @media only screen and (max-width: 767px) { .page .page__in { position: relative; top: auto; left: auto; right: auto; bottom: auto; padding-top: 60px; } }
@@ -674,8 +673,10 @@ picture { display: inline-block; vertical-align: middle; }
 .el { position: absolute; top: 140px; left: 0; right: 0; bottom: 140px; text-align: center; }
 @media only screen and (max-width: 767px) { .el { position: relative; top: auto; left: auto; right: auto; bottom: auto; margin-bottom: 40px; } }
 .el .el__pic { position: relative; display: inline-block; height: 100%; }
+@media only screen and (max-width: 1024px) { .el .el__pic { height: auto; max-height: 100%; } }
 .el .el__in { position: relative; display: inline-block; height: 100%; }
-.el .el__in img { display: inline-block; height: auto; min-width: 100px; max-height: 100%; }
+@media only screen and (max-width: 1024px) { .el .el__in { height: auto; max-height: 100%; } }
+.el .el__in img { display: inline-block; height: auto; max-height: 100%; max-width: 100%; }
 .el .el__item { position: absolute; top: 0; left: 0; z-index: 4; }
 .el .el__item.is-active { z-index: 8; }
 .el .el__item.is-active .el__plus { border-color: #fff; background: #1262b2; color: #fff; }
