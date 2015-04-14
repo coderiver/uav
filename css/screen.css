@@ -1028,8 +1028,8 @@ picture { display: inline-block; vertical-align: middle; }
 
 .bg-anim { height: 100%; }
 .bg-anim .img-wrap { display: none; }
-@media only screen and (max-width: 767px) { .bg-anim .img-wrap { display: block; } }
-@media only screen and (max-width: 767px) { .bg-anim .flight { display: none; } }
+@media only screen and (max-width: 1024px) { .bg-anim .img-wrap { display: block; } }
+@media only screen and (max-width: 1024px) { .bg-anim .flight { display: none; } }
 
 @-moz-keyframes cloud1 { 0% { -moz-transform: translateX(0); -ms-transform: translateX(0); -webkit-transform: translateX(0); transform: translateX(0); }
   100% { -moz-transform: translateX(100%); -ms-transform: translateX(100%); -webkit-transform: translateX(100%); transform: translateX(100%); } }
