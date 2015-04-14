@@ -518,7 +518,8 @@ head.ready(function() {
 			$('.js-popup-slider').slick('slickNext');
 		});
 	}
-	popupSlider();
+	//popupSlider();
+	
 	// tabs mobile init
 
 	function tabSlider(){
