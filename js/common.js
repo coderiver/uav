@@ -7,7 +7,7 @@ head.ready(function() {
 			responsive: 767,
 			menu: "#index-menu",
 			anchors: ['home-index', 'home-products', 'home-company', 'home-contacts'],
-			afterRender: function(){
+			afterRender: function(index){
 	            $('.header').removeAttr('hidden');
 	            $('.header').removeClass('is-small');
 	            if (index == 1) {
@@ -34,7 +34,7 @@ head.ready(function() {
 			resize: true,
 			responsive: 767,
 			anchors: ['products-index', 'products-contacts'],
-			afterRender: function(){
+			afterRender: function(index){
 	            // after render events
 	            if (index == 1) {
 	            	$('body').animate({scrollTop:0}, '10');
@@ -57,7 +57,7 @@ head.ready(function() {
 			menu: "#penguin-menu",
 			anchors: ['penguin-index', 'performance', 'exploded_view', 'tech_specs', 'take_off', 
 			'engine', 'payload_module', 'pgcs', 'options', 'penguin-contacts'],
-			afterRender: function(){
+			afterRender: function(index){
 	            $('.logo a').addClass('js-link');
 	            $('.nav a.nav__contacts').addClass('js-link');
 	            if (index == 1) {
@@ -92,7 +92,7 @@ head.ready(function() {
 			menu: '#catapult-menu',
 			anchors: ['performance', 'adaptability', 'exploded_view', 'tech_specs', 'catapult5', 'package', 
 			'catapult7', 'catapult8', 'catapult-contacts'],
-			afterRender: function(){
+			afterRender: function(index){
 	            $('.logo a').addClass('js-link');
 	            $('.nav a.nav__contacts').addClass('js-link');
 	            if (index == 1) {
