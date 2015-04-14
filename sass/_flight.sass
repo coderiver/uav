@@ -1,0 +1,106 @@
+// animation for flight picture
+.bg-anim
+    height: 100%
+    .img-wrap
+        display: none
+        +r(767)
+            display: block
+    .flight
+        +r(767)
+            display: none        
+
++keyframes(cloud1)
+    0%
+        +transform(translateX(0))
+    100%
+        +transform(translateX(100%))
++keyframes(cloud2)
+    0%
+        +transform(translateX(-100%))
+    100%
+        +transform(translateX(0))
++keyframes(cloud3)
+    0%
+        +transform(translateX(-100%))
+    100%
+        +transform(translateX(100%))
++keyframes(rotate)
+    0%
+        +rotate(0)
+    50%
+        +rotate(180)    
+    100%
+        +rotate(360)                             
+.flight
+    position: relative
+    overflow: hidden
+    height: 100vh
+    .flight__bg
+        position: relative
+        height: 100%
+        background: url(../img/flight/bg.png)
+        +cover
+        z-index: 1
+    .flight__plain
+        position: absolute
+        top: 50%
+        left: 50%
+        +transform(translate(-50%, -50%))
+        font-size: 0
+        z-index: 3
+        img
+            position: relative
+            z-index: 2
+    .flight__engine
+        position: absolute
+        top: 50%
+        left: 50%
+        +transform(translate(-50%, -50%))
+        width: 25%
+        height: 30%  
+        margin: -7% 0 0 -9%
+        +animation(rotate 300ms linear infinite)
+        font-size: 0
+        +gpu
+        z-index: 1
+        img
+            width: 100%
+            height: 100%     
+    .flight__cloud1
+        position: absolute
+        top: 0
+        bottom: 0
+        font-size: 0
+        z-index: 2
+        +animation(cloud1 50s linear infinite)
+        +gpu
+        img
+            height: 100%
+            width: auto
+            max-width: none       
+    .flight__cloud2
+        position: absolute
+        top: 0
+        bottom: 0
+        font-size: 0
+        z-index: 2
+        +animation(cloud2 50s linear infinite)
+        +gpu
+        img
+            height: 100%
+            width: auto
+            max-width: none
+    .flight__cloud3
+        position: absolute
+        top: 0
+        left: 0
+        +animation(cloud3 50s linear infinite)
+        +gpu
+        z-index: 4
+    .flight__cloud4
+        position: absolute
+        bottom: 0
+        left: 0
+        +animation(cloud3 40s linear infinite)
+        +gpu
+        z-index: 4            
