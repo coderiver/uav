@@ -254,3 +254,15 @@
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
 </html>
+
+
+<picture>
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="img/img-large.jpg" media="(min-width: 1024px)">
+    <source srcset="img/img-big.jpg" media="(min-width: 768px)">
+    <source srcset="img/img.jpg" media="(min-width: 568px)">
+    <source srcset="img/img-tablet.jpg" media="(min-width: 320px)">
+    <source srcset="img/img-mobile.jpg" media="(min-width: 240px)">
+    <!--[if IE 9]></video><![endif]-->
+    <img srcset="img/img.jpg" alt="img">  
+</picture>

@@ -55,8 +55,7 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 767px) { .non-mobile { display: none; } }
 
 .img-wrap { position: relative; overflow: hidden; height: 100%; }
-.img-wrap .img-wrap__bg { position: absolute; top: -1000px; left: 0; right: 0; bottom: -1000px; text-align: center; font-size: 0; overflow: hidden; }
-.img-wrap .img-wrap__bg:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.img-wrap .img-wrap__bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .img-wrap .img-wrap__bg img { width: 100%; height: auto; vertical-align: middle; }
 .img-wrap .img-wrap__in { height: 100vh; min-height: 768px; }
 .main .img-wrap .img-wrap__in { min-height: 1px; }
