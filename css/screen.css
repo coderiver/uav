@@ -59,10 +59,9 @@ picture { display: inline-block; vertical-align: middle; }
 .img-wrap .img-wrap__bg img { width: 100%; height: auto; vertical-align: middle; }
 .img-wrap .img-wrap__in { height: 100vh; min-height: 768px; }
 .main .img-wrap .img-wrap__in { min-height: 1px; }
-@media only screen and (max-width: 1023px) { .img-wrap .img-wrap__bg { top: 0; bottom: 0; left: -1000px; right: -1000px; }
+@media only screen and (max-width: 1023px) { .img-wrap .img-wrap__bg { top: 0; bottom: 0; }
   .img-wrap .img-wrap__bg picture { height: 100%; }
   .img-wrap .img-wrap__bg img { width: auto; height: 100vh; }
-  .main .img-wrap .img-wrap__bg { top: -1000px; bottom: -1000px; }
   .main .img-wrap .img-wrap__bg picture { width: auto; height: auto; } }
 
 .title { margin-bottom: 10px; font-size: 48px; font-weight: 100; line-height: 1.2; color: #fff; }
