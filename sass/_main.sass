@@ -103,9 +103,10 @@
 	.footer-menu__link
 		position: relative
 		overflow: hidden
-		display: inline-block
+		display: block
 		width: 100px
 		height: 100px
+		margin: 0 auto 
 		line-height: 100px 
 		border-radius: 50%
 		border: 1px solid #fff
@@ -138,19 +139,21 @@
 			bottom: 0
 			right: 0
 			left: 0
+			border-radius: 50%
 			background: rgba(#000, 0.4)
 			z-index: 2
 			opacity: 0 
 			+tr(opacity 200ms) 
 		picture
-			+tr(opacity 200ms)
-		img
 			display: inline-block
 			vertical-align: middle
+			+tr(opacity 200ms)
+		img
+			display: block
 			border-radius: 50%
 	.footer-menu__content
 		position: relative
-		height: 100px 
+		height: 98px 
 		padding: 0 20px
 		opacity: 0
 		line-height: 1.4  
