@@ -72,7 +72,7 @@ head.ready(function() {
 	                $('.js-menu').addClass('is-fixed');
 	            }
 	            // after returning to section 1
-	            else if(index == 2 && direction == 'up'){
+	            else if(nextIndex == 1){
 	            	$('.js-menu').removeClass('is-fixed');	
 	                $('.header').removeAttr('hidden');
 	            }
@@ -107,7 +107,7 @@ head.ready(function() {
 	                $('.js-menu').addClass('is-fixed');
 	            }
 	            // after returning to section 1
-	            else if(index == 2 && direction == 'up'){
+	            else if(nextIndex == 1){
 	            	$('.js-menu').removeClass('is-fixed');	
 	                $('.header').removeAttr('hidden');
 	            }
