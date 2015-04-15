@@ -362,7 +362,7 @@ head.ready(function() {
 
 	// popup init
 
-	$('body').on('click', '.js-popup-btn', function(){
+	$('.js-popup-btn').on('click', function(){
 		$('body').addClass('no-scroll');
 		$('.js-popup').show();
 		popupSlider();
