@@ -90,8 +90,8 @@ head.ready(function() {
 			resize: true,
 			responsive: 767,
 			menu: '#catapult-menu',
-			anchors: ['performance', 'adaptability', 'exploded_view', 'tech_specs', 'catapult5', 'package', 
-			'catapult7', 'catapult8', 'catapult-contacts'],
+			anchors: ['performance', 'adaptability', 'exploded_view', 'tech_specs', 'package',
+			 'catapult_options', 'catapult-contacts'],
 			afterRender: function(index){
 	            $('.logo a').addClass('js-link');
 	            $('.nav a.nav__contacts').addClass('js-link');

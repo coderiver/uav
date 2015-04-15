@@ -800,7 +800,7 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 480px) { .catapult .catapult__el_3 { margin-left: -100px; } }
 .catapult .catapult__dims { position: relative; display: inline-block; height: 100%; }
 @media only screen and (max-width: 1024px) { .catapult .catapult__dims { height: auto; max-height: 100%; } }
-.catapult .catapult__arrows { position: relative; height: auto !important; max-height: 100%; opacity: 0; -moz-transition: opacity 300ms; -o-transition: opacity 300ms; -webkit-transition: opacity 300ms; transition: opacity 300ms; z-index: 2; }
+.catapult .catapult__arrows { position: relative; height: auto !important; max-height: 100%; width: auto; opacity: 0; -moz-transition: opacity 300ms; -o-transition: opacity 300ms; -webkit-transition: opacity 300ms; transition: opacity 300ms; z-index: 2; }
 .catapult .catapult__arrows.is-visible { opacity: 1; }
 @media only screen and (max-width: 767px) { .catapult .catapult__arrows { opacity: 0; } }
 .catapult .catapult__bg { position: absolute; z-index: 1; opacity: 0; font-size: 0; -moz-transition: opacity 300ms; -o-transition: opacity 300ms; -webkit-transition: opacity 300ms; transition: opacity 300ms; }
