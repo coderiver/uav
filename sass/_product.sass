@@ -1197,31 +1197,28 @@
         height: 130px
         border-radius: 50%
         border: 1px solid #fff
+        background: #000 
         overflow: hidden
         +gpu
-        &:hover
+        .no-touch &:hover
             .catalog__img
-                picture
-                    opacity: 1 
+                opacity: 1 
             .catalog__content
                 opacity: 0
     .catalog__img
         position: absolute
-        top: -500px
-        bottom: -500px
-        left: -500px
-        right: -500px
+        top: -200px
+        bottom: -200px
+        left: -200px
+        right: -200px
         font-size: 0
-        +vertical
-        background: #000
+        opacity: 0.6 
+        -webkit-background-size: 100% auto 
+        -o-background-size: 100% auto 
+        background-size: 100% auto 
         z-index: 1
-        picture
-            opacity: 0.6 
+        .no-touch &
             +tr(opacity 200ms)
-        img
-            display: inline-block
-            vertical-align: middle
-            border-radius: 50%
     .catalog__content
         position: relative
         height: 130px

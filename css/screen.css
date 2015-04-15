@@ -838,13 +838,11 @@ picture { display: inline-block; vertical-align: middle; }
 .catalog-mob .catalog .catalog__item { width: auto; }
 .catalog .catalog__list { font-size: 0; }
 .catalog .catalog__item { display: inline-block; text-align: center; width: 33.3%; margin-bottom: 5%; }
-.catalog .catalog__link { position: relative; display: inline-block; width: 130px; height: 130px; border-radius: 50%; border: 1px solid #fff; overflow: hidden; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-.catalog .catalog__link:hover .catalog__img picture { opacity: 1; }
-.catalog .catalog__link:hover .catalog__content { opacity: 0; }
-.catalog .catalog__img { position: absolute; top: -500px; bottom: -500px; left: -500px; right: -500px; font-size: 0; text-align: center; font-size: 0; background: #000; z-index: 1; }
-.catalog .catalog__img:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.catalog .catalog__img picture { opacity: 0.6; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
-.catalog .catalog__img img { display: inline-block; vertical-align: middle; border-radius: 50%; }
+.catalog .catalog__link { position: relative; display: inline-block; width: 130px; height: 130px; border-radius: 50%; border: 1px solid #fff; background: #000; overflow: hidden; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+.no-touch .catalog .catalog__link:hover .catalog__img { opacity: 1; }
+.no-touch .catalog .catalog__link:hover .catalog__content { opacity: 0; }
+.catalog .catalog__img { position: absolute; top: -200px; bottom: -200px; left: -200px; right: -200px; font-size: 0; opacity: 0.6; -webkit-background-size: 100% auto; -o-background-size: 100% auto; background-size: 100% auto; z-index: 1; }
+.no-touch .catalog .catalog__img { -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
 .catalog .catalog__content { position: relative; height: 130px; padding: 0 10px; line-height: 1.4; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; text-align: center; font-size: 0; z-index: 2; }
 .catalog .catalog__content:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .catalog .catalog__content span { display: inline-block; vertical-align: middle; font-size: 11px; }
