@@ -365,6 +365,9 @@ head.ready(function() {
 	$('.js-popup-btn').on('click', function(){
 		$('body').addClass('no-scroll');
 		var link = $(this).data('popup');
+
+		//disabling scrolling
+		$.fn.fullpage.setAllowScrolling(false);
 		
 		// fires when btn doesn't have data-slide attribute (init first slide then)
 		if ($(this).data('slide')) {
@@ -395,6 +398,8 @@ head.ready(function() {
 	$('body').on('click', '.js-popup-close', function(){
 		$('.js-popup').hide();
 		$('body').removeClass('no-scroll');
+		//enabling scrolling
+		$.fn.fullpage.setAllowScrolling(true);
 	});
 
 	// catalog slider init
