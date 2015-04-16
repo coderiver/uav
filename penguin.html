@@ -1390,7 +1390,7 @@
 									    <!--[if IE 9]><video style="display: none;"><![endif]-->
 									    <source srcset="img/desk.png, img/desk-retina.png 2x">
 									    <!--[if IE 9]></video><![endif]-->
-									    <img srcset="img/desk.png" alt="img">
+									    <img srcset="img/desk.png" width="476" alt="img">
 									</picture>
 								</div>
 								<div class="content content_w270">
@@ -1433,19 +1433,19 @@
 							<!-- round-menu -->
 							<ul class="round-menu">
 								<li class="round-menu__item">
-									<a href="#" class="round-menu__link">
+									<a href="#" class="round-menu__link js-popup-btn" data-popup="desk-popup" data-slide="1">
 										<div class="round-menu__img" style="background-image: url(img/picture1-retina.jpg);"></div>
 										<div class="round-menu__content"><span>Fuel Injection Advantage</span></div>
 									</a>
 								</li>
 								<li class="round-menu__item">
-									<a href="#" class="round-menu__link">
+									<a href="#" class="round-menu__link js-popup-btn" data-popup="desk-popup" data-slide="2">
 										<div class="round-menu__img" style="background-image: url(img/picture2-retina.jpg);"></div>
 										<div class="round-menu__content"><span>Fuel Injection Advantage</span></div>
 									</a>
 								</li>
 								<li class="round-menu__item">
-									<a href="#" class="round-menu__link">
+									<a href="#" class="round-menu__link js-popup-btn" data-popup="desk-popup" data-slide="3">
 										<div class="round-menu__img" style="background-image: url(img/picture2-retina.jpg);"></div>
 										<div class="round-menu__content"><span>Fuel Injection Advantage</span></div>
 									</a>
@@ -1454,7 +1454,7 @@
 						</div>
 						<!-- block -->
 						<div class="block block_bottom-right">
-							<a href="#" class="btn js-popup-btn">Learn more about the product</a>
+							<a href="#" class="btn js-popup-btn" data-popup="desk-video-popup">Learn more about the product</a>
 						</div>
 						<!-- mobile navigation -->
 						<div class="mob-nav">
@@ -1994,7 +1994,7 @@
 	</div>
 </div>
 <!-- popup -->
-<div class="popup js-popup" style="display: none;">
+<div id="desk-popup" class="popup js-popup" style="display: none;">
 	<div class="popup__close js-popup-close">
 		<span class="icon icon-exploded-close"></span>
 	</div>
@@ -2035,6 +2035,26 @@
 				<button class="popup-slider__prev">Previous</button>
 				<button class="popup-slider__next">Next</button>
 
+			</div>
+		</div>
+	</div>
+</div>
+<div id="desk-video-popup" class="popup js-popup" style="display: none;">
+	<div class="popup__close js-popup-close">
+		<span class="icon icon-exploded-close"></span>
+	</div>
+	<div class="popup__bg">
+		<picture>
+		    <!--[if IE 9]><video style="display: none;"><![endif]-->
+		    <source srcset="img/desk.png, img/desk-retina.png 2x">
+		    <!--[if IE 9]></video><![endif]-->
+		    <img srcset="img/desk.png" width="476" alt="img">  
+		</picture>
+	</div>
+	<div class="popup__content">
+		<div class="video">
+			<div class="video__in">
+				<iframe width="auto" height="auto" src="https://www.youtube.com/embed/inkKN42RJK0" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>

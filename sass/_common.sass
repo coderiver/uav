@@ -689,9 +689,15 @@ picture
 			padding: 0 10px 	
 	.products__list
 		margin: 28px 0
+		text-align: center
 	.products__item
 		padding: 0 20px
 		text-align: center
+		& > a
+			display: block
+			&:hover
+				.products__name
+					text-decoration: underline
 		+r(767)
 			padding: 0
 			margin: 0 20px 
@@ -730,7 +736,28 @@ picture
 			left: auto
 			right: auto 		
 
-
+// video
+.video
+	position: relative
+	height: 100%
+	+vertical
+	.video__in
+		position: absolute
+		top: 50%
+		+transform(translateY(-50%))
+		width: 100%
+		height: 0
+		padding-bottom: 56.25%
+		iframe
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+		+r(767)
+			position: relative
+			top: 0
+			+transform(translateY(0))	 
 
 
 

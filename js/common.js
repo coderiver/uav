@@ -314,7 +314,27 @@ head.ready(function() {
 	}
 	clients();
 
-	function popupSlider(){
+	// tabs mobile init
+
+	function tabSlider(){
+		$('.js-tabs-3').slick({
+			infinite: false,
+			speed: 600,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			responsive: [
+			    {
+			    	breakpoint: 768,
+			    	settings: {
+			    		slidesToShow: 1,
+			    	}
+			    }
+			]
+		});
+	}
+	tabSlider();
+
+	function popupSlider(target){
 		$('.js-popup-slider').slick({
 			speed: 600,
 			dots: true,
@@ -337,37 +357,41 @@ head.ready(function() {
 		$('body').on('click', '.popup-slider__next', function(){
 			$('.js-popup-slider').slick('slickNext');
 		});
+		$('.js-popup-slider').slick('slickGoTo', target);
 	}
-	//popupSlider();
-
-	// tabs mobile init
-
-	function tabSlider(){
-		$('.js-tabs-3').slick({
-			infinite: false,
-			speed: 600,
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			responsive: [
-			    {
-			    	breakpoint: 768,
-			    	settings: {
-			    		slidesToShow: 1,
-			    	}
-			    }
-			]
-		});
-	}
-	tabSlider();
 
 	// popup init
 
 	$('.js-popup-btn').on('click', function(){
 		$('body').addClass('no-scroll');
-		$('.js-popup').show();
-		popupSlider();
+		var link = $(this).data('popup');
+		
+		// fires when btn doesn't have data-slide attribute (init first slide then)
+		if ($(this).data('slide')) {
+			sliderNumber = $(this).data('slide') -1;
+		}
+		else {
+			sliderNumber = 0;
+		}
+		
+		// find popup via id
+		$('#' + link).show();
+
+		// init slider in popup
+		if ($('#' + link).find('.js-popup-slider').length) {
+			if (!$('.js-popup-slider').hasClass('is-inited')) {
+				popupSlider(sliderNumber);
+				$('.js-popup-slider').addClass('is-inited');
+			}
+			else {
+				$('#' + link).find('.js-popup-slider').slick('slickGoTo', sliderNumber);
+			}
+		};
+		
 		return false;
 	});
+
+	// close popup
 	$('body').on('click', '.js-popup-close', function(){
 		$('.js-popup').hide();
 		$('body').removeClass('no-scroll');
