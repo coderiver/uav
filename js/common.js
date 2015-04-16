@@ -335,6 +335,24 @@ head.ready(function() {
 	tabSlider();
 
 	function popupSlider(target){
+
+		$('.js-bg-slider').slick({
+			speed: 600,
+			arrows: false,
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			swipe: false,
+			//asNavFor: '.js-popup-slider',
+			responsive: [
+			    {
+			    	breakpoint: 768,
+			    	settings: {
+			    		adaptiveHeight: true
+			    	}
+			    }
+			]
+		});
 		$('.js-popup-slider').slick({
 			speed: 600,
 			dots: true,
@@ -342,6 +360,7 @@ head.ready(function() {
 			infinite: true,
 			slidesToShow: 1,
 			slidesToScroll: 1,
+			asNavFor: '.js-bg-slider',
 			responsive: [
 			    {
 			    	breakpoint: 768,
@@ -357,6 +376,8 @@ head.ready(function() {
 		$('body').on('click', '.popup-slider__next', function(){
 			$('.js-popup-slider').slick('slickNext');
 		});
+		
+		$('.js-bg-slider').slick('slickGoTo', target);
 		$('.js-popup-slider').slick('slickGoTo', target);
 	}
 
@@ -382,12 +403,14 @@ head.ready(function() {
 
 		// init slider in popup
 		if ($('#' + link).find('.js-popup-slider').length) {
-			if (!$('.js-popup-slider').hasClass('is-inited')) {
+			if (!$('.js-popup-slider').hasClass('is-inited') && !$('.js-bg-slider').hasClass('is-inited')) {
 				popupSlider(sliderNumber);
 				$('.js-popup-slider').addClass('is-inited');
+				$('.js-bg-slider').addClass('is-inited');
 			}
 			else {
 				$('#' + link).find('.js-popup-slider').slick('slickGoTo', sliderNumber);
+				$('#' + link).find('.js-bg-slider').slick('slickGoTo', sliderNumber);
 			}
 		};
 		
