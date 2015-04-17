@@ -361,25 +361,41 @@ picture
 		top: auto
 		padding-top: 40px   		
 	&.leftside-bg
-		top: -20%
+		top: -60%
 		left: -20%
-		bottom: 0
 		right: 20%
 		+vertical
 		+transform(translateY(0))
+		+r(1440)
+			top: -45%
+		+r(1280)
+			top: -20%
+			left: -20%
+			right: auto
+			bottom: 0
+		+r(1024)
+			right: 300px	
 		img
 			display: inline-block
 			vertical-align: middle
 			max-width: 100%
+			width: auto
 			max-height: 100%
 		+r(768)
 			position: relative
 			width: 100%
-			left: 0
-			top: 7%
+			left: auto
+			top: auto
+			right: auto 
 			bottom: auto
+			margin-bottom: -340px
+			img
+				position: relative
+				top: -100px
+		+r(767)
+			margin-bottom: -240px		
 		+r(568)
-			margin-top: 30px		
+			//margin-top: 30px		
 	&.page__bg_top
 		img
 			width: auto
