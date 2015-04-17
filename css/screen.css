@@ -314,9 +314,9 @@ picture { display: inline-block; vertical-align: middle; }
 .footer-menu .footer-menu__link:hover .footer-menu__content { opacity: 1; }
 @media only screen and (max-width: 767px) { .footer-menu .footer-menu__link .footer-menu__bg:after { opacity: 1; }
   .footer-menu .footer-menu__link .footer-menu__content { opacity: 1; } }
-.footer-menu .footer-menu__bg { position: absolute; top: -500px; bottom: -500px; left: -500px; right: -500px; font-size: 0; text-align: center; font-size: 0; z-index: 1; }
+.footer-menu .footer-menu__bg { position: absolute; top: 0; bottom: 0; left: 0; right: 0; font-size: 0; text-align: center; font-size: 0; z-index: 1; }
 .footer-menu .footer-menu__bg:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.footer-menu .footer-menu__bg:after { content: ""; position: absolute; top: 50%; left: 50%; width: 98px; height: 98px; margin: -49px 0 0 -49px; border-radius: 50%; background: rgba(0, 0, 0, 0.4); z-index: 2; opacity: 0; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
+.footer-menu .footer-menu__bg:after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 50%; background: rgba(0, 0, 0, 0.4); z-index: 2; opacity: 0; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
 .footer-menu .footer-menu__bg picture { display: inline-block; vertical-align: middle; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
 .footer-menu .footer-menu__bg img { display: block; border-radius: 50%; }
 .footer-menu .footer-menu__content { position: relative; height: 98px; padding: 0 20px; opacity: 0; line-height: 1.4; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; text-align: center; font-size: 0; z-index: 2; }
@@ -846,7 +846,7 @@ picture { display: inline-block; vertical-align: middle; }
 .catalog .catalog__link { position: relative; display: inline-block; width: 130px; height: 130px; border-radius: 50%; border: 1px solid #fff; background: #000; overflow: hidden; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .no-touch .catalog .catalog__link:hover .catalog__img { opacity: 1; }
 .no-touch .catalog .catalog__link:hover .catalog__content { opacity: 0; }
-.catalog .catalog__img { position: absolute; top: -40px; bottom: -40px; left: -40px; right: -40px; font-size: 0; opacity: 0.6; -webkit-background-size: 100% auto; -o-background-size: 100% auto; background-size: 100% auto; z-index: 1; }
+.catalog .catalog__img { position: absolute; top: 0; bottom: 0; left: 0; right: 0; font-size: 0; opacity: 0.6; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; z-index: 1; }
 .no-touch .catalog .catalog__img { -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
 .catalog .catalog__content { position: relative; height: 130px; padding: 0 10px; line-height: 1.4; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; text-align: center; font-size: 0; z-index: 2; }
 .catalog .catalog__content:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
@@ -990,7 +990,7 @@ picture { display: inline-block; vertical-align: middle; }
 .round-menu .round-menu__link { position: relative; display: block; width: 80px; height: 80px; border-radius: 50%; border: 1px solid #fff; background: #000; overflow: hidden; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .no-touch .round-menu .round-menu__link:hover .round-menu__img { opacity: 1; }
 .no-touch .round-menu .round-menu__link:hover .round-menu__content { opacity: 0; }
-.round-menu .round-menu__img { position: absolute; top: -20px; bottom: -20px; left: -20px; right: -20px; font-size: 0; opacity: 0.7; -webkit-background-size: 100% auto; -o-background-size: 100% auto; background-size: 100% auto; z-index: 1; }
+.round-menu .round-menu__img { position: absolute; top: 0; bottom: 0; left: 0; right: 0; font-size: 0; opacity: 0.7; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; z-index: 1; }
 .no-touch .round-menu .round-menu__img { -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
 .round-menu .round-menu__content { position: relative; width: 78px; height: 78px; padding: 0 10px; line-height: 1.4; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; text-align: center; font-size: 0; z-index: 2; }
 .round-menu .round-menu__content:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }

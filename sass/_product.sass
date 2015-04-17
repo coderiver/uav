@@ -1208,15 +1208,13 @@
                 opacity: 0
     .catalog__img
         position: absolute
-        top: -40px
-        bottom: -40px
-        left: -40px
-        right: -40px
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
         font-size: 0
         opacity: 0.6 
-        -webkit-background-size: 100% auto 
-        -o-background-size: 100% auto 
-        background-size: 100% auto 
+        +cover
         z-index: 1
         .no-touch &
             +tr(opacity 200ms)
