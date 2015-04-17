@@ -596,7 +596,7 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 1024px) { .product-pic picture { height: auto; }
   .product-pic img { height: auto; } }
 @media only screen and (max-width: 768px) { .product-pic { position: relative; top: 0; right: auto; bottom: auto; }
-  .product-pic picture { max-width: 80%; margin-bottom: 20px; } }
+  .product-pic picture { margin-bottom: 20px; } }
 @media only screen and (max-width: 767px) { .product-pic { max-width: 100%; } }
 
 .share-wrap { margin-bottom: 30px; *zoom: 1; }
