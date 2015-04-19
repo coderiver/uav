@@ -831,10 +831,28 @@ head.ready(function() {
 		};
 	};
 
-	$('.baq').fancybox({width:1017,height:560, beforeShow: function(){
+
+    $('.contacts__col_form').on('submit','form',function(e){
+        e.preventDefault();
+        var data = $(this).serialize();
+        var self = this;
+        var parent = $(self).parents('.contacts__col_form');
+        //$(parent).spin('small');
+        $('[type=submit]', self).attr('disabled', 'disabled');
+        $.post($(self).attr('action'),data,function(data){
+            //$(parent).data('spinner').stop();
+            $('> div.form', parent).html(data);
+        })
+    })
+
+    $('.baq').fancybox({width:1017,height:560, beforeShow: function(){
         $.fn.fullpage.setAllowScrolling(false);
     }, beforeClose: function(){
-        $.fn.fullpage.setAllowScrolling(true);
+        if(confirm("Are you sure you want to quit?")){
+            $.fn.fullpage.setAllowScrolling(true);
+        }else{
+            return false;
+        }
     }});
     $('form[name=baq]').submit(function(){
         $('a.baq').click();
