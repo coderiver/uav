@@ -754,7 +754,40 @@ picture
 			left: auto
 			right: auto	 
 
-
+.newbg
+	position: absolute
+	top: 50%
+	left: 50%
+	width: 1000px   
+	height: 1000px 
+	margin-top: -550px 
+	margin-left: -650px 
+	z-index: -1 
+	-webkit-background-size: contain
+	-o-background-size: contain
+	background-size: contain
+	background-position: 50% 50%
+	background-repeat: no-repeat  
+	&.right
+		margin-left: -400px 
+		+r(1024)
+			position: static
+			width: 100%
+			height: auto
+			padding-bottom: 100%  
+			margin: 0
+	+r(1024)
+		position: static
+		width: 100%
+		height: auto
+		padding-bottom: 100%  
+		margin: 0
+		// height: 100px
+	&.maxheight
+		padding-bottom: 0 
+		+r(1024)
+			height: 200px 
+	
 
 
 

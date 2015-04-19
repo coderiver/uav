@@ -831,4 +831,14 @@ head.ready(function() {
 		};
 	};
 
+	$('.baq').fancybox({width:1017,height:560, beforeShow: function(){
+        $.fn.fullpage.setAllowScrolling(false);
+    }, beforeClose: function(){
+        $.fn.fullpage.setAllowScrolling(true);
+    }});
+    $('form[name=baq]').submit(function(){
+        $('a.baq').click();
+        return false;
+    });
+
 });
