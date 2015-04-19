@@ -267,6 +267,8 @@ picture { display: inline-block; vertical-align: middle; }
 .newbg { position: absolute; top: 50%; left: 50%; width: 1000px; height: 1000px; margin-top: -550px; margin-left: -650px; z-index: -1; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; background-position: 50% 50%; background-repeat: no-repeat; }
 .newbg.right { margin-left: -400px; }
 @media only screen and (max-width: 1024px) { .newbg.right { position: static; width: 100%; height: auto; padding-bottom: 100%; margin: 0; } }
+.newbg.bottom { margin-top: -450px; }
+@media only screen and (max-width: 1024px) { .newbg.bottom { position: static; width: 100%; height: auto; padding-bottom: 100%; margin: 0; } }
 @media only screen and (max-width: 1024px) { .newbg { position: static; width: 100%; height: auto; padding-bottom: 100%; margin: 0; } }
 .newbg.maxheight { padding-bottom: 0; }
 @media only screen and (max-width: 1024px) { .newbg.maxheight { height: 200px; } }
