@@ -641,7 +641,9 @@ picture
 		left: 10px
 		text-align: center
 		.tabs__in
-			padding: 0 		
+			padding: 0
+	+r(480)
+		top: 40px		 		
 		
 // products
 .page_products
@@ -777,29 +779,40 @@ picture
 	&.left
 		margin-top: -550px 
 		margin-left: -650px 
-		+r(1024)
+		+r(767)
 			+static
 	&.topleft      
 		margin-top: -512px - 200px
 		margin-left: -512px  - 256px
-		+r(1024)
+		+r(768)
 			+static
+			margin: 0 0 -300px
+		+r(767)
+			margin: -100px 0 -200px 	
+		+r(480)
+			margin: -50px 0 -150px
+		+r(320)
+			margin: 0 0 -100px	 
 	&.right
 		margin-left: -400px 
-		+r(1024)
+		+r(767)
 			+static
 	&.bottom
 		margin-top: -450px 
-		+r(1024)
+		+r(767)
 			+static
-	+r(1024)
+			margin-bottom: -100px
+	+r(767)
 		+static
-		// height: 100px
 	&.maxheight
-		padding-bottom: 0 
-		+r(1024)
-			height: 200px 
-
+		padding-bottom: 0
+		+r(768)
+			+static
+			margin: -150px 0 -150px
+		+r(480)
+			margin: -100px 0 -100px 
+		+r(360)
+			margin: 0 
 
 .capcha img
 	border-radius: 15px
