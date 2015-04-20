@@ -201,6 +201,11 @@ picture
 			.logo
 				padding: 3px 0 0 26px 		 		
 .build-quote
+	position: fixed
+	top: 100px
+	right: 50%
+	margin-right: -790px
+	z-index: 2
 	display: block
 	font-size: 0
 	color: #fff
@@ -781,9 +786,16 @@ picture
 		margin-left: -650px 
 		+r(767)
 			+static
-	&.topleft      
-		margin-top: -512px - 200px
-		margin-left: -512px  - 256px
+	&.topleft     
+		width: 2048px
+		height: 2048px
+		margin-top: -1100px
+		margin-left: -1500px
+		+r(1024) 
+			width: 1024px
+			height: 1024px	   
+			margin-top: -512px - 200px
+			margin-left: -512px  - 256px
 		+r(768)
 			+static
 			margin: 0 0 -300px
