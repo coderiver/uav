@@ -277,6 +277,10 @@ picture { display: inline-block; vertical-align: middle; }
 .newbg.maxheight { padding-bottom: 0; }
 @media only screen and (max-width: 1024px) { .newbg.maxheight { height: 200px; } }
 
+.capcha img { border-radius: 15px; }
+
+.form .error { border-color: red; }
+
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
