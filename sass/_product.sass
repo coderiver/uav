@@ -1169,12 +1169,16 @@
         float: right
         width: 300px
         min-height: 1px
+        .quote
+            display: none
         +r(767)
             float: none
             width: 100%
             -webkit-order: 2
             -ms-order: 2
-            order: 2                 
+            order: 2
+            .quote
+                display: block                 
 .quote
     margin-bottom: 20px 
     padding: 18px 18px 0

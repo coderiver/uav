@@ -94,21 +94,38 @@ head.ready(function() {
 	            if (index == 1) {
 	            	$('body').animate({scrollTop:0}, '10');
 	            };
+	            if(index == 2 || index == 5){
+	        		$('.js-build-quote').find('.build-quote').addClass('build-quote_dark');
+	        	} else {
+	        		$('.js-build-quote').find('.build-quote').removeClass('build-quote_dark');
+	        	};
 	            if (index == 3) {
 	            	if (!$('.js-scheme').hasClass('is-loaded')) {
 	            		getPictures();
 	            	};
 	            };
-	            if (!index == 10 && index == 1) {
-	            	$('.js-build-quote').show();
-	            }
+	            if ($(window).width() <= 767) {
+	            	$('.js-build-quote').removeClass('is-open').hide();
+	            };
 	        },
 	        afterLoad: function(anchorLink, index){
+	        	if(index == 2 || index == 5){
+	        		$('.js-build-quote').find('.build-quote').addClass('build-quote_dark');
+	        	} else {
+	        		$('.js-build-quote').find('.build-quote').removeClass('build-quote_dark');
+	        	};
+
 	        	if(index == 3){
 	        		if (!$('.js-scheme').hasClass('is-loaded')) {
 	        			getPictures();
 	        		};
 	        	}
+	        	if (index == 9){
+	            	$('.js-build-quote').addClass('is-open');
+	            }
+	            if ($(window).width() <= 767) {
+	            	$('.js-build-quote').removeClass('is-open').hide();
+	            };
             },
 			onLeave: function(index, nextIndex, direction){
 
@@ -129,7 +146,7 @@ head.ready(function() {
 	            }
 	            // after returning to 9 slide from 10
 	            if (nextIndex == 9){
-	            	$('.js-build-quote').show().addClass('is-open');
+	            	$('.js-build-quote').show();
 	            }
 	            else {
 	            	$('.js-build-quote').removeClass('is-open');
@@ -156,7 +173,18 @@ head.ready(function() {
 	            if (index == 1) {
 	            	$('body').animate({scrollTop:0}, '10');
 	            };
+	            if ($(window).width() <= 767) {
+	            	$('.js-build-quote').removeClass('is-open').hide();
+	            };
 	        },
+	        afterLoad: function(anchorLink, index){
+	        	if (index == 5){
+	            	$('.js-build-quote').addClass('is-open');
+	            }
+	            if ($(window).width() <= 767) {
+	            	$('.js-build-quote').removeClass('is-open').hide();
+	            };
+            },
 			onLeave: function(index, nextIndex, direction){
 
 	            //after leaving section 1
@@ -176,7 +204,7 @@ head.ready(function() {
 	            }
 	            // after returning to 5 slide from 6
 	            if (nextIndex == 5){
-	            	$('.js-build-quote').show().addClass('is-open');
+	            	$('.js-build-quote').show();
 	            }
 	            else {
 	            	$('.js-build-quote').removeClass('is-open');

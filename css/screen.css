@@ -92,18 +92,20 @@ picture { display: inline-block; vertical-align: middle; }
 .build-quote-wrap { position: fixed; top: 100px; right: 50%; width: 300px; *zoom: 1; margin-right: -750px; z-index: 2; }
 .build-quote-wrap:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1580px) { .build-quote-wrap { right: 40px; margin-right: 0; } }
+@media only screen and (max-width: 768px) { .build-quote-wrap { right: 20px; } }
 @media only screen and (max-width: 767px) { .build-quote-wrap { display: none; } }
-.build-quote-wrap .build-quote { float: right; }
+.build-quote-wrap .build-quote { float: right; opacity: 1; }
 .build-quote-wrap .quote { display: none; }
-.build-quote-wrap.is-open .build-quote { display: none; }
+.build-quote-wrap.is-open .build-quote { display: none; opacity: 0; }
 .build-quote-wrap.is-open .quote { display: block; }
 
-.build-quote { display: block; font-size: 0; color: #fff; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
+.build-quote { display: block; font-size: 0; color: #fff; -moz-transition: color 200ms, opacity 200ms; -o-transition: color 200ms, opacity 200ms; -webkit-transition: color 200ms, opacity 200ms; transition: color 200ms, opacity 200ms; }
 .build-quote:hover { color: #80BAF5; }
 .build-quote:hover span { text-decoration: underline; }
 @media only screen and (max-width: 767px) { .page__in .build-quote { display: none; } }
 .build-quote.build-quote_bold { font-weight: 700; }
 .build-quote.build-quote_mb40 { margin-bottom: 40px; }
+.build-quote.build-quote_dark { color: #2c3941; }
 .build-quote span, .build-quote .icon { display: inline-block; vertical-align: middle; }
 .build-quote span { margin-right: 15px; font-size: 12px; }
 .build-quote .icon { font-size: 20px; }
@@ -869,7 +871,9 @@ picture { display: inline-block; vertical-align: middle; }
 .accesories .accesories__left .title { margin-bottom: 50px; }
 @media only screen and (max-width: 767px) { .accesories .accesories__left { width: 100%; overflow: visible; -webkit-order: 1; -ms-order: 1; order: 1; padding-right: 0; } }
 .accesories .accesories__right { float: right; width: 300px; min-height: 1px; }
-@media only screen and (max-width: 767px) { .accesories .accesories__right { float: none; width: 100%; -webkit-order: 2; -ms-order: 2; order: 2; } }
+.accesories .accesories__right .quote { display: none; }
+@media only screen and (max-width: 767px) { .accesories .accesories__right { float: none; width: 100%; -webkit-order: 2; -ms-order: 2; order: 2; }
+  .accesories .accesories__right .quote { display: block; } }
 
 .quote { margin-bottom: 20px; padding: 18px 18px 0; border: 1px solid #fff; border-radius: 10px; }
 .quote .title { font-size: 42px; }

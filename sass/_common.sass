@@ -211,22 +211,26 @@ picture
 	+r(1580)
 		right: 40px
 		margin-right: 0
+	+r(768)
+		right: 20px	
 	+r(767)
 		display: none	
 	.build-quote
 		float: right
+		opacity: 1 
 	.quote
 		display: none
 	&.is-open
 		.build-quote
 			display: none
+			opacity: 0 
 		.quote
 			display: block				 		
 .build-quote
 	display: block
 	font-size: 0
 	color: #fff
-	+tr(color 200ms)
+	+transition(color 200ms, opacity 200ms)
 	&:hover
 		color: #80BAF5
 		span
@@ -237,7 +241,9 @@ picture
 	&.build-quote_bold
 		font-weight: 700
 	&.build-quote_mb40
-		margin-bottom: 40px	
+		margin-bottom: 40px
+	&.build-quote_dark
+		color: #2c3941	
 	span,
 	.icon
 		display: inline-block
