@@ -22,9 +22,9 @@ head.ready(function() {
   				if (counter == imgCount) {
   					clearInterval(interval);
   				};
-    		}, 60);		
+    		}, 40);		
     	container.addClass('is-loaded');
-    	var delay = 60*imgCount + 120; 
+    	var delay = 40*imgCount + 200; 
     	setTimeout(function(){
     		container.parent().find('.js-tooltip-item').addClass('is-visible');
     	}, delay);

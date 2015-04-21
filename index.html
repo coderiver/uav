@@ -12,8 +12,24 @@
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<link rel="stylesheet" media="all" href="css/style.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<style>
+		#preloader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background:#668398;
+			z-index: 9999;
+		}
+	</style>
 </head>
 <body>
+<!-- preloader -->
+<div id='preloader'>
+	<p style="color: #fff; font-size: 72px;">preloader</p>
+	<div id="preloader-svg"></div>
+</div>
 <!-- wrap -->
 <div class="wrap">
 	<!-- header -->
