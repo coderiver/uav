@@ -324,6 +324,9 @@
     &.block_top-right
         top: 0
         right: 0
+        padding-top: 60px
+        .page_first &
+            padding-top: 0
         +r(767)
             float: none
             width: 100%
@@ -695,10 +698,12 @@
     +r(767)
         padding-top: 0
 .el
-    position: relative
-    padding-top: 140px
-    max-height: 100%
     text-align: center
+    position: absolute
+    top: -200px
+    bottom: -200px
+    left: -200px
+    right: -200px
     +r(768)
         padding-top: 180px
     +r(767)
@@ -712,10 +717,13 @@
     .el__pic
         position: relative
         display: inline-block
-        height: 100%
-        +r(1024)
-            height: auto
-            max-height: 100%
+        height: 100%  
+        +r(767)
+            position: relative
+            top: auto
+            bottom: auto
+            right: auto
+            left: auto
     .el__in
         position: relative
         display: inline-block
@@ -724,21 +732,22 @@
             display: inline-block
             height: auto
             width: auto
-            max-height: 555px
+            height: 100%
             max-width: 100%
-        +r(1280)
+        +r(767)
+            margin: -50px 0 0
             img
-                max-height: 450px    
-        +r(1024)
-            height: auto
-            max-height: 100%
-            img
-                max-height: 450px             
+                max-height: 100vw
+                height: auto          
     .el__item
         position: absolute
         top: 0
         left: 0
-        z-index: 4 
+        z-index: 4
+        opacity: 0
+        +tr(opacity 200ms)
+        &.is-visible
+            opacity: 1
         &.is-active
             z-index: 8
             .el__plus
@@ -1159,6 +1168,7 @@
     .accesories__right
         float: right
         width: 300px
+        min-height: 1px
         +r(767)
             float: none
             width: 100%

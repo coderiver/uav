@@ -199,13 +199,30 @@ picture
 				padding: 3px 0 0 3px
 		+r(786)
 			.logo
-				padding: 3px 0 0 26px 		 		
-.build-quote
+				padding: 3px 0 0 26px 	
+.build-quote-wrap
 	position: fixed
 	top: 100px
 	right: 50%
-	margin-right: -790px
+	width: 300px
+	+clr
+	margin-right: -750px
 	z-index: 2
+	+r(1580)
+		right: 40px
+		margin-right: 0
+	+r(767)
+		display: none	
+	.build-quote
+		float: right
+	.quote
+		display: none
+	&.is-open
+		.build-quote
+			display: none
+		.quote
+			display: block				 		
+.build-quote
 	display: block
 	font-size: 0
 	color: #fff

@@ -12,8 +12,24 @@
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<link rel="stylesheet" media="all" href="css/style.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<style>
+		#preloader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background:#668398;
+			z-index: 9999;
+		}
+	</style>
 </head>
 <body>
+<!-- preloader -->
+<div id='preloader'>
+	<p style="color: #fff; font-size: 72px;">preloader</p>
+	<div id="preloader-svg"></div>
+</div>
 <!-- wrap -->
 <div class="wrap">
 	<!-- header -->
@@ -97,11 +113,6 @@
 											<a href="#"><i class="icon icon-exploded-plus"></i></a>
 										</div>
 									</div>
-									<!-- build-quote -->
-									<a class="build-quote build-quote_bold" href="#">
-										<span>BUILD-A-QUOTE</span>
-										<i class="icon icon-menu-baq"></i>
-									</a>
 								</div>
 								<!-- hr -->
 								<div class="hr hr_large"></div>
@@ -319,45 +330,73 @@
 						<div class="el js-tooltip">
 							<div class="el__pic">
 								<div class="el__in">
-									<img src="img/prod2.png" alt="">
+									<img class="js-scheme" data-type="plain" data-length="26" src="img/plain/1.png" alt="">
+									<!-- load frames -->
+									<div style="display: none;">
+										<img src="img/plain/2.png" alt="">
+										<img src="img/plain/3.png" alt="">
+										<img src="img/plain/4.png" alt="">
+										<img src="img/plain/5.png" alt="">
+										<img src="img/plain/6.png" alt="">
+										<img src="img/plain/7.png" alt="">
+										<img src="img/plain/8.png" alt="">
+										<img src="img/plain/9.png" alt="">
+										<img src="img/plain/10.png" alt="">
+										<img src="img/plain/11.png" alt="">
+										<img src="img/plain/12.png" alt="">
+										<img src="img/plain/13.png" alt="">
+										<img src="img/plain/14.png" alt="">
+										<img src="img/plain/15.png" alt="">
+										<img src="img/plain/16.png" alt="">
+										<img src="img/plain/17.png" alt="">
+										<img src="img/plain/18.png" alt="">
+										<img src="img/plain/19.png" alt="">
+										<img src="img/plain/20.png" alt="">
+										<img src="img/plain/21.png" alt="">
+										<img src="img/plain/22.png" alt="">
+										<img src="img/plain/23.png" alt="">
+										<img src="img/plain/24.png" alt="">
+										<img src="img/plain/25.png" alt="">
+										<img src="img/plain/26.png" alt="">
+									</div>
 									<!-- 1 -->
-									<div class="el__item is-active js-tooltip-item" style="top: 31%; left: 18%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
+									<div class="el__item is-active js-tooltip-item" style="top: 33%; left: 20%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
 										<div class="el__plus js-tooltip-btn">
 											<i class="icon icon-exploded-plus"></i>
 										</div>
 									</div>
 									<!-- 2 -->
-									<div class="el__item js-tooltip-item" style="top: 77%; left: 26%;" data-img="img/prod5-mobile.png" data-text="<div>Modular rail with integrated pneumatic cylinder.2</div><div>User -upgradable catapult length.2</div>">
+									<div class="el__item js-tooltip-item" style="top: 57%; left: 34%;" data-img="img/prod5-mobile.png" data-text="<div>Modular rail with integrated pneumatic cylinder.2</div><div>User -upgradable catapult length.2</div>">
 										<div class="el__plus js-tooltip-btn">
 											<i class="icon icon-exploded-plus"></i>
 										</div>
 									</div>
 									<!-- 3 -->
-									<div class="el__item js-tooltip-item" style="top: 56%; left: 33%;" data-img="img/plain2.png" data-text="<div>Modular rail with integrated pneumatic cylinder.3</div><div>User -upgradable catapult length.3</div>">
+									<div class="el__item js-tooltip-item" style="top: 50%; left: 36%;" data-img="img/plain2.png" data-text="<div>Modular rail with integrated pneumatic cylinder.3</div><div>User -upgradable catapult length.3</div>">
 										<div class="el__plus js-tooltip-btn">
 											<i class="icon icon-exploded-plus"></i>
 										</div>
 									</div>
 									<!-- 4 -->
-									<div class="el__item js-tooltip-item" style="top: 38%; left: 40%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
+									<div class="el__item js-tooltip-item" style="top: 41%; left: 42%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
 										<div class="el__plus js-tooltip-btn">
 											<i class="icon icon-exploded-plus"></i>
 										</div>
 									</div>
 									<!-- 5 -->
-									<div class="el__item js-tooltip-item" style="top: 51%; left: 49%;" data-img="img/prod5-mobile.png" data-text="<div>Modular rail with integrated pneumatic cylinder.2</div><div>User -upgradable catapult length.2</div>">
+									<div class="el__item js-tooltip-item" style="top: 47%; left: 49%;" data-img="img/prod5-mobile.png" data-text="<div>Modular rail with integrated pneumatic cylinder.2</div><div>User -upgradable catapult length.2</div>">
 										<div class="el__plus js-tooltip-btn">
 											<i class="icon icon-exploded-plus"></i>
 										</div>
 									</div>
 									<!-- 6 -->
-									<div class="el__item js-tooltip-item" style="top: 55%; left: 53%;" data-img="img/plain2.png" data-text="<div>Modular rail with integrated pneumatic cylinder.3</div><div>User -upgradable catapult length.3</div>">
+									<div class="el__item js-tooltip-item" style="top: 48%; left: 51%;" data-img="img/plain2.png" data-text="<div>Modular rail with integrated pneumatic cylinder.3</div><div>User -upgradable catapult length.3</div>">
 										<div class="el__plus js-tooltip-btn">
 											<i class="icon icon-exploded-plus"></i>
 										</div>
 									</div>
 									<!-- 7 -->
-									<div class="el__item js-tooltip-item" style="top: 25%; left: 91%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
+									<div class="el__item js-tooltip-item" style="top: 37%; left: 76%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
 										<div class="el__plus js-tooltip-btn">
 											<i class="icon icon-exploded-plus"></i>
 										</div>
@@ -391,11 +430,6 @@
 						</div>
 						<!-- block -->
 						<div class="block block_top-right">
-							<!-- build-quote -->
-							<a class="build-quote build-quote_bold build-quote_mb40" href="#">
-								<span>BUILD-A-QUOTE</span>
-								<i class="icon icon-menu-baq"></i>
-							</a>
 							<!-- actions -->
 							<div class="actions">
 								<div class="actions__item">
@@ -535,11 +569,6 @@
 						
 						<!-- block -->
 						<div class="block block_top-right">
-							<!-- build-quote -->
-							<a class="build-quote build-quote_bold build-quote_mb40" href="#">
-								<span>BUILD-A-QUOTE</span>
-								<i class="icon icon-menu-baq"></i>
-							</a>
 							<!-- actions -->
 							<div class="actions">
 								<div class="actions__item">
@@ -627,11 +656,6 @@
 								</div>
 								<!-- block -->
 								<div class="block block_top-right">
-									<!-- build-quote -->
-									<a class="build-quote build-quote_bold build-quote_mb40" href="#">
-										<span>BUILD-A-QUOTE</span>
-										<i class="icon icon-menu-baq"></i>
-									</a>
 									<!-- actions -->
 									<div class="actions">
 										<div class="actions__item">
@@ -720,11 +744,6 @@
 								</div>
 								<!-- block -->
 								<div class="block block_top-right">
-									<!-- build-quote -->
-									<a class="build-quote build-quote_bold build-quote_mb40" href="#">
-										<span>BUILD-A-QUOTE</span>
-										<i class="icon icon-menu-baq"></i>
-									</a>
 									<!-- actions -->
 									<div class="actions">
 										<div class="actions__item">
@@ -833,11 +852,6 @@
 								</div>
 								<!-- block -->
 								<div class="block block_top-right">
-									<!-- build-quote -->
-									<a class="build-quote build-quote_bold build-quote_mb40" href="#">
-										<span>BUILD-A-QUOTE</span>
-										<i class="icon icon-menu-baq"></i>
-									</a>
 									<!-- actions -->
 									<div class="actions">
 										<div class="actions__item">
@@ -976,11 +990,6 @@
 								</div>
 								<!-- block -->
 								<div class="block block_top-right">
-									<!-- build-quote -->
-									<a class="build-quote build-quote_bold build-quote_mb40" href="#">
-										<span>BUILD-A-QUOTE</span>
-										<i class="icon icon-menu-baq"></i>
-									</a>
 									<!-- more -->
 									<div class="more more_col">
 										<div class="more__topper">
@@ -1085,11 +1094,6 @@
 								</div>
 								<!-- block -->
 								<div class="block block_top-right">
-									<!-- build-quote -->
-									<a class="build-quote build-quote_bold build-quote_mb40" href="#">
-										<span>BUILD-A-QUOTE</span>
-										<i class="icon icon-menu-baq"></i>
-									</a>
 									<!-- more -->
 									<div class="more more_col">
 										<div class="more__topper">
@@ -1210,11 +1214,6 @@
 								</div>
 								<!-- block -->
 								<div class="block block_top-right">
-									<!-- build-quote -->
-									<a class="build-quote build-quote_bold build-quote_mb40" href="#">
-										<span>BUILD-A-QUOTE</span>
-										<i class="icon icon-menu-baq"></i>
-									</a>
 									<!-- actions -->
 									<div class="actions">
 										<div class="actions__item">
@@ -1307,11 +1306,6 @@
 								</div>
 								<!-- block -->
 								<div class="block block_top-right">
-									<!-- build-quote -->
-									<a class="build-quote build-quote_bold build-quote_mb40" href="#">
-										<span>BUILD-A-QUOTE</span>
-										<i class="icon icon-menu-baq"></i>
-									</a>
 									<!-- actions -->
 									<div class="actions">
 										<div class="actions__item">
@@ -1403,11 +1397,6 @@
 						</div>
 						<!-- block -->
 						<div class="block block_top-right">
-							<!-- build-quote -->
-							<a class="build-quote build-quote_bold build-quote_mb40" href="#">
-								<span>BUILD-A-QUOTE</span>
-								<i class="icon icon-menu-baq"></i>
-							</a>
 							<!-- actions -->
 							<div class="actions">
 								<div class="actions__item">
@@ -1476,36 +1465,7 @@
 						<!-- accesories -->
 						<div class="accesories">
 							<div class="accesories__right">
-								<div class="quote">
-									<div class="title">Build-a-Quote</div>
-									<div class="quote__text">Vide volorem experum nobis inimi, nest, vollupt aectecta ne soluptat ut officte mporum exerum fugiti omnihit aestiusda sit eos aut earchit accum quatestiame dolorerchit modi il expelibus que volore porehenda venime que re qui sitaspi entinusdanti te ipis ellaccumquam faces eum renimi, quissunditis ex estias.</div>
-									<div class="quote__select">
-										<div>Please select your location:</div>
-										<div></div>
-										<div class="form">
-											<div class="form__row">
-												<label class="radio">
-													<input type="radio" name="country">
-													<span>United States</span>
-												</label>
-											</div>
-											<div class="form__row">
-												<label class="radio">
-													<input type="radio" name="country">
-													<span>Europe</span>
-												</label>
-											</div>
-											<div class="form__row">
-												<div class="form__left">
-													
-												</div>
-												<div class="form__right">
-													<button type="submit" class="btn">Continue</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+
 							</div>
 							<div class="accesories__left">
 								<div class="title">List of other options & accesories</div>
@@ -1992,10 +1952,43 @@
 			</div>
 		</div>
 		<!-- build-quote -->
-		<a class="build-quote build-quote_bold build-quote_mb40" href="#">
-			<span>BUILD-A-QUOTE</span>
-			<i class="icon icon-menu-baq"></i>
-		</a>
+		<div class="build-quote-wrap js-build-quote" style="display: none;">
+			<a class="build-quote" href="#">
+				<span>BUILD-A-QUOTE</span>
+				<i class="icon icon-menu-baq"></i>
+			</a>
+			<!-- quote -->
+			<div class="quote">
+				<div class="title">Build-a-Quote</div>
+				<div class="quote__text">Vide volorem experum nobis inimi, nest, vollupt aectecta ne soluptat ut officte mporum exerum fugiti omnihit aestiusda sit eos aut earchit accum quatestiame dolorerchit modi il expelibus que volore porehenda venime que re qui sitaspi entinusdanti te ipis ellaccumquam faces eum renimi, quissunditis ex estias.</div>
+				<div class="quote__select">
+					<div>Please select your location:</div>
+					<div></div>
+					<div class="form">
+						<div class="form__row">
+							<label class="radio">
+								<input type="radio" name="country">
+								<span>United States</span>
+							</label>
+						</div>
+						<div class="form__row">
+							<label class="radio">
+								<input type="radio" name="country">
+								<span>Europe</span>
+							</label>
+						</div>
+						<div class="form__row">
+							<div class="form__left">
+								
+							</div>
+							<div class="form__right">
+								<button type="submit" class="btn">Continue</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 <!-- popup -->
