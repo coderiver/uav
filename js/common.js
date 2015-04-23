@@ -96,24 +96,34 @@ head.ready(function() {
     };
 
     // allow fullpagejs scroll
-    function allowScroll(){
+    function allowScroll(direction){
     	console.log('wait 5sec for free to scroll...');
     	setTimeout(function(){
-    		$.fn.fullpage.setAllowScrolling(true, 'down');
-    		$.fn.fullpage.moveSectionDown();
-    		console.log('free to scroll');
+    		$.fn.fullpage.setAllowScrolling(true);
+    		
+    		if (direction == 'up') {
+    			$.fn.fullpage.moveSectionUp();
+    		}
+    		if (direction == 'down') {
+    			$.fn.fullpage.moveSectionDown();
+    		}
     	}, 2000);
 	};
+	
 	$('body').bind('mousewheel', function(e){
 	        if(e.originalEvent.wheelDelta /120 > 0) {
-	        	console.log('scrolling up !');
+	        	if ($('body').hasClass('scroll-false')) {
+	        		getPictures('back');
+	        		allowScroll('up');
+	        		$('body').removeClass('scroll-false');
+	        	};
 	        }
 	        else{
 	        	if ($('body').hasClass('scroll-false')) {
 	        		getPictures('back');
-	        		allowScroll();
+	        		allowScroll('down');
+	        		$('body').removeClass('scroll-false');
 	        	};
-	            console.log('scrolling down !');
 	        }
 	    });
 
@@ -161,13 +171,9 @@ head.ready(function() {
 	            	$('.js-build-quote').removeClass('is-open').hide();
 	            }
 
-	            // fake plain appearance
                 if (nextIndex == 2 && direction == 'up') {
-	            	$('.flight__plain').removeClass('no-animation');
-	            	$('body').removeClass('scroll-false');
-	            	$.fn.fullpage.setAllowScrolling(true, 'down');
-    				console.log('free to scroll');
-	            	//getPictures('back');
+	            	$('.fixed-plain').show();
+	            	$('.js-tooltip').removeClass('is-visible');
 	            }
                 if (nextIndex == 3 && direction == 'down') {
 	            	$('.flight__plain').addClass('no-animation');
@@ -175,8 +181,7 @@ head.ready(function() {
 	            }
 	            if (nextIndex == 4 && direction == 'down') {
             		$('.fixed-plain').show();
-            		$('body').removeClass('scroll-false');
-            		//getPictures('back');
+            		$('.js-tooltip').removeClass('is-visible');
 	            }
 	            if (nextIndex == 3 && direction == 'up') {
 	            	$('.fixed-plain').show();
@@ -197,10 +202,16 @@ head.ready(function() {
 	        		$('.js-build-quote').find('.build-quote').removeClass('build-quote_dark');
 	        	};
 	        	if(index == 2 || index == 3 || index == 4){
-	        		$('.fixed-plain').hide();
+	        		setTimeout(function(){
+	        			$('.fixed-plain').hide();
+	        		}, 100);
 	        	}
+	        	if (index == 2) {
+	        		$('.flight__plain').removeClass('no-animation');
+	        	};
 	        	if(index == 3){
-	        		$.fn.fullpage.setAllowScrolling(false, 'down');
+	        		$.fn.fullpage.setAllowScrolling(false);
+	        		$('.js-tooltip').addClass('is-visible');
 	        		getPictures('forward');
 	        		$('body').addClass('scroll-false');
 	        		console.log('scroll banned');
