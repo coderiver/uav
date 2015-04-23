@@ -868,6 +868,15 @@ picture { display: inline-block; vertical-align: middle; }
 .catapult .catapult__dimm { position: absolute; font-size: 12px; color: #2c3941; white-space: nowrap; opacity: 0; -moz-transition: opacity 300ms 300ms; -o-transition: opacity 300ms 300ms; -webkit-transition: opacity 300ms; -webkit-transition-delay: 300ms; transition: opacity 300ms 300ms; z-index: 3; }
 @media only screen and (max-width: 767px) { .catapult .catapult__dimm { display: none; } }
 
+.dimms { position: absolute; top: -80px; left: -40px; right: -40px; bottom: -40px; }
+@media only screen and (max-width: 767px) { .dimms { position: relative; top: auto; left: auto; right: auto; bottom: auto; } }
+.dimms .dimms__arrows, .dimms .dimms__product { position: absolute; top: 0; left: 0; right: 0; bottom: 0; text-align: center; font-size: 0; }
+.dimms .dimms__arrows:before, .dimms .dimms__product:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.dimms .dimms__arrows img, .dimms .dimms__product img { display: inline-block; vertical-align: middle; width: 1024px; height: auto; }
+@media only screen and (max-width: 1024px) { .dimms .dimms__arrows img, .dimms .dimms__product img { width: 100%; } }
+.dimms .dimms__in { position: relative; display: inline-block; vertical-align: middle; }
+.dimms .dimms__value { position: absolute; font-size: 12px; color: #2c3941; white-space: nowrap; z-index: 3; }
+
 .accesories { *zoom: 1; }
 .accesories:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 767px) { .accesories { display: -webkit-flex; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; } }
@@ -1195,4 +1204,4 @@ picture { display: inline-block; vertical-align: middle; }
 
 .fixed-plain { position: fixed; top: 0; bottom: 0; right: 0; left: 0; text-align: center; font-size: 0; z-index: 999; }
 .fixed-plain:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.fixed-plain img { position: relative; top: -24px; display: inline-block; vertical-align: middle; width: 1024px; }
+.fixed-plain img { position: relative; display: inline-block; vertical-align: middle; width: 1024px; }

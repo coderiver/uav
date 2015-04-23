@@ -1169,7 +1169,44 @@
         +tr(opacity 300ms 300ms)
         z-index: 3
         +r(767)
-            display: none                  
+            display: none
+//dimms
+.dimms
+    position: absolute
+    top: -80px
+    left: -40px             
+    right: -40px
+    bottom: -40px
+    +r(767)
+        position: relative
+        top: auto
+        left: auto
+        right: auto
+        bottom: auto
+    .dimms__arrows, .dimms__product
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        +vertical
+        img    
+            display: inline-block
+            vertical-align: middle
+            width: 1024px
+            height: auto
+            +r(1024)
+                width: 100% 
+    .dimms__in
+        position: relative
+        display: inline-block
+        vertical-align: middle            
+    .dimms__value
+        position: absolute
+        font-size: 12px
+        color: #2c3941
+        white-space: nowrap
+        z-index: 3 
 .accesories
     +clr
     +r(767)
