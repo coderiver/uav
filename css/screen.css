@@ -830,7 +830,8 @@ picture { display: inline-block; vertical-align: middle; }
 .size span { position: relative; width: 25px; height: 13px; margin: 2px 10px 0; padding: 2px; background: #2c3941; text-align: right; border-radius: 6px; -moz-transition: text-align 200ms; -o-transition: text-align 200ms; -webkit-transition: text-align 200ms; transition: text-align 200ms; z-index: 1; }
 .size span:before { content: ""; display: inline-block; width: 9px; height: 9px; background: #FFF; border-radius: 50%; vertical-align: top; }
 
-.catapult { position: absolute; top: 50%; left: 0; right: 0; height: 460px; margin-top: -230px; }
+.catapult { position: absolute; top: 50%; left: 0; right: 0; height: 460px; margin-top: -276px; margin-left: -23px; opacity: 0; }
+.catapult.is-visible { opacity: 1; }
 @media only screen and (max-width: 1024px) { .catapult { height: 400px; } }
 @media only screen and (max-width: 767px) { .catapult { position: relative; top: auto; left: auto; right: auto; margin-top: 0; height: auto; } }
 .catapult.catapult_resp { position: relative; top: 0; right: auto; left: auto; margin-top: 175px; }
@@ -841,11 +842,12 @@ picture { display: inline-block; vertical-align: middle; }
 .catapult .catapult__man img, .catapult .catapult__el img { height: 100%; }
 @media only screen and (max-width: 1024px) { .catapult .catapult__man img, .catapult .catapult__el img { max-width: 100%; height: auto; } }
 @media only screen and (max-width: 767px) { .catapult .catapult__man, .catapult .catapult__el { position: relative; left: auto; right: auto; top: auto; } }
-.catapult .catapult__man { top: 0; opacity: 0; -moz-transition: opacity 300ms 600ms; -o-transition: opacity 300ms 600ms; -webkit-transition: opacity 300ms; -webkit-transition-delay: 600ms; transition: opacity 300ms 600ms; }
-.section.active .catapult .catapult__man { opacity: 1; }
+.catapult .catapult__man { top: 0; opacity: 0; -moz-transition: opacity 300ms; -o-transition: opacity 300ms; -webkit-transition: opacity 300ms; transition: opacity 300ms; }
+.catapult .catapult__man.is-visible { opacity: 1; }
 .catapult .catapult__man img { height: 385px; }
 @media only screen and (max-width: 767px) { .catapult .catapult__man { opacity: 1; } }
-.catapult .catapult__el { bottom: 0; }
+.catapult .catapult__el { bottom: 0; opacity: 0; }
+.catapult .catapult__el.is-active { opacity: 1; }
 @media only screen and (max-width: 1024px) { .catapult .catapult__el { left: 100px; right: 100px; } }
 @media only screen and (max-width: 767px) { .catapult .catapult__el { position: absolute; left: 0; right: 0; top: 0; } }
 .catapult .catapult__el_1 { top: auto; padding-right: 70px; }
@@ -860,12 +862,13 @@ picture { display: inline-block; vertical-align: middle; }
 .catapult .catapult__dims.is-visible > img, .catapult .catapult__dims.is-visible .catapult__dimm { opacity: 1; }
 .catapult .catapult__dims > img { width: 700px; height: auto; margin-left: -50px; opacity: 0; -moz-transition: opacity 300ms 300ms; -o-transition: opacity 300ms 300ms; -webkit-transition: opacity 300ms; -webkit-transition-delay: 300ms; transition: opacity 300ms 300ms; }
 @media only screen and (max-width: 1024px) { .catapult .catapult__dims { height: auto; max-height: 100%; } }
-.catapult .catapult__arrows { position: relative; height: auto !important; max-height: 100%; width: auto; opacity: 0; -moz-transition: opacity 300ms; -o-transition: opacity 300ms; -webkit-transition: opacity 300ms; transition: opacity 300ms; z-index: 2; }
+.catapult .catapult__arrows { position: relative; height: auto !important; max-height: 100%; width: auto; opacity: 0; -moz-transition: opacity 300ms 600ms; -o-transition: opacity 300ms 600ms; -webkit-transition: opacity 300ms; -webkit-transition-delay: 600ms; transition: opacity 300ms 600ms; z-index: 2; }
 .catapult .catapult__arrows.is-visible { opacity: 1; }
 @media only screen and (max-width: 767px) { .catapult .catapult__arrows { opacity: 0; } }
-.catapult .catapult__bg { position: absolute; top: 50%; left: 50%; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 578px; margin-top: -7px; margin-left: -10px; z-index: 1; opacity: 0; font-size: 0; }
+.catapult .catapult__bg { position: absolute; top: 50%; left: 50%; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 578px; margin-top: -7px; margin-left: -10px; z-index: 1; font-size: 0; }
 .catapult .catapult__bg > img { width: 100%; height: auto; }
-.catapult .catapult__dimm { position: absolute; font-size: 12px; color: #2c3941; white-space: nowrap; opacity: 0; -moz-transition: opacity 300ms 300ms; -o-transition: opacity 300ms 300ms; -webkit-transition: opacity 300ms; -webkit-transition-delay: 300ms; transition: opacity 300ms 300ms; z-index: 3; }
+.catapult .catapult__dimm { position: absolute; font-size: 12px; color: #2c3941; white-space: nowrap; opacity: 0; -moz-transition: opacity 300ms 600ms; -o-transition: opacity 300ms 600ms; -webkit-transition: opacity 300ms; -webkit-transition-delay: 600ms; transition: opacity 300ms 600ms; z-index: 3; }
+.catapult .catapult__dimm.is-visible { opacity: 1; }
 @media only screen and (max-width: 767px) { .catapult .catapult__dimm { display: none; } }
 
 .dimms { position: absolute; top: -80px; left: -40px; right: -40px; bottom: -40px; }
