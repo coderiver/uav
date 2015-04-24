@@ -734,7 +734,7 @@ picture { display: inline-block; vertical-align: middle; }
 
 @media only screen and (max-width: 767px) { .page__in.details { padding-top: 0; } }
 
-.el { text-align: center; position: absolute; top: -80px; bottom: -4px; left: -40px; right: -40px; -moz-transition: -moz-transform 150ms; -o-transition: -o-transform 150ms; -webkit-transition: -webkit-transform 150ms; transition: transform 150ms; opacity: 0; }
+.el { text-align: center; position: absolute; top: -80px; bottom: -40px; left: -40px; right: -40px; -moz-transition: -moz-transform 150ms; -o-transition: -o-transform 150ms; -webkit-transition: -webkit-transform 150ms; transition: transform 150ms; opacity: 0; }
 .el.is-visible { opacity: 1; }
 @media only screen and (max-width: 768px) { .el { padding-top: 180px; } }
 @media only screen and (max-width: 767px) { .el { position: relative; top: auto; left: auto; right: auto; bottom: auto; padding-top: 50px; margin-bottom: 40px; } }

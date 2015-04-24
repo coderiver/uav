@@ -202,30 +202,28 @@ head.ready(function() {
 	        	} else {
 	        		$('.js-build-quote').find('.build-quote').removeClass('build-quote_dark');
 	        	};
-	        	if(index == 2 || index == 3){
+	        	if(index == 2){
+	        		
 	        		setTimeout(function(){
+	        			$('.flight__plain').removeClass('no-animation');
 	        			$('.fixed-plain').hide();
 	        		}, 300);
 	        	}
-	        	if (index == 2) {
-	        		setTimeout(function(){
-	        			$('.flight__plain').removeClass('no-animation');
-	        		}, 300);
-	        	};
 	        	if(index == 3){
 	        		$.fn.fullpage.setAllowScrolling(false);
 	        		setTimeout(function(){
 	        			$('.js-tooltip').addClass('is-visible');
 	        			getPictures('forward');
+	        			$('.fixed-plain').hide();
 	        		}, 300);
 	        		
 	        		$('body').addClass('scroll-false');
 	        		console.log('scroll banned');
 	        	}
 	        	if (index == 4) {
-	        		$('.dimms__product').addClass('is-visible');
-	        		$('.fixed-plain').hide();
 	        		setTimeout(function(){
+	        			$('.dimms__product').addClass('is-visible');
+	        			$('.fixed-plain').hide();
 	        			$('.dimms__arrows').addClass('is-visible');
 	        		}, 300);
 	        	};
