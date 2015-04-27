@@ -1108,19 +1108,38 @@
         top: auto
         padding-right: 70px
         img
-            height: 100% 
-    .catapult__el_2, .catapult__el_3
+            height: 100%        
+    .catapult__el_2
         top: auto
-        padding-right: 100px 
+        padding-right: 70px
+        .catapult__bg
+            width: 650px
+            margin-left: -18px
+        .catapult__dims
+            padding-left: 0
+            & > img
+                width: 650px   
+        img
+            height: 100% 
+    .catapult__el_3, .catapult__el_4
+        top: auto
+        padding-right: 100px
+        .catapult__bg
+            width: 210px
+            margin-left: 27px
+            margin-top: 27px
+        .catapult__dims
+            margin-top: -50px
+            margin-left: 0    
         img
             height: 100%
         +r(1024)
             .catapult__dims
                 height: 100%
-    .catapult__el_3
-        margin-left: -200px
-        +r(480)
-            margin-left: -100px  
+    .catapult__el_4
+        .catapult__bg
+            width: 350px
+            margin-left: 95px             
     .catapult__dims
         position: relative
         display: inline-block
@@ -1133,7 +1152,6 @@
             & > img, .catapult__dimm
                 opacity: 1       
         & > img
-            width: 700px
             height: auto
             margin-left: -50px
             opacity: 0
@@ -1158,9 +1176,9 @@
         top: 50%
         left: 50%
         +transform(translate(-50%, -50%))
-        width: 578px
-        margin-top: -7px
-        margin-left: -10px 
+        width: 584px
+        margin-top: -9px
+        margin-left: -8px 
         z-index: 1
         font-size: 0
         & > img
