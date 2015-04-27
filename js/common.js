@@ -8,6 +8,7 @@ head.ready(function() {
 	// penguin exploded scheme animation
     function getPictures(direction){
     	var container = $('.section.active').find('.js-scheme'),
+    		wrap = $('.section.active').find('.js-tooltip'),
     		type = container.data('type'),
     		length = container.data('length');
 
@@ -15,35 +16,39 @@ head.ready(function() {
     	imgCount = imgCount + 1;
     	
     	// play animation
-		if (direction == 'forward') {
-			counter = 1;
-			interval = setInterval(function(){
-				$('.js-scheme').attr('src', 'img/'+type+'/'+counter+'.png');
-				counter++;
-				if (counter == imgCount) {
-					clearInterval(interval);
-				};
-			}, 30);
-	    	
-	    	var delay = 40*imgCount + 200; 
-	    	setTimeout(function(){
-	    		container.parent().find('.js-tooltip-item').addClass('is-visible');
-	    	}, delay);
-	    	$('.js-tooltip').addClass('is-animated');
-		}
-		if (direction == 'back') {
-			container.parent().find('.js-tooltip-item').removeClass('is-visible');
-			counter = 26;
-			interval2 = setInterval(function(){
-				$('.js-scheme').attr('src', 'img/'+type+'/'+counter+'.png');
-				counter--;
-				if (counter == 1) {
-					clearInterval(interval2);
-				};
-			}, 40);
-			$('.js-tooltip').removeClass('is-animated');
-		};
-		
+
+    	if (!wrap.hasClass('is-animated')) {
+			if (direction == 'forward') {
+				counter = 1;
+				interval = setInterval(function(){
+					$('.js-scheme').attr('src', 'img/'+type+'/'+counter+'.png');
+					counter++;
+					if (counter == imgCount) {
+						clearInterval(interval);
+					};
+				}, 30);
+		    	
+		    	var delay = 40*imgCount + 200; 
+		    	setTimeout(function(){
+		    		container.parent().find('.js-tooltip-item').addClass('is-visible');
+		    	}, delay);
+		    	wrap.addClass('is-animated');
+			}
+			if (direction == 'back') {
+				container.parent().find('.js-tooltip-item').removeClass('is-visible');
+				counter = 26;
+				interval2 = setInterval(function(){
+					$('.js-scheme').attr('src', 'img/'+type+'/'+counter+'.png');
+					counter--;
+					if (counter == 1) {
+						clearInterval(interval2);
+					};
+				}, 40);
+				if (type == 'plain') {
+					wrap.removeClass('is-animated');
+				};	
+			};
+    	};
     }
 
     // fullPageJs init for index slides
@@ -97,7 +102,7 @@ head.ready(function() {
 
     // allow fullpagejs scroll
     function allowScroll(direction){
-    	console.log('wait 5sec for free to scroll...');
+    	console.log('wait 2sec for free to scroll...');
     	setTimeout(function(){
     		$.fn.fullpage.setAllowScrolling(true);
     		
@@ -111,21 +116,21 @@ head.ready(function() {
 	};
 	
 	$('body').bind('mousewheel', function(e){
-	        if(e.originalEvent.wheelDelta /120 > 0) {
-	        	if ($('body').hasClass('scroll-false')) {
-	        		getPictures('back');
-	        		allowScroll('up');
-	        		$('body').removeClass('scroll-false');
-	        	};
-	        }
-	        else{
-	        	if ($('body').hasClass('scroll-false')) {
-	        		getPictures('back');
-	        		allowScroll('down');
-	        		$('body').removeClass('scroll-false');
-	        	};
-	        }
-	    });
+        if(e.originalEvent.wheelDelta /120 > 0) {
+        	if ($('body').hasClass('scroll-false')) {
+        		getPictures('back');
+        		allowScroll('up');
+        		$('body').removeClass('scroll-false');
+        	};
+        }
+        else{
+        	if ($('body').hasClass('scroll-false')) {
+        		getPictures('back');
+        		allowScroll('down');
+        		$('body').removeClass('scroll-false');
+        	};
+        }
+    });
 
 	// fullPageJs init for penguin slides
 	function penguinFullPage(){
@@ -260,15 +265,15 @@ head.ready(function() {
 	        },
 	        afterLoad: function(anchorLink, index){
 	        	if (index == 3){
-	        		$.fn.fullpage.setAllowScrolling(false);
-	        		setTimeout(function(){
+	        		//$.fn.fullpage.setAllowScrolling(false);
+	        		//setTimeout(function(){
 	        			$('.js-tooltip').addClass('is-visible');
 	        			getPictures('forward');
 	        			$('.fixed-plain').hide();
-	        		}, 300);
+	        		//}, 300);
 	        		
-	        		$('body').addClass('scroll-false');
-	        		console.log('scroll banned');
+	        		//$('body').addClass('scroll-false');
+	        		//console.log('scroll banned');
 
 	            };
 	            if (index == 4) {
@@ -304,11 +309,11 @@ head.ready(function() {
 	            }
 	            if(nextIndex == 3 && direction == 'up'){
 	            	$('.fixed-plain').show();
-	            	$('.catapult').removeClass('is-visible');
+	            	//$('.catapult').removeClass('is-visible');
 	            }
 	            if(nextIndex == 4 && direction == 'down'){
-	            	$('.fixed-plain').show();
-	            	$('.js-tooltip').removeClass('is-visible');
+	            	//$('.fixed-plain').show();
+	            	//$('.js-tooltip').removeClass('is-visible');
 	            }
 	            if (nextIndex == 6 && direction == 'down') {
 	            	$('.js-build-quote').removeClass('is-open').hide();
