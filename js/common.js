@@ -172,10 +172,6 @@ head.ready(function() {
 	                $('.header').removeAttr('hidden');
 	                $('.js-build-quote').hide();
 	            }
-	            if (nextIndex == 10 && direction == 'down') {
-	            	$('.js-build-quote').removeClass('is-open').hide();
-	            }
-
                 if (nextIndex == 2 && direction == 'up') {
 	            	$('.fixed-plain').show();
 	            	$('.js-tooltip').removeClass('is-visible');
@@ -195,10 +191,14 @@ head.ready(function() {
 	            }
 	            // after returning to 9 slide from 10
 	            if (nextIndex == 9){
-	            	$('.js-build-quote').show();
+	            	$('.js-build-quote').show().addClass('is-open');
 	            }
-	            else {
-	            	$('.js-build-quote').removeClass('is-open');
+	            if (nextIndex == 10){
+	            	$('.js-build-quote').hide();
+	            	$('.quote').removeClass('is-open');
+	            }
+	            if(index == 9){
+	               	$('.quote').removeClass('is-open');
 	            }
 	        },
             afterLoad: function(anchorLink, index){
@@ -207,6 +207,9 @@ head.ready(function() {
 	        	} else {
 	        		$('.js-build-quote').find('.build-quote').removeClass('build-quote_dark');
 	        	};
+	        	if (index !== 9 && index !== 10 && index !== 1){
+	            	$('.js-build-quote').show().removeClass('is-open');
+	            }
 	        	if(index == 2){
 	        		
 	        		setTimeout(function(){
@@ -234,6 +237,7 @@ head.ready(function() {
 	        	};
 	        	if (index == 9){
 	            	$('.js-build-quote').addClass('is-open');
+	            	$('.quote').addClass('is-open');
 	            };
 	            if ($(window).width() <= 767) {
 	            	$('.js-build-quote').removeClass('is-open').hide();
@@ -260,36 +264,35 @@ head.ready(function() {
 	            	$('body').animate({scrollTop:0}, '10');
 	            };
 	            if ($(window).width() <= 767) {
+	            	$('.quote').removeClass('is-open');
 	            	$('.js-build-quote').removeClass('is-open').hide();
 	            };
 	        },
 	        afterLoad: function(anchorLink, index){
 	        	if (index == 3){
-	        		//$.fn.fullpage.setAllowScrolling(false);
-	        		//setTimeout(function(){
-	        			$('.js-tooltip').addClass('is-visible');
-	        			getPictures('forward');
-	        			$('.fixed-plain').hide();
-	        		//}, 300);
-	        		
-	        		//$('body').addClass('scroll-false');
-	        		//console.log('scroll banned');
-
+	        		$('.js-tooltip').addClass('is-visible');
+	        		getPictures('forward');
+	        		$('.fixed-plain').hide();
 	            };
 	            if (index == 4) {
 	            	$('.catapult').addClass('is-visible');
 	        		setTimeout(function(){
 	        			$('.catapult__man').addClass('is-visible');
 	        			$('.catapult__el.is-active').addClass('is-visible');
-	        			$('.fixed-plain').hide();
+	        			//$('.fixed-plain').hide();
 	        			$('.catapult__el.is-active').find('.catapult__dimm').addClass('is-visible');
 	        			$('.catapult__el.is-active').find('.catapult__arrows').addClass('is-visible');
 	        		}, 300);
 	        	};
 	        	if (index == 5){
 	            	$('.js-build-quote').addClass('is-open');
+	            	$('.quote').addClass('is-open');
+	            }
+	            if (index !== 5 && index !== 6 && index !== 1){
+	            	$('.js-build-quote').show().removeClass('is-open');
 	            }
 	            if ($(window).width() <= 767) {
+	            	$('.quote').removeClass('is-open');
 	            	$('.js-build-quote').removeClass('is-open').hide();
 	            };
             },
@@ -307,23 +310,19 @@ head.ready(function() {
 	                $('.header').removeAttr('hidden');
 	                $('.js-build-quote').hide();
 	            }
-	            if(nextIndex == 3 && direction == 'up'){
-	            	$('.fixed-plain').show();
-	            	//$('.catapult').removeClass('is-visible');
-	            }
-	            if(nextIndex == 4 && direction == 'down'){
-	            	//$('.fixed-plain').show();
-	            	//$('.js-tooltip').removeClass('is-visible');
-	            }
-	            if (nextIndex == 6 && direction == 'down') {
-	            	$('.js-build-quote').removeClass('is-open').hide();
-	            }
-	            // after returning to 5 slide from 6
+	            // after returning to 5 slide
 	            if (nextIndex == 5){
-	            	$('.js-build-quote').show();
+	            	$('.js-build-quote').show().addClass('is-open');
+	            	//$('.quote').addClass('is-open');
 	            }
-	            else {
-	            	$('.js-build-quote').removeClass('is-open');
+	            if (nextIndex == 6){
+	            	$('.js-build-quote').hide();
+	            	$('.quote').removeClass('is-open');
+	            }
+	            // on leaving slide 5
+	            if(index == 5){
+	               	$('.quote').removeClass('is-open');
+	            	//$('.js-build-quote').hide();
 	            }
 	        }
 		});
