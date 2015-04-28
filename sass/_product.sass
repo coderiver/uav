@@ -1277,12 +1277,15 @@
             .quote
                 display: block                 
 .quote
+    display: none
     margin-bottom: 20px 
     padding: 18px 18px 0
     border: 1px solid #fff
     border-radius: 10px
     opacity: 0
     +tr(opacity 300ms)
+    &.is-visible
+        display: block
     &.is-open
         opacity: 1
         .title, .quote__text, .quote__select  

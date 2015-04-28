@@ -17,38 +17,36 @@ head.ready(function() {
     	
     	// play animation
 
-    	if (!wrap.hasClass('is-animated')) {
-			if (direction == 'forward') {
-				counter = 1;
-				interval = setInterval(function(){
-					$('.js-scheme').attr('src', 'img/'+type+'/'+counter+'.png');
-					counter++;
-					if (counter == imgCount) {
-						clearInterval(interval);
-					};
-				}, 30);
-		    	
-		    	var delay = 40*imgCount + 200; 
-		    	setTimeout(function(){
-		    		container.parent().find('.js-tooltip-item').addClass('is-visible');
-		    	}, delay);
-		    	wrap.addClass('is-animated');
-			}
-			if (direction == 'back') {
-				container.parent().find('.js-tooltip-item').removeClass('is-visible');
-				counter = 26;
-				interval2 = setInterval(function(){
-					$('.js-scheme').attr('src', 'img/'+type+'/'+counter+'.png');
-					counter--;
-					if (counter == 1) {
-						clearInterval(interval2);
-					};
-				}, 40);
-				if (type == 'plain') {
-					wrap.removeClass('is-animated');
-				};	
-			};
-    	};
+		if (direction == 'forward') {
+			counter = 1;
+			interval = setInterval(function(){
+				$('.js-scheme').attr('src', 'img/'+type+'/'+counter+'.png');
+				counter++;
+				if (counter == imgCount) {
+					clearInterval(interval);
+				};
+			}, 30);
+	    	
+	    	var delay = 40*imgCount + 200; 
+	    	setTimeout(function(){
+	    		container.parent().find('.js-tooltip-item').addClass('is-visible');
+	    	}, delay);
+	    	wrap.addClass('is-animated');
+		}
+		if (direction == 'back') {
+			container.parent().find('.js-tooltip-item').removeClass('is-visible');
+			counter = 26;
+			interval2 = setInterval(function(){
+				$('.js-scheme').attr('src', 'img/'+type+'/'+counter+'.png');
+				counter--;
+				if (counter == 1) {
+					clearInterval(interval2);
+				};
+			}, 40);
+			if (type == 'plain') {
+				wrap.removeClass('is-animated');
+			};	
+		};
     }
 
     // fullPageJs init for index slides
@@ -155,6 +153,7 @@ head.ready(function() {
 	            	getPictures('forward');
 	            };
 	            if ($(window).width() <= 767) {
+	            	$('.quote').removeClass('is-open').removeClass('is-visible');
 	            	$('.js-build-quote').removeClass('is-open').hide();
 	            };
 	        },
@@ -192,13 +191,19 @@ head.ready(function() {
 	            // after returning to 9 slide from 10
 	            if (nextIndex == 9){
 	            	$('.js-build-quote').show().addClass('is-open');
+	            	$(".quote").addClass("is-visible").delay(300).queue(function(){
+	            	    $(this).addClass("is-open").dequeue();
+	            	});
 	            }
 	            if (nextIndex == 10){
-	            	$('.js-build-quote').hide();
-	            	$('.quote').removeClass('is-open');
+	            	setTimeout(function(){
+	            		$('.js-build-quote').hide();
+	            	}, 300);
 	            }
 	            if(index == 9){
-	               	$('.quote').removeClass('is-open');
+	            	$(".quote").removeClass("is-open").delay(300).queue(function(){
+	            	    $(this).removeClass("is-visible").dequeue();
+	            	});
 	            }
 	        },
             afterLoad: function(anchorLink, index){
@@ -237,9 +242,12 @@ head.ready(function() {
 	        	};
 	        	if (index == 9){
 	            	$('.js-build-quote').addClass('is-open');
-	            	$('.quote').addClass('is-open');
+	            	$(".quote").addClass("is-visible").delay(300).queue(function(){
+	            	    $(this).addClass("is-open").dequeue();
+	            	});
 	            };
 	            if ($(window).width() <= 767) {
+	            	$('.quote').removeClass('is-open');
 	            	$('.js-build-quote').removeClass('is-open').hide();
 	            };
             },
@@ -264,32 +272,37 @@ head.ready(function() {
 	            	$('body').animate({scrollTop:0}, '10');
 	            };
 	            if ($(window).width() <= 767) {
-	            	$('.quote').removeClass('is-open');
+	            	$('.quote').removeClass('is-open').removeClass('is-visible');
 	            	$('.js-build-quote').removeClass('is-open').hide();
 	            };
 	        },
 	        afterLoad: function(anchorLink, index){
 	        	if (index == 3){
 	        		$('.js-tooltip').addClass('is-visible');
-	        		getPictures('forward');
-	        		$('.fixed-plain').hide();
+	        		if (!$('.js-tooltip').hasClass('is-animated')) {
+	        			getPictures('forward');
+	        		};
 	            };
 	            if (index == 4) {
 	            	$('.catapult').addClass('is-visible');
 	        		setTimeout(function(){
 	        			$('.catapult__man').addClass('is-visible');
 	        			$('.catapult__el.is-active').addClass('is-visible');
-	        			//$('.fixed-plain').hide();
 	        			$('.catapult__el.is-active').find('.catapult__dimm').addClass('is-visible');
 	        			$('.catapult__el.is-active').find('.catapult__arrows').addClass('is-visible');
 	        		}, 300);
 	        	};
 	        	if (index == 5){
 	            	$('.js-build-quote').addClass('is-open');
-	            	$('.quote').addClass('is-open');
+	            	$(".quote").addClass("is-visible").delay(300).queue(function(){
+	            	    $(this).addClass("is-open").dequeue();
+	            	});
 	            }
 	            if (index !== 5 && index !== 6 && index !== 1){
 	            	$('.js-build-quote').show().removeClass('is-open');
+	            }
+	            if (index !== 5 ){
+	            	$('.quote').removeClass('is-visible');
 	            }
 	            if ($(window).width() <= 767) {
 	            	$('.quote').removeClass('is-open');
@@ -313,16 +326,20 @@ head.ready(function() {
 	            // after returning to 5 slide
 	            if (nextIndex == 5){
 	            	$('.js-build-quote').show().addClass('is-open');
-	            	//$('.quote').addClass('is-open');
+	            	$(".quote").addClass("is-visible").delay(300).queue(function(){
+	            	    $(this).addClass("is-open").dequeue();
+	            	});
 	            }
 	            if (nextIndex == 6){
-	            	$('.js-build-quote').hide();
-	            	$('.quote').removeClass('is-open');
+	            	setTimeout(function(){
+	            		$('.js-build-quote').hide();
+	            	}, 300);
 	            }
 	            // on leaving slide 5
 	            if(index == 5){
-	               	$('.quote').removeClass('is-open');
-	            	//$('.js-build-quote').hide();
+	               	$(".quote").removeClass("is-open").delay(300).queue(function(){
+	            	    $(this).removeClass("is-visible").dequeue();
+	            	});
 	            }
 	        }
 		});

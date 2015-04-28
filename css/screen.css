@@ -899,7 +899,8 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 767px) { .accesories .accesories__right { float: none; width: 100%; -webkit-order: 2; -ms-order: 2; order: 2; }
   .accesories .accesories__right .quote { display: block; } }
 
-.quote { margin-bottom: 20px; padding: 18px 18px 0; border: 1px solid #fff; border-radius: 10px; opacity: 0; -moz-transition: opacity 300ms; -o-transition: opacity 300ms; -webkit-transition: opacity 300ms; transition: opacity 300ms; }
+.quote { display: none; margin-bottom: 20px; padding: 18px 18px 0; border: 1px solid #fff; border-radius: 10px; opacity: 0; -moz-transition: opacity 300ms; -o-transition: opacity 300ms; -webkit-transition: opacity 300ms; transition: opacity 300ms; }
+.quote.is-visible { display: block; }
 .quote.is-open { opacity: 1; }
 .quote.is-open .title, .quote.is-open .quote__text, .quote.is-open .quote__select { opacity: 1; }
 .quote .title { font-size: 42px; opacity: 0; -moz-transition: opacity 300ms 300ms; -o-transition: opacity 300ms 300ms; -webkit-transition: opacity 300ms; -webkit-transition-delay: 300ms; transition: opacity 300ms 300ms; }
