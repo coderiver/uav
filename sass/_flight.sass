@@ -138,3 +138,25 @@
         display: inline-block
         vertical-align: middle
         width: 1024px        
+        
+// catapult animation
+.cat-plain
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    z-index: 1
+    +cover
+    opacity: 0
+    +tr(opacity 300ms)
+    &.is-visible
+        opacity: 1 
+.cat
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    z-index: 2
+    +cover        
