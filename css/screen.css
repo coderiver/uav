@@ -741,8 +741,8 @@ picture { display: inline-block; vertical-align: middle; }
 .el .el__in { position: relative; display: inline-block; height: 100%; text-align: center; font-size: 0; }
 .el .el__in:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .el .el__in img { display: inline-block; vertical-align: middle; width: 1024px; height: 1024px; }
-@media only screen and (max-width: 767px) { .el .el__in { margin: -50px 0 0; }
-  .el .el__in img { max-height: 100vw; height: auto; } }
+@media only screen and (max-width: 1024px) { .el .el__in img { width: 768px; height: 768px; } }
+@media only screen and (max-width: 767px) { .el .el__in { margin: -50px 0 0; } }
 .el .el__item { position: absolute; top: 0; left: 0; z-index: 4; opacity: 0; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
 .el .el__item.is-visible { opacity: 1; }
 .el .el__item.is-active { z-index: 8; }
@@ -1129,8 +1129,8 @@ picture { display: inline-block; vertical-align: middle; }
 
 .bg-anim { height: 100%; }
 .bg-anim .img-wrap { display: none; }
-@media only screen and (max-width: 1024px) { .bg-anim .img-wrap { display: block; } }
-@media only screen and (max-width: 1024px) { .bg-anim .flight { display: none; } }
+@media only screen and (max-width: 767px) { .bg-anim .img-wrap { display: block; } }
+@media only screen and (max-width: 767px) { .bg-anim .flight { display: none; } }
 
 @-moz-keyframes cloud1 { 0% { -moz-transform: translateX(0); -ms-transform: translateX(0); -webkit-transform: translateX(0); transform: translateX(0); }
   100% { -moz-transform: translateX(100%); -ms-transform: translateX(100%); -webkit-transform: translateX(100%); transform: translateX(100%); } }
@@ -1206,6 +1206,7 @@ picture { display: inline-block; vertical-align: middle; }
 .flight .flight__bg { position: relative; height: 100%; background: url(../img/flight/bg.png); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; z-index: 1; }
 .flight .flight__plain-wrap { position: absolute; top: 50%; left: 50%; width: 1024px; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 0; z-index: 3; }
 .flight .flight__plain-wrap img { position: relative; z-index: 2; }
+@media only screen and (max-width: 1024px) { .flight .flight__plain-wrap { width: 768px; } }
 .flight .flight__plain { position: relative; margin-top: 70px; -webkit-animation: plain 30s linear infinite; -moz-animation: plain 30s linear infinite; -ms-animation: plain 30s linear infinite; -o-animation: plain 30s linear infinite; animation: plain 30s linear infinite; }
 .flight .flight__plain.no-animation { -webkit-animation: none; -moz-animation: none; -ms-animation: none; -o-animation: none; animation: none; opacity: 0; }
 .flight .flight__engine { position: absolute; top: 50%; left: 50%; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 7%; height: 8%; margin: -4% 0 0 -3%; -webkit-animation: rotate 300ms linear infinite; -moz-animation: rotate 300ms linear infinite; -ms-animation: rotate 300ms linear infinite; -o-animation: rotate 300ms linear infinite; animation: rotate 300ms linear infinite; font-size: 0; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); z-index: 1; }
@@ -1220,6 +1221,7 @@ picture { display: inline-block; vertical-align: middle; }
 .fixed-plain { position: fixed; top: 0; bottom: 0; right: 0; left: 0; text-align: center; font-size: 0; z-index: 999; }
 .fixed-plain:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .fixed-plain img { position: relative; display: inline-block; vertical-align: middle; width: 1024px; }
+@media only screen and (max-width: 1024px) { .fixed-plain img { width: 768px; } }
 
 .cat-plain { position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 1; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; opacity: 0; -moz-transition: opacity 300ms; -o-transition: opacity 300ms; -webkit-transition: opacity 300ms; transition: opacity 300ms; }
 .cat-plain.is-visible { opacity: 1; }

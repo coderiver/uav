@@ -3,10 +3,10 @@
     height: 100%
     .img-wrap
         display: none
-        +r(1024)
+        +r(767)
             display: block
     .flight
-        +r(1024)
+        +r(767)
             display: none        
 
 +keyframes(cloud1)
@@ -63,6 +63,8 @@
         img
             position: relative
             z-index: 2
+        +r(1024)
+            width: 768px    
     .flight__plain
         position: relative
         margin-top: 70px
@@ -137,7 +139,10 @@
         position: relative
         display: inline-block
         vertical-align: middle
-        width: 1024px        
+        width: 1024px
+    +r(1024)
+        img
+            width: 768px            
         
 // catapult animation
 .cat-plain

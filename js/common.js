@@ -1,8 +1,3 @@
-
-$(window).on('load', function () {
-    var $preloader = $('#preloader');
-    $preloader.delay(400).fadeOut();
-});
 head.ready(function() {
 
 	// penguin exploded scheme animation

@@ -155,8 +155,22 @@
 		  	}
 		}
 	</style>
+	<script type="text/javascript">
+       var timerStart = Date.now();
+	</script>
 </head>
 <body>
+<script type="text/javascript">
+   	window.onload = function () {
+    	loadTime = (Date.now()-timerStart);
+    	minPreload = (4000 - loadTime);
+
+    	function delayLoad(){
+    		document.getElementById('preloader').style.display='none';
+    	}
+        setTimeout(delayLoad, minPreload);
+    }
+</script>
 <!-- preloader -->
 <div id='preloader'>
 	<div class="preloader__in">
