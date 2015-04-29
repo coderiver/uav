@@ -541,11 +541,14 @@
         float: left
     &:after
         float: right
+    +r(768)
+        margin-bottom: 15px    
     &.hr_small
         display: none
         margin-bottom: 34px
         +r(768)
             display: block
+            margin-bottom: 24px
         +r(600)
             display: none    
     &.hr_large
@@ -731,7 +734,7 @@
     .el__in
         position: relative
         display: inline-block
-        height: 100%
+        height: 1024px
         +vertical
         img
             display: inline-block
@@ -739,6 +742,7 @@
             width: 1024px
             height: 1024px
         +r(1024)
+            height: 768px
             img
                 width: 768px
                 height: 768px      
