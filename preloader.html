@@ -165,10 +165,17 @@
     	loadTime = (Date.now()-timerStart);
     	minPreload = (4000 - loadTime);
 
+    	// removing preloader
     	function delayLoad(){
     		document.getElementById('preloader').style.display='none';
     	}
-        setTimeout(delayLoad, minPreload);
+
+    	if (loadTime >= 4000) {
+    		delayLoad();
+    	}
+    	else {
+    		setTimeout(delayLoad, minPreload);
+    	}
     }
 </script>
 <!-- preloader -->
