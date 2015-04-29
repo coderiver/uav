@@ -37,7 +37,7 @@ a[href^=mailto]:hover { color: #1262b2; }
 
 picture { display: inline-block; vertical-align: middle; }
 
-.wrap { position: relative; min-height: 100%; height: 100%; }
+.wrap { position: relative; min-height: 100%; height: 100%; z-index: 1; }
 
 .center { position: relative; max-width: 1580px; padding: 0 40px; margin: 0 auto; *zoom: 1; }
 .center:after { content: " "; display: table; clear: both; }
@@ -390,7 +390,7 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 414px) { .contacts .contacts__col.contacts__col_form { width: 100%; } }
 .contacts .contacts__text > div { margin-bottom: 20px; }
 
-.nav-drop { position: fixed; top: 0; right: 0; left: 0; height: 100vh; overflow-y: auto; background: #fff; z-index: 999; }
+.nav-drop { position: fixed; top: 0; right: 0; left: 0; height: 100vh; overflow-y: auto; background: #fff; z-index: 998; }
 .nav-drop.is-open { display: block; }
 .nav-drop .nav-drop__close { position: absolute; top: 50%; left: 20px; margin-top: -8px; line-height: 1; cursor: pointer; color: #344148; font-size: 16px; }
 .nav-drop .nav-drop__topper { position: relative; height: 10vh; line-height: 10vh; padding: 0 20px; text-align: right; border-bottom: 1px solid #2c3941; }

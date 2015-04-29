@@ -13,22 +13,163 @@
 	<link rel="stylesheet" media="all" href="css/style.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<style>
-		#preloader {
+		#preloader{
 			position: fixed;
 			top: 0;
-			left: 0;
 			right: 0;
 			bottom: 0;
-			background:#668398;
-			z-index: 9999;
+			left: 0;
+			overflow: hidden;
+			background: #668398;
+			z-index: 999;
+		}
+		.preloader__in{
+			position: absolute;
+			top: 80px;
+			left: 50%;
+			width: 350px;
+			margin: 80px 0 0 -175px;
+		}
+		.path {
+			stroke-dasharray: 24.0291366577148px;
+			stroke-dashoffset: 24.0291366577148px;
+			-webkit-animation: dash 4s linear forwards infinite;
+			animation: dash 4s linear forwards infinite;
+		}
+		.path2 {
+			stroke-dasharray: 266.174530029297px;
+			stroke-dashoffset: 266.174530029297px;
+			-webkit-animation: dash2 4s linear forwards infinite;
+			animation: dash2 4s linear forwards infinite;
+		}
+		.path3 {
+			stroke-dasharray: 162.628662109375px;
+		  	stroke-dashoffset: 162.628662109375px;
+		  	-webkit-animation: dash3 4s linear forwards infinite;
+		  	animation: dash3 4s linear forwards infinite;
+		}
+		.path4 {
+			stroke-dasharray: 13.7510013580322px;
+		  	stroke-dashoffset: 13.7510013580322px;
+		  	-webkit-animation: dash4 4s linear forwards infinite;
+		  	animation: dash4 4s linear forwards infinite;
+		}
+		@-webkit-keyframes dash {
+		  	0% {
+		  	  	stroke-dashoffset: 24.0291366577148;
+		  	}
+		  	25% {
+		  		stroke-dashoffset: 0;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
+		}
+		@keyframes dash {
+		  	0% {
+		  	  	stroke-dashoffset: 24.0291366577148;
+		  	}
+		  	25% {
+		  		stroke-dashoffset: 0;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
+		}
+		@-webkit-keyframes dash2 {
+		  	0% {
+		  	  	stroke-dashoffset: 266.174530029297;
+		  	}
+		  	25% {
+		  		stroke-dashoffset:266.174530029297;
+		  	}
+		  	50% {
+		  		stroke-dashoffset: 0;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
+		}
+		@keyframes dash2 {
+		  	0% {
+		  	  	stroke-dashoffset: 266.174530029297;
+		  	}
+		  	25% {
+		  		stroke-dashoffset:266.174530029297;
+		  	}
+		  	50% {
+		  		stroke-dashoffset: 0;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
+		}
+		@-webkit-keyframes dash3 {
+		  	0% {
+		  	  	stroke-dashoffset: 162.628662109375;
+		  	}
+		  	50% {
+		  		stroke-dashoffset: 162.628662109375;
+		  	}
+		  	75% {
+		  		stroke-dashoffset: 0;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
+		}
+		@keyframes dash3 {
+		  	0% {
+		  	  	stroke-dashoffset: 162.628662109375;
+		  	}
+		  	50% {
+		  		stroke-dashoffset: 162.628662109375;
+		  	}
+		  	75% {
+		  		stroke-dashoffset: 0;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
+		}
+		@-webkit-keyframes dash4 {
+		  	0% {
+		  	  	stroke-dashoffset: 13.7510013580322;
+		  	}
+		  	75% {
+		  		stroke-dashoffset: 13.7510013580322;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
+		}
+		@keyframes dash4 {
+		  	0% {
+		  	  	stroke-dashoffset: 13.7510013580322;
+		  	}
+		  	75% {
+		  		stroke-dashoffset: 13.7510013580322;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
 		}
 	</style>
 </head>
 <body>
 <!-- preloader -->
 <div id='preloader'>
-	<p style="color: #fff; font-size: 72px;">preloader</p>
-	<div id="preloader-svg"></div>
+	<div class="preloader__in">
+		<svg viewBox="0 0 349 277" xmlns="http://www.w3.org/2000/svg">
+			<path class="path" d="M110.386,35.022v8.285c3.955-1.195,6.25-2.617,6.25-4.143S114.341,36.218,110.386,35.022z" stroke="#ffffff" fill-opacity="0" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+			
+			<path class="path2" d="M77.654,38.722c-11.705,0-13.191-5.623-1.582-5.623c2.581,0,27.696,0.744,30.595,0.893  c-4.727-0.297-30.435-1.164-35.672-1.164c-26.9,0-48.705,4.234-48.705,9.46c0,5.224,21.805,7.378,48.705,7.378  c2.479,0,4.914-2.75,7.294-2.75c11.563,0,20.125-0.044,28.378-0.044v-12.88C106.667,35.022,87.153,38.722,77.654,38.722z" stroke="#ffffff" fill-opacity="0" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+			
+			<path class="path3" d="M194.539,33.992V9.119c0-2.692,2.63-2.5,5.875-2.5l0,0c3.244,0,5.875-0.192,5.875,2.5v22.042  c0,2.691-2.631,2.83-5.875,2.83l0,0c-0.889,0.001-93.121,0.001-93.747,0.001" stroke="#ffffff" fill-opacity="0" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+			
+			<path class="path4" d="M 22.29 42.287 L 8.539 42.287" stroke="#ffffff" fill-opacity="0" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+		</svg>
+	</div>
 </div>
 <!-- wrap -->
 <div class="wrap">
