@@ -272,7 +272,7 @@
     background: url(../img/patern.png)
     +r(767) 
         height: auto
-        min-height: 100%   
+        min-height: 100vh   
     .page__in
         position: absolute
         top: 80px
@@ -302,7 +302,6 @@
         z-index: 4
         +r(767) 
             height: auto
-            min-height: 100%
             
 .block
     position: absolute
@@ -422,6 +421,8 @@
 
 .content
     margin-bottom: 25px
+    .page_dark &
+        color: #2c3941
     .content__title
         margin-bottom: 20px
         font-size: 30px
@@ -584,6 +585,8 @@
     &.scroll_main
         bottom: 42px
         color: $dark
+        +r(768)
+            display: block
     .scroll__title
         margin-bottom: 5px
         text-transform: uppercase
@@ -720,7 +723,11 @@
         right: auto
         bottom: auto
         padding-top: 50px
-        margin-bottom: 40px 
+        margin-top: -200px 
+        margin-bottom: 40px
+        opacity: 1
+    +r(480)
+        margin-top: -100px      
     .el__pic
         position: relative
         display: inline-block
@@ -741,13 +748,28 @@
             vertical-align: middle
             width: 1024px
             height: 1024px
+            &.scheme
+                +r(767)
+                    display: none
+            &.scheme_mob
+                display: none
+                +r(767)
+                    display: block        
         +r(1024)
             height: 768px
             img
                 width: 768px
                 height: 768px      
         +r(767)
-            margin: -50px 0 0      
+            width: 150%
+            +transform(translateX(-16%))
+            height: auto
+            margin: -50px 0 -200px
+            img
+                width: 100%
+                height: auto
+        +r(480)
+            margin: 0 0 -100px                
     .el__item
         position: absolute
         top: 0
@@ -757,6 +779,8 @@
         +tr(opacity 200ms)
         &.is-visible
             opacity: 1
+        +r(767)
+            opacity: 1    
         &.is-active
             z-index: 8
             .el__plus
@@ -843,8 +867,7 @@
             padding: 0 5px
             font-size: 12px
         .icon
-            font-size: 10px
-
+            font-size: 10px   
 .info
     font-size: 0
     +r(767)
@@ -1052,7 +1075,9 @@
         left: auto
         right: auto
         margin-top: 0
+        margin-left: 0
         height: auto
+        opacity: 1 
     &.catapult_resp
         position: relative
         top: 0
@@ -1125,7 +1150,16 @@
             & > img
                 width: 650px   
         img
-            height: 100% 
+            height: 100%
+        +r(767)
+            padding-right: 0
+            .catapult__bg
+                width: 100%
+                margin-left: 0
+            .catapult__dims
+                & > img
+                    width: 100%
+                    margin-left: 0         
     .catapult__el_3, .catapult__el_4
         top: auto
         padding-right: 100px
@@ -1141,10 +1175,20 @@
         +r(1024)
             .catapult__dims
                 height: 100%
+        +r(767)
+            padding-right: 0
+            .catapult__bg
+                width: 150px
+                margin-left: 0
+                margin-top: 56px
+                         
     .catapult__el_4
         .catapult__bg
             width: 350px
-            margin-left: 95px             
+            margin-left: 95px
+            +r(767)
+                width: 250px
+                margin-left: 0              
     .catapult__dims
         position: relative
         display: inline-block
@@ -1163,7 +1207,11 @@
             +tr(opacity 300ms 300ms)
         +r(1024)
             height: auto
-            max-height: 100% 
+            max-height: 100%
+        +r(767)
+            margin-left: 0
+            padding-top: 0
+            margin-top: 60px     
     .catapult__arrows
         position: relative
         height: auto!important
@@ -1173,9 +1221,9 @@
         +tr(opacity 300ms 600ms) 
         z-index: 2
         &.is-visible
-            opacity: 1 
-        +r(767)
-            opacity: 0 
+            opacity: 1
+            +r(767)
+                opacity: 0  
     .catapult__bg
         position: absolute
         top: 50%
@@ -1188,7 +1236,11 @@
         font-size: 0
         & > img
             width: 100%
-            height: auto 
+            height: auto
+        +r(767)
+            width: 100%
+            margin-top: 0
+            margin-left: 0      
     .catapult__dimm
         position: absolute
         font-size: 12px
@@ -1214,12 +1266,17 @@
         left: auto
         right: auto
         bottom: auto
+        margin: -200px 0 -150px
+    +r(480)
+        margin: -100px 0 -50px 
     .dimms__arrows, .dimms__product
         +contain
         +vertical
         opacity: 0
         &.is-visible
-            opacity: 1 
+            opacity: 1
+        +r(767)
+            opacity: 1    
         img    
             display: inline-block
             vertical-align: middle
@@ -1232,11 +1289,17 @@
             img
                 width: 100%
     .dimms__arrows
+        width: 145%
+        +transform(translateX(-15%)) 
         +tr(opacity 300ms)            
     .dimms__product
         +r(767)
+            width: 145%
+            +transform(translateX(-15%)) 
             +non-contain
-            margin: -100px 0 
+            margin: -100px 0
+        +r(568)
+            margin: 0      
     .dimms__in
         position: relative
         display: inline-block
@@ -1280,7 +1343,11 @@
             -ms-order: 2
             order: 2
             .quote
-                display: block                 
+                display: block
+                opacity: 1
+                .title, .quote__text, .quote__select
+                    opacity: 1 
+
 .quote
     display: none
     margin-bottom: 20px 

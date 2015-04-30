@@ -237,7 +237,7 @@
 	</header>
 	<!-- container -->
 	<div class="container">
-		<div class="js-fullpage-penguin">
+		<div class="js-fullpage js-fullpage-penguin">
 			<!-- page -->
 			<div class="section page page_first">
 				<div class="newbg left topleft" style="background-image:url(img/testpic.png);"></div>
@@ -492,7 +492,8 @@
 						<div class="el js-tooltip">
 							<div class="el__pic">
 								<div class="el__in">
-									<img class="js-scheme" data-type="plain" data-length="26" src="img/plain/1.png" alt="">
+									<img class="scheme js-scheme" data-type="plain" data-length="26" src="img/plain/1.png" alt="">
+									<img class="scheme_mob" src="img/plain/26.png" alt="">
 									<!-- load frames -->
 									<div style="display: none;">
 										<img src="img/plain/2.png" alt="">
@@ -1615,6 +1616,13 @@
 									<i class="icon icon-subsection-payload"></i>
 								</div>	
 							</a>
+							<i class="icon icon-scroll-arrow-down"></i>
+							<a href="#" class="mob-nav__next js-scroll-next">
+								<i class="icon icon-arrow-main-down"></i>
+								<div class="mob-nav__img">
+									<i class="icon icon-subsection-takeoff"></i>
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -1833,6 +1841,22 @@
 								</div>
 							</div>
 						</div>
+						<!-- mobile navigation -->
+						<div class="mob-nav">
+							<a href="#" class="mob-nav__prev js-scroll-prev">
+								<i class="icon icon-arrow-main-up"></i>
+								<div class="mob-nav__img">
+									<i class="icon icon-subsection-payload"></i>
+								</div>	
+							</a>
+							<i class="icon icon-scroll-arrow-down"></i>
+							<a href="#" class="mob-nav__next js-scroll-next">
+								<i class="icon icon-arrow-main-down"></i>
+								<div class="mob-nav__img">
+									<i class="icon icon-subsection-takeoff"></i>
+								</div>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -1948,13 +1972,19 @@
 										</div>	
 									</form>
 								</div>
-								<!-- socials -->
-								<div class="socials">
-									<div class="socials__title">Follow UAV Factory on:</div>
-									<div class="socials__list">
-										<a href="#"><i class="icon icon-social-fb"></i></a>
-										<a href="#"><i class="icon icon-social-in"></i></a>
-										<a href="#"><i class="icon icon-social-tw"></i></a>
+								<div class="clr">
+									<!-- prev section btn -->
+									<a href="#" class="scroll-prev js-scroll-prev">
+										<i class="icon icon-arrow-main-up"></i>
+									</a>
+									<!-- socials -->
+									<div class="socials">
+										<div class="socials__title">Follow UAV Factory on:</div>
+										<div class="socials__list">
+											<a href="#"><i class="icon icon-social-fb"></i></a>
+											<a href="#"><i class="icon icon-social-in"></i></a>
+											<a href="#"><i class="icon icon-social-tw"></i></a>
+										</div>
 									</div>
 								</div>
 							</div>

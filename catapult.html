@@ -237,9 +237,9 @@
 	</header>
 	<!-- container -->
 	<div class="container">
-		<div class="js-fullpage-catapult">
+		<div class="js-fullpage js-fullpage-catapult">
 			<!-- page -->
-			<div class="section page">
+			<div class="section page ">
 				<!-- center -->
 				<div class="center">
 					<div class="page__in">
@@ -446,7 +446,8 @@
 						<div class="el js-tooltip">
 							<div class="el__pic">
 								<div class="el__in">
-									<img class="js-scheme" data-type="catapult" data-length="26" src="img/catapult/1.png" alt="">
+									<img class="scheme js-scheme" data-type="catapult" data-length="26" src="img/catapult/1.png" alt="">
+									<img class="scheme_mob" src="img/catapult/26.png" alt="">
 									<!-- load frames -->
 									<div style="display: none;">
 										<img src="img/catapult/2.png" alt="">
@@ -476,25 +477,25 @@
 										<img src="img/catapult/26.png" alt="">
 									</div>
 									<!-- 1 -->
-									<div class="el__item is-active js-tooltip-item" style="top: 41%; left: 36%;" data-img="img/pic1.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
+									<div class="el__item is-active js-tooltip-item" style="top: 39%; left: 36%;" data-img="img/pic1.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
 										<div class="el__plus js-tooltip-btn">
 											<i class="icon icon-exploded-plus"></i>
 										</div>
 									</div>
 									<!-- 2 -->
-									<div class="el__item js-tooltip-item" style="top: 46%; left: 52%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
+									<div class="el__item js-tooltip-item" style="top: 43%; left: 52%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
 										<div class="el__plus js-tooltip-btn">
 											<i class="icon icon-exploded-plus"></i>
 										</div>
 									</div>
 									<!-- 3 -->
-									<div class="el__item js-tooltip-item" style="top: 50%; left: 65%;" data-img="img/pic1.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
+									<div class="el__item js-tooltip-item" style="top: 47%; left: 65%;" data-img="img/pic1.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
 										<div class="el__plus js-tooltip-btn">
 											<i class="icon icon-exploded-plus"></i>
 										</div>
 									</div>
 									<!-- 4 -->
-									<div class="el__item js-tooltip-item" style="top: 54%; left: 79%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
+									<div class="el__item js-tooltip-item" style="top: 50%; left: 79%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
 										<div class="el__plus js-tooltip-btn">
 											<i class="icon icon-exploded-plus"></i>
 										</div>
@@ -738,7 +739,37 @@
 						<!-- accesories -->
 						<div class="accesories">
 							<div class="accesories__right">
-
+								<!-- quote -->
+								<div class="quote">
+									<div class="title">Build-a-Quote</div>
+									<div class="quote__text">Vide volorem experum nobis inimi, nest, vollupt aectecta ne soluptat ut officte mporum exerum fugiti omnihit aestiusda sit eos aut earchit accum quatestiame dolorerchit modi il expelibus que volore porehenda venime que re qui sitaspi entinusdanti te ipis ellaccumquam faces eum renimi, quissunditis ex estias.</div>
+									<div class="quote__select">
+										<div>Please select your location:</div>
+										<div></div>
+										<div class="form">
+											<div class="form__row">
+												<label class="radio">
+													<input type="radio" name="country">
+													<span>United States</span>
+												</label>
+											</div>
+											<div class="form__row">
+												<label class="radio">
+													<input type="radio" name="country">
+													<span>Europe</span>
+												</label>
+											</div>
+											<div class="form__row">
+												<div class="form__left">
+													
+												</div>
+												<div class="form__right">
+													<button type="submit" class="btn">Continue</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="accesories__left">
 								<div class="title">List of other options & accesories</div>
@@ -914,6 +945,22 @@
 								</div>
 							</div>
 						</div>
+						<!-- mobile navigation -->
+						<div class="mob-nav">
+							<a href="#" class="mob-nav__prev js-scroll-prev">
+								<i class="icon icon-arrow-main-up"></i>
+								<div class="mob-nav__img">
+									<i class="icon icon-subsection-payload"></i>
+								</div>	
+							</a>
+							<i class="icon icon-scroll-arrow-down"></i>
+							<a href="#" class="mob-nav__next js-scroll-next">
+								<i class="icon icon-arrow-main-down"></i>
+								<div class="mob-nav__img">
+									<i class="icon icon-subsection-takeoff"></i>
+								</div>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -1029,13 +1076,19 @@
 										</div>	
 									</form>
 								</div>
-								<!-- socials -->
-								<div class="socials">
-									<div class="socials__title">Follow UAV Factory on:</div>
-									<div class="socials__list">
-										<a href="#"><i class="icon icon-social-fb"></i></a>
-										<a href="#"><i class="icon icon-social-in"></i></a>
-										<a href="#"><i class="icon icon-social-tw"></i></a>
+								<div class="clr">
+									<!-- prev section btn -->
+									<a href="#" class="scroll-prev js-scroll-prev">
+										<i class="icon icon-arrow-main-up"></i>
+									</a>
+									<!-- socials -->
+									<div class="socials">
+										<div class="socials__title">Follow UAV Factory on:</div>
+										<div class="socials__list">
+											<a href="#"><i class="icon icon-social-fb"></i></a>
+											<a href="#"><i class="icon icon-social-in"></i></a>
+											<a href="#"><i class="icon icon-social-tw"></i></a>
+										</div>
 									</div>
 								</div>
 							</div>

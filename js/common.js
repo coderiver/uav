@@ -459,24 +459,72 @@ head.ready(function() {
   	}
   	tab();
 
-  	$('body').on('click', '.js-scroll-prev', function(){
-  		var target = $(this).parents('.section').prev('.section');
-  		if ($(target).length) {
-  			$('body, html').animate({
-  				scrollTop: $(target).offset().top
-  			}, 300);
-  		};
-  		return false;
-  	});
-  	$('body').on('click', '.js-scroll-next', function(){
-  		var target = $(this).parents('.section').next('.section');
-  		if ($(target).length) {
-  			$('body, html').animate({
-  				scrollTop: $(target).offset().top
-  			}, 300);
-  		};
-  		return false;
-  	});
+  	// mobile navigation for slides
+  	function mobNav(){
+  		var wrap = $('.js-fullpage'),
+  			page = wrap.find('.section');
+
+  		page.hide();
+  		wrap.find('.section:first-child').show();
+
+  		// nav
+  		$('body').on('click', '.js-scroll-prev', function(){
+  			var prevPage = $(this).parents('.section').prev();
+ 
+  			if (prevPage.length) {
+  				page.hide();
+  				$('body, html').animate({
+  					scrollTop: 0
+  				}, 10);
+  				setTimeout(function(){
+  					prevPage.show();
+  				}, 10);
+  			};
+  			return false;
+  		});
+  		$('body').on('click', '.js-scroll-next', function(){
+  			var nextPage = $(this).parents('.section').next();
+  			
+  			if (nextPage.length) {
+  				page.hide();
+  				$('body, html').animate({
+  					scrollTop: 0
+  				}, 10);
+  				setTimeout(function(){
+  					nextPage.show();
+  					if (nextPage.find('.js-tabs-3').length) {
+  						$('.js-tabs-3').slick('reinit').addClass('is-reinited');
+  					};
+  					if (nextPage.find('.js-slick-2').length) {
+  						$('.js-slick-2').slick('reinit').addClass('is-reinited');
+  					};
+  				}, 10);
+  			};
+  			return false;
+  		});
+  	}
+  	if ($(window).width() <768) {
+  		mobNav();
+  	};
+  	
+  	// $('body').on('click', '.js-scroll-prev', function(){
+  	// 	var target = $(this).parents('.section').prev('.section');
+  	// 	if ($(target).length) {
+  	// 		$('body, html').animate({
+  	// 			scrollTop: $(target).offset().top
+  	// 		}, 300);
+  	// 	};
+  	// 	return false;
+  	// });
+  	// $('body').on('click', '.js-scroll-next', function(){
+  	// 	var target = $(this).parents('.section').next('.section');
+  	// 	if ($(target).length) {
+  	// 		$('body, html').animate({
+  	// 			scrollTop: $(target).offset().top
+  	// 		}, 300);
+  	// 	};
+  	// 	return false;
+  	// });
 
 	// sliders init
 	function slick(){
