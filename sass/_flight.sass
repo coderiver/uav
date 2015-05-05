@@ -134,15 +134,21 @@
     right: 0
     left: 0
     +vertical
+    +tr(all 1s)
     z-index: 999
     img
         position: relative
         display: inline-block
         vertical-align: middle
         width: 1024px
+        +tr(transform 1000ms)
+        will-change: transform
+    &.is-large
+        img
+            transform: translate(55%, 25%) scale(3.5)
     +r(1024)
         img
-            width: 768px            
+            width: 768px           
         
 // catapult animation
 .cat-plain
@@ -164,4 +170,6 @@
     left: 0
     bottom: 0
     z-index: 2
-    +cover        
+    +cover
+    &.is-hidden
+        opacity: 0         
