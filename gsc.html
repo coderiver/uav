@@ -1,0 +1,1236 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:500,100,300,700,300italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/jquery.fullPage.css" >
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<link rel="stylesheet" media="all" href="css/style.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<style>
+		#preloader{
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			overflow: hidden;
+			background: #668398;
+			z-index: 999;
+		}
+		.preloader__in{
+			position: absolute;
+			top: 80px;
+			left: 50%;
+			width: 350px;
+			margin: 80px 0 0 -110px;
+		}
+		.path {
+			stroke-dasharray: 24.0291366577148px;
+			stroke-dashoffset: 24.0291366577148px;
+			-webkit-animation: dash 4s linear forwards infinite;
+			animation: dash 4s linear forwards infinite;
+		}
+		.path2 {
+			stroke-dasharray: 266.174530029297px;
+			stroke-dashoffset: 266.174530029297px;
+			-webkit-animation: dash2 4s linear forwards infinite;
+			animation: dash2 4s linear forwards infinite;
+		}
+		.path3 {
+			stroke-dasharray: 162.628662109375px;
+		  	stroke-dashoffset: 162.628662109375px;
+		  	-webkit-animation: dash3 4s linear forwards infinite;
+		  	animation: dash3 4s linear forwards infinite;
+		}
+		.path4 {
+			stroke-dasharray: 13.7510013580322px;
+		  	stroke-dashoffset: 13.7510013580322px;
+		  	-webkit-animation: dash4 4s linear forwards infinite;
+		  	animation: dash4 4s linear forwards infinite;
+		}
+		@-webkit-keyframes dash {
+		  	0% {
+		  	  	stroke-dashoffset: 24.0291366577148;
+		  	}
+		  	25% {
+		  		stroke-dashoffset: 0;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
+		}
+		@keyframes dash {
+		  	0% {
+		  	  	stroke-dashoffset: 24.0291366577148;
+		  	}
+		  	25% {
+		  		stroke-dashoffset: 0;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
+		}
+		@-webkit-keyframes dash2 {
+		  	0% {
+		  	  	stroke-dashoffset: 266.174530029297;
+		  	}
+		  	25% {
+		  		stroke-dashoffset:266.174530029297;
+		  	}
+		  	50% {
+		  		stroke-dashoffset: 0;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
+		}
+		@keyframes dash2 {
+		  	0% {
+		  	  	stroke-dashoffset: 266.174530029297;
+		  	}
+		  	25% {
+		  		stroke-dashoffset:266.174530029297;
+		  	}
+		  	50% {
+		  		stroke-dashoffset: 0;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
+		}
+		@-webkit-keyframes dash3 {
+		  	0% {
+		  	  	stroke-dashoffset: 162.628662109375;
+		  	}
+		  	50% {
+		  		stroke-dashoffset: 162.628662109375;
+		  	}
+		  	75% {
+		  		stroke-dashoffset: 0;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
+		}
+		@keyframes dash3 {
+		  	0% {
+		  	  	stroke-dashoffset: 162.628662109375;
+		  	}
+		  	50% {
+		  		stroke-dashoffset: 162.628662109375;
+		  	}
+		  	75% {
+		  		stroke-dashoffset: 0;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
+		}
+		@-webkit-keyframes dash4 {
+		  	0% {
+		  	  	stroke-dashoffset: 13.7510013580322;
+		  	}
+		  	75% {
+		  		stroke-dashoffset: 13.7510013580322;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
+		}
+		@keyframes dash4 {
+		  	0% {
+		  	  	stroke-dashoffset: 13.7510013580322;
+		  	}
+		  	75% {
+		  		stroke-dashoffset: 13.7510013580322;
+		  	}
+		  	100% {
+		  		stroke-dashoffset: 0;
+		  	}
+		}
+	</style>
+	<script type="text/javascript">
+       var timerStart = Date.now();
+   	</script>
+</head>
+<body>
+<script type="text/javascript">
+   	window.onload = function () {
+    	loadTime = (Date.now()-timerStart);
+    	minPreload = (4000 - loadTime);
+
+    	// removing preloader
+    	function delayLoad(){
+    		document.getElementById('preloader').style.display='none';
+    	}
+
+    	if (loadTime >= 4000) {
+    		delayLoad();
+    	}
+    	else {
+    		setTimeout(delayLoad, minPreload);
+    	}
+    }
+</script>
+<!-- preloader -->
+<div id='preloader'>
+	<div class="preloader__in">
+		<svg viewBox="0 0 349 277" xmlns="http://www.w3.org/2000/svg">
+			<path class="path" d="M110.386,35.022v8.285c3.955-1.195,6.25-2.617,6.25-4.143S114.341,36.218,110.386,35.022z" stroke="#ffffff" fill-opacity="0" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+			
+			<path class="path2" d="M77.654,38.722c-11.705,0-13.191-5.623-1.582-5.623c2.581,0,27.696,0.744,30.595,0.893  c-4.727-0.297-30.435-1.164-35.672-1.164c-26.9,0-48.705,4.234-48.705,9.46c0,5.224,21.805,7.378,48.705,7.378  c2.479,0,4.914-2.75,7.294-2.75c11.563,0,20.125-0.044,28.378-0.044v-12.88C106.667,35.022,87.153,38.722,77.654,38.722z" stroke="#ffffff" fill-opacity="0" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+			
+			<path class="path3" d="M194.539,33.992V9.119c0-2.692,2.63-2.5,5.875-2.5l0,0c3.244,0,5.875-0.192,5.875,2.5v22.042  c0,2.691-2.631,2.83-5.875,2.83l0,0c-0.889,0.001-93.121,0.001-93.747,0.001" stroke="#ffffff" fill-opacity="0" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+			
+			<path class="path4" d="M 22.29 42.287 L 8.539 42.287" stroke="#ffffff" fill-opacity="0" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+		</svg>
+	</div>
+</div>
+<!-- wrap -->
+<div class="wrap">
+	<!-- header -->
+	<header class="header is-small">
+		<!-- logo -->
+		<div class="logo">
+			<a href="index.html"></a>
+		</div>
+		<div class="mob-menu">
+			<div class="mob-menu__links js-menu-links">
+				<a href="products.html">Products</a>
+				<a href="#">company</a>
+				<a href="#catapult-contacts">contacts</a>
+			</div>
+			<button class="mob-menu__btn js-menu-btn">
+				<i></i>
+			</button>
+		</div>
+		<!-- center -->
+		<div class="center">
+			<!-- socials -->
+			<div class="socials">
+				<div class="socials__title">Social:</div>
+				<div class="socials__list">
+					<a href="#"><i class="icon icon-social-fb"></i></a>
+					<a href="#"><i class="icon icon-social-in"></i></a>
+					<a href="#"><i class="icon icon-social-tw"></i></a>
+				</div>
+			</div>
+			<!-- build-quote -->
+			<a class="build-quote" href="#">
+				<span>BUILD-A-QUOTE</span>
+				<i class="icon icon-menu-baq"></i>
+			</a>
+			<!-- nav -->
+			<nav class="nav">
+				<a href="products.html">Products<i class="icon icon-arrow-main-down"></i></a>
+				<a href="#">company<i class="icon icon-arrow-main-down"></i></a>
+				<a href="#catapult-contacts">contacts<i class="icon icon-arrow-main-down"></i></a>
+			</nav>
+			<div class="sertificate">Unmanned platforms and subsystems  |  ISO 9001:2008 Certified</div>
+		</div>
+	</header>
+	<!-- container -->
+	<div class="container">
+		<div class="js-fullpage js-fullpage-gsc">
+			<!-- page -->
+			<div class="section page ">
+				<!-- center -->
+				<div class="center">
+					<div class="page__in">
+						<!-- product-pic -->
+						<div class="newbg maxheight" style="background-image: url(img/testpic.png);"></div>
+						<div class="product-pic" style="display:none">
+							<picture >
+							    <!--[if IE 9]><video style="display: none;"><![endif]-->
+							    <source srcset="img/testpic.png">
+							    <!--[if IE 9]></video><![endif]-->
+							    <img srcset="img/testpic.png" alt="img">  
+							</picture>
+						</div>
+						<!-- block -->
+						<div class="block block_w300 block_large block_top-right">
+							<div class="block__col">
+								<!-- hr -->
+								<div class="hr"></div>
+								<!-- content -->
+								<div class="content">
+									<div class="content__title">Portable Pneumatic Catapult</div>
+									<div class="content__italic">Portable pneumatic catapult for mini UAVs with the takeoff weight of up to 35 kg.</div>
+									<div class="content__text">
+										<div>The catapult features a rugged aluminum structure, which can be disassembled into a man portable transportation case. UAV Factory offers carriage customization services for client’s unmanned aircraft vehicles.</div>
+									</div>
+								</div>
+								<!-- hr -->
+								<div class="hr hr_small"></div>
+							</div>
+							<div class="block__col">
+								<!-- hr -->
+								<div class="hr hr_small"></div>
+								<!-- share-wrap -->
+								<div class="share-wrap">
+									<!-- share -->
+									<div class="share">
+										<div class="share__title">Share this:</div>
+										<div class="share__list">
+											<a href="#"><i class="icon icon-social-fb"></i></a>
+											<a href="#"><i class="icon icon-social-in"></i></a>
+											<a href="#"><i class="icon icon-social-tw"></i></a>
+											<a href="#"><i class="icon icon-exploded-plus"></i></a>
+										</div>
+									</div>
+								</div>
+								<!-- hr -->
+								<div class="hr"></div>
+							</div>
+						</div>
+						<!-- scroll -->
+						<div class="scroll">
+							<div class="scroll__title">scroll down</div>
+							<i class="icon icon-scroll_1 icon-scroll-arrow-down-single"></i>
+							<i class="icon icon-scroll_2 icon-scroll-arrow-down-single"></i>
+							<i class="icon icon-scroll_3 icon-scroll-arrow-down-single"></i>
+						</div>
+						<!-- mobile navigation -->
+						<div class="mob-nav">
+							<a href="#" class="mob-nav__prev js-scroll-next">
+								<div class="mob-nav__first">
+									<i class="icon icon-scroll-arrow-down"></i>
+									<p>next</p>
+									<p>learn more about PERFOMANCE</p>
+								</div>	
+							</a>
+							<a href="#" class="mob-nav__next js-scroll-next">
+								<i class="icon icon-arrow-main-down"></i>
+								<div class="mob-nav__img">
+									<i class="icon icon-subsection-takeoff"></i>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- page -->
+			<div class="section page page_dark">
+				<div class="gsc js-gsc" style="background-image:url(img/gsc/1.jpg);"></div>
+				<!-- load frames -->
+				<div style="display: none;">
+					<img src="img/gsc/2.png" alt="">
+					<img src="img/gsc/3.png" alt="">
+					<img src="img/gsc/4.png" alt="">
+					<img src="img/gsc/5.png" alt="">
+					<img src="img/gsc/6.png" alt="">
+					<img src="img/gsc/7.png" alt="">
+					<img src="img/gsc/8.png" alt="">
+					<img src="img/gsc/9.png" alt="">
+					<img src="img/gsc/10.png" alt="">
+					<img src="img/gsc/11.png" alt="">
+					<img src="img/gsc/12.png" alt="">
+					<img src="img/gsc/13.png" alt="">
+					<img src="img/gsc/14.png" alt="">
+					<img src="img/gsc/15.png" alt="">
+					<img src="img/gsc/16.png" alt="">
+					<img src="img/gsc/17.png" alt="">
+					<img src="img/gsc/18.png" alt="">
+					<img src="img/gsc/19.png" alt="">
+					<img src="img/gsc/20.png" alt="">
+					<img src="img/gsc/21.png" alt="">
+					<img src="img/gsc/22.png" alt="">
+					<img src="img/gsc/23.png" alt="">
+					<img src="img/gsc/24.png" alt="">
+					<img src="img/gsc/25.png" alt="">
+					<img src="img/gsc/26.png" alt="">
+				</div>
+				<!-- center -->
+				<div class="center">
+					<div class="page__in">
+						<!-- block -->
+						<div class="block block_w220 block_top-left">
+							<!-- content -->
+							<div class="content">
+								<div class="content__title">Customizable carriage</div>
+								<div class="content__text">
+									<div>Reliable carriage with foldable legs, rope length adjustment and safety pin. Carriage is made of hard anodized aluminum for maximum wear resistance.</div>
+									<div>The catapult features a rugged aluminum structure, which can be disassembled into a man portable transportation case. The catapult features a rugged aluminum structure, which can be disassembled into a man portable transportation case.</div>
+									<div>Reliable carriage with foldable legs, rope length adjustment and safety pin.</div>
+								</div>
+							</div>
+						</div>
+						<!-- block -->
+						<div class="block block_top-right">
+							<!-- actions -->
+							<div class="actions">
+								<div class="actions__item">
+									<a class="actions__link" href="#">
+										<div class="actions__ico">
+											<i class="icon icon-more-download"></i>
+										</div>
+										<div class="actions__title">Exploded view</div>
+									</a>
+								</div>
+								<div class="actions__item">
+									<a class="actions__link" href="#">
+										<div class="actions__ico">
+											<i class="icon icon-more-download"></i>
+										</div>
+										<div class="actions__title">Download Datasheet</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- mobile navigation -->
+						<div class="mob-nav">
+							<a href="#" class="mob-nav__prev js-scroll-prev">
+								<i class="icon icon-arrow-main-up"></i>
+								<div class="mob-nav__img">
+									<i class="icon icon-subsection-payload"></i>
+								</div>	
+							</a>
+							<i class="icon icon-scroll-arrow-down"></i>
+							<a href="#" class="mob-nav__next js-scroll-next">
+								<i class="icon icon-arrow-main-down"></i>
+								<div class="mob-nav__img">
+									<i class="icon icon-subsection-takeoff"></i>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- page -->
+			<div class="section page">
+				<!-- center -->
+				<div class="center">
+					<div class="page__in details">
+						<!-- block -->
+						<div class="block block_w300 block_top-left">
+							<!-- content -->
+							<div class="content">
+								<div class="content__title">Pneumatic Catapult Exploded View</div>
+								<div class="content__italic">Select a part to see details.</div>
+							</div>
+						</div>
+						<!-- el -->
+						<div class="el js-tooltip">
+							<div class="el__pic">
+								<div class="el__in">
+									<img class="scheme" src="img/gsc/26.png" alt="">
+									<img class="scheme_mob" src="img/gsc/26.png" alt="">
+									<!-- 1 -->
+									<div class="el__item is-active js-tooltip-item" style="top: 39%; left: 36%;" data-img="img/pic1.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
+										<div class="el__plus js-tooltip-btn">
+											<i class="icon icon-exploded-plus"></i>
+										</div>
+									</div>
+									<!-- 2 -->
+									<div class="el__item js-tooltip-item" style="top: 43%; left: 52%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
+										<div class="el__plus js-tooltip-btn">
+											<i class="icon icon-exploded-plus"></i>
+										</div>
+									</div>
+									<!-- 3 -->
+									<div class="el__item js-tooltip-item" style="top: 47%; left: 65%;" data-img="img/pic1.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
+										<div class="el__plus js-tooltip-btn">
+											<i class="icon icon-exploded-plus"></i>
+										</div>
+									</div>
+									<!-- 4 -->
+									<div class="el__item js-tooltip-item" style="top: 50%; left: 79%;" data-img="img/engine.png" data-text="<div>Modular rail with integrated pneumatic cylinder.</div><div>User -upgradable catapult length.</div>">
+										<div class="el__plus js-tooltip-btn">
+											<i class="icon icon-exploded-plus"></i>
+										</div>
+									</div>
+								</div>
+								<!-- el__info -->
+								<div class="el__info" style="display: none;">
+									<button class="el__close js-tooltip-close">
+										<i class="icon icon-exploded-close"></i>
+									</button>
+									<div class="el__preview">
+										<img src="img/pic1.png" alt="">
+									</div>
+									<div class="el__text">
+										<div>Modular rail with integrated pneumatic cylinder.</div>
+										<div>User -upgradable catapult length.</div>
+									</div>
+									<div class="el__nav">
+										<button class="js-tooltip-prev">
+											<i class="icon icon-arrow-main-left"></i>
+											<span>Previous</span>
+										</button>
+										<button class="js-tooltip-next">
+											<span>Next</span>
+											<i class="icon icon-arrow-main-right"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- block -->
+						<div class="block block_top-right">
+							<!-- actions -->
+							<div class="actions">
+								<div class="actions__item">
+									<a class="actions__link" href="#">
+										<div class="actions__ico">
+											<i class="icon icon-more-download"></i>
+										</div>
+										<div class="actions__title">Download Datasheet</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- links -->
+						<div class="links">
+							<div class="links__row">
+								<a href="#">Integrated compressor</a>
+								<a href="#">Launch speed</a>
+								<a href="#">Modular rail</a>
+								<a href="#">1000 launches</a>
+								<a href="#">Carriage design</a>
+								<a href="#">Fill time</a>
+							</div>
+							<div class="links__row">
+								<a href="#">Rope assembly</a>
+								<a href="#">Conditions</a>
+								<a href="#">Assembly</a>
+								<a href="#">Compact</a>
+							</div>
+						</div>
+						<!-- mobile navigation -->
+						<div class="mob-nav">
+							<a href="#" class="mob-nav__prev js-scroll-prev">
+								<i class="icon icon-arrow-main-up"></i>
+								<div class="mob-nav__img">
+									<i class="icon icon-subsection-payload"></i>
+								</div>	
+							</a>
+							<i class="icon icon-scroll-arrow-down"></i>
+							<a href="#" class="mob-nav__next js-scroll-next">
+								<i class="icon icon-arrow-main-down"></i>
+								<div class="mob-nav__img">
+									<i class="icon icon-subsection-takeoff"></i>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- page -->
+			<div class="section page page_dims">
+				<!-- center -->
+				<div class="center">
+					<div class="page__in">
+						<!-- catapult -->
+						<div class="catapult">
+							<div class="catapult__man">
+								<img src="img/human.png" alt="">
+							</div>
+							<div class="catapult__el catapult__el_1 js-dimm js-dimm1 is-active">
+								<div class="catapult__dims">
+									<img class="catapult__arrows" src="img/Catapult_6_dimensions.png" width="1258" alt="">
+									<div class="catapult__dimm" style="top: 45%; left: -17%;">1100 mm</div>
+									<div class="catapult__dimm" style="top: 98%; left: 17%;">1279 mm</div>
+									<div class="catapult__dimm" style="top: 79%; left: 60%;">4685 mm</div>
+									<div class="catapult__dimm" style="top: 58%; left: 57%;">11 deg</div>
+									<div class="catapult__dimm" style="top: 21%; left: 66%;">3946 mm</div>
+									<div class="catapult__bg">
+										<img src="img/Catapult_6.png" width="1167" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="catapult__el catapult__el_2 js-dimm js-dimm2">
+								<div class="catapult__dims">
+									<img class="catapult__arrows" src="img/Catapult_12_dimensions.png" alt="">
+									<div class="catapult__dimm" style="top: 50%; left: -17%;">1100 mm</div>
+									<div class="catapult__dimm" style="top: 98%; left: 9%;">1279 mm</div>
+									<div class="catapult__dimm" style="top: 77%; left: 62%;">4685 mm</div>
+									<div class="catapult__dimm" style="top: 57%; left: 63%;">11 deg</div>
+									<div class="catapult__dimm" style="top: 25%; left: 63%;">3946 mm</div>
+									<div class="catapult__bg">
+										<img src="img/Catapult_12.png" width="1309" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="catapult__el catapult__el_3 js-dimm js-dimm3">
+								<div class="catapult__dims">
+									<img class="catapult__arrows" src="img/Catapult_6_case_dimensions.png" alt="">
+									<div class="catapult__dimm" style="top: 58%; left: -59%;">545 mm</div>
+									<div class="catapult__dimm" style="top: 98%; left: 22%;">705 mm</div>
+									<div class="catapult__dimm" style="top: 14%; left: 41%;">1315 mm</div>
+									<div class="catapult__bg">
+										<img src="img/Catapult_6_case.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="catapult__el catapult__el_4 js-dimm js-dimm4">
+								<div class="catapult__dims">
+									<img class="catapult__arrows" src="img/Catapult_12_case_dimensions.png" alt="">
+									<div class="catapult__dimm" style="top: 58%; left: -59%;">545 mm</div>
+									<div class="catapult__dimm" style="top: 98%; left: 22%;">705 mm</div>
+									<div class="catapult__dimm" style="top: 14%; left: 41%;">1315 mm</div>
+									<div class="catapult__bg">
+										<img src="img/Catapult_12_case.png" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- block -->
+						<div class="block block_w300 block_top-left">
+							<!-- info -->
+							<div class="info">
+								<div class="info__ico">
+									<i class="icon icon-subsection-package"></i>
+								</div>
+								<div class="info__col">
+									<div class="info__title">Size:</div>
+									<ul class="info__size">
+										<li><span>D</span><span class="js-dimm-width">704</span> mm</li>
+										<li><span>H</span><span class="js-dimm-height">543</span> mm</li>
+										<li><span>L</span><span class="js-dimm-length">1313</span> mm</li>
+									</ul>
+								</div>
+								<div class="info__col info__col_border">
+									<div class="info__title">Weight:</div>
+									<div class="info__weight"><span class="js-dimm-weight">110</span>kg</div>
+								</div>
+							</div>
+						</div>
+						<!-- block -->
+						<div class="block block_top-center">
+							<!-- size -->
+							<div class="size js-size">
+								<a class="is-active" href="#">mm / kg</a>
+								<span></span>
+								<a href="#">inch / lbs</a>
+							</div>
+						</div>
+						<!-- block -->
+						<div class="block block_w500 block_bottom-left">
+							<!-- options -->
+							<div class="options">
+								<div class="options__title">Please choose product options:</div>
+								<!-- btns -->
+								<div class="btns">
+									<a class="btn js-dimm1-btn is-active" href="#">Unpacked</a>
+									<a class="btn js-dimm2-btn" href="#">Packed</a>
+								</div>
+								<!-- btns -->
+								<div class="btns">
+									<a class="btn js-dimm3-btn is-active" href="#">6,000 KJ</a>
+									<a class="btn js-dimm4-btn" href="#">10,000 KJ</a>
+								</div>
+							</div>
+						</div>
+						<!-- block -->
+						<div class="block block_top-right">
+							<!-- actions -->
+							<div class="actions">
+								<div class="actions__item">
+									<a class="actions__link" href="#">
+										<div class="actions__ico">
+											<i class="icon icon-more-play"></i>
+										</div>
+										<div class="actions__title">Launch Video</div>
+									</a>
+								</div>
+								<div class="actions__item">
+									<a class="actions__link" href="#">
+										<div class="actions__ico">
+											<i class="icon icon-more-download"></i>
+										</div>
+										<div class="actions__title">Download Datasheet</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- block -->
+						<div class="block block_w220 block_bottom-right">
+							<!-- disclaimer -->
+							<div class="disclaimer">
+								<div class="disclaimer__title"><i class="icon icon-arrow-circle"></i>Disclaimer</div>
+								<div class="disclaimer__text">The catapult features a rugged aluminum structure, which can be disassembled into a man portable transportation case.</div>
+							</div>
+						</div>
+						<!-- mobile navigation -->
+						<div class="mob-nav">
+							<a href="#" class="mob-nav__prev js-scroll-prev">
+								<i class="icon icon-arrow-main-up"></i>
+								<div class="mob-nav__img">
+									<i class="icon icon-subsection-payload"></i>
+								</div>	
+							</a>
+							<i class="icon icon-scroll-arrow-down"></i>
+							<a href="#" class="mob-nav__next js-scroll-next">
+								<i class="icon icon-arrow-main-down"></i>
+								<div class="mob-nav__img">
+									<i class="icon icon-subsection-takeoff"></i>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- page -->
+			<div class="section page">
+				<!-- center -->
+				<div class="center">
+					<div class="page__in">
+						<!-- accesories -->
+						<div class="accesories">
+							<div class="accesories__right">
+								<!-- quote -->
+								<div class="quote">
+									<div class="title">Build-a-Quote</div>
+									<div class="quote__text">Vide volorem experum nobis inimi, nest, vollupt aectecta ne soluptat ut officte mporum exerum fugiti omnihit aestiusda sit eos aut earchit accum quatestiame dolorerchit modi il expelibus que volore porehenda venime que re qui sitaspi entinusdanti te ipis ellaccumquam faces eum renimi, quissunditis ex estias.</div>
+									<div class="quote__select">
+										<div>Please select your location:</div>
+										<div></div>
+										<div class="form">
+											<div class="form__row">
+												<label class="radio">
+													<input type="radio" name="country">
+													<span>United States</span>
+												</label>
+											</div>
+											<div class="form__row">
+												<label class="radio">
+													<input type="radio" name="country">
+													<span>Europe</span>
+												</label>
+											</div>
+											<div class="form__row">
+												<div class="form__left">
+													
+												</div>
+												<div class="form__right">
+													<button type="submit" class="btn">Continue</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="accesories__left">
+								<div class="title">List of other options & accesories</div>
+								<div class="catalog js-catalog">
+									<div class="catalog__list">
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="catalog__list">
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="catalog-mob js-slick-2">
+									<div class="catalog">
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="catalog">
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="catalog">
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="catalog">
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="catalog">
+										<div class="catalog__item">
+											<a href="#" class="catalog__link">
+												<div class="catalog__img" style="background-image: url(img/picture1-retina.jpg);"></div>
+												<div class="catalog__content">
+													<span>Portable Ground Control Station</span>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- mobile navigation -->
+						<div class="mob-nav">
+							<a href="#" class="mob-nav__prev js-scroll-prev">
+								<i class="icon icon-arrow-main-up"></i>
+								<div class="mob-nav__img">
+									<i class="icon icon-subsection-payload"></i>
+								</div>	
+							</a>
+							<i class="icon icon-scroll-arrow-down"></i>
+							<a href="#" class="mob-nav__next js-scroll-next">
+								<i class="icon icon-arrow-main-down"></i>
+								<div class="mob-nav__img">
+									<i class="icon icon-subsection-takeoff"></i>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- page -->
+			<div class="page section">
+				<div class="page__bg page__bg_top non-mobile">
+					<picture>
+					    <!--[if IE 9]><video style="display: none;"><![endif]-->
+					    <source srcset="img/plain.png, img/plain-retina.png 2x">
+					    <!--[if IE 9]></video><![endif]-->
+					    <img srcset="img/plain.png" width="549" height="270" alt="img">
+					</picture>
+				</div>
+				<!-- center -->
+				<div class="center">
+					<div class="page__in">
+						<div class="contacts">
+							<div class="contacts__col">
+								<div class="title">UAV Factory USA LLC</div>
+								<div class="contacts__text">
+									<div>
+										50 South Buckhout Street, Irvington, NY 10533 USA
+									</div>
+									<div>
+										Phone: +1 (914) 591 3296<br>
+										Fax: +1 (914) 591 3715
+									</div>
+									<div>
+										Sales: <a href="mailto:josephm@uavfactory.com">josephm@uavfactory.com</a>
+									</div>
+								</div>
+							</div>
+							<div class="contacts__col">
+								<div class="title">UAV Factory Ltd., Europe</div>
+								<div class="contacts__text">
+									<div>
+										7 Peldu Street, Jelgava, Latvia, LV-3002
+									</div>
+									<div>
+										General enquiries: +371 29191590<br>
+										Sales: +371 29119398<br>
+										Fax: +371 63048747
+									</div>
+									<div>
+										Information: <a href="mailto:info@uavfactory.com">info@uavfactory.com</a><br>
+										Sales: <a href="mailto:sales@uavfactory.com">sales@uavfactory.com</a>
+									</div>
+								</div>
+							</div>
+							<div class="contacts__col contacts__col_form">
+								<div class="title">Contact form</div>
+								<div class="form">
+									<form>
+										<div class="form__row">
+											<input type="text" class="input" placeholder="Enter your name">
+										</div>
+										<div class="form__row">
+											<div class="form__left">
+												<input type="text" class="input" placeholder="Company name">
+											</div>
+											<div class="form__right">
+												<input type="text" class="input" placeholder="Website">
+											</div>
+										</div>
+										<div class="form__row">
+											<div class="form__left">
+												<input type="text" class="input" placeholder="Phone number">
+											</div>
+											<div class="form__right">
+												<input type="text" class="input" placeholder="E-mail">
+											</div>
+										</div>
+										<div class="form__row">
+											<textarea class="textarea" placeholder="Your question"></textarea>
+										</div>
+										<div class="form__row">
+											<div class="form__left">
+												<div class="capcha">
+													<img src="img/capcha.png" alt="">
+												</div>
+											</div>
+											<div class="form__right">
+												<input type="text" class="input" placeholder="Enter capcha">
+											</div>
+										</div>
+										<div class="form__row">
+											<div class="form__left">
+												
+											</div>
+											<div class="form__right">
+												<button type="submit" class="btn">Submit</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- footer -->
+				<footer class="footer">
+					<div class="footer__content">
+						<div class="center">
+							<div class="footer__right">
+								<!-- sign-in -->
+								<div class="sign-in">
+									<form>
+										<div class="sign-in__right">
+											<button type="submit" class="btn">Submit</button>
+										</div>
+										<div class="sign-in__left">
+											<input type="text" class="input" placeholder="Sign up for our newsletter">
+										</div>	
+									</form>
+								</div>
+								<div class="clr">
+									<!-- prev section btn -->
+									<a href="#" class="scroll-prev js-scroll-prev">
+										<i class="icon icon-arrow-main-up"></i>
+									</a>
+									<!-- socials -->
+									<div class="socials">
+										<div class="socials__title">Follow UAV Factory on:</div>
+										<div class="socials__list">
+											<a href="#"><i class="icon icon-social-fb"></i></a>
+											<a href="#"><i class="icon icon-social-in"></i></a>
+											<a href="#"><i class="icon icon-social-tw"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<nav class="footer__nav">
+								<ul class="footer__list">
+									<li><a href="#">Research & Education</a></li>
+									<li><a href="#">Technical Data</a></li>
+									<li><a href="#">Testimonials</a></li>
+									<li><a href="#">Terms & Conditions</a></li>
+								</ul>
+								<ul class="footer__list">
+									<li><a href="#">Products</a></li>
+									<li><a href="#">Partners</a></li>
+									<li><a href="#">Company</a></li>
+									<li><a href="#">Contact information</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<div class="center">
+							<div class="copyrights">© <span class="js-year">2015</span>-UAV Factory. All rights reserved.</div>
+							<a href="#" class="design">
+								Developed by CG Ant <span class="icon icon-contacts-developed"></span>
+							</a>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<!-- menu -->
+		<div class="menu js-menu">
+			<div class="mob-menu">
+				<div class="mob-menu__links js-menu-links">
+					<a href="products.html">Products</a>
+					<a href="#">company</a>
+					<a href="#gsc-contacts">contacts</a>
+				</div>
+				<button class="mob-menu__btn js-menu-btn">
+					<i></i>
+				</button>
+			</div>
+			<!-- center -->
+			<div class="center">
+				<ul id="gsc-menu" class="menu__list">
+					<li data-menuanchor="performance">
+						<a class="menu__item is-current" href="#performance">
+							<div class="menu__type">
+								<i class="icon icon-subsection-performance"></i>
+							</div>
+							<div class="menu__arr">
+								<i class="icon icon-arrow-main-down"></i>
+							</div>
+							<div class="menu__title">Performance</div>
+							<div class="menu__arr-left">
+								<i class="icon icon-arrow-main-left"></i>
+							</div>
+							<div class="menu__arr-right">
+								<i class="icon icon-arrow-main-right"></i>
+							</div>
+						</a>
+					</li>
+					<li data-menuanchor="exploded_view">
+						<a class="menu__item" href="#exploded_view">
+							<div class="menu__type">
+								<i class="icon icon-subsection-exploded"></i>
+							</div>
+							<div class="menu__arr">
+								<i class="icon icon-arrow-main-down"></i>
+							</div>
+							<div class="menu__title">exploded</div>
+							<div class="menu__arr-left">
+								<i class="icon icon-arrow-main-left"></i>
+							</div>
+							<div class="menu__arr-right">
+								<i class="icon icon-arrow-main-right"></i>
+							</div>
+						</a>
+					</li>
+					<li data-menuanchor="compartment">
+						<a class="menu__item" href="#compartment">
+							<div class="menu__type">
+								<i class="icon icon-subsection-techspecs"></i>
+							</div>
+							<div class="menu__arr">
+								<i class="icon icon-arrow-main-down"></i>
+							</div>
+							<div class="menu__title">compartment</div>
+							<div class="menu__arr-left">
+								<i class="icon icon-arrow-main-left"></i>
+							</div>
+							<div class="menu__arr-right">
+								<i class="icon icon-arrow-main-right"></i>
+							</div>
+						</a>
+					</li>
+					<li data-menuanchor="gsc_options">
+						<a class="menu__item" href="#gsc_options">
+							<div class="menu__type">
+								<i class="icon icon-subsection-options"></i>
+							</div>
+							<div class="menu__arr">
+								<i class="icon icon-arrow-main-down"></i>
+							</div>
+							<div class="menu__title">options</div>
+							<div class="menu__arr-left">
+								<i class="icon icon-arrow-main-left"></i>
+							</div>
+							<div class="menu__arr-right">
+								<i class="icon icon-arrow-main-right"></i>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<!-- build-quote -->
+				<a class="build-quote" href="#">
+					<i class="icon icon-menu-baq"></i>
+				</a>
+			</div>
+		</div>
+		<!-- build-quote -->
+		<div class="build-quote-wrap js-build-quote" style="display: none;">
+			<a class="build-quote" href="#">
+				<span>BUILD-A-QUOTE</span>
+				<i class="icon icon-menu-baq"></i>
+			</a>
+			<!-- quote -->
+			<div class="quote">
+				<div class="title">Build-a-Quote</div>
+				<div class="quote__text">Vide volorem experum nobis inimi, nest, vollupt aectecta ne soluptat ut officte mporum exerum fugiti omnihit aestiusda sit eos aut earchit accum quatestiame dolorerchit modi il expelibus que volore porehenda venime que re qui sitaspi entinusdanti te ipis ellaccumquam faces eum renimi, quissunditis ex estias.</div>
+				<div class="quote__select">
+					<div>Please select your location:</div>
+					<div></div>
+					<div class="form">
+						<div class="form__row">
+							<label class="radio">
+								<input type="radio" name="country">
+								<span>United States</span>
+							</label>
+						</div>
+						<div class="form__row">
+							<label class="radio">
+								<input type="radio" name="country">
+								<span>Europe</span>
+							</label>
+						</div>
+						<div class="form__row">
+							<div class="form__left">
+								
+							</div>
+							<div class="form__right">
+								<button type="submit" class="btn">Continue</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- fake plain for animation -->
+		<div class="fixed-plain" style="display: none;">
+			<img src="img/gsc/26.png" alt="">
+		</div>
+	</div>
+</div>
+<!-- mobile navigation -->
+<nav class="nav-drop js-nav-drop" style="display: none;">
+	<div class="nav-drop__topper">
+		<span class="nav-drop__logo"></span>
+		<div class="nav-drop__close js-nav-drop-close">
+			<span class="icon icon-exploded-close"></span>
+		</div>
+	</div>
+	<ul class="nav-drop__links">
+		<li>
+			<a href="index.html">home</a>
+		</li>
+		<li>
+			<a href="products.html">Products</a>
+		</li>
+		<li>
+			<a href="#">company</a>
+		</li>
+		<li>
+			<a href="#home-contacts">contacts</a>
+		</li>
+	</ul>
+	<div class="nav-drop__socials">
+		<div class="socials">
+			<div class="socials__list">
+				<a href="#"><i class="icon icon-social-fb"></i></a>
+				<a href="#"><i class="icon icon-social-in"></i></a>
+				<a href="#"><i class="icon icon-social-tw"></i></a>
+			</div>
+		</div>
+	</div>
+</nav>
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>
