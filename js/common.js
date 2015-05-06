@@ -469,7 +469,7 @@ head.ready(function() {
 		catapultFullPage();
 	};
 
-	// fullPageJs init for catapult slides
+	// fullPageJs init for gsc slides
 	function gscFullPage(){
 		$('.js-fullpage-gsc').fullpage({
 			resize: true,
@@ -565,6 +565,126 @@ head.ready(function() {
 		gscFullPage();
 	};
 
+	// animations for engine
+	function propeller(){
+		var item = $('.js-propeller'),
+			counter = 1;
+
+			function timer(){
+				interval = setInterval(function(){
+					item.attr('style', 'background-image:url(img/engine/'+counter+'.png);');
+					counter++;
+
+					if (counter == 4) {
+						clearInterval(interval);
+						counter = 1;
+					};
+				}, 60);
+			}
+
+			var timerInterval = setInterval(function(){
+				timer();
+			}, 180);
+
+	};
+	propeller();
+
+
+	// fullPageJs init for gsc slides
+	function engineFullPage(){
+		$('.js-fullpage-engine').fullpage({
+			resize: true,
+			responsive: 767,
+			menu: '#engine-menu',
+			anchors: ['index', 'performance', 'features', 'integraion', 'engine_options', 'engine-contacts'],
+			afterRender: function(index){
+	            $('.logo a').addClass('js-link');
+	            $('.nav a.nav__contacts').addClass('js-link');
+	            if (index == 1) {
+	            	$('body').animate({scrollTop:0}, '10');
+	            }
+	            if(index == 2){
+	            	gsc();
+	        		$('.js-build-quote').find('.build-quote').addClass('build-quote_dark');
+	        	} else {
+	        		$('.js-build-quote').find('.build-quote').removeClass('build-quote_dark');
+	        	};
+	            if ($(window).width() <= 768) {
+	            	$('.quote').removeClass('is-open').removeClass('is-visible');
+	            	$('.js-build-quote').removeClass('is-open').hide();
+	            };
+	        },
+	        afterLoad: function(anchorLink, index){
+	        	if (index == 2){
+	        		$('.js-build-quote').find('.build-quote').addClass('build-quote_dark');
+	        		setTimeout(function(){
+	        			gsc();
+	        		}, 600);
+	        		
+	            }
+	            if (index !==2) {
+	            	$('.js-build-quote').find('.build-quote').removeClass('build-quote_dark');
+	            }
+	            if (index == 3) {
+	            	$('.js-tooltip').addClass('is-visible');
+	            	setTimeout(function(){
+	            		$('.js-tooltip-item').addClass('is-visible');
+	            	}, 200);
+	            };
+	        	if (index == 5){
+	            	$('.js-build-quote').addClass('is-open');
+	            	$(".quote").addClass("is-visible").delay(300).queue(function(){
+	            	    $(this).addClass("is-open").dequeue();
+	            	});
+	            }
+	            if (index !== 5 && index !== 6 && index !== 1){
+	            	$('.js-build-quote').show().removeClass('is-open');
+	            }
+	            if (index !== 5 ){
+	            	$('.quote').removeClass('is-visible');
+	            }
+	            if ($(window).width() <= 768) {
+	            	$('.quote').removeClass('is-open');
+	            	$('.js-build-quote').removeClass('is-open').hide();
+	            };
+            },
+			onLeave: function(index, nextIndex, direction){
+				//after leaving section 1
+	            if(index == 1 && direction =='down'){
+	                $('.header').attr('hidden', 'hidden');
+	                $('.js-menu').addClass('is-fixed');
+	                $('.js-build-quote').show();
+	            }
+	            // after returning to section 1
+	            if(nextIndex == 1){
+	            	$('.js-menu').removeClass('is-fixed');
+	                $('.header').removeAttr('hidden');
+	                $('.js-build-quote').hide();
+	            }
+	            // after returning to 5 slide
+	            if (nextIndex == 5){
+	            	$('.js-build-quote').show().addClass('is-open');
+	            	$(".quote").addClass("is-visible").delay(300).queue(function(){
+	            	    $(this).addClass("is-open").dequeue();
+	            	});
+	            }
+	            if (nextIndex == 6){
+	            	setTimeout(function(){
+	            		$('.js-build-quote').hide();
+	            	}, 300);
+	            }
+	            // on leaving slide 5
+	            if(index == 5){
+	               	$(".quote").removeClass("is-open").delay(300).queue(function(){
+	            	    $(this).removeClass("is-visible").dequeue();
+	            	});
+	            }
+	        }
+		});
+	}
+	if ($('.js-fullpage-engine').length) {
+		engineFullPage();
+	};
 
     // fullPageJs init for one product slides
     function productFullPage(){

@@ -1257,3 +1257,8 @@ picture { display: inline-block; vertical-align: middle; }
 
 .cat, .gsc { position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 2; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .cat.is-hidden, .gsc.is-hidden { opacity: 0; }
+
+.engine { position: absolute; top: 0; bottom: 0; right: 0; left: 0; z-index: 2; }
+.engine .engine__wall { position: absolute; top: 0; bottom: 0; right: 0; left: 0; z-index: 1; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.engine .engine__platform { position: absolute; top: 0; bottom: 0; right: 0; left: 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; z-index: 2; }
+.engine .engine__item { position: absolute; top: 0; bottom: 0; right: 0; left: 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; z-index: 3; }
