@@ -377,6 +377,9 @@ picture
 	background: $blue
 	&:hover
 		text-decoration: underline
+	+r(1024)
+		&:hover
+			text-decoration: none
 	+r(600)
 		padding: 7px 15px 0 
 	&.btn_gray
@@ -665,7 +668,7 @@ picture
 	height: 100%
 .tabs
 	position: absolute
-	top: 60px
+	top: 80px
 	left: 50%
 	margin-left: -780px
 	z-index: 5
@@ -679,6 +682,9 @@ picture
 			padding: 0 40px 
 	+rm(1581)
 		margin-left: -750px 
+	+r(768)
+		.tabs__in
+			padding: 0 20px 	
 	+r(767)
 		right: 10px
 		left: 10px
