@@ -683,7 +683,7 @@ head.ready(function() {
 	            		$('.fixed-plain').hide();
 	            	}, 200);
 	            	setTimeout(function(){
-	            		$('.js-tooltip-item').addClass('is-visible');
+	            		$('.js-tooltip-back').addClass('is-visible');
 	            	}, 300);
 	            };
 	        	if (index == 5){
@@ -777,6 +777,68 @@ head.ready(function() {
     if ($('.js-fullpage-product').length) {
         productFullPage();
     };
+
+    // engine explode scheme rotation
+
+    function engineView(){
+    	var img = $('.js-engine-rotation'),
+    		linkFront = $('.el__front'),
+    		linkBack = $('.el__back');
+
+    		// rotate back
+    		function engineAnimation(direction){
+    			if (direction == 'front') {
+    				var engineFrame = 25;
+    				interval4 = setInterval(function(){
+    					$('.js-engine-rotation').attr('src', 'img/engine/'+engineFrame+'.png');
+    					engineFrame++;
+    					if (engineFrame == 38) {
+    						clearInterval(interval4);
+    					};
+    				}, 40);
+    				$('.js-engine-rotation').addClass('front');
+    			}
+    			if (direction == 'back') {
+    				var engineFrame2 = 37;
+    				interval5 = setInterval(function(){
+    					$('.js-engine-rotation').attr('src', 'img/engine/'+engineFrame2+'.png');
+    					engineFrame2--;
+    					if (engineFrame2 == 24) {
+    						clearInterval(interval5);
+    					};
+    				}, 40);
+    				$('.js-engine-rotation').addClass('back');
+    			};
+    		}
+
+    		// navigation
+    		linkFront.on('click', function(){
+    			if ($('.js-engine-rotation').hasClass('back')) {
+    				$('.js-engine-rotation').removeClass('back');
+    				$('.js-tooltip-back').removeClass('is-visible');
+    				setTimeout(function(){
+						engineAnimation('front');
+    				}, 200);
+    				setTimeout(function(){
+						$('.js-tooltip-front').addClass('is-visible');
+    				}, 880);
+    			}
+    		});
+    		linkBack.on('click', function(){
+    			if ($('.js-engine-rotation').hasClass('front')) {
+    				$('.js-engine-rotation').removeClass('front');
+    				$('.js-tooltip-front').removeClass('is-visible');
+    				setTimeout(function(){
+						engineAnimation('back');
+    				}, 200);
+    				setTimeout(function(){
+						$('.js-tooltip-back').addClass('is-visible');
+    				}, 880);
+    			}
+    		});
+
+    }
+	engineView();
 
 	// tabs
 

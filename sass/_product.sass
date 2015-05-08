@@ -769,7 +769,26 @@
                 width: 100%
                 height: auto
         +r(480)
-            margin: 0 0 -100px                
+            margin: 0 0 -100px 
+    .el__front, .el__back
+        position: absolute
+        top: 50%
+        background: transparent
+        color: #fff
+        font-size: 14px
+        &:hover
+            text-decoration: underline
+        +r(1024)
+            &:hover
+                text-decoration: none    
+    .el__front
+        right: 0
+        +r(1024)
+            right: 15px
+    .el__back
+        left: 0
+        +r(1024)
+            left: 15px                              
     .el__item
         position: absolute
         top: 0

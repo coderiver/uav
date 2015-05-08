@@ -760,6 +760,13 @@ picture { display: inline-block; vertical-align: middle; }
 @media only screen and (max-width: 767px) { .el .el__in { width: 150%; -moz-transform: translateX(-16%); -ms-transform: translateX(-16%); -webkit-transform: translateX(-16%); transform: translateX(-16%); height: auto; margin: -50px 0 -200px; }
   .el .el__in img { width: 100%; height: auto; } }
 @media only screen and (max-width: 480px) { .el .el__in { margin: 0 0 -100px; } }
+.el .el__front, .el .el__back { position: absolute; top: 50%; background: transparent; color: #fff; font-size: 14px; }
+.el .el__front:hover, .el .el__back:hover { text-decoration: underline; }
+@media only screen and (max-width: 1024px) { .el .el__front:hover, .el .el__back:hover { text-decoration: none; } }
+.el .el__front { right: 0; }
+@media only screen and (max-width: 1024px) { .el .el__front { right: 15px; } }
+.el .el__back { left: 0; }
+@media only screen and (max-width: 1024px) { .el .el__back { left: 15px; } }
 .el .el__item { position: absolute; top: 0; left: 0; z-index: 4; opacity: 0; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
 .el .el__item.is-visible { opacity: 1; }
 @media only screen and (max-width: 767px) { .el .el__item { opacity: 1; } }
