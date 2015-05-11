@@ -782,6 +782,8 @@ head.ready(function() {
     		linkFront = $('.el__front'),
     		linkBack = $('.el__back');
 
+    		$('.js-tooltip-back').addClass('is-visible');
+
     		// rotate back
     		function engineAnimation(direction){
     			if (direction == 'front') {
@@ -1498,29 +1500,6 @@ head.ready(function() {
 	var year = new Date().getFullYear();
 	$('.js-year').text(year);
 
-	if ($(window).width() <= 767) {
-		if ($('.js-fullpage-index').length) {
-			if (!$('.js-fullpage-index').hasClass('is-destroyed')) {
-				$('.js-fullpage-index').fullpage.destroy('all');
-			};
-		};
-		if ($('.js-fullpage-penguin').length) {
-			if (!$('.js-fullpage-penguin').hasClass('is-destroyed')) {
-				$('.js-fullpage-penguin').fullpage.destroy('all');
-			};
-		};
-		if ($('.js-fullpage-catapult').length) {
-			if (!$('.js-fullpage-catapult').hasClass('is-destroyed')) {
-				$('.js-fullpage-catapult').fullpage.destroy('all');
-			};
-		};
-		if ($('.js-fullpage-products').length) {
-			if (!$('.js-fullpage-products').hasClass('is-destroyed')) {
-				$('.js-fullpage-products').fullpage.destroy('all');
-			};
-		};
-	};
-
 	// resize
 	if ($(window).width() <= 767) {
 		if ($('.js-fullpage-index').length) {
@@ -1543,6 +1522,19 @@ head.ready(function() {
 				$('.js-fullpage-products').fullpage.destroy('all');
 			};
 		};
+		if ($('.js-fullpage-engine').length) {
+			if (!$('.js-fullpage-engine').hasClass('fp-destroyed')) {
+				$('.js-fullpage-engine').fullpage.destroy('all');
+			};
+		};
+		if ($('.js-fullpage-gsc').length) {
+			if (!$('.js-fullpage-gsc').hasClass('fp-destroyed')) {
+				$('.js-fullpage-gsc').fullpage.destroy('all');
+			};
+		};
+
+		// stop propeller animation on small devices
+		stopPropeller();
 	};
 
 
