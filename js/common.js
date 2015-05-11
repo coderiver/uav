@@ -84,12 +84,11 @@ head.ready(function() {
 
     function gsc(){
     	var item = $('.js-gsc'),
-    		wrap = $('.section.active'),
+    		wrap = $('.body'),
     		counter = 2;
 
     	// takeoff animation
-    	if (!wrap.hasClass('is-loaded')) {
-    		$.fn.fullpage.setAllowScrolling(false);
+    	if (!wrap.hasClass('gsc-animation')) {
     		interval = setInterval(function(){
     			item.attr('style', 'background-image:url(img/gsc/'+counter+'.png);');
     			counter++;
@@ -100,14 +99,15 @@ head.ready(function() {
     		
     		setTimeout(function(){
     			wrap.addClass('is-loaded');
-    			$('body').addClass('gsc-animation');
+    			$('body').removeClass('gsc-animation').addClass('is-loaded');
+    			$.fn.fullpage.setAllowScrolling(true);
+    			$.fn.fullpage.moveSectionDown();
     		}, 1000);
     	};
     }
 
     // allow fullpagejs scroll
     function allowScroll(direction, delay){
-    	console.log('wait 2sec for free to scroll...');
     	setTimeout(function(){
     		$.fn.fullpage.setAllowScrolling(true);
     		
@@ -174,9 +174,7 @@ head.ready(function() {
         		}, 1300);
         	};
         	if ($('body').hasClass('gsc-animation')) {
-        		$('.body').removeClass('gsc-animation');
-        		$.fn.fullpage.setAllowScrolling(true);
-        		$.fn.fullpage.moveSectionDown();
+        		gsc();
         	};
         	if ($('body').hasClass('engine-anim')) {
         		stopPropeller();
@@ -510,7 +508,6 @@ head.ready(function() {
 	            	$('body').animate({scrollTop:0}, '10');
 	            }
 	            if(index == 2){
-	            	gsc();
 	        		$('.js-build-quote').find('.build-quote').addClass('build-quote_dark');
 	        	} else {
 	        		$('.js-build-quote').find('.build-quote').removeClass('build-quote_dark');
@@ -523,10 +520,10 @@ head.ready(function() {
 	        afterLoad: function(anchorLink, index){
 	        	if (index == 2){
 	        		$('.js-build-quote').find('.build-quote').addClass('build-quote_dark');
-	        		setTimeout(function(){
-	        			gsc();
-	        		}, 600);
-	        		
+	        		if (!$('body').hasClass('is-loaded')) {
+	        			$('body').addClass('gsc-animation');
+	        			$.fn.fullpage.setAllowScrolling(false);
+	        		};
 	            }
 	            if (index !==2) {
 	            	$('.js-build-quote').find('.build-quote').removeClass('build-quote_dark');
